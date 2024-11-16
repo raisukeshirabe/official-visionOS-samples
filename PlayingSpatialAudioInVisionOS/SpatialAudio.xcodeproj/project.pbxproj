@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF02DEAC2BEC1DDD008047B2 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02DEAB2BEC1DDD008047B2 /* EntryPoint.swift */; };
+		DF02DEB22BEC1DE2008047B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF02DEB12BEC1DE2008047B2 /* Assets.xcassets */; };
+		DF02DEB52BEC1DE2008047B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF02DEB42BEC1DE2008047B2 /* Preview Assets.xcassets */; };
+		DF02DEBF2BEC2544008047B2 /* FunkySynth.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DF02DEBE2BEC2543008047B2 /* FunkySynth.m4a */; };
+		DF02DEC12BEC3486008047B2 /* DecibelSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02DEC02BEC3486008047B2 /* DecibelSlider.swift */; };
+		DF02DEC32BEC38F9008047B2 /* AxisVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02DEC22BEC38F9008047B2 /* AxisVisualizer.swift */; };
+		F5527B1F2C4EF5680054C698 /* SpatialAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5527B1E2C4EF5680054C698 /* SpatialAudioView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		426E76349D97A181D8FA61E0 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		68F42DE3A7DF4126C4C25FBE /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		A1B988F6D3A2520F964FC288 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DF02DEA42BEC1DDD008047B2 /* SpatialAudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialAudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF02DEAB2BEC1DDD008047B2 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		DF02DEB12BEC1DE2008047B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF02DEB42BEC1DE2008047B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF02DEB62BEC1DE2008047B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF02DEBE2BEC2543008047B2 /* FunkySynth.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = FunkySynth.m4a; sourceTree = "<group>"; };
+		DF02DEC02BEC3486008047B2 /* DecibelSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelSlider.swift; sourceTree = "<group>"; };
+		DF02DEC22BEC38F9008047B2 /* AxisVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxisVisualizer.swift; sourceTree = "<group>"; };
+		F5527B1E2C4EF5680054C698 /* SpatialAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialAudioView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF02DEA12BEC1DDD008047B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A473C568BE16FE2E396CD8A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				68F42DE3A7DF4126C4C25FBE /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		DF02DE9B2BEC1DDD008047B2 = {
+			isa = PBXGroup;
+			children = (
+				A1B988F6D3A2520F964FC288 /* README.md */,
+				DF02DEA62BEC1DDD008047B2 /* SpatialAudio */,
+				DF02DEA52BEC1DDD008047B2 /* Products */,
+				4A473C568BE16FE2E396CD8A /* Configuration */,
+				F4AF88DD9B5B3B926D1056B0 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		DF02DEA52BEC1DDD008047B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DEA42BEC1DDD008047B2 /* SpatialAudio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF02DEA62BEC1DDD008047B2 /* SpatialAudio */ = {
+			isa = PBXGroup;
+			children = (
+				F5527B1D2C4EF5360054C698 /* Views */,
+				F5527B202C4EF5790054C698 /* Resources */,
+				F5527B212C4EF58D0054C698 /* Visualizer */,
+				F5527B222C4EF59A0054C698 /* App */,
+			);
+			path = SpatialAudio;
+			sourceTree = "<group>";
+		};
+		F4AF88DD9B5B3B926D1056B0 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				426E76349D97A181D8FA61E0 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		F5527B1D2C4EF5360054C698 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5527B1E2C4EF5680054C698 /* SpatialAudioView.swift */,
+				DF02DEC02BEC3486008047B2 /* DecibelSlider.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5527B202C4EF5790054C698 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DEBE2BEC2543008047B2 /* FunkySynth.m4a */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5527B212C4EF58D0054C698 /* Visualizer */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DEC22BEC38F9008047B2 /* AxisVisualizer.swift */,
+			);
+			path = Visualizer;
+			sourceTree = "<group>";
+		};
+		F5527B222C4EF59A0054C698 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DEAB2BEC1DDD008047B2 /* EntryPoint.swift */,
+				DF02DEB62BEC1DE2008047B2 /* Info.plist */,
+				DF02DEB12BEC1DE2008047B2 /* Assets.xcassets */,
+				DF02DEB42BEC1DE2008047B2 /* Preview Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF02DEA32BEC1DDD008047B2 /* SpatialAudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF02DEB92BEC1DE2008047B2 /* Build configuration list for PBXNativeTarget "SpatialAudio" */;
+			buildPhases = (
+				DF02DEA02BEC1DDD008047B2 /* Sources */,
+				DF02DEA12BEC1DDD008047B2 /* Frameworks */,
+				DF02DEA22BEC1DDD008047B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpatialAudio;
+			productName = SpatialAudio;
+			productReference = DF02DEA42BEC1DDD008047B2 /* SpatialAudio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF02DE9C2BEC1DDD008047B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					DF02DEA32BEC1DDD008047B2 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = DF02DE9F2BEC1DDD008047B2 /* Build configuration list for PBXProject "SpatialAudio" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF02DE9B2BEC1DDD008047B2;
+			productRefGroup = DF02DEA52BEC1DDD008047B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF02DEA32BEC1DDD008047B2 /* SpatialAudio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF02DEA22BEC1DDD008047B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF02DEB52BEC1DE2008047B2 /* Preview Assets.xcassets in Resources */,
+				DF02DEB22BEC1DE2008047B2 /* Assets.xcassets in Resources */,
+				DF02DEBF2BEC2544008047B2 /* FunkySynth.m4a in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF02DEA02BEC1DDD008047B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF02DEC32BEC38F9008047B2 /* AxisVisualizer.swift in Sources */,
+				F5527B1F2C4EF5680054C698 /* SpatialAudioView.swift in Sources */,
+				DF02DEC12BEC3486008047B2 /* DecibelSlider.swift in Sources */,
+				DF02DEAC2BEC1DDD008047B2 /* EntryPoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF02DEB72BEC1DE2008047B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F42DE3A7DF4126C4C25FBE /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		DF02DEB82BEC1DE2008047B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F42DE3A7DF4126C4C25FBE /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
+		DF02DEBA2BEC1DE2008047B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F42DE3A7DF4126C4C25FBE /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = SpatialAudio/App;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PlayingSpatialAudio;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.spatial-audio${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		DF02DEBB2BEC1DE2008047B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F42DE3A7DF4126C4C25FBE /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = SpatialAudio/App;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PlayingSpatialAudio;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.spatial-audio${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF02DE9F2BEC1DDD008047B2 /* Build configuration list for PBXProject "SpatialAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF02DEB72BEC1DE2008047B2 /* Debug */,
+				DF02DEB82BEC1DE2008047B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF02DEB92BEC1DE2008047B2 /* Build configuration list for PBXNativeTarget "SpatialAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF02DEBA2BEC1DE2008047B2 /* Debug */,
+				DF02DEBB2BEC1DE2008047B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF02DE9C2BEC1DDD008047B2 /* Project object */;
+}
