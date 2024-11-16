@@ -1,0 +1,589 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["body3", "MI_metal_B3", "MI_lights", "MI_mesh_B3", "MI_rainbow_B3", "MI_plastic_B3"]
+    def "MI_metal_B3" (
+        active = true
+        references = @../Materials/M_metal.usda@</Root/B3/M_metal_B3>
+    )
+    {
+        int inputs:mat_switch = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-374.61594, -125.82774)
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Switch"
+        {
+            int inputs:which.connect = </Root/MI_metal_B3.inputs:mat_switch>
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "pink"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "orange"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "green"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "blue"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "normal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "roughness"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "ao"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "emissiveMask"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "mat_switch" (
+            active = false
+        )
+        {
+            float2 ui:nodegraph:node:size = (157, 53)
+        }
+    }
+
+    def "MI_lights" (
+        active = true
+        references = @../Materials/M_lights.usda@</Root/Cube/M_light>
+    )
+    {
+        int inputs:light_switch = 7 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1023.02606, 160.76202)
+                    float2 sizeInSubgraph = (143.5, 53)
+                    int stackingOrderInSubgraph = 1121
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "RB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "OB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "PB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Switch_2"
+        {
+            float2 ui:nodegraph:node:size = (110, 289)
+        }
+
+        over "light_switch"
+        {
+            float2 ui:nodegraph:node:size = (160.5, 53)
+        }
+    }
+
+    def "MI_mesh_B3" (
+        active = true
+        references = @../Materials/M_mesh.usda@</Root/B3/M_mesh_B3>
+    )
+    {
+        int inputs:mat_switch = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-887.8615, -100.56416)
+                    int stackingOrderInSubgraph = 1130
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Switch"
+        {
+            int inputs:which.connect = </Root/MI_mesh_B3.inputs:mat_switch>
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "ao"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "orange"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "yellow"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "black"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "grey"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "normal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "roughness"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "mat_switch" (
+            active = false
+        )
+        {
+            float2 ui:nodegraph:node:size = (157, 53)
+            int ui:nodegraph:node:stackingOrder = 1127
+        }
+    }
+
+    def "MI_rainbow_B3" (
+        active = true
+        references = @../Materials/M_rainbow.usda@</Root/B3/M_rainbow_B3>
+    )
+    {
+        int inputs:mat_switch = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-701.3282, -98.11972)
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Switch"
+        {
+            int inputs:which.connect = </Root/MI_rainbow_B3.inputs:mat_switch>
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "mat_switch" (
+            active = false
+        )
+        {
+            float2 ui:nodegraph:node:size = (157, 53)
+        }
+
+        over "red"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "rose"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "beige"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "black"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "normal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "roughness"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "ao"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "MI_plastic_B3" (
+        active = true
+        references = @../Materials/M_plastic.usda@</Root/B3/M_plastic_B3>
+    )
+    {
+        int inputs:mat_switch (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-374.61594, -125.82774)
+                    float2 sizeInSubgraph = (140, 53)
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Switch"
+        {
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "opacity"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "ao"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "pink"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "orange"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "green"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "blue"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "normal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "roughness"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "body3" (
+        active = true
+        prepend references = @../Assets/Robot/mesh/body3.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (0, 7.450581e-9, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geo_grp"
+        {
+            over "body3_grp"
+            {
+                over "body_grp" (
+                    references = None
+                )
+                {
+                    over "R_shoulder_panel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                        references = None
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_B3> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "L_shoulder_panel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_B3> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "R_arm_panel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_B3> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "L_arm_panel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_B3> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "torso_panel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_B3> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "base" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_B3> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+                }
+
+                over "light_grp"
+                {
+                    over "rims" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_lights> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "connector" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_lights> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "hands" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                        references = None
+                    )
+                    {
+                        rel material:binding = </Root/MI_lights> (
+                            bindMaterialAs = "strongerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "connectorBottom" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                        references = None
+                    )
+                    {
+                        rel material:binding = </Root/MI_lights> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                        uniform token subdivisionScheme = "none"
+                    }
+                }
+
+                over "turbo" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                    references = None
+                )
+                {
+                    rel material:binding = </Root/M_turbo> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token subdivisionScheme = "none"
+                }
+            }
+        }
+
+        over "rig_grp"
+        {
+            over "root" (
+                references = None
+            )
+            {
+            }
+        }
+
+        over "mtl"
+        {
+            over "mat_turbo"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+
+                over "turbo_B3_"
+                {
+                    color3f inputs:diffuseColor = (0.89894086, 0.7965642, 0.34677577) (
+                        colorSpace = "srgb_displayp3"
+                    )
+                    color3f inputs:emissiveColor = (0.68406266, 0.8000001, 0.19399363) (
+                        colorSpace = "lin_srgb"
+                    )
+                }
+            }
+        }
+
+        def RealityKitComponent "AnimationLibrary"
+        {
+            uniform token info:id = "RealityKit.AnimationLibrary"
+
+            def RealityKitAnimationFile "body3_idle_anim_usd"
+            {
+                uniform asset file = @../Assets/Robot/animations/body3/body3_idle_anim.usd@
+                uniform string name = "Idle"
+            }
+
+            def RealityKitAnimationFile "body3_celebrate_anim_usd"
+            {
+                uniform asset file = @../Assets/Robot/animations/body3/body3_celebrate_anim.usd@
+                uniform string name = "Celebrate"
+            }
+
+            def RealityKitAnimationFile "body3_walkEnd_anim_usd"
+            {
+                uniform asset file = @../Assets/Robot/animations/body3/body3_walkEnd_anim.usd@
+                uniform string name = "Walk End"
+            }
+
+            def RealityKitAnimationFile "body3_walkStart_anim_usd"
+            {
+                uniform asset file = @../Assets/Robot/animations/body3/body3_walkStart_anim.usd@
+                uniform string name = "Walk Start"
+            }
+
+            def RealityKitAnimationFile "body3_walk_anim_usd"
+            {
+                uniform asset file = @../Assets/Robot/animations/body3/body3_walk_anim.usd@
+                uniform string name = "Walk Loop"
+            }
+        }
+    }
+
+    def "M_turbo" (
+        active = true
+        prepend references = @../Materials/M_lights.usda@</Root/turboCube/M_turbo>
+    )
+    {
+        int inputs:light_switch = 7
+    }
+}
+

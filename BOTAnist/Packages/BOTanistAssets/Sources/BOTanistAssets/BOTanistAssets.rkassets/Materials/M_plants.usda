@@ -1,0 +1,1491 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Poppy", "CoffeeBerry", "SidePlant", "yucca"]
+    def Cube "Poppy" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["DefaultMaterial", "M_poppy"]
+        rel material:binding = </Root/Poppy/M_poppy> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (0.4132291, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_poppy" (
+            active = true
+            references = None
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "emisssive", "R", "N", "Remap", "AO", "Range", "BC", "Separate3", "TransformNormal", "Normalize_1", "TransformVector", "Normalize", "Constant_4", "Mask", "Normal", "DotProduct", "SmoothStep", "Constant_3", "ViewDirection", "Mix", "Mix_1", "Clamp", "Saturate_1", "Multiply_6", "Constant_2", "Multiply_5", "Mix_3", "E", "Constant", "Multiply_2", "Multiply_1"]
+            token outputs:mtlx:surface.connect = </Root/Poppy/M_poppy/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1144.007, 126.60183)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1203
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat.connect = None
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/Poppy/M_poppy/Mix_1.outputs:out>
+                color3f inputs:emissiveColor.connect = </Root/Poppy/M_poppy/Mix_2.outputs:out>
+                float inputs:ior
+                float inputs:metallic
+                float3 inputs:normal.connect = </Root/Poppy/M_poppy/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/Poppy/M_poppy/Range.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (766.64136, 135.51065)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 1205
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/Poppy/M_poppy/N.outputs:out>
+                float inputs:inlow
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (877.2523, 845.7193)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 6519
+            }
+
+            def Shader "Range"
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp
+                float inputs:gamma
+                float inputs:in.connect = </Root/Poppy/M_poppy/R.outputs:out>
+                float inputs:inhigh
+                float inputs:inlow
+                float inputs:outhigh
+                float inputs:outlow
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (941.0055, -190.78387)
+                float2 ui:nodegraph:node:size = (98, 217)
+                int ui:nodegraph:node:stackingOrder = 6462
+            }
+
+            def Shader "BC" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/plants/textures/T_poppy_BaseColor.jpg@
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1017.4565, -439.03906)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6487
+            }
+
+            def Shader "Separate3"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/Poppy/M_poppy/Mix.outputs:out>
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-616.82465, 368.66147)
+                float2 ui:nodegraph:node:size = (115.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "TransformNormal"
+            {
+                uniform token info:id = "ND_transformnormal_vector3"
+                string inputs:fromspace = "model"
+                float3 inputs:in.connect = </Root/Poppy/M_poppy/Normal.outputs:out>
+                string inputs:tospace = "world"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2103.606, 361.1984)
+                float2 ui:nodegraph:node:size = (158, 145)
+                int ui:nodegraph:node:stackingOrder = 6145
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+            }
+
+            def Shader "Normalize_1"
+            {
+                uniform token info:id = "ND_normalize_vector3"
+                float3 inputs:in.connect = </Root/Poppy/M_poppy/TransformVector.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-1793.3406, 513.307)
+                float2 ui:nodegraph:node:size = (161, 53)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "TransformVector"
+            {
+                uniform token info:id = "ND_transformvector_vector3"
+                string inputs:fromspace = "model"
+                float3 inputs:in.connect = </Root/Poppy/M_poppy/ViewDirection.outputs:out>
+                string inputs:tospace = "world"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2013.6516, 528.9077)
+                float2 ui:nodegraph:node:size = (153.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6145
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:tospace"]
+            }
+
+            def Shader "Normalize"
+            {
+                uniform token info:id = "ND_normalize_vector3"
+                float3 inputs:in.connect = </Root/Poppy/M_poppy/TransformNormal.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-1885.7722, 397.1058)
+                float2 ui:nodegraph:node:size = (149, 40)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "Constant_4"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1074.6365, 415.11404)
+                float2 ui:nodegraph:node:size = (158, 53)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "Mask" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp = 0
+                bool inputs:doclamp.connect = None
+                float inputs:gamma
+                float inputs:in.connect = </Root/Poppy/M_poppy/SmoothStep.outputs:out>
+                float inputs:inhigh = 0.75
+                float inputs:inlow = 0.55
+                float inputs:outhigh
+                float inputs:outlow
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1046.177, 583.84375)
+                float2 ui:nodegraph:node:size = (98, 217)
+                int ui:nodegraph:node:stackingOrder = 6544
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow", "inputs:inlow", "inputs:inlow", "inputs:outhigh", "inputs:gamma", "inputs:inhigh", "inputs:outhigh", "inputs:in"]
+            }
+
+            def Shader "Normal"
+            {
+                uniform token info:id = "ND_normal_vector3"
+                string inputs:space = "model"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2304.939, 350.60495)
+                float2 ui:nodegraph:node:size = (128.5, 40)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "DotProduct"
+            {
+                uniform token info:id = "ND_dotproduct_vector3"
+                float3 inputs:in1.connect = </Root/Poppy/M_poppy/Normalize.outputs:out>
+                float3 inputs:in2.connect = </Root/Poppy/M_poppy/Normalize_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1508.8181, 508.3273)
+                float2 ui:nodegraph:node:size = (153.5, 53)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "SmoothStep"
+            {
+                uniform token info:id = "ND_smoothstep_float"
+                float inputs:high
+                float inputs:in.connect = </Root/Poppy/M_poppy/DotProduct.outputs:out>
+                float inputs:low
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1293.4407, 512.8949)
+                float2 ui:nodegraph:node:size = (127.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "Constant_3"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (0, 0, 0) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1072.3474, 326.63834)
+                float2 ui:nodegraph:node:size = (158, 53)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "ViewDirection"
+            {
+                uniform token info:id = "ND_realitykit_viewdirection_vector3"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2238.3477, 526.6229)
+                float2 ui:nodegraph:node:size = (210, 53)
+                int ui:nodegraph:node:stackingOrder = 6145
+            }
+
+            def Shader "Mix"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/Poppy/M_poppy/Constant_4.outputs:out>
+                color3f inputs:fg.connect = </Root/Poppy/M_poppy/Constant_3.outputs:out>
+                float inputs:mix = 0
+                float inputs:mix.connect = </Root/Poppy/M_poppy/Mask.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-788.03326, 346.00992)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6145
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+            }
+
+            def Shader "Mix_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/Poppy/M_poppy/BC.outputs:out>
+                color3f inputs:fg.connect = </Root/Poppy/M_poppy/Multiply.outputs:out>
+                float inputs:mix.connect = </Root/Poppy/M_poppy/Clamp.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-165.30771, -410.77368)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6409
+            }
+
+            def Shader "Clamp" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_clamp_float"
+                float inputs:in.connect = </Root/Poppy/M_poppy/Separate3.outputs:outr>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-343.97705, -252.79189)
+                float2 ui:nodegraph:node:size = (91, 145)
+                int ui:nodegraph:node:stackingOrder = 6465
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:low"]
+            }
+
+            def Shader "Saturate_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_saturate_color3"
+                float inputs:amount = 1.5
+                color3f inputs:in.connect = </Root/Poppy/M_poppy/BC.outputs:out>
+                color3f inputs:lumacoeffs
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-561.59033, -532.7325)
+                float2 ui:nodegraph:node:size = (138.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6568
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:lumacoeffs"]
+            }
+
+            def Shader "Mix_3" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/Poppy/M_poppy/BC.outputs:out>
+                color3f inputs:fg.connect = </Root/Poppy/M_poppy/Multiply_1.outputs:out>
+                float inputs:mix.connect = </Root/Poppy/M_poppy/Oneminus.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-301.44922, 20.223143)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6567
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+            }
+
+            def Shader "E" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/plants/textures/T_poppy_emissiveMask.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-209.88568, 818.01733)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6563
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord", "inputs:default", "inputs:uaddressmode"]
+            }
+
+            def Shader "R" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @../Assets/plants/textures/T_poppy_Roughness.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (664.22156, -318.60233)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6462
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:vaddressmode"]
+            }
+
+            def Shader "N" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/plants/textures/T_poppy_Normal.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (688.06256, 826.37366)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6519
+            }
+
+            def Shader "Mix_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg = (0.84313726, 0.3664055, 0.5330412) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:bg.connect = </Root/Poppy/M_poppy/Inside.outputs:out>
+                color3f inputs:fg = (0.99942404, 0.9855537, 0) (
+                    colorSpace = "srgb_texture"
+                )
+                color3f inputs:fg.connect = None
+                float inputs:mix.connect = </Root/Poppy/M_poppy/Image.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (309.6199, 133.87535)
+                int ui:nodegraph:node:stackingOrder = 6661
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:bg", "inputs:bg"]
+            }
+
+            def Shader "Image" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/plants/textures/T_poppy_upLight_mask.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (31.21229, 430.07452)
+                int ui:nodegraph:node:stackingOrder = 6661
+            }
+
+            def Shader "Multiply" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_color3FA"
+                prepend color3f inputs:in1.connect = </Root/Poppy/M_poppy/Saturate_1.outputs:out>
+                float inputs:in2 = 1.3
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-356.39023, -534.2903)
+                int ui:nodegraph:node:stackingOrder = 6569
+            }
+
+            def Shader "Multiply_5" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_color3"
+                color3f inputs:in1.connect = </Root/Poppy/M_poppy/BC.outputs:out>
+                color3f inputs:in2 = (0.999996, 1, 1) (
+                    colorSpace = "srgb_texture"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-639.82214, -239.41125)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 6541
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in2"]
+            }
+
+            def Shader "Separate3_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/Poppy/M_poppy/E.outputs:out>
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-179.33191, 236.95679)
+                int ui:nodegraph:node:stackingOrder = 6565
+            }
+
+            def Shader "Inside" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_inside_color3"
+                color3f inputs:in.connect = </Root/Poppy/M_poppy/Mix_3.outputs:out>
+                float inputs:mask.connect = </Root/Poppy/M_poppy/Separate3_2.outputs:outr>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (21.703617, 125.525604)
+                int ui:nodegraph:node:stackingOrder = 6559
+            }
+
+            def Shader "Multiply_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_color3FA"
+                prepend color3f inputs:in1.connect = </Root/Poppy/M_poppy/Multiply_5.outputs:out>
+                float inputs:in2 = 10
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-572.265, -144.7684)
+                int ui:nodegraph:node:stackingOrder = 6543
+            }
+
+            def Shader "Mask_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp = 0
+                bool inputs:doclamp.connect = None
+                float inputs:gamma
+                float inputs:in.connect = </Root/Poppy/M_poppy/SmoothStep.outputs:out>
+                float inputs:inhigh = 0.6
+                float inputs:outhigh
+                float inputs:outlow = 0.5
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-620.6813, 612.53577)
+                float2 ui:nodegraph:node:size = (98, 217)
+                int ui:nodegraph:node:stackingOrder = 6549
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow", "inputs:inlow", "inputs:inlow", "inputs:outhigh", "inputs:gamma", "inputs:inhigh", "inputs:outhigh", "inputs:in"]
+            }
+
+            def Shader "Oneminus" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_realitykit_oneminus_float"
+                float inputs:in.connect = </Root/Poppy/M_poppy/Mask_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-371.57446, 613.51556)
+                int ui:nodegraph:node:stackingOrder = 6548
+            }
+        }
+    }
+
+    def Cube "CoffeeBerry" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["M_coffeeBerry", "M_coffeeBerry_1"]
+        rel material:binding = </Root/CoffeeBerry/M_coffeeBerry> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (-0.5007239, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_coffeeBerry" (
+            active = true
+            references = None
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "N", "Image", "Clamp_2", "Separate3_2", "Remap", "AO", "Image_5", "Image_4", "Combine3_1", "Mix_1", "Constant_4", "Range", "Mix_3", "Mix", "Separate3_1", "Normal", "Constant_2", "Clamp_1", "Clamp", "Saturate_1", "TransformVector", "Multiply_5", "SmoothStep", "ViewDirection", "Separate3", "Normalize_1", "Constant_3", "BC_1", "Mask", "DotProduct", "Constant_5", "E", "Separate4_1", "Range_1", "TransformNormal", "Multiply_6", "Normalize", "Screen"]
+            token outputs:mtlx:surface.connect = </Root/CoffeeBerry/M_coffeeBerry/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (979.09204, 100.193825)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1349
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+                references = None
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat = 1
+                float inputs:clearcoat.connect = </Root/CoffeeBerry/M_coffeeBerry/Separate3_2.outputs:outr>
+                float inputs:clearcoatRoughness = 0.5
+                color3f inputs:diffuseColor.connect = </Root/CoffeeBerry/M_coffeeBerry/Mix_1.outputs:out>
+                color3f inputs:emissiveColor.connect = </Root/CoffeeBerry/M_coffeeBerry/Mix_2.outputs:out>
+                float inputs:ior
+                float inputs:metallic
+                float3 inputs:normal.connect = </Root/CoffeeBerry/M_coffeeBerry/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/CoffeeBerry/M_coffeeBerry/Range_1.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (701.8319, 45.450706)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 6441
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:clearcoatRoughness", "inputs:clearcoatRoughness"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/N.outputs:out>
+                float inputs:inlow
+                float inputs:outhigh
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (745.43164, 1149.6337)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 6594
+            }
+
+            def Shader "Image_4"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/plants/textures/T_coffeeBerry_Roughness.jpg@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (469.88077, -369.1562)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 5804
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:vaddressmode", "inputs:file"]
+            }
+
+            def Shader "Combine3_1"
+            {
+                uniform token info:id = "ND_combine3_color3"
+                float inputs:in1.connect = </Root/CoffeeBerry/M_coffeeBerry/Separate4_1.outputs:outr>
+                float inputs:in2.connect = </Root/CoffeeBerry/M_coffeeBerry/Separate4_1.outputs:outg>
+                float inputs:in3.connect = </Root/CoffeeBerry/M_coffeeBerry/Separate4_1.outputs:outb>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1043.43, -662.38153)
+                float2 ui:nodegraph:node:size = (157, 54)
+                int ui:nodegraph:node:stackingOrder = 6496
+            }
+
+            def Shader "Mix_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/CoffeeBerry/M_coffeeBerry/Combine3_1.outputs:out>
+                color3f inputs:fg.connect = </Root/CoffeeBerry/M_coffeeBerry/Saturate_1.outputs:out>
+                float inputs:mix.connect = </Root/CoffeeBerry/M_coffeeBerry/Clamp.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-205.62741, -553.68677)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6443
+            }
+
+            def Shader "Constant_4"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1657.0845, 430.417)
+                float2 ui:nodegraph:node:size = (158, 53)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Mix_3"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/CoffeeBerry/M_coffeeBerry/Multiply_6.outputs:out>
+                color3f inputs:fg.connect = </Root/CoffeeBerry/M_coffeeBerry/Multiply_5.outputs:out>
+                float inputs:mix.connect = </Root/CoffeeBerry/M_coffeeBerry/Clamp_1.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-384.24048, 5.7880373)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6318
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+            }
+
+            def Shader "Mix"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/CoffeeBerry/M_coffeeBerry/Constant_4.outputs:out>
+                color3f inputs:fg.connect = </Root/CoffeeBerry/M_coffeeBerry/Constant_3.outputs:out>
+                float inputs:mix = 0
+                float inputs:mix.connect = </Root/CoffeeBerry/M_coffeeBerry/Mask.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1370.4812, 361.31287)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6142
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+            }
+
+            def Shader "Normal" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_normal_vector3"
+                string inputs:space = "model"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2887.387, 365.9079)
+                float2 ui:nodegraph:node:size = (128.5, 40)
+                int ui:nodegraph:node:stackingOrder = 6449
+            }
+
+            def Shader "Constant_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1304.8746, 158.15192)
+                float2 ui:nodegraph:node:size = (158.5, 53)
+                int ui:nodegraph:node:stackingOrder = 6324
+            }
+
+            def Shader "Clamp_1"
+            {
+                uniform token info:id = "ND_clamp_float"
+                float inputs:high
+                float inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/Separate3.outputs:outr>
+                float inputs:low
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-583.937, 171.59435)
+                float2 ui:nodegraph:node:size = (103, 145)
+                int ui:nodegraph:node:stackingOrder = 5875
+            }
+
+            def Shader "Clamp"
+            {
+                uniform token info:id = "ND_clamp_float"
+                float inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/Separate3.outputs:outr>
+                float inputs:low
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-449.6493, -402.74197)
+                float2 ui:nodegraph:node:size = (91, 145)
+                int ui:nodegraph:node:stackingOrder = 6180
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:low"]
+            }
+
+            def Shader "Saturate_1"
+            {
+                uniform token info:id = "ND_saturate_color3"
+                float inputs:amount = 4
+                color3f inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/Combine3_1.outputs:out>
+                color3f inputs:lumacoeffs
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-630.099, -713.65186)
+                float2 ui:nodegraph:node:size = (138.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6180
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:lumacoeffs"]
+            }
+
+            def Shader "TransformVector" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_transformvector_vector3"
+                string inputs:fromspace = "model"
+                float3 inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/ViewDirection.outputs:out>
+                string inputs:tospace = "world"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2596.0996, 544.21063)
+                float2 ui:nodegraph:node:size = (153.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6448
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:tospace"]
+            }
+
+            def Shader "Multiply_5"
+            {
+                uniform token info:id = "ND_multiply_color3FA"
+                color3f inputs:in1.connect = </Root/CoffeeBerry/M_coffeeBerry/Multiply_6.outputs:out>
+                float inputs:in2 = 3
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-593.0788, -125.40203)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 6318
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in2"]
+            }
+
+            def Shader "SmoothStep" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_smoothstep_float"
+                float inputs:high
+                float inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/DotProduct.outputs:out>
+                float inputs:low
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1875.8887, 528.1978)
+                float2 ui:nodegraph:node:size = (127.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6451
+            }
+
+            def Shader "ViewDirection" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_realitykit_viewdirection_vector3"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2820.7957, 541.92584)
+                float2 ui:nodegraph:node:size = (210, 53)
+                int ui:nodegraph:node:stackingOrder = 6447
+            }
+
+            def Shader "Separate3"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/Mix.outputs:out>
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-1199.2726, 383.96442)
+                float2 ui:nodegraph:node:size = (115.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Normalize_1"
+            {
+                uniform token info:id = "ND_normalize_vector3"
+                float3 inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/TransformVector.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2375.7886, 528.6099)
+                float2 ui:nodegraph:node:size = (161, 53)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Constant_3"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (0, 0, 0) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1654.7954, 341.94128)
+                float2 ui:nodegraph:node:size = (158, 53)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "BC_1"
+            {
+                uniform token info:id = "ND_image_color4"
+                color4f inputs:default
+                asset inputs:file = @../Assets/plants/textures/T_coffeeBerry_BaseColor.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color4f outputs:out
+                float2 ui:nodegraph:node:pos = (-1515.8104, -663.1312)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6496
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode"]
+            }
+
+            def Shader "Mask" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp = 0
+                bool inputs:doclamp.connect = None
+                float inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/SmoothStep.outputs:out>
+                float inputs:inhigh = 0.75
+                float inputs:inlow = 0.55
+                float inputs:outhigh = 0.5
+                float inputs:outlow
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1628.625, 599.14667)
+                float2 ui:nodegraph:node:size = (98, 217)
+                int ui:nodegraph:node:stackingOrder = 6497
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow", "inputs:inlow", "inputs:inlow", "inputs:outhigh", "inputs:gamma", "inputs:inhigh", "inputs:outhigh", "inputs:in"]
+            }
+
+            def Shader "DotProduct" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_dotproduct_vector3"
+                float3 inputs:in1.connect = </Root/CoffeeBerry/M_coffeeBerry/Normalize.outputs:out>
+                float3 inputs:in2.connect = </Root/CoffeeBerry/M_coffeeBerry/Normalize_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2091.266, 523.63025)
+                float2 ui:nodegraph:node:size = (153.5, 53)
+                int ui:nodegraph:node:stackingOrder = 6450
+            }
+
+            def Shader "Separate4_1"
+            {
+                uniform token info:id = "ND_separate4_color4"
+                color4f inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/BC_1.outputs:out>
+                float outputs:outa
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-1232.6512, -654.04297)
+                float2 ui:nodegraph:node:size = (128, 163)
+                int ui:nodegraph:node:stackingOrder = 6496
+            }
+
+            def Shader "Range_1"
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp
+                float inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/Image_4.outputs:out>
+                float inputs:outhigh = 0.7
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (642.7013, -313.15176)
+                float2 ui:nodegraph:node:size = (103.5, 217)
+                int ui:nodegraph:node:stackingOrder = 5807
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow"]
+            }
+
+            def Shader "TransformNormal" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_transformnormal_vector3"
+                string inputs:fromspace = "model"
+                float3 inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/Normal.outputs:out>
+                string inputs:tospace = "world"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2686.054, 376.50134)
+                float2 ui:nodegraph:node:size = (158, 145)
+                int ui:nodegraph:node:stackingOrder = 6445
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+            }
+
+            def Shader "Multiply_6"
+            {
+                uniform token info:id = "ND_multiply_color3"
+                color3f inputs:in1.connect = </Root/CoffeeBerry/M_coffeeBerry/E.outputs:out>
+                color3f inputs:in2.connect = </Root/CoffeeBerry/M_coffeeBerry/Constant_2.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1203.6376, -44.602276)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 6318
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+            }
+
+            def Shader "Normalize" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_normalize_vector3"
+                float3 inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/TransformNormal.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2468.2202, 412.40875)
+                float2 ui:nodegraph:node:size = (149, 40)
+                int ui:nodegraph:node:stackingOrder = 6446
+            }
+
+            def Shader "N"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/plants/textures/T_coffeeBerry_Normal.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (556.2419, 1130.2881)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6594
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:texcoord"]
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/plants/textures/T_coffeeBerry_berry_mask.jpg@
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (124.1575, 657.72974)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6820
+            }
+
+            def Shader "Clamp_2"
+            {
+                uniform token info:id = "ND_clamp_color3FA"
+                float inputs:high
+                prepend color3f inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/Image.outputs:out>
+                float inputs:low = 0.3
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (286.30118, 670.8002)
+                float2 ui:nodegraph:node:size = (107, 145)
+                int ui:nodegraph:node:stackingOrder = 6818
+            }
+
+            def Shader "Separate3_2"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/Clamp_2.outputs:out>
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (454.07834, 674.4328)
+                float2 ui:nodegraph:node:size = (130.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6818
+            }
+
+            def Shader "E" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/plants/textures/T_coffeeBerry_Emissive.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1397.1465, -118.23638)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6322
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord"]
+            }
+
+            def Shader "UpLight" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/plants/textures/T_coffeeberry_upLight_mask.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-158.37424, 349.6107)
+                int ui:nodegraph:node:stackingOrder = 6729
+            }
+
+            def Shader "Mix_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg = (0.84313726, 0.3664055, 0.5330412) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:bg.connect = </Root/CoffeeBerry/M_coffeeBerry/Mix_3.outputs:out>
+                color3f inputs:fg = (0.53158903, 0.9969724, 0.97014403) (
+                    colorSpace = "srgb_displayp3"
+                )
+                float inputs:mix.connect = </Root/CoffeeBerry/M_coffeeBerry/Range_2.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (120.033394, 53.411514)
+                int ui:nodegraph:node:stackingOrder = 6727
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:bg", "inputs:bg"]
+            }
+
+            def Shader "Range_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_range_float"
+                float inputs:in.connect = </Root/CoffeeBerry/M_coffeeBerry/UpLight.outputs:out>
+                float inputs:outhigh = 0.7
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (103.78759, 330.954)
+                int ui:nodegraph:node:stackingOrder = 6726
+            }
+        }
+    }
+
+    def Cube "yucca" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["M_yucca", "DefaultMaterial"]
+        rel material:binding = </Root/yucca/M_yucca> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+
+        def Material "M_yucca" (
+            active = true
+            references = None
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "N", "Image", "Clamp_2", "Separate3_2", "Remap", "AO", "UpLight", "Mix_2", "Image_5", "Image_4", "Combine3_1", "Mix_1", "Constant_4", "Range", "Mix_3", "Mix", "Separate3_1", "Normal", "Constant_2", "Clamp_1", "Clamp", "Saturate_1", "TransformVector", "Multiply_5", "SmoothStep", "ViewDirection", "Separate3", "Normalize_1", "Constant_3", "BC_1", "Mask", "DotProduct", "Constant_5", "E", "Separate4_1", "Range_1", "TransformNormal", "Multiply_6", "Normalize", "Screen"]
+            token outputs:mtlx:surface.connect = </Root/yucca/M_yucca/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (979.09204, 100.193825)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1349
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat = 1
+                float inputs:clearcoat.connect = </Root/yucca/M_yucca/Separate3_2.outputs:outr>
+                float inputs:clearcoatRoughness = 0.5
+                color3f inputs:diffuseColor.connect = </Root/yucca/M_yucca/Mix_1.outputs:out>
+                color3f inputs:emissiveColor.connect = </Root/yucca/M_yucca/Mix_2.outputs:out>
+                float inputs:ior
+                float inputs:metallic
+                float3 inputs:normal.connect = </Root/yucca/M_yucca/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/yucca/M_yucca/Range_1.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (701.8319, 45.450706)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 6071
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:clearcoatRoughness"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/yucca/M_yucca/N.outputs:out>
+                float inputs:inlow
+                float inputs:outhigh
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (1267.2339, 718.93286)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 6383
+            }
+
+            def Shader "Image_4"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/plants/textures/T_yucca_Roughness.jpg@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (469.88077, -369.1562)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6327
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:vaddressmode", "inputs:file", "inputs:vaddressmode", "inputs:vaddressmode"]
+            }
+
+            def Shader "Combine3_1"
+            {
+                uniform token info:id = "ND_combine3_color3"
+                float inputs:in1.connect = </Root/yucca/M_yucca/Separate4_1.outputs:outr>
+                float inputs:in2.connect = </Root/yucca/M_yucca/Separate4_1.outputs:outg>
+                float inputs:in3.connect = </Root/yucca/M_yucca/Separate4_1.outputs:outb>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1293.1868, -354.1711)
+                float2 ui:nodegraph:node:size = (157, 54)
+                int ui:nodegraph:node:stackingOrder = 6042
+            }
+
+            def Shader "Mix_1"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/yucca/M_yucca/Combine3_1.outputs:out>
+                color3f inputs:fg.connect = </Root/yucca/M_yucca/Saturate_1.outputs:out>
+                float inputs:mix.connect = </Root/yucca/M_yucca/Clamp.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-423.16028, -601.90674)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6180
+            }
+
+            def Shader "Constant_4"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1657.0845, 430.417)
+                float2 ui:nodegraph:node:size = (158, 53)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Mix_3"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/yucca/M_yucca/Multiply_6.outputs:out>
+                color3f inputs:fg.connect = </Root/yucca/M_yucca/Multiply_5.outputs:out>
+                float inputs:mix.connect = </Root/yucca/M_yucca/Clamp_1.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-384.24048, 5.7880373)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6318
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+            }
+
+            def Shader "Mix"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/yucca/M_yucca/Constant_4.outputs:out>
+                color3f inputs:fg.connect = </Root/yucca/M_yucca/Constant_3.outputs:out>
+                float inputs:mix = 0
+                float inputs:mix.connect = </Root/yucca/M_yucca/Mask.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1370.4812, 361.31287)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 6142
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+            }
+
+            def Shader "Normal"
+            {
+                uniform token info:id = "ND_normal_vector3"
+                string inputs:space = "model"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2887.387, 365.9079)
+                float2 ui:nodegraph:node:size = (128.5, 40)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Constant_2"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1380.6356, 58.911125)
+                float2 ui:nodegraph:node:size = (158.5, 53)
+                int ui:nodegraph:node:stackingOrder = 6318
+            }
+
+            def Shader "Clamp_1"
+            {
+                uniform token info:id = "ND_clamp_float"
+                float inputs:high
+                float inputs:in.connect = </Root/yucca/M_yucca/Separate3.outputs:outr>
+                float inputs:low
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-583.937, 171.59435)
+                float2 ui:nodegraph:node:size = (103, 145)
+                int ui:nodegraph:node:stackingOrder = 5875
+            }
+
+            def Shader "Clamp"
+            {
+                uniform token info:id = "ND_clamp_float"
+                float inputs:in.connect = </Root/yucca/M_yucca/Separate3.outputs:outr>
+                float inputs:low
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-449.6493, -402.74197)
+                float2 ui:nodegraph:node:size = (91, 145)
+                int ui:nodegraph:node:stackingOrder = 6180
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:low"]
+            }
+
+            def Shader "Saturate_1"
+            {
+                uniform token info:id = "ND_saturate_color3"
+                float inputs:amount = 4
+                color3f inputs:in.connect = </Root/yucca/M_yucca/Combine3_1.outputs:out>
+                color3f inputs:lumacoeffs
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-630.099, -713.65186)
+                float2 ui:nodegraph:node:size = (138.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6180
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:lumacoeffs"]
+            }
+
+            def Shader "TransformVector"
+            {
+                uniform token info:id = "ND_transformvector_vector3"
+                string inputs:fromspace = "model"
+                float3 inputs:in.connect = </Root/yucca/M_yucca/ViewDirection.outputs:out>
+                string inputs:tospace = "world"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2596.0996, 544.21063)
+                float2 ui:nodegraph:node:size = (153.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6142
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:tospace"]
+            }
+
+            def Shader "Multiply_5"
+            {
+                uniform token info:id = "ND_multiply_color3FA"
+                color3f inputs:in1.connect = </Root/yucca/M_yucca/Multiply_6.outputs:out>
+                float inputs:in2 = 3
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-593.0788, -125.40203)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 6318
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in2"]
+            }
+
+            def Shader "SmoothStep"
+            {
+                uniform token info:id = "ND_smoothstep_float"
+                float inputs:high
+                float inputs:in.connect = </Root/yucca/M_yucca/DotProduct.outputs:out>
+                float inputs:low
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1875.8887, 528.1978)
+                float2 ui:nodegraph:node:size = (127.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "ViewDirection"
+            {
+                uniform token info:id = "ND_realitykit_viewdirection_vector3"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2820.7957, 541.92584)
+                float2 ui:nodegraph:node:size = (210, 53)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Separate3"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/yucca/M_yucca/Mix.outputs:out>
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-1199.2726, 383.96442)
+                float2 ui:nodegraph:node:size = (115.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Normalize_1"
+            {
+                uniform token info:id = "ND_normalize_vector3"
+                float3 inputs:in.connect = </Root/yucca/M_yucca/TransformVector.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2375.7886, 528.6099)
+                float2 ui:nodegraph:node:size = (161, 53)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Constant_3"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (0, 0, 0) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1654.7954, 341.94128)
+                float2 ui:nodegraph:node:size = (158, 53)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "BC_1"
+            {
+                uniform token info:id = "ND_image_color4"
+                color4f inputs:default
+                asset inputs:file = @../Assets/plants/textures/T_yucca_BaseColor.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color4f outputs:out
+                float2 ui:nodegraph:node:pos = (-1752.6986, -508.63998)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6746
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode"]
+            }
+
+            def Shader "Mask"
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp = 0
+                bool inputs:doclamp.connect = None
+                float inputs:in.connect = </Root/yucca/M_yucca/SmoothStep.outputs:out>
+                float inputs:inhigh = 0.75
+                float inputs:inlow = 0.55
+                float inputs:outhigh = 0.5
+                float inputs:outlow
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1628.625, 599.14667)
+                float2 ui:nodegraph:node:size = (98, 217)
+                int ui:nodegraph:node:stackingOrder = 6142
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow", "inputs:inlow", "inputs:inlow", "inputs:outhigh", "inputs:gamma", "inputs:inhigh", "inputs:outhigh", "inputs:in"]
+            }
+
+            def Shader "DotProduct"
+            {
+                uniform token info:id = "ND_dotproduct_vector3"
+                float3 inputs:in1.connect = </Root/yucca/M_yucca/Normalize.outputs:out>
+                float3 inputs:in2.connect = </Root/yucca/M_yucca/Normalize_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2091.266, 523.63025)
+                float2 ui:nodegraph:node:size = (153.5, 53)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "Separate4_1"
+            {
+                uniform token info:id = "ND_separate4_color4"
+                color4f inputs:in.connect = </Root/yucca/M_yucca/BC_1.outputs:out>
+                float outputs:outa
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-1482.408, -345.83258)
+                float2 ui:nodegraph:node:size = (128, 163)
+                int ui:nodegraph:node:stackingOrder = 6042
+            }
+
+            def Shader "Range_1"
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp
+                float inputs:in.connect = </Root/yucca/M_yucca/Image_4.outputs:out>
+                float inputs:outhigh = 0.7
+                float inputs:outlow = 0.5
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (642.7013, -313.15176)
+                float2 ui:nodegraph:node:size = (103.5, 217)
+                int ui:nodegraph:node:stackingOrder = 6328
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow"]
+            }
+
+            def Shader "TransformNormal"
+            {
+                uniform token info:id = "ND_transformnormal_vector3"
+                string inputs:fromspace = "model"
+                float3 inputs:in.connect = </Root/yucca/M_yucca/Normal.outputs:out>
+                string inputs:tospace = "world"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2686.054, 376.50134)
+                float2 ui:nodegraph:node:size = (158, 145)
+                int ui:nodegraph:node:stackingOrder = 6142
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+            }
+
+            def Shader "Multiply_6"
+            {
+                uniform token info:id = "ND_multiply_color3"
+                color3f inputs:in1.connect = </Root/yucca/M_yucca/E.outputs:out>
+                color3f inputs:in2.connect = </Root/yucca/M_yucca/Constant_2.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1203.6376, -44.602276)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 6318
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+            }
+
+            def Shader "Normalize"
+            {
+                uniform token info:id = "ND_normalize_vector3"
+                float3 inputs:in.connect = </Root/yucca/M_yucca/TransformNormal.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2468.2202, 412.40875)
+                float2 ui:nodegraph:node:size = (149, 40)
+                int ui:nodegraph:node:stackingOrder = 6142
+            }
+
+            def Shader "N"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/plants/textures/T_yucca_Normal.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (1078.0441, 699.5873)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6383
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:texcoord"]
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/plants/textures/T_yucca_emissive_mask.jpg@
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (185.68394, 734.01324)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6744
+            }
+
+            def Shader "Clamp_2"
+            {
+                uniform token info:id = "ND_clamp_color3FA"
+                float inputs:high
+                color3f inputs:in.connect = </Root/yucca/M_yucca/Image.outputs:out>
+                float inputs:low = 0.3
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (347.82764, 747.0837)
+                float2 ui:nodegraph:node:size = (107, 145)
+                int ui:nodegraph:node:stackingOrder = 6744
+            }
+
+            def Shader "Separate3_2"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/yucca/M_yucca/Clamp_2.outputs:out>
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (515.6048, 750.71625)
+                float2 ui:nodegraph:node:size = (130.5, 145)
+                int ui:nodegraph:node:stackingOrder = 6744
+            }
+
+            def Shader "E" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/plants/textures/T_yucca_Emissive.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1723.4315, 19.748219)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 6330
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:default"]
+            }
+
+            def Shader "Mix_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg = (0.84313726, 0.3664055, 0.5330412) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:bg.connect = </Root/yucca/M_yucca/Mix_3.outputs:out>
+                color3f inputs:fg = (0.20310572, 0.9969724, 0.23659821) (
+                    colorSpace = "srgb_displayp3"
+                )
+                float inputs:mix.connect = </Root/yucca/M_yucca/Range_2.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (213.00145, 65.04793)
+                int ui:nodegraph:node:stackingOrder = 6723
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:bg", "inputs:bg"]
+            }
+
+            def Shader "UpLight" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/plants/textures/T_yucca_upLight_mask.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-65.40617, 361.2471)
+                int ui:nodegraph:node:stackingOrder = 6723
+            }
+
+            def Shader "Range_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_range_float"
+                float inputs:in.connect = </Root/yucca/M_yucca/UpLight.outputs:out>
+                float inputs:outhigh = 0.7
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (196.75565, 342.59042)
+                int ui:nodegraph:node:stackingOrder = 6723
+            }
+        }
+    }
+}
+

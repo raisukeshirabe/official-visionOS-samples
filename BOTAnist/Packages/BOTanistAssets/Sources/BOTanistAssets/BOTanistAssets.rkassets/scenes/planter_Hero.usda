@@ -1,0 +1,1030 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.14)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["MI_coffeeBerry", "MI_poppy", "MI_light", "MI_metal", "MI_yucca", "coffeeBerry", "poppy", "yucca"]
+    def "MI_poppy" (
+        active = true
+        references = @../Materials/M_plants.usda@</Root/Poppy/M_poppy>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float inputs:clearcoatRoughness = 0.3
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 6384
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_2"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_3"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 1370
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Saturate"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "In"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Separate4"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 163)
+        }
+
+        over "Constant_1"
+        {
+            float2 ui:nodegraph:node:size = (155, 53)
+        }
+
+        over "Multiply_3"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Combine3"
+        {
+            float2 ui:nodegraph:node:size = (145, 54)
+        }
+
+        over "BC"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "mask"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Multiply_2"
+        {
+            float inputs:in2 = 3
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1372
+        }
+
+        over "Multiply_4"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "emisssive"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "AO"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Multiply_1"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "Range"
+        {
+            float inputs:outhigh = 0.8
+            float inputs:outlow = 0.4
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 1371
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "TransformNormal"
+        {
+            float2 ui:nodegraph:node:size = (158, 145)
+        }
+
+        over "Normalize_1"
+        {
+            float2 ui:nodegraph:node:size = (161, 53)
+        }
+
+        over "TransformVector"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 145)
+        }
+
+        over "Normalize"
+        {
+            float2 ui:nodegraph:node:size = (149, 40)
+        }
+
+        over "Constant_4"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Mask"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Normal"
+        {
+            float2 ui:nodegraph:node:size = (128.5, 40)
+        }
+
+        over "DotProduct"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "SmoothStep"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Constant_3"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "ViewDirection"
+        {
+            float2 ui:nodegraph:node:size = (210, 53)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Multiply_6"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant_2"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 53)
+        }
+
+        over "Multiply_5"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Mix_3"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Image_7"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "E"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Clamp_1"
+        {
+            float2 ui:nodegraph:node:size = (103, 145)
+        }
+
+        over "Separate3_1"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+    }
+
+    def "poppy" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (0, 0, 0)
+        }
+        references = @../Assets/plants/mesh/hero/poppy.usdz@
+    )
+    {
+        rel material:binding = </Root/MI_poppy> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.014, 0.014, 0.014)
+        float3 xformOp:translate = (0, -0.02943489, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geo_grp"
+        {
+            over "poppy"
+            {
+                uniform token subdivisionScheme = "none"
+            }
+        }
+    }
+
+    def "yucca" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @../Assets/plants/mesh/hero/yucca.usdz@
+    )
+    {
+        rel material:binding = </Root/MI_yucca> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        float3 xformOp:scale = (0.013, 0.013, 0.013)
+        float3 xformOp:translate = (0, -0.03061296, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geo_grp"
+        {
+            over "yucca"
+            {
+                uniform token subdivisionScheme = "none"
+            }
+        }
+    }
+
+    def "coffeeBerry" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @../Assets/plants/mesh/hero/coffeeBerry.usdz@
+    )
+    {
+        rel material:binding = </Root/MI_coffeeBerry> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        float3 xformOp:scale = (0.013, 0.013, 0.013)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geo_grp"
+        {
+            over "coffeeBerry"
+            {
+                uniform token subdivisionScheme = "none"
+            }
+        }
+    }
+
+    def "MI_coffeeBerry" (
+        active = true
+        references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Image_2"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Multiply_3"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Saturate"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Separate4"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 163)
+        }
+
+        over "Combine3"
+        {
+            float2 ui:nodegraph:node:size = (145, 54)
+        }
+
+        over "BC"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_3"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "In"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "mask"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Constant_1"
+        {
+            float2 ui:nodegraph:node:size = (155, 53)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "Inside"
+        {
+            float2 ui:nodegraph:node:size = (88.5, 127)
+        }
+
+        over "Multiply_1"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Multiply_2"
+        {
+            float inputs:in2 = 4
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1464
+        }
+
+        over "Image_4"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Range_1"
+        {
+            float2 ui:nodegraph:node:size = (103.5, 217)
+        }
+
+        over "Mix_3"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Screen"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Constant_5"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Separate3_1"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Image_5"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "N"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Clamp_1"
+        {
+            float2 ui:nodegraph:node:size = (103, 145)
+        }
+
+        over "Constant_4"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Normal"
+        {
+            float2 ui:nodegraph:node:size = (128.5, 40)
+        }
+
+        over "TransformVector"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 145)
+        }
+
+        over "SmoothStep"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "ViewDirection"
+        {
+            float2 ui:nodegraph:node:size = (210, 53)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Normalize_1"
+        {
+            float2 ui:nodegraph:node:size = (161, 53)
+        }
+
+        over "Constant_3"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "DotProduct"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "TransformNormal"
+        {
+            float2 ui:nodegraph:node:size = (158, 145)
+        }
+
+        over "Normalize"
+        {
+            float2 ui:nodegraph:node:size = (149, 40)
+        }
+
+        over "mask_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Combine3_1"
+        {
+            float2 ui:nodegraph:node:size = (157, 54)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "In_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Multiply_4"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "BC_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Separate4_1"
+        {
+            float2 ui:nodegraph:node:size = (128, 163)
+        }
+
+        over "Multiply_6"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Saturate_2"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Constant_6"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Image_7"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Multiply_5"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Inside_1"
+        {
+            float2 ui:nodegraph:node:size = (100.5, 127)
+        }
+
+        over "Constant_2"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 53)
+        }
+
+        over "Mask"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Clamp_2"
+        {
+            float2 ui:nodegraph:node:size = (107, 145)
+        }
+
+        over "Separate3_2"
+        {
+            float2 ui:nodegraph:node:size = (130.5, 145)
+        }
+    }
+
+    def "MI_light" (
+        active = true
+        references = @../Materials/M_lights.usda@</Root/Cube/M_light>
+    )
+    {
+        int inputs:light_switch = 1 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1023.02606, 160.76202)
+                    float2 sizeInSubgraph = (143.5, 53)
+                    int stackingOrderInSubgraph = 1054
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            float inputs:roughness = 0.8
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 1059
+        }
+
+        over "Multiply"
+        {
+            float inputs:in2 = 7
+            float2 ui:nodegraph:node:pos = (-107.519005, 184.85098)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1058
+        }
+
+        over "RB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "PB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "Switch_2"
+        {
+            float2 ui:nodegraph:node:size = (110, 289)
+        }
+    }
+
+    def "MI_metal" (
+        active = true
+        references = @../Materials/M_environment.usda@</Root/concrete/M_concrete>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Multiply_1"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant_1"
+        {
+            float2 inputs:value = (1, 1)
+            float2 ui:nodegraph:node:size = (154, 53)
+            int ui:nodegraph:node:stackingOrder = 189
+        }
+
+        over "Constant"
+        {
+            color3f inputs:value = (0.88466203, 0.88466203, 0.88466203) (
+                colorSpace = "srgb_displayp3"
+            )
+            float2 ui:nodegraph:node:size = (151, 53)
+            int ui:nodegraph:node:stackingOrder = 193
+        }
+
+        over "PreviewSurface_1"
+        {
+            float inputs:metallic = 1
+            float2 ui:nodegraph:node:size = (161, 307)
+            int ui:nodegraph:node:stackingOrder = 190
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Saturate"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+            int ui:nodegraph:node:stackingOrder = 185
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:amount"]
+        }
+
+        over "BaseColor"
+        {
+            asset inputs:file = @../Assets/environment/textures/tiling/metal_BaseColor.jpg@
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 182
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:realworldtilesize", "inputs:texcoord", "inputs:uvoffset"]
+        }
+
+        over "Normal"
+        {
+            asset inputs:file = @../Assets/environment/textures/tiling/metal_Normal.jpg@
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 183
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord"]
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+            int ui:nodegraph:node:stackingOrder = 194
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow"]
+        }
+
+        over "Roughness"
+        {
+            asset inputs:file = @../Assets/environment/textures/tiling/metal_Roughness.jpg@
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 184
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        over "Range"
+        {
+            float inputs:outlow = 0.7
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 191
+        }
+    }
+
+    def "MI_yucca" (
+        active = true
+        references = @../Materials/M_plants.usda@</Root/yucca/M_yucca>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Clamp_1"
+        {
+            float2 ui:nodegraph:node:size = (103, 145)
+        }
+
+        over "Combine3_1"
+        {
+            float2 ui:nodegraph:node:size = (157, 54)
+        }
+
+        over "Separate4_1"
+        {
+            float2 ui:nodegraph:node:size = (128, 163)
+        }
+
+        over "MaterialXPreviewSurface" (
+            references = None
+        )
+        {
+            float inputs:clearcoatRoughness = 0.35
+            color3f inputs:diffuseColor.connect = </Root/MI_yucca/Mix_1.outputs:out>
+            color3f inputs:emissiveColor.connect = </Root/MI_yucca/Mix_2.outputs:out>
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 6339
+        }
+
+        over "Clamp_2" (
+            references = None
+        )
+        {
+            float inputs:low = 0
+            float2 ui:nodegraph:node:pos = (396.08826, 400.83444)
+            float2 ui:nodegraph:node:size = (107, 145)
+            int ui:nodegraph:node:stackingOrder = 6733
+        }
+
+        over "Separate3_2" (
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:pos = (626.8076, 376.46216)
+            float2 ui:nodegraph:node:size = (130.5, 145)
+            int ui:nodegraph:node:stackingOrder = 6737
+        }
+
+        over "Constant_4"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Normal"
+        {
+            float2 ui:nodegraph:node:size = (128.5, 40)
+        }
+
+        over "TransformVector"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 145)
+        }
+
+        over "SmoothStep"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "ViewDirection"
+        {
+            float2 ui:nodegraph:node:size = (210, 53)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Normalize_1"
+        {
+            float2 ui:nodegraph:node:size = (161, 53)
+        }
+
+        over "Constant_3"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Mask" (
+            references = None
+        )
+        {
+            float inputs:inhigh = 0.8
+            float inputs:inlow = 0.5
+            float inputs:outhigh = 0.8
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 6725
+        }
+
+        over "DotProduct"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "TransformNormal"
+        {
+            float2 ui:nodegraph:node:size = (158, 145)
+        }
+
+        over "Normalize"
+        {
+            float2 ui:nodegraph:node:size = (149, 40)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Image_5"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Separate3_1"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Constant_5"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Screen"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Mix_3"
+        {
+            float2 ui:nodegraph:node:pos = (-256.12683, -37.71299)
+            float2 ui:nodegraph:node:size = (109, 145)
+            int ui:nodegraph:node:stackingOrder = 6741
+        }
+
+        over "Constant_2"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 53)
+        }
+
+        over "Multiply_5" (
+            references = None
+        )
+        {
+            float inputs:in2 = 6
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 6742
+        }
+
+        over "Multiply_6"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "BC_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image" (
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:pos = (303.219, 682.2311)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 6735
+        }
+
+        over "E"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "N"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "AO"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_4"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Range_1"
+        {
+            float2 ui:nodegraph:node:size = (103.5, 217)
+        }
+
+        def Shader "Convert" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_convert_float_color3"
+            float inputs:in.connect = </Root/MI_yucca/Separate3.outputs:outr>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-44.134377, -223.30675)
+            int ui:nodegraph:node:stackingOrder = 6724
+        }
+
+        over "Mix_2" (
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:pos = (216.01378, -43.571068)
+            int ui:nodegraph:node:stackingOrder = 6727
+        }
+
+        over "Range_2" (
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:pos = (101.617226, 171.4216)
+            int ui:nodegraph:node:stackingOrder = 6739
+        }
+    }
+}
+

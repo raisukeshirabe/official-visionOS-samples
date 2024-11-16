@@ -1,0 +1,324 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.14)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Root", "Cube_1"]
+
+def Xform "Root"
+{
+    reorder nameChildren = ["env", "M_env", "concrete", "island"]
+    def Cube "concrete" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["M_concrete", "Cube_1"]
+        rel material:binding = </Root/concrete/M_concrete> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.64651316, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_concrete"
+        {
+            reorder nameChildren = ["DefaultSurfaceShader", "Multiply_1", "Constant_1", "Multiply", "Constant", "Normal", "PreviewSurface_1", "Roughness", "BaseColor", "Saturate"]
+            token outputs:mtlx:surface.connect = </Root/concrete/M_concrete/PreviewSurface_1.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = </Root/concrete/M_concrete/DefaultSurfaceShader.outputs:surface>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (858.39984, 70.644844)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 172
+
+            def Shader "DefaultSurfaceShader" (
+                active = false
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+
+            def Shader "Constant_1"
+            {
+                uniform token info:id = "ND_constant_vector2"
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-804.8544, 159.6058)
+                float2 ui:nodegraph:node:size = (154, 53)
+                int ui:nodegraph:node:stackingOrder = 188
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_color3"
+                color3f inputs:in1.connect = </Root/concrete/M_concrete/Saturate.outputs:out>
+                color3f inputs:in2.connect = </Root/concrete/M_concrete/Constant.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (96.19043, -5.3157425)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 172
+            }
+
+            def Shader "Constant"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (0.4073893, 0.4073893, 0.4073893) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-112.53516, 84.73047)
+                float2 ui:nodegraph:node:size = (151, 53)
+                int ui:nodegraph:node:stackingOrder = 170
+            }
+
+            def Shader "PreviewSurface_1"
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/concrete/M_concrete/Multiply.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic
+                float3 inputs:normal.connect = </Root/concrete/M_concrete/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/concrete/M_concrete/Range.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (396.3909, 130.70703)
+                float2 ui:nodegraph:node:size = (161, 307)
+                int ui:nodegraph:node:stackingOrder = 170
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "Saturate"
+            {
+                uniform token info:id = "ND_saturate_color3"
+                color3f inputs:in.connect = </Root/concrete/M_concrete/BaseColor.outputs:out>
+                color3f inputs:lumacoeffs
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-89.17929, -113.65561)
+                float2 ui:nodegraph:node:size = (138.5, 145)
+                int ui:nodegraph:node:stackingOrder = 173
+            }
+
+            def Shader "BaseColor"
+            {
+                uniform token info:id = "ND_tiledimage_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/environment/textures/T_dirt_BaseColor.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord
+                float2 inputs:uvoffset
+                float2 inputs:uvtiling = (3, 3)
+                float2 inputs:uvtiling.connect = </Root/concrete/M_concrete/Constant_1.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-534.1765, -310.34473)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 198
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:realworldtilesize", "inputs:texcoord"]
+            }
+
+            def Shader "Normal"
+            {
+                uniform token info:id = "ND_tiledimage_vector3"
+                float3 inputs:default
+                asset inputs:file = @../Assets/environment/textures/T_dirt_Normal.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord
+                float2 inputs:uvoffset
+                float2 inputs:uvtiling.connect = </Root/concrete/M_concrete/Constant_1.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-521.59076, 172.987)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 197
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                prepend float3 inputs:in.connect = </Root/concrete/M_concrete/Normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (50.440945, 266.1877)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 180
+            }
+
+            def Shader "Roughness"
+            {
+                uniform token info:id = "ND_tiledimage_float"
+                float inputs:default
+                asset inputs:file = @../Assets/environment/textures/T_dirt_Roughness.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord
+                float2 inputs:uvoffset
+                float2 inputs:uvtiling.connect = </Root/concrete/M_concrete/Constant_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-279.43808, 604.58514)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 193
+            }
+
+            def Shader "Range"
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp
+                float inputs:in.connect = </Root/concrete/M_concrete/Roughness.outputs:out>
+                float inputs:outhigh
+                float inputs:outlow
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (151.65002, 460.2172)
+                float2 ui:nodegraph:node:size = (98, 217)
+                int ui:nodegraph:node:stackingOrder = 184
+            }
+        }
+    }
+
+    def Cube "env" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/M_env> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.21344447, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Material "M_env"
+    {
+        reorder nameChildren = ["PreviewSurface", "BC", "R", "Range", "M", "AO", "N", "Remap", "Constant", "Multiply"]
+        prepend token outputs:mtlx:surface.connect = </Root/M_env/PreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1076.3324, 109.426476)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 148
+
+        def Shader "PreviewSurface"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Root/M_env/Multiply.outputs:out>
+            color3f inputs:emissiveColor
+            float inputs:ior
+            float3 inputs:normal.connect = </Root/M_env/Remap.outputs:out>
+            float inputs:occlusion
+            float inputs:opacity = 2.3131032
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/M_env/Range.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (851.3324, 109.426476)
+            float2 ui:nodegraph:node:size = (159.5, 307)
+            int ui:nodegraph:node:stackingOrder = 152
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "Range"
+        {
+            uniform token info:id = "ND_range_float"
+            bool inputs:doclamp
+            float inputs:in.connect = </Root/M_env/R.outputs:out>
+            float inputs:outhigh
+            float inputs:outlow
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-299.14062, 242.4961)
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 12
+        }
+
+        def Shader "Remap"
+        {
+            uniform token info:id = "ND_remap_vector3FA"
+            float3 inputs:in.connect = </Root/M_env/N.outputs:out>
+            float inputs:outlow = -1
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (368.89233, -164.73293)
+            float2 ui:nodegraph:node:size = (94, 181)
+            int ui:nodegraph:node:stackingOrder = 88
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:outlow"]
+        }
+
+        def Shader "Constant"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (1, 1, 1) (
+                colorSpace = "srgb_displayp3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-81.18207, -171.42311)
+            float2 ui:nodegraph:node:size = (151, 53)
+            int ui:nodegraph:node:stackingOrder = 67
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_color3"
+            color3f inputs:in1.connect = </Root/M_env/BC.outputs:out>
+            color3f inputs:in2.connect = </Root/M_env/Constant.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (103.26635, -127.35976)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 64
+        }
+
+        def Shader "BC"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @../Assets/environment/textures/T_islandTop_BaseColor.jpg@
+            string inputs:filtertype
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-529.2073, -169.92943)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 82
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord"]
+        }
+
+        def Shader "N"
+        {
+            uniform token info:id = "ND_image_vector3"
+            asset inputs:file = @../Assets/environment/textures/T_islandTop_Normal.jpg@
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-150.9096, -446.25146)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 150
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord"]
+        }
+
+        def Shader "R"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/environment/textures/T_islandTop_Roughness.jpg@
+            string inputs:filtertype
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-540.4883, 147.7461)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 91
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+    }
+}
+

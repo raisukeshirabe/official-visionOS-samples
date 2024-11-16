@@ -1,0 +1,599 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["head2", "MI_mesh_H2", "MI_rainbow_H2", "MI_plastic_H2", "MI_F", "MI_metal_H2", "MI_lights"]
+    def "MI_metal_H2" (
+        active = true
+        references = @../Materials/M_metal.usda@</Root/H2/M_metal_H2>
+    )
+    {
+        int inputs:mat_switch = 3 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-374.61594, -125.82774)
+                    float2 sizeInSubgraph = (140, 53)
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Switch"
+        {
+            int inputs:which.connect = </Root/MI_metal_H2.inputs:mat_switch>
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "roughness"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "pink"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "orange"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "green"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "blue"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "normal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "ao"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "mat_switch" (
+            active = false
+        )
+        {
+            float2 ui:nodegraph:node:size = (157, 53)
+            int ui:nodegraph:node:stackingOrder = 938
+        }
+    }
+
+    def "MI_lights" (
+        active = true
+        references = @../Materials/M_lights.usda@</Root/Cube/M_light>
+    )
+    {
+        int inputs:light_switch (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1023.02606, 160.76202)
+                    float2 sizeInSubgraph = (143.5, 53)
+                    int stackingOrderInSubgraph = 1054
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Switch_2"
+        {
+            float2 ui:nodegraph:node:size = (110, 289)
+        }
+
+        over "RB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "OB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "PB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "light_switch"
+        {
+            float2 ui:nodegraph:node:size = (160.5, 53)
+        }
+    }
+
+    def "head2" (
+        active = true
+        references = @../Assets/Robot/mesh/head2.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "head2_grp"
+        {
+            over "light_grp"
+            {
+                over "rims"
+                {
+                    over "rims_geometry" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_lights> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+
+                over "connector"
+                {
+                    over "connector_geometry" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_lights> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+
+                over "ears"
+                {
+                    over "ears_geometry" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_lights> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+            }
+
+            over "base" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_plastic_H2> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+
+                over "base_geometry" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/MI_rainbow_H2> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+
+                    def RealityKitCustomComponent "BOTanistAssets_HeadMaterialComponent"
+                    {
+                        uniform token info:id = "BOTanistAssets.HeadMaterialComponent"
+                    }
+                }
+            }
+
+            over "face"
+            {
+                over "face_geometry" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/MI_face_H2> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+
+                    def RealityKitCustomComponent "BOTanistAssets_FaceMaterialComponent"
+                    {
+                        uniform token info:id = "BOTanistAssets.FaceMaterialComponent"
+                    }
+                }
+            }
+
+            over "head_grp"
+            {
+                over "base"
+                {
+                    over "base_geometry" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_H2> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        def RealityKitCustomComponent "BOTanistAssets_HeadMaterialComponent"
+                        {
+                            uniform token info:id = "BOTanistAssets.HeadMaterialComponent"
+                        }
+                    }
+                }
+
+                over "L_ear_panel"
+                {
+                    over "L_ear_panel_geometry" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_H2> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        def RealityKitCustomComponent "BOTanistAssets_HeadMaterialComponent"
+                        {
+                            uniform token info:id = "BOTanistAssets.HeadMaterialComponent"
+                        }
+                    }
+                }
+
+                over "R_ear_panel"
+                {
+                    over "R_ear_panel_geometry" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_H2> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        def RealityKitCustomComponent "BOTanistAssets_HeadMaterialComponent"
+                        {
+                            uniform token info:id = "BOTanistAssets.HeadMaterialComponent"
+                        }
+                    }
+                }
+
+                over "head_panel"
+                {
+                    over "head_panel_geometry" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/MI_plastic_H2> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        def RealityKitCustomComponent "BOTanistAssets_HeadMaterialComponent"
+                        {
+                            uniform token info:id = "BOTanistAssets.HeadMaterialComponent"
+                        }
+                    }
+                }
+            }
+        }
+
+        over "face" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/M_Face> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "head_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_plastic_H2> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "light_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_lights> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (67.58933, 53.731827, 49.549717)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0, 117.22294, -4.0489197)
+                }
+            }
+        }
+    }
+
+    def "MI_mesh_H2" (
+        active = true
+        references = @../Materials/M_mesh.usda@</Root/H2/M_mesh_H2>
+    )
+    {
+        int inputs:mat_switch = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-721.3282, -118.11972)
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Switch"
+        {
+            int inputs:which.connect = </Root/MI_mesh_H2.inputs:mat_switch>
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "mat_switch" (
+            active = false
+        )
+        {
+            float2 ui:nodegraph:node:size = (157, 53)
+            int ui:nodegraph:node:stackingOrder = 1126
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "ao"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "orange"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "yellow"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "black"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "grey"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "normal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "roughness"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "MI_rainbow_H2" (
+        active = true
+        references = @../Materials/M_rainbow.usda@</Root/H2/M_rainbow_H2>
+    )
+    {
+        int inputs:mat_switch = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-953.7186, -49.04925)
+                    float2 sizeInSubgraph = (140, 53)
+                    int stackingOrderInSubgraph = 1290
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Switch"
+        {
+            int inputs:which.connect = </Root/MI_rainbow_H2.inputs:mat_switch>
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "mat_switch" (
+            active = false
+        )
+        {
+            float2 ui:nodegraph:node:size = (157, 53)
+            int ui:nodegraph:node:stackingOrder = 1289
+        }
+
+        over "red"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "rose"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "beige"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "black"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "normal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "roughness"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "ao"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "MI_plastic_H2" (
+        active = true
+        references = @../Materials/M_plastic.usda@</Root/H2/M_plastic_H2>
+    )
+    {
+        int inputs:mat_switch (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-374.61594, -125.82774)
+                    float2 sizeInSubgraph = (140, 53)
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Switch"
+        {
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "pink"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "orange"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "green"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "blue"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "normal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "roughness"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "ao"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "opacity"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "M_Face" (
+        active = true
+        prepend references = @../Materials/M_face.usda@</Root/F/M_Face>
+    )
+    {
+    }
+}
+

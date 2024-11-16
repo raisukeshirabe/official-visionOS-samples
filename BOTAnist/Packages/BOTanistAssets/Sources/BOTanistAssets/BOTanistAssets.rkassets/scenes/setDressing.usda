@@ -1,0 +1,1572 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.14)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["bottomSetDressing", "M_sidePlant", "foliageSetDressing", "MI_poppy", "MI_coffeeBerry", "M_bigPlant", "MI_yucca", "MI_tallPlant"]
+    def "MI_tallPlant" (
+        active = true
+        references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Image_2"
+        {
+            asset inputs:file = @../Assets/plants/textures/T_plantTall_Normal.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 1647
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Image_3"
+        {
+            asset inputs:file = @../Assets/plants/textures/T_plantTall_AmbientOcclusion.jpg@
+            float2 ui:nodegraph:node:pos = (112.11246, 282.78735)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 1650
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:default", "inputs:vaddressmode"]
+        }
+
+        over "Multiply_1"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant"
+        {
+            color3f inputs:value = (1, 0.5772649, 0.56420714) (
+                colorSpace = "srgb_displayp3"
+            )
+            float2 ui:nodegraph:node:size = (151, 53)
+            int ui:nodegraph:node:stackingOrder = 1653
+        }
+
+        over "In"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "mask"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_4"
+        {
+            asset inputs:file = @../Assets/plants/textures/T_plantTall_BaseColor.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 1645
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Constant_2"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 53)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Multiply_2"
+        {
+            float inputs:in2 = 3
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1655
+        }
+
+        over "Image"
+        {
+            asset inputs:file = @../Assets/plants/textures/T_plantTall_Emissive.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 1651
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord"]
+        }
+
+        over "Multiply_4"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Image_1"
+        {
+            asset inputs:file = @../Assets/plants/textures/T_plantTall_Roughness.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 1646
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Remap_1"
+        {
+            float2 ui:nodegraph:node:size = (105.5, 181)
+        }
+    }
+
+    def "foliageSetDressing" (
+        active = true
+        references = @../Assets/plants/mesh/setDressing/foliageSetDressing.usd@
+    )
+    {
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "foliage_side_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_sidePlant> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "foliage_poppy_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_poppy> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "foliage_coffeeBerry_grp_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_coffeeBerry> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "foliage_tall_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_tallPlant> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "foliage_big_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_bigPlant> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "foliage_end_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_bottomPlant> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "big" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/M_bigPlant> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "coffeeBerry_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_coffeeBerry> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "side" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/M_sidePlant> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+    }
+
+    def "MI_yucca" (
+        active = true
+        references = @../Materials/M_plants.usda@</Root/yucca/M_yucca>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Clamp_1"
+        {
+            float2 ui:nodegraph:node:size = (103, 145)
+        }
+
+        over "Combine3_1"
+        {
+            float2 ui:nodegraph:node:size = (157, 54)
+        }
+
+        over "Separate4_1"
+        {
+            float2 ui:nodegraph:node:size = (128, 163)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Clamp_2"
+        {
+            float2 ui:nodegraph:node:size = (107, 145)
+        }
+
+        over "Separate3_2"
+        {
+            float2 ui:nodegraph:node:size = (130.5, 145)
+        }
+
+        over "Constant_4"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Normal"
+        {
+            float2 ui:nodegraph:node:size = (128.5, 40)
+        }
+
+        over "TransformVector"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 145)
+        }
+
+        over "SmoothStep"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "ViewDirection"
+        {
+            float2 ui:nodegraph:node:size = (210, 53)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Normalize_1"
+        {
+            float2 ui:nodegraph:node:size = (161, 53)
+        }
+
+        over "Constant_3"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Mask"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "DotProduct"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "TransformNormal"
+        {
+            float2 ui:nodegraph:node:size = (158, 145)
+        }
+
+        over "Normalize"
+        {
+            float2 ui:nodegraph:node:size = (149, 40)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Image_5"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Separate3_1"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Constant_5"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Screen"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Mix_3"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Constant_2" (
+            references = None
+        )
+        {
+            color3f inputs:value = (1, 0.45630175, 0.5777656) (
+                colorSpace = "srgb_displayp3"
+            )
+            float2 ui:nodegraph:node:pos = (-1093.48, 118.158394)
+            float2 ui:nodegraph:node:size = (158.5, 53)
+            int ui:nodegraph:node:stackingOrder = 6333
+        }
+
+        over "Multiply_5"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Multiply_6"
+        {
+            float2 ui:nodegraph:node:pos = (-709.2527, 5.861503)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 6332
+        }
+
+        over "BC_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "E" (
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:pos = (-1362.1937, -191.36108)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 6330
+        }
+
+        over "N"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "AO"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_4"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Range_1"
+        {
+            float2 ui:nodegraph:node:size = (103.5, 217)
+        }
+    }
+
+    def "MI_poppy" (
+        active = true
+        references = @../Materials/M_plants.usda@</Root/Poppy/M_poppy>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "AO"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "TransformNormal"
+        {
+            float2 ui:nodegraph:node:size = (158, 145)
+        }
+
+        over "Normalize_1"
+        {
+            float2 ui:nodegraph:node:size = (161, 53)
+        }
+
+        over "TransformVector"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 145)
+        }
+
+        over "Normalize"
+        {
+            float2 ui:nodegraph:node:size = (149, 40)
+        }
+
+        over "Constant_4"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "Mask"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Normal"
+        {
+            float2 ui:nodegraph:node:size = (128.5, 40)
+        }
+
+        over "DotProduct"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "SmoothStep"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Constant_3"
+        {
+            float2 ui:nodegraph:node:size = (158, 53)
+        }
+
+        over "ViewDirection"
+        {
+            float2 ui:nodegraph:node:size = (210, 53)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "BC"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Mix_3"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Clamp_1"
+        {
+            float2 ui:nodegraph:node:size = (103, 145)
+        }
+
+        over "Image_2"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "E"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Constant_2"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 53)
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Multiply_6"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Multiply_5"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Separate3_1"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+    }
+
+    def "MI_coffeeBerry" (
+        active = true
+        references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry>
+    )
+    {
+        over "Mix"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "Constant_3"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "Normalize_1"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "SmoothStep"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "Mask"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "Normalize"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "Separate3"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "Constant_4"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "Normal"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "TransformNormal"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "DotProduct"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "TransformVector"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+
+        over "ViewDirection"
+        {
+            int ui:nodegraph:node:stackingOrder = 6590
+        }
+    }
+
+    def Material "M_bigPlant" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["PreviewSurface", "R", "BC", "Saturate", "Mix_2", "Curve_Mask", "Remap", "Range_1", "AO", "Multiply_5", "Multiply_6", "Clamp", "CC_mask", "Convert", "E_mask_2", "E_mask", "Multiply", "Mix_1", "Separate3_1", "Separate3_2", "N", "Constant_2"]
+        prepend token outputs:mtlx:surface.connect = </Root/M_bigPlant/PreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1551.5875, 130.29623)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 6753
+
+        def Shader "PreviewSurface" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat.connect = </Root/M_bigPlant/Separate3_2.outputs:outr>
+            float inputs:clearcoatRoughness = 0.3
+            color3f inputs:diffuseColor.connect = </Root/M_bigPlant/Mix_2.outputs:out>
+            color3f inputs:emissiveColor.connect = </Root/M_bigPlant/Mix_3.outputs:out>
+            float inputs:ior
+            float inputs:metallic
+            float3 inputs:normal.connect = </Root/M_bigPlant/Remap.outputs:out>
+            float inputs:occlusion
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/M_bigPlant/Range_1.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (1186.4175, 19.642775)
+            int ui:nodegraph:node:stackingOrder = 7066
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:clearcoat"]
+        }
+
+        def Shader "Remap" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Remap>
+        )
+        {
+            uniform token info:id = "ND_remap_vector3FA"
+            float3 inputs:in.connect = </Root/M_bigPlant/N.outputs:out>
+            float2 ui:nodegraph:node:pos = (1761.079, 612.1371)
+            int ui:nodegraph:node:stackingOrder = 6855
+        }
+
+        def Shader "Range_1" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Range_1>
+        )
+        {
+            uniform token info:id = "ND_range_float"
+            float inputs:in.connect = </Root/M_bigPlant/R.outputs:out>
+            float inputs:outlow = 0.25
+            float2 ui:nodegraph:node:pos = (1248.5515, -432.3717)
+            int ui:nodegraph:node:stackingOrder = 6816
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow", "inputs:outhigh"]
+        }
+
+        def Shader "Separate3_2" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Separate3_2>
+        )
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_bigPlant/CC_mask.outputs:out>
+            float outputs:outg
+            float2 ui:nodegraph:node:pos = (639.98566, 493.02914)
+            int ui:nodegraph:node:stackingOrder = 7105
+        }
+
+        def Shader "N" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/N>
+        )
+        {
+            uniform token info:id = "ND_image_vector3"
+            asset inputs:file = @../Assets/plants/textures/T_bigPlant_Normal.jpg@
+            float2 ui:nodegraph:node:pos = (1529.6676, 615.8621)
+            int ui:nodegraph:node:stackingOrder = 6855
+        }
+
+        def Shader "Constant_2" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Constant_2>
+        )
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0.6243354, 0.8334046, 0.88235295) (
+                colorSpace = "srgb_displayp3"
+            )
+            float2 ui:nodegraph:node:pos = (152.48064, -190.95529)
+            int ui:nodegraph:node:stackingOrder = 7074
+        }
+
+        def Shader "R" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Image_4>
+        )
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/plants/textures/T_bigPlant_Roughness.jpg@
+            float2 ui:nodegraph:node:pos = (974.43274, -490.5379)
+            int ui:nodegraph:node:stackingOrder = 6763
+        }
+
+        def Shader "BC" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @../Assets/plants/textures/T_bigPlant_BaseColor.jpg@
+            string inputs:filtertype
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-202.97531, -925.16516)
+            int ui:nodegraph:node:stackingOrder = 6736
+        }
+
+        def Shader "Saturate" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_saturate_color3"
+            float inputs:amount = 3
+            color3f inputs:in.connect = </Root/M_bigPlant/BC.outputs:out>
+            color3f inputs:lumacoeffs
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (175.27615, -828.2838)
+            int ui:nodegraph:node:stackingOrder = 6993
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:lumacoeffs"]
+        }
+
+        def Shader "Mix_2" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_bigPlant/BC.outputs:out>
+            color3f inputs:fg.connect = </Root/M_bigPlant/Multiply.outputs:out>
+            float inputs:mix.connect = </Root/M_bigPlant/Separate3.outputs:outr>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (439.53458, -525.6565)
+            int ui:nodegraph:node:stackingOrder = 6629
+        }
+
+        def Shader "E_mask" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file = @../Assets/plants/textures/T_bigPlant_Emissive.jpg@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-181.50526, -209.73946)
+            int ui:nodegraph:node:stackingOrder = 7042
+        }
+
+        def Shader "Multiply" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_multiply_color3FA"
+            prepend color3f inputs:in1.connect = </Root/M_bigPlant/Saturate.outputs:out>
+            float inputs:in2 = 1.3
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (373.13403, -749.8104)
+            int ui:nodegraph:node:stackingOrder = 6790
+        }
+
+        def Shader "Mix_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_bigPlant/Saturate_1.outputs:out>
+            color3f inputs:fg.connect = </Root/M_bigPlant/Multiply_3.outputs:out>
+            float inputs:mix.connect = </Root/M_bigPlant/Separate3.outputs:outr>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (628.86176, -92.56004)
+            int ui:nodegraph:node:stackingOrder = 7036
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+        }
+
+        def Shader "CC_mask" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Image>
+        )
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @../Assets/plants/textures/T_bigPlant_bulb_mask.jpg@
+            string inputs:filtertype
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:pos = (628.9598, 252.4526)
+            int ui:nodegraph:node:stackingOrder = 7105
+        }
+
+        def Shader "E_mask_2" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file = @../Assets/plants/textures/T_bigPlant_emissive2_mask.jpg@
+            string inputs:filtertype
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-569.2854, -96.44236)
+            int ui:nodegraph:node:stackingOrder = 6997
+        }
+
+        def Shader "Multiply_2" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_multiply_color3FA"
+            color3f inputs:in1.connect = </Root/M_bigPlant/Constant_5.outputs:out>
+            float inputs:in2 = 10
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (637.22003, 32.25512)
+            int ui:nodegraph:node:stackingOrder = 7058
+        }
+
+        def Shader "Normalize" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Normalize>
+        )
+        {
+            uniform token info:id = "ND_normalize_vector3"
+            float3 inputs:in.connect = </Root/M_bigPlant/TransformNormal.outputs:out>
+            float2 ui:nodegraph:node:pos = (-1139.0997, 330.83972)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "DotProduct" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/DotProduct>
+        )
+        {
+            uniform token info:id = "ND_dotproduct_vector3"
+            float3 inputs:in1.connect = </Root/M_bigPlant/Normalize.outputs:out>
+            float3 inputs:in2.connect = </Root/M_bigPlant/Normalize_1.outputs:out>
+            float2 ui:nodegraph:node:pos = (-762.1457, 442.06122)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "TransformNormal" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/TransformNormal>
+        )
+        {
+            uniform token info:id = "ND_transformnormal_vector3"
+            float3 inputs:in.connect = </Root/M_bigPlant/Normal.outputs:out>
+            float2 ui:nodegraph:node:pos = (-1356.9335, 294.9323)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "Mask" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Mask>
+        )
+        {
+            uniform token info:id = "ND_range_float"
+            float inputs:in.connect = </Root/M_bigPlant/SmoothStep.outputs:out>
+            float2 ui:nodegraph:node:pos = (-299.50455, 517.57764)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "TransformVector" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/TransformVector>
+        )
+        {
+            uniform token info:id = "ND_transformvector_vector3"
+            float3 inputs:in.connect = </Root/M_bigPlant/ViewDirection.outputs:out>
+            float2 ui:nodegraph:node:pos = (-1266.9791, 462.6416)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "SmoothStep" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/SmoothStep>
+        )
+        {
+            uniform token info:id = "ND_smoothstep_float"
+            float inputs:in.connect = </Root/M_bigPlant/DotProduct.outputs:out>
+            float2 ui:nodegraph:node:pos = (-546.76825, 446.62878)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "Mix" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Mix>
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_bigPlant/Constant_4.outputs:out>
+            color3f inputs:fg.connect = </Root/M_bigPlant/Constant_3.outputs:out>
+            float inputs:mix.connect = </Root/M_bigPlant/Mask.outputs:out>
+            float2 ui:nodegraph:node:pos = (-41.360752, 279.74384)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "Separate3" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Separate3>
+        )
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_bigPlant/Mix.outputs:out>
+            float2 ui:nodegraph:node:pos = (129.84787, 302.3954)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "ViewDirection" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/ViewDirection>
+        )
+        {
+            uniform token info:id = "ND_realitykit_viewdirection_vector3"
+            float2 ui:nodegraph:node:pos = (-1491.6752, 460.3568)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "Constant_3" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Constant_3>
+        )
+        {
+            uniform token info:id = "ND_constant_color3"
+            float2 ui:nodegraph:node:pos = (-325.67496, 260.37225)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "Normal" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Normal>
+        )
+        {
+            uniform token info:id = "ND_normal_vector3"
+            float2 ui:nodegraph:node:pos = (-1558.2665, 284.33887)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "Normalize_1" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Normalize_1>
+        )
+        {
+            uniform token info:id = "ND_normalize_vector3"
+            float3 inputs:in.connect = </Root/M_bigPlant/TransformVector.outputs:out>
+            float2 ui:nodegraph:node:pos = (-1046.6681, 447.0409)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "Constant_4" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Constant_4>
+        )
+        {
+            uniform token info:id = "ND_constant_color3"
+            float2 ui:nodegraph:node:pos = (-327.96402, 348.84796)
+            int ui:nodegraph:node:stackingOrder = 6992
+        }
+
+        def Shader "Multiply_6" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_multiply_color3"
+            prepend color3f inputs:in1.connect = </Root/M_bigPlant/Constant_2.outputs:out>
+            color3f inputs:in2.connect = </Root/M_bigPlant/Saturate_1.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (314.71317, -178.50433)
+            int ui:nodegraph:node:stackingOrder = 6770
+        }
+
+        def Shader "Multiply_3" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_multiply_color3FA"
+            prepend color3f inputs:in1.connect = </Root/M_bigPlant/Multiply_6.outputs:out>
+            float inputs:in2 = 4.5
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (432.60742, -217.52225)
+            int ui:nodegraph:node:stackingOrder = 7072
+        }
+
+        def Shader "Mix_3" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_bigPlant/Mix_1.outputs:out>
+            color3f inputs:fg = (0.68992186, 0.43955776, 1) (
+                colorSpace = "srgb_displayp3"
+            )
+            color3f inputs:fg.connect = </Root/M_bigPlant/Multiply_2.outputs:out>
+            float inputs:mix.connect = </Root/M_bigPlant/Separate3_1.outputs:outr>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (880.6396, 39.10581)
+            int ui:nodegraph:node:stackingOrder = 7050
+        }
+
+        def Shader "Separate3_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_bigPlant/E_mask_2.outputs:out>
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (142.58086, 76.6993)
+            int ui:nodegraph:node:stackingOrder = 7048
+        }
+
+        def Shader "Constant_5" (
+            references = @../Materials/M_plants.usda@</Root/CoffeeBerry/M_coffeeBerry/Constant_2>
+        )
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0.64005995, 0.26748526, 1) (
+                colorSpace = "srgb_displayp3"
+            )
+            float2 ui:nodegraph:node:pos = (398.25943, -21.888203)
+            int ui:nodegraph:node:stackingOrder = 7073
+        }
+
+        def Shader "Saturate_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_saturate_color3"
+            float inputs:amount = 0
+            color3f inputs:in.connect = </Root/M_bigPlant/E_mask.outputs:out>
+            color3f inputs:lumacoeffs
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (84.42219, -48.337765)
+            int ui:nodegraph:node:stackingOrder = 7071
+        }
+    }
+
+    def "bottomSetDressing" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @../Assets/plants/mesh/setDressing/bottomSetDressing.usd@
+    )
+    {
+        rel material:binding = </Root/MI_poppy> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "mat_poppy" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_poppy> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "mat_yucca" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_yucca> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "mat_coffeeBerry" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_coffeeBerry> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "mtl" (
+            references = None
+        )
+        {
+        }
+
+        over "pasted__mat_yucca" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_yucca> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "mat_poppy1" (
+            references = None
+        )
+        {
+        }
+    }
+
+    def Material "M_sidePlant" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["PreviewSurface", "TransformVector", "Saturate_2", "Separate3", "SmoothStep", "Image_5", "Constant_6", "Normal", "Image", "Image_7", "Constant_1", "TransformNormal", "Mask", "Image_8", "Mix_3", "Mix_1", "Mix_2", "Image_9", "Normalize_1", "Mix", "Convert", "Constant_3", "Remap_3", "R", "Normalize", "DotProduct", "ViewDirection", "Multiply_7", "Multiply_3", "Image_1", "Clamp_1", "Separate3_1", "Range"]
+        prepend token outputs:mtlx:surface.connect = </Root/M_sidePlant/PreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1295.7975, 159.8504)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 8578
+
+        def Shader "PreviewSurface" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat.connect = </Root/M_sidePlant/Separate3_1.outputs:outr>
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Root/M_sidePlant/Mix_3.outputs:out>
+            color3f inputs:emissiveColor.connect = </Root/M_sidePlant/Mix_2.outputs:out>
+            float inputs:ior
+            float inputs:metallic
+            float3 inputs:normal.connect = </Root/M_sidePlant/Remap_3.outputs:out>
+            float inputs:occlusion.connect = </Root/M_sidePlant/Image_9.outputs:out>
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/M_sidePlant/Range.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (933.6756, 61.804363)
+            int ui:nodegraph:node:stackingOrder = 8613
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "TransformVector" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/TransformVector>
+        )
+        {
+            uniform token info:id = "ND_transformvector_vector3"
+            float3 inputs:in.connect = </Root/M_sidePlant/ViewDirection.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-2073.8088, 376.37238)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Saturate_2" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Saturate_2>
+        )
+        {
+            uniform token info:id = "ND_saturate_color3"
+            float inputs:amount = 3
+            color3f inputs:in.connect = </Root/M_sidePlant/Image_7.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-642.62866, -657.03)
+            int ui:nodegraph:node:stackingOrder = 8637
+        }
+
+        def Shader "Separate3" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Separate3>
+        )
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_sidePlant/Mix.outputs:out>
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-557.16455, 443.2763)
+            int ui:nodegraph:node:stackingOrder = 8689
+        }
+
+        def Shader "SmoothStep" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/SmoothStep>
+        )
+        {
+            uniform token info:id = "ND_smoothstep_float"
+            float inputs:in.connect = </Root/M_sidePlant/DotProduct.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1353.5981, 360.35956)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Image_5" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Image_5>
+        )
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @../Assets/plants/textures/T_sidePlant_emissive_mask.jpg@
+            string inputs:filtertype
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-477.71414, 103.51993)
+            int ui:nodegraph:node:stackingOrder = 8618
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "Constant_6" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Constant_6>
+        )
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (1, 1, 1) (
+                colorSpace = "srgb_displayp3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1066.254, 239.09299)
+            int ui:nodegraph:node:stackingOrder = 8631
+        }
+
+        def Shader "Normal" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Normal>
+        )
+        {
+            uniform token info:id = "ND_normal_vector3"
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-2365.0962, 198.06964)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Image" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Image>
+        )
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/plants/textures/sideplant_EmmissiveMask.jpg@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-51.16883, 491.49683)
+            int ui:nodegraph:node:stackingOrder = 8619
+        }
+
+        def Shader "Image_7" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Image_7>
+        )
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @../Assets/plants/textures/T_sidePlant_BaseColor.jpg@
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1176.4006, -421.13892)
+            int ui:nodegraph:node:stackingOrder = 8608
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        def Shader "Constant_1" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Constant_1>
+        )
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (1, 0.4927977, 0.5818914) (
+                colorSpace = "srgb_displayp3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-327.27216, 513.1432)
+            int ui:nodegraph:node:stackingOrder = 8692
+        }
+
+        def Shader "TransformNormal" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/TransformNormal>
+        )
+        {
+            uniform token info:id = "ND_transformnormal_vector3"
+            float3 inputs:in.connect = </Root/M_sidePlant/Normal.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-2163.7634, 208.66309)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Mask" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Mask>
+        )
+        {
+            uniform token info:id = "ND_range_float"
+            float inputs:in.connect = </Root/M_sidePlant/SmoothStep.outputs:out>
+            float inputs:inhigh = 0.8
+            float inputs:inlow = 0.15
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-975.3975, 454.6919)
+            int ui:nodegraph:node:stackingOrder = 8694
+        }
+
+        def Shader "Image_8" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Image_8>
+        )
+        {
+            uniform token info:id = "ND_image_vector3"
+            asset inputs:file = @../Assets/plants/textures/T_sidePlant_Normal.jpg@
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (565.4824, -404.1777)
+            int ui:nodegraph:node:stackingOrder = 8646
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+        }
+
+        def Shader "Mix_3" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Mix_3>
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_sidePlant/Image_7.outputs:out>
+            color3f inputs:fg = (1, 0.8687503, 0) (
+                colorSpace = "srgb_displayp3"
+            )
+            color3f inputs:fg.connect = </Root/M_sidePlant/Saturate_2.outputs:out>
+            float inputs:mix.connect = </Root/M_sidePlant/Image_1.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-107.44707, -570.2351)
+            int ui:nodegraph:node:stackingOrder = 8595
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:bg", "inputs:fg"]
+        }
+
+        def Shader "Mix_1" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Mix_1>
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_sidePlant/Image_7.outputs:out>
+            color3f inputs:fg.connect = </Root/M_sidePlant/Multiply_3.outputs:out>
+            float inputs:mix.connect = </Root/M_sidePlant/Separate3.outputs:outr>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (138.41533, 128.14095)
+            int ui:nodegraph:node:stackingOrder = 8599
+        }
+
+        def Shader "Mix_2" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Mix_2>
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_sidePlant/Multiply_7.outputs:out>
+            color3f inputs:fg.connect = </Root/M_sidePlant/Mix_1.outputs:out>
+            float inputs:mix.connect = </Root/M_sidePlant/Separate3_1.outputs:outr>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (292.92603, 339.7986)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Image_9" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Image_9>
+        )
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @../Assets/plants/textures/T_sidePlant_AmbientOcclusion.jpg@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (774.327, 545.04895)
+            int ui:nodegraph:node:stackingOrder = 8697
+        }
+
+        def Shader "Normalize_1" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Normalize_1>
+        )
+        {
+            uniform token info:id = "ND_normalize_vector3"
+            float3 inputs:in.connect = </Root/M_sidePlant/TransformVector.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-1853.4979, 360.77167)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Mix" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Mix>
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_sidePlant/Constant_6.outputs:out>
+            color3f inputs:fg.connect = </Root/M_sidePlant/Constant_3.outputs:out>
+            float inputs:mix.connect = </Root/M_sidePlant/Mask.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-766.1789, 251.12213)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Convert" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Convert>
+        )
+        {
+            uniform token info:id = "ND_convert_float_color3"
+            float inputs:in.connect = </Root/M_sidePlant/Image_1.outputs:out>
+            float2 ui:nodegraph:node:pos = (23.380611, -151.3492)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Constant_3" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Constant_3>
+        )
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1001.8231, 158.32983)
+            int ui:nodegraph:node:stackingOrder = 8633
+        }
+
+        def Shader "Remap_3" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Remap_3>
+        )
+        {
+            uniform token info:id = "ND_remap_vector3FA"
+            float3 inputs:in.connect = </Root/M_sidePlant/Image_8.outputs:out>
+            float inputs:outhigh
+            float inputs:outlow = -1
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (824.83203, -347.8102)
+            int ui:nodegraph:node:stackingOrder = 8647
+        }
+
+        def Shader "Normalize" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Normalize>
+        )
+        {
+            uniform token info:id = "ND_normalize_vector3"
+            float3 inputs:in.connect = </Root/M_sidePlant/TransformNormal.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-1945.9298, 244.5705)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "DotProduct" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/DotProduct>
+        )
+        {
+            uniform token info:id = "ND_dotproduct_vector3"
+            float3 inputs:in1.connect = </Root/M_sidePlant/Normalize.outputs:out>
+            float3 inputs:in2.connect = </Root/M_sidePlant/Normalize_1.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1568.9755, 355.792)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "ViewDirection" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/ViewDirection>
+        )
+        {
+            uniform token info:id = "ND_realitykit_viewdirection_vector3"
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-2298.505, 374.0876)
+            int ui:nodegraph:node:stackingOrder = 8574
+        }
+
+        def Shader "Multiply_7" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Multiply_7>
+        )
+        {
+            uniform token info:id = "ND_multiply_color3"
+            color3f inputs:in1.connect = </Root/M_sidePlant/Image_5.outputs:out>
+            color3f inputs:in2.connect = </Root/M_sidePlant/Constant_1.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-197.50987, 192.34427)
+            int ui:nodegraph:node:stackingOrder = 8607
+        }
+
+        def Shader "Multiply_3" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Multiply_3>
+        )
+        {
+            uniform token info:id = "ND_multiply_color3FA"
+            color3f inputs:in1.connect = </Root/M_sidePlant/Multiply_7.outputs:out>
+            float inputs:in2 = 12
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-46.43595, 108.60017)
+            int ui:nodegraph:node:stackingOrder = 8696
+        }
+
+        def Shader "Image_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/plants/textures/T_sidePlant_curvature_mask.jpg@
+            string inputs:filtertype
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-452.7496, -310.36127)
+            int ui:nodegraph:node:stackingOrder = 8592
+        }
+
+        def Shader "Clamp_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_clamp_float"
+            float inputs:high = 0.04
+            float inputs:in.connect = </Root/M_sidePlant/Image_1.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-179.86145, -299.7897)
+            int ui:nodegraph:node:stackingOrder = 8594
+        }
+
+        def Shader "Separate3_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_sidePlant/Image_5.outputs:out>
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (187.78708, 508.28336)
+            int ui:nodegraph:node:stackingOrder = 8620
+        }
+
+        def Shader "Range" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_range_float"
+            bool inputs:doclamp
+            float inputs:in.connect = </Root/M_sidePlant/R.outputs:out>
+            float inputs:outhigh = 0.7
+            float inputs:outlow = 0.2
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1293.8904, -225.7452)
+            int ui:nodegraph:node:stackingOrder = 8695
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:outlow"]
+        }
+
+        def Shader "R" (
+            references = @../Materials/M_plants.usda@</Root/SidePlant/M_sidePlant/Image_6>
+        )
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/plants/textures/T_sidePlant_Roughness.jpg@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1100.4802, -435.1454)
+            int ui:nodegraph:node:stackingOrder = 8686
+        }
+    }
+}
+

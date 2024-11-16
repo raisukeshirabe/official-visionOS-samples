@@ -1,0 +1,782 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Cube", "turboCube"]
+    def Cube "Cube" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/Cube/M_light> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+
+        def Material "M_light" (
+            active = true
+            references = None
+        )
+        {
+            int inputs:light_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-1023.02606, 160.76202)
+                        float2 sizeInSubgraph = (143.5, 53)
+                        int stackingOrderInSubgraph = 1054
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/Cube/M_light/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:emissiveColor.connect = </Root/Cube/M_light/Multiply.outputs:out>
+                float inputs:ior
+                float inputs:occlusion
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 960
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "RB" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_tiledimage_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/lights/RB_2.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-869.88165, -108.828125)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 1055
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "Switch_2"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1 = (1, 0.08381789, 0) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in1.connect = None
+                color3f inputs:in2 = (1, 0.8687503, 0) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in2.connect = None
+                color3f inputs:in3 = (0.065773055, 1, 0.0017936085) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in3.connect = None
+                color3f inputs:in4 = (0, 0.72659516, 0.88235295) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in4.connect = None
+                color3f inputs:in5 = (0.6527058, 0, 1) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in5.connect = None
+                color3f inputs:in6 = (0.96701515, 0.9922836, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:in7.connect = </Root/Cube/M_light/RB.outputs:out>
+                color3f inputs:in8.connect = </Root/Cube/M_light/PB.outputs:out>
+                color3f inputs:in9.connect = None
+                color3f inputs:in10
+                int inputs:which.connect = </Root/Cube/M_light.inputs:light_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-314.95337, 56.62745)
+                float2 ui:nodegraph:node:size = (110, 289)
+                int ui:nodegraph:node:stackingOrder = 1053
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in7"]
+            }
+
+            def Shader "PB" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_tiledimage_color3"
+                asset inputs:file = @../Assets/Robot/textures/lights/PB_2.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-934.21844, 389.10947)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 1062
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:realworldimagesize", "inputs:texcoord"]
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_color3FA"
+                color3f inputs:in1.connect = </Root/Cube/M_light/Switch_2.outputs:out>
+                float inputs:in2 = 2
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-103.55422, 141.42679)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 967
+            }
+        }
+    }
+
+    def Cube "turboCube" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/turboCube/M_turbo> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.47263193, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_turbo" (
+            active = true
+            references = None
+        )
+        {
+            int inputs:light_switch = 10 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-706.3766, -374.63354)
+                        float2 sizeInSubgraph = (143.5, 53)
+                        int stackingOrderInSubgraph = 2744
+                    }
+                }
+            )
+            float inputs:Speed = 0.55 (
+                colorSpace = ""
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-1924.2777, 258.64844)
+                        float2 sizeInSubgraph = (107.5, 53)
+                        int stackingOrderInSubgraph = 3822
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/turboCube/M_turbo/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex.connect = </Root/turboCube/M_turbo/GeometryModifier.outputs:out>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1083.8461, 80.51836)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 2624
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+                references = None
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/turboCube/M_turbo/Multiply.outputs:out>
+                color3f inputs:emissiveColor.connect = </Root/turboCube/M_turbo/Multiply.outputs:out>
+                float inputs:ior
+                float inputs:metallic
+                float3 inputs:normal
+                float inputs:occlusion.connect = </Root/turboCube/M_turbo/Difference.outputs:out>
+                float inputs:opacity.connect = </Root/turboCube/M_turbo/Difference.outputs:out>
+                float inputs:opacityThreshold
+                float inputs:roughness = 1
+                float inputs:roughness.connect = None
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (818.09937, -18.930775)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 3835
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "RB" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_tiledimage_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/lights/RB_3.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1324.4777, -456.97543)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 3831
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "Switch_2"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1 = (1, 0.08381789, 0) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in1.connect = None
+                color3f inputs:in2 = (1, 0.8687503, 0) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in2.connect = None
+                color3f inputs:in3 = (0.065773055, 1, 0.0017936085) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in3.connect = None
+                color3f inputs:in4 = (0, 0.72659516, 0.88235295) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in4.connect = None
+                color3f inputs:in5 = (0.6527058, 0, 1) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in5.connect = None
+                color3f inputs:in6 = (0.96701515, 0.9922836, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:in7.connect = </Root/turboCube/M_turbo/RB.outputs:out>
+                color3f inputs:in8.connect = </Root/turboCube/M_turbo/PB.outputs:out>
+                color3f inputs:in9.connect = None
+                color3f inputs:in10
+                int inputs:which.connect = </Root/turboCube/M_turbo.inputs:light_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-533.5332, -551.9398)
+                float2 ui:nodegraph:node:size = (110, 289)
+                int ui:nodegraph:node:stackingOrder = 2744
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in7"]
+            }
+
+            def Shader "PB" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_tiledimage_color3"
+                asset inputs:file = @../Assets/Robot/textures/lights/PB_3.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:uvtiling = (1, 1)
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1087.3711, -634.287)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 3833
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:realworldimagesize", "inputs:texcoord"]
+            }
+
+            def Shader "Ramptb_1"
+            {
+                uniform token info:id = "ND_ramptb_color3"
+                float2 inputs:texcoord
+                color3f inputs:valueb = (0.44306344, 0.44306344, 0.44306344) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:valuet = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-245.93077, -815.5456)
+                float2 ui:nodegraph:node:size = (148.5, 145)
+                int ui:nodegraph:node:stackingOrder = 2744
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "Screen"
+            {
+                uniform token info:id = "ND_screen_color3"
+                color3f inputs:bg.connect = </Root/turboCube/M_turbo/Switch_2.outputs:out>
+                color3f inputs:fg.connect = </Root/turboCube/M_turbo/Contrast_1.outputs:out>
+                float inputs:mix = 0.5
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (66.31699, -536.80334)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 2744
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:mix", "inputs:bg"]
+            }
+
+            def Shader "Contrast_1"
+            {
+                uniform token info:id = "ND_contrast_color3FA"
+                float inputs:amount = 1.55
+                color3f inputs:in.connect = </Root/turboCube/M_turbo/Ramptb_1.outputs:out>
+                float inputs:pivot = 1.5
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-69.98584, -713.1173)
+                float2 ui:nodegraph:node:size = (118.5, 145)
+                int ui:nodegraph:node:stackingOrder = 2744
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_color3FA"
+                prepend color3f inputs:in1.connect = </Root/turboCube/M_turbo/Screen.outputs:out>
+                float inputs:in2 = 2
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (101.57768, -369.74963)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 2744
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in2"]
+            }
+
+            def Shader "Saturate"
+            {
+                uniform token info:id = "ND_saturate_color3"
+                float inputs:amount = 5
+                color3f inputs:in.connect = </Root/turboCube/M_turbo/Switch_2.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-457.80533, -793.93243)
+                float2 ui:nodegraph:node:size = (138.5, 145)
+                int ui:nodegraph:node:stackingOrder = 2744
+            }
+
+            def Shader "Convert"
+            {
+                uniform token info:id = "ND_convert_float_color3"
+                float inputs:in.connect = </Root/turboCube/M_turbo/TiledImage.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-452.94485, 80.979675)
+                float2 ui:nodegraph:node:size = (135.5, 40)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Difference"
+            {
+                uniform token info:id = "ND_difference_float"
+                float inputs:bg.connect = </Root/turboCube/M_turbo/Separate3.outputs:outr>
+                float inputs:fg.connect = </Root/turboCube/M_turbo/Separate3.outputs:outr>
+                float inputs:mix.connect = </Root/turboCube/M_turbo/Separate3_1.outputs:outr>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (40.234604, 113.29154)
+                float2 ui:nodegraph:node:size = (116, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Multiply_1"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/turboCube/M_turbo/Time_2.outputs:out>
+                float inputs:in2.connect = </Root/turboCube/M_turbo/bounce.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (529.22363, 894.3813)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "UV_Offset"
+            {
+                uniform token info:id = "ND_constant_vector2"
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1679.7777, -106.10157)
+                float2 ui:nodegraph:node:size = (154, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Sin"
+            {
+                uniform token info:id = "ND_sin_vector3"
+                float3 inputs:in = (0, 1, 0)
+                float3 inputs:in.connect = </Root/turboCube/M_turbo/Multiply_5.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (943.70636, 787.8602)
+                float2 ui:nodegraph:node:size = (116, 40)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Multiply_4"
+            {
+                uniform token info:id = "ND_multiply_color3"
+                color3f inputs:in1.connect = </Root/turboCube/M_turbo/Contrast.outputs:out>
+                color3f inputs:in2.connect = </Root/turboCube/M_turbo/Convert.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-250.66928, 97.53581)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Constant_2"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (0, 0, 0) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-999.6628, 558.14087)
+                float2 ui:nodegraph:node:size = (158.5, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "GeometryModifier"
+            {
+                uniform token info:id = "ND_realitykit_geometrymodifier_vertexshader"
+                float3 inputs:bitangent
+                color4f inputs:color
+                float3 inputs:modelPositionOffset.connect = </Root/turboCube/M_turbo/Sin.outputs:out>
+                float3 inputs:normal
+                float4 inputs:userAttribute
+                half2 inputs:userAttributeHalf2_0
+                half2 inputs:userAttributeHalf2_1
+                half4 inputs:userAttributeHalf4_0
+                float2 inputs:uv0
+                float2 inputs:uv1
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (643.49347, 467.57394)
+                float2 ui:nodegraph:node:size = (196.5, 325)
+                int ui:nodegraph:node:stackingOrder = 3837
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:modelPositionOffset"]
+            }
+
+            def Shader "Time_2"
+            {
+                uniform token info:id = "ND_time_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (345.06766, 830.97986)
+                float2 ui:nodegraph:node:size = (122.5, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "TransformNormal"
+            {
+                uniform token info:id = "ND_transformnormal_vector3"
+                string inputs:fromspace = "model"
+                float3 inputs:in.connect = </Root/turboCube/M_turbo/Normal.outputs:out>
+                string inputs:tospace = "world"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2699.9329, 458.8482)
+                float2 ui:nodegraph:node:size = (158, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+            }
+
+            def Shader "Separate3_1"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/turboCube/M_turbo/Mix.outputs:out>
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (44.379517, 319.15762)
+                float2 ui:nodegraph:node:size = (127.5, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Normalize"
+            {
+                uniform token info:id = "ND_normalize_vector3"
+                float3 inputs:in.connect = </Root/turboCube/M_turbo/TransformNormal.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2482.099, 494.7556)
+                float2 ui:nodegraph:node:size = (149, 40)
+                int ui:nodegraph:node:stackingOrder = 3822
+            }
+
+            def Shader "Constant_4"
+            {
+                uniform token info:id = "ND_constant_vector3"
+                float3 inputs:value = (0, 1, 0)
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (523.8579, 718.5415)
+                float2 ui:nodegraph:node:size = (155.5, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Mix"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg.connect = </Root/turboCube/M_turbo/Constant_1.outputs:out>
+                color3f inputs:fg.connect = </Root/turboCube/M_turbo/Constant_2.outputs:out>
+                float inputs:mix = 0
+                float inputs:mix.connect = </Root/turboCube/M_turbo/Mask.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-613.4441, 743.3186)
+                float2 ui:nodegraph:node:size = (109, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+            }
+
+            def Shader "Multiply_2"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/turboCube/M_turbo/Time.outputs:out>
+                float inputs:in2.connect = </Root/turboCube/M_turbo.inputs:Speed>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1679.7777, 215.64842)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 3822
+            }
+
+            def Shader "TiledImage"
+            {
+                uniform token info:id = "ND_tiledimage_float"
+                asset inputs:file = @../Assets/Robot/textures/lights/stripes_Mask.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord
+                float2 inputs:uvoffset.connect = </Root/turboCube/M_turbo/Combine2_1.outputs:out>
+                float2 inputs:uvtiling = (1.5, 1.5)
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1037.0231, 97.24629)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Ramptb"
+            {
+                uniform token info:id = "ND_ramptb_color3"
+                float2 inputs:texcoord
+                color3f inputs:valueb = (0, 0, 0) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:valuet = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-710.191, 241.25821)
+                float2 ui:nodegraph:node:size = (148.5, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "Subtract"
+            {
+                uniform token info:id = "ND_subtract_float"
+                float inputs:in1.connect = </Root/turboCube/M_turbo/Floor.outputs:out>
+                float inputs:in2.connect = </Root/turboCube/M_turbo/Multiply_2.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1310.5277, 204.89842)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Separate2"
+            {
+                uniform token info:id = "ND_separate2_vector2"
+                float2 inputs:in.connect = </Root/turboCube/M_turbo/UV_Offset.outputs:out>
+                float outputs:outx
+                float outputs:outy
+                float2 ui:nodegraph:node:pos = (-1472.0277, -106.10157)
+                float2 ui:nodegraph:node:size = (115, 127)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Normalize_1"
+            {
+                uniform token info:id = "ND_normalize_vector3"
+                float3 inputs:in.connect = </Root/turboCube/M_turbo/TransformVector.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2474.8262, 778.51697)
+                float2 ui:nodegraph:node:size = (161, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Mask"
+            {
+                uniform token info:id = "ND_range_float"
+                bool inputs:doclamp = 0
+                bool inputs:doclamp.connect = None
+                float inputs:gamma = 0.2
+                float inputs:gamma.connect = None
+                float inputs:in.connect = </Root/turboCube/M_turbo/SmoothStep.outputs:out>
+                float inputs:inhigh.connect = None
+                float inputs:inlow.connect = None
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1259.0078, 806.70825)
+                float2 ui:nodegraph:node:size = (98, 217)
+                int ui:nodegraph:node:stackingOrder = 3711
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow", "inputs:inlow", "inputs:inlow", "inputs:outhigh", "inputs:gamma", "inputs:inhigh"]
+            }
+
+            def Shader "ViewDirection" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_realitykit_viewdirection_vector3"
+                string inputs:space = "object"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2919.8333, 791.83295)
+                float2 ui:nodegraph:node:size = (210, 53)
+                int ui:nodegraph:node:stackingOrder = 3824
+            }
+
+            def Shader "Multiply_5"
+            {
+                uniform token info:id = "ND_multiply_vector3"
+                float3 inputs:in1.connect = </Root/turboCube/M_turbo/Constant_4.outputs:out>
+                float3 inputs:in2.connect = </Root/turboCube/M_turbo/Convert_2.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (810.8709, 775.1024)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Multiply_3"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/turboCube/M_turbo/Separate2.outputs:outy>
+                float inputs:in2.connect = </Root/turboCube/M_turbo/Constant.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1310.5277, -62.85157)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "SmoothStep"
+            {
+                uniform token info:id = "ND_smoothstep_float"
+                float inputs:high
+                float inputs:in.connect = </Root/turboCube/M_turbo/DotProduct.outputs:out>
+                float inputs:low
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1751.2592, 726.395)
+                float2 ui:nodegraph:node:size = (127.5, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Convert_2"
+            {
+                uniform token info:id = "ND_convert_float_vector3"
+                float inputs:in.connect = </Root/turboCube/M_turbo/Multiply_1.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (646.0405, 890.92596)
+                float2 ui:nodegraph:node:size = (151, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Contrast"
+            {
+                uniform token info:id = "ND_contrast_color3FA"
+                float inputs:amount = 1.5
+                color3f inputs:in.connect = </Root/turboCube/M_turbo/Ramptb.outputs:out>
+                float inputs:pivot
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-482.99335, 230.7159)
+                float2 ui:nodegraph:node:size = (106, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Constant"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 1
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1472.0277, 70.39842)
+                float2 ui:nodegraph:node:size = (141.5, 53)
+                int ui:nodegraph:node:stackingOrder = 3822
+            }
+
+            def Shader "Combine2_1"
+            {
+                uniform token info:id = "ND_combine2_vector2"
+                float inputs:in1.connect = </Root/turboCube/M_turbo/Multiply_3.outputs:out>
+                float inputs:in2.connect = </Root/turboCube/M_turbo/Subtract.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1236.4938, 84.125626)
+                float2 ui:nodegraph:node:size = (157, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "bounce"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 8
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (363.3538, 917.1114)
+                float2 ui:nodegraph:node:size = (131.5, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Constant_1"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (1, 1, 1) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1016.9984, 735.6545)
+                float2 ui:nodegraph:node:size = (155, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Normal"
+            {
+                uniform token info:id = "ND_normal_vector3"
+                string inputs:space = "model"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2919.0652, 481.4076)
+                float2 ui:nodegraph:node:size = (128.5, 40)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Separate3"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/turboCube/M_turbo/Multiply_4.outputs:out>
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-122.96268, 56.28892)
+                float2 ui:nodegraph:node:size = (115.5, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "DotProduct"
+            {
+                uniform token info:id = "ND_dotproduct_vector3"
+                float3 inputs:in1.connect = </Root/turboCube/M_turbo/Normalize.outputs:out>
+                float3 inputs:in2.connect = </Root/turboCube/M_turbo/Normalize_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2141.126, 684.7235)
+                float2 ui:nodegraph:node:size = (153.5, 53)
+                int ui:nodegraph:node:stackingOrder = 3711
+            }
+
+            def Shader "Floor"
+            {
+                uniform token info:id = "ND_floor_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1472.0277, 272.89844)
+                float2 ui:nodegraph:node:size = (118, 40)
+                int ui:nodegraph:node:stackingOrder = 3822
+            }
+
+            def Shader "TransformVector"
+            {
+                uniform token info:id = "ND_transformvector_vector3"
+                string inputs:fromspace = "model"
+                float3 inputs:in.connect = </Root/turboCube/M_turbo/ViewDirection.outputs:out>
+                string inputs:tospace = "world"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-2695.1372, 794.11774)
+                float2 ui:nodegraph:node:size = (153.5, 145)
+                int ui:nodegraph:node:stackingOrder = 3711
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:tospace"]
+            }
+
+            def Shader "Time"
+            {
+                uniform token info:id = "ND_time_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1884.2777, 185.64842)
+                float2 ui:nodegraph:node:size = (122.5, 53)
+                int ui:nodegraph:node:stackingOrder = 3822
+            }
+        }
+    }
+}
+

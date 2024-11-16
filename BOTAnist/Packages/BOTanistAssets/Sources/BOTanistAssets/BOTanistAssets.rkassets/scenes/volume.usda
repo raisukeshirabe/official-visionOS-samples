@@ -1,0 +1,3117 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.14)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    customData = {
+        float3 rotationEulerHint = (0, 4.636048, 0)
+    }
+    references = None
+)
+{
+    reorder nameChildren = ["planter_Hero_2", "planter_Hero", "planter_Hero_1", "lighting", "MI_planters", "MI_islandTop", "MI_islandEdge", "MI_islandBase", "MI_dirt", "MI_lightGreen", "MI_lightPink", "MI_lightBlue", "setDressing", "volume", "EnvironmentLightingConfiguration", "MovementBoundaries"]
+    quatf xformOp:orient = (0.67960757, 0, -0.7335759, 0)
+    float3 xformOp:scale = (0.05, 0.05, 0.05)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Xform "MovementBoundaries" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["Cube", "Cube_1", "Cube_2", "Cube_3", "Cube_4", "Cube_5", "Cube_6", "Cube_7", "Cube_8", "Cube_9", "Cube_10", "Cube_11"]
+        quatf xformOp:orient = (0.99999994, 0, 0, 0)
+        float3 xformOp:scale = (0.8919079, 0.8919079, 0.8919079)
+        float3 xformOp:translate = (0.07995547, 5.2154076e-7, -0.12402132)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "Cube" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            double size = 0
+            quatf xformOp:orient = (0.99999994, 0, 0, 0)
+            float3 xformOp:scale = (0.99999994, 0.99999994, 0.99999994)
+            float3 xformOp:translate = (0.0000018626455, 0, 7.1851897)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_1" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0.5119399, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_1/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.9674182, 0, 0.25318387, 0)
+            float3 xformOp:scale = (0.99999976, 0.9999998, 0.99999976)
+            float3 xformOp:translate = (2.8156776, -1.7053027e-13, 7.061017)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_2" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 1.125856, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_2/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.84569615, 0, 0.5336647, 0)
+            float3 xformOp:scale = (0.99999976, 0.9999998, 0.99999976)
+            float3 xformOp:translate = (7.22085, -1.7053027e-13, 2.5380433)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_3" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 1.5707963, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_3/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.7071067, 0, 0.70710677, 0)
+            float3 xformOp:scale = (0.9999996, 0.99999976, 0.9999996)
+            float3 xformOp:translate = (6.5523086, -5.684342e-14, 0.35280788)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_4" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 1.5707963, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_4/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.7071067, 0, 0.70710677, 0)
+            float3 xformOp:scale = (0.99999934, 0.9999995, 0.99999934)
+            float3 xformOp:translate = (-7.215828, -1.7053027e-13, 0.11922869)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_5" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_5/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.99999964, 0.99999964, 0.99999964)
+            float3 xformOp:translate = (-0.008022563, -1.7053027e-13, -6.831335)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_6" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0.43710765, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_6/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.976212, 0, 0.21681806, 0)
+            float3 xformOp:scale = (0.9999997, 0.9999998, 0.9999997)
+            float3 xformOp:translate = (-3.2047768, -1.7053027e-13, -6.0319257)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_7" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0.9393064, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_7/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.8917253, 0, 0.45257708, 0)
+            float3 xformOp:scale = (0.9999997, 0.9999998, 0.9999997)
+            float3 xformOp:translate = (-5.907276, -1.7053027e-13, -3.6994863)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_8" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, -0.61465096, 0)
+            }
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_8/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.95314604, 0, -0.30251053, 0)
+            float3 xformOp:scale = (0.9999995, 0.9999995, 0.9999995)
+            float3 xformOp:translate = (3.4828608, -5.684342e-14, -5.6268435)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_9" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, -0.61465096, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_9/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.95314604, 0, -0.30251053, 0)
+            float3 xformOp:scale = (0.9999995, 0.9999995, 0.9999995)
+            float3 xformOp:translate = (-3.817044, 0, 6.0009575)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_10" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, -1.0427651, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_10/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.8671314, 0, -0.49807945, 0)
+            float3 xformOp:scale = (0.9999995, 0.9999995, 0.9999995)
+            float3 xformOp:translate = (-6.186323, 0, 3.4510994)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_11" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, -1.0427651, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_11/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.8671314, 0, -0.49807945, 0)
+            float3 xformOp:scale = (0.9999995, 0.9999995, 0.9999995)
+            float3 xformOp:translate = (5.8310776, -1.6707074e-7, -3.0476055)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_12" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0.033559464, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_12/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.9998592, 0, 0.016778942, 0)
+            float3 xformOp:scale = (0.9999996, 0.99999976, 0.99999964)
+            float3 xformOp:translate = (8.989451, -1.7053027e-13, 5.696398)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Cube "Cube_13" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, -1.2955163, 0)
+            }
+            references = None
+        )
+        {
+            rel material:binding = </Root/MovementBoundaries/Cube_13/DefaultMaterial>
+            double size = 0
+            quatf xformOp:orient = (0.79743856, 0, -0.6034001, 0)
+            float3 xformOp:scale = (0.99999976, 0.9999997, 0.9999996)
+            float3 xformOp:translate = (6.705354, -1.7053027e-13, 8.329786)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Collider"
+            {
+                uint group = 1
+                uniform token info:id = "RealityKit.Collider"
+                uint mask = 4294967295
+                token type = "Default"
+
+                def RealityKitStruct "Shape"
+                {
+                    float3 extent = (3, 3, 3)
+                    token shapeType = "Box"
+
+                    def RealityKitStruct "pose"
+                    {
+                    }
+                }
+            }
+        }
+    }
+
+    def RealityKitComponent "EnvironmentLightingConfiguration"
+    {
+        float environmentLightingWeight = 1
+        uniform token info:id = "RealityKit.EnvironmentLightingConfiguration"
+    }
+
+    def "volume" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -2.3213854, 0)
+        }
+        references = @../Assets/environment/mesh/volume.usd@
+    )
+    {
+        quatf xformOp:orient = (-0.39870438, 0, 0.9170795, 0)
+        float3 xformOp:scale = (0.009999998, 0.009999998, 0.009999998)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "lights" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_volumeLight> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "island_grp"
+        {
+            over "islandTop" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_islandTop> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "islandEdge" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_islandEdge> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "islandBottom" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_islandTop> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "islandBase" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_islandBase> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "islandEnd" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_islandEdge> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+        }
+
+        over "pipes" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_pipes> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "dirt" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_dirt> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "floatingIsland" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_floatingIsland> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "planters" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_planters> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "polySurface890"
+        {
+            quatf xformOp:orient = (0.86669225, 0, 0.4988432, 0)
+            float3 xformOp:scale = (1.1121994, 1.1121994, 1.1121994)
+            double3 xformOp:translate = (-11.818851470947266, 6.464531421661377, 1.4600920677185059)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        over "group27"
+        {
+            quatf xformOp:orient = (0.97650146, 0, -0.21551064, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        over "group19"
+        {
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        over "polySurface876" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_foliageYucca> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "base" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_islandBase> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+
+            over "mat_islandBase1" (
+                references = None
+            )
+            {
+            }
+        }
+
+        over "top" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_islandTop> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+
+            over "mat_islandTop" (
+                references = None
+            )
+            {
+            }
+        }
+
+        over "edge" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_islandEdge> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "mtl"
+        {
+            over "mat_glass" (
+                references = None
+            )
+            {
+                token inputs:frame:stPrimvarName = "st"
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 109.5)
+                float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+                over "T_glass"
+                {
+                    color3f inputs:diffuseColor = (0.18, 0.18, 0.54538953) (
+                        colorSpace = "lin_srgb"
+                    )
+                    color3f inputs:diffuseColor.connect = None
+                    color3f inputs:emissiveColor = (0.5155631, 0.6469188, 0.73631334) (
+                        colorSpace = "srgb_displayp3"
+                    )
+                    float inputs:ior = 1.56
+                    float inputs:metallic = 0.1
+                    float inputs:metallic.connect = None
+                    float inputs:roughness = 0
+                }
+
+                def Shader "diffuseColor"
+                {
+                    uniform token info:id = "UsdUVTexture"
+                    asset inputs:file = @../Assets/environment/textures/T_glass_BaseColor.jpg@
+                    float2 inputs:st.connect = </Root/volume/mtl/mat_glass/diffuseColor/TexCoordReader.outputs:result>
+                    color3f outputs:rgb
+
+                    def Shader "TexCoordReader"
+                    {
+                        uniform token info:id = "UsdPrimvarReader_float2"
+                        token inputs:varname.connect = </Root/volume/mtl/mat_glass/T_glass.inputs:frame:stPrimvarName>
+                        float2 outputs:result
+                    }
+                }
+
+                def Shader "roughness"
+                {
+                    uniform token info:id = "UsdUVTexture"
+                    asset inputs:file = @../Assets/environment/textures/glass3_Roughness.jpg@
+                    float2 inputs:st.connect = </Root/volume/mtl/mat_glass/roughness/TexCoordReader.outputs:result>
+                    float outputs:r
+
+                    def Shader "TexCoordReader"
+                    {
+                        uniform token info:id = "UsdPrimvarReader_float2"
+                        token inputs:varname.connect = </Root/volume/mtl/mat_glass/T_glass.inputs:frame:stPrimvarName>
+                        float2 outputs:result
+                    }
+                }
+
+                def Shader "metallic"
+                {
+                    uniform token info:id = "UsdUVTexture"
+                    asset inputs:file = @../Assets/environment/textures/glass3_Metalness.jpg@
+                    float2 inputs:st.connect = </Root/volume/mtl/mat_glass/metallic/TexCoordReader.outputs:result>
+                    float outputs:r
+
+                    def Shader "TexCoordReader"
+                    {
+                        uniform token info:id = "UsdPrimvarReader_float2"
+                        token inputs:varname.connect = </Root/volume/mtl/mat_glass/T_glass.inputs:frame:stPrimvarName>
+                        float2 outputs:result
+                    }
+                }
+
+                def Shader "emissiveColor"
+                {
+                    uniform token info:id = "UsdUVTexture"
+                    asset inputs:file = @../Assets/environment/textures/glass3_Emissive.jpg@
+                    float2 inputs:st.connect = </Root/volume/mtl/mat_glass/emissiveColor/TexCoordReader.outputs:result>
+                    color3f outputs:rgb
+
+                    def Shader "TexCoordReader"
+                    {
+                        uniform token info:id = "UsdPrimvarReader_float2"
+                        token inputs:varname.connect = </Root/volume/mtl/mat_glass/T_glass.inputs:frame:stPrimvarName>
+                        float2 outputs:result
+                    }
+                }
+            }
+        }
+
+        over "lights_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+
+            over "heroPlanter_rim1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_heroPlanter1_light> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "bottom_rim_2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightBlue> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "bottom_rim_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightBlue> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "bottom_light" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightBlue> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "heroPlanter_rim_2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightGreen> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "heroPlanter_rim_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightPink> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "heroPlanter_rim_3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightBlue> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+        }
+
+        over "top_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_islandTop> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "edge_grp_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_islandEdge> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "base_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_islandBase> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "planters_grp_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_planters> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "dirt_grp_low" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/MI_dirt> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "lights_grp_low"
+        {
+            over "bottomLightRim_1_low" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightGreen> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "bottomLightRim_2_low" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightPink> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "bottomLight_low" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightBlue> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "heroPlanter_rim1_low" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightGreen> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "heroPlanter_rim3_low" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightPink> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            over "heroPlanter_rim2_low" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_lightBlue> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+        }
+
+        over "dirt_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+
+            over "dirt_side" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = None
+            )
+            {
+                rel material:binding = </Root/MI_dirt> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+            }
+
+            over "dirt_end" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = None
+            )
+            {
+                rel material:binding = </Root/MI_dirt_1> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+                float3 xformOp:translate = (0, 14.003367, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            over "dirt_big" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = None
+            )
+            {
+                rel material:binding = </Root/MI_dirt> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+            }
+
+            over "dirt_coffeeBerry_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = None
+            )
+            {
+                rel material:binding = </Root/MI_dirt> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+            }
+
+            over "dirt_coffeeBerry_2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_dirt> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+            }
+
+            over "dirt_coffeeBerry_3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_dirt> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+            }
+
+            over "dirt_hero_3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_dirt> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+            }
+
+            over "dirt_hero_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_dirt> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+            }
+
+            over "dirt_hero_2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/MI_dirt> (
+                    bindMaterialAs = "strongerThanDescendants"
+                )
+            }
+        }
+
+        over "edge_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_islandEdge> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+
+            over "edge_main" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+
+        over "planters_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/MI_planters> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "glass" (
+            references = None
+        )
+        {
+        }
+    }
+
+    def "MI_planters" (
+        active = true
+        references = @../Materials/M_environment.usda@</Root/M_env>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Image_1"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_Roughness.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 77
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        over "Range" (
+            references = None
+        )
+        {
+            float inputs:outlow = 0.3
+            float2 ui:nodegraph:node:pos = (231.46147, 260.00787)
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 217
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow", "inputs:outlow"]
+        }
+
+        over "Image_2"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_Metalness.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 79
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:texcoord"]
+        }
+
+        over "PreviewSurface"
+        {
+            color3f inputs:diffuseColor.connect = </Root/MI_planters/Mix.outputs:out>
+            float inputs:metallic.connect = </Root/MI_planters/Image_6.outputs:out>
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Image_3"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_AmbientOcclusion.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 80
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+        }
+
+        over "Image_4"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_Normal.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 78
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:pos = (790.301, -292.4311)
+            float2 ui:nodegraph:node:size = (94, 181)
+            int ui:nodegraph:node:stackingOrder = 145
+        }
+
+        over "Multiply" (
+            active = false
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:pos = (-120.650276, -326.0184)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 170
+        }
+
+        over "Constant" (
+            references = None
+        )
+        {
+            color3f inputs:value = (0.5632544, 0.6865915, 0.7397905) (
+                colorSpace = "srgb_displayp3"
+            )
+            float2 ui:nodegraph:node:pos = (-222.93211, -459.28308)
+            float2 ui:nodegraph:node:size = (151, 53)
+            int ui:nodegraph:node:stackingOrder = 178
+        }
+
+        over "Image"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_BaseColor.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 76
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:file"]
+        }
+
+        over "Contrast"
+        {
+            float2 ui:nodegraph:node:size = (106, 145)
+        }
+
+        over "BC" (
+            references = None
+        )
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_BaseColor.jpg@
+            float2 ui:nodegraph:node:pos = (-640.7087, -605.889)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 219
+        }
+
+        over "M"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_Metalness.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 95
+        }
+
+        over "N" (
+            references = None
+        )
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_Normal.jpg@
+            float2 ui:nodegraph:node:pos = (474.24524, -451.1743)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 145
+        }
+
+        over "R"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_Roughness.jpg@
+            float2 ui:nodegraph:node:pos = (-9.886182, 165.25787)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 217
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord"]
+        }
+
+        over "AO"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_planters_AmbientOcclusion.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 97
+        }
+
+        def Shader "Mix" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/MI_planters/BC.outputs:out>
+            color3f inputs:fg.connect = </Root/MI_planters/Constant.outputs:out>
+            float inputs:mix.connect = </Root/MI_planters/Image_5.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (90.20627, -353.30057)
+            int ui:nodegraph:node:stackingOrder = 157
+        }
+
+        def Shader "Image_5" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/environment/textures/T_planters_circle_mask.jpg@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-577.6433, -159.86795)
+            int ui:nodegraph:node:stackingOrder = 167
+        }
+
+        def Shader "Image_6"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/environment/textures/T_planters_Metalness.jpg@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (576.7292, 333.21994)
+            int ui:nodegraph:node:stackingOrder = 220
+        }
+    }
+
+    def "lighting" (
+        active = true
+        references = @lighting.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+
+        over "Lighting" (
+            references = None
+        )
+        {
+            reorder nameChildren = ["BottomLight", "CoffeeBerryLights", "PlantLightGroup", "PlantLightGroup_1", "PlantLightGroup_2", "BigPlanterLights", "DirectionalLight", "SidePlanterLights"]
+            over "BigPlanterLights" (
+                references = None
+            )
+            {
+                over "YellowPointLight1" (
+                    references = None
+                )
+                {
+                    float3 xformOp:translate = (-2.4491353, 2.9200802, -6.604979)
+
+                    over "PointLight"
+                    {
+                        float attenuationRadius = 1
+                        float3 color = (0.37635657, 0.5843479, 0.42590642)
+                        float intensity = 300
+                    }
+                }
+
+                over "YellowPointLight2"
+                {
+                    over "PointLight"
+                    {
+                        float3 color = (0.031987444, 0.6798869, 0.0710367)
+                    }
+                }
+
+                over "YellowPointLight3"
+                {
+                    over "PointLight"
+                    {
+                        float3 color = (0.031987444, 0.6798869, 0.0710367)
+                    }
+                }
+
+                over "YellowPointLight4" (
+                    references = None
+                )
+                {
+                    over "PointLight"
+                    {
+                        float3 color = (0.031987444, 0.6798869, 0.0710367)
+                    }
+                }
+
+                over "YellowSpotLight" (
+                    references = None
+                )
+                {
+                }
+            }
+
+            over "PlantLightGroup" (
+                references = None
+            )
+            {
+                float3 xformOp:translate = (5.0922275, -6.658956e-7, 4.8060203)
+
+                over "PinkPointLight" (
+                    customData = {
+                        float3 rotationEulerHint = (0, -2.7752525e-9, 0)
+                    }
+                    references = None
+                )
+                {
+                    quatf xformOp:orient = (1, 0, -1.3876262e-9, 0)
+                    float3 xformOp:scale = (0.99999994, 0.9999999, 0.9999999)
+                    float3 xformOp:translate = (-0.10108281, 0.64540404, -0.1520982)
+
+                    over "PointLight"
+                    {
+                        float attenuationRadius = 0.06
+                        float intensity = 180
+                    }
+                }
+            }
+
+            over "PlantLightGroup_1" (
+                references = None
+            )
+            {
+                float3 xformOp:translate = (-3.8779836, -5.261972e-7, -0.9795419)
+
+                over "BluePointLight" (
+                    references = None
+                )
+                {
+                    float3 xformOp:translate = (0.49203032, 0.4885774, 0.18993995)
+                }
+            }
+
+            over "PlantLightGroup_2" (
+                references = None
+            )
+            {
+                float3 xformOp:translate = (2.1198726, -5.8207655e-7, -3.2998054)
+
+                over "GreenSpotLight" (
+                    references = None
+                )
+                {
+                }
+
+                over "GreenPointLight" (
+                    references = None
+                )
+                {
+                    float3 xformOp:translate = (0.4611075, 0.48857656, 0.46180725)
+                }
+            }
+
+            over "SidePlanterLights" (
+                references = None
+            )
+            {
+                over "Transform_1" (
+                    references = None
+                )
+                {
+                    float3 xformOp:translate = (-6.6188154, 2.7668726, 1.8590801)
+
+                    over "PointLight"
+                    {
+                        float3 color = (0.9881334, 0.054965407, 0.3654158)
+                    }
+                }
+
+                over "Transform_2" (
+                    references = None
+                )
+                {
+                    float3 xformOp:translate = (-4.7626333, 2.7668548, 4.7051735)
+
+                    over "PointLight"
+                    {
+                        float3 color = (1, 0, 0.3650456)
+                    }
+                }
+            }
+
+            over "DirectionalLight" (
+                references = None
+            )
+            {
+                over "DirectionalLight"
+                {
+                    float intensity = 1000
+
+                    over "Shadow"
+                    {
+                        float maximumDistance = 1
+                    }
+                }
+            }
+
+            def Xform "CoffeeBerryLights" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, -2.176634e-9, 0)
+                float3 xformOp:scale = (0.9999999, 0.9999998, 0.9999999)
+                float3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "CoffeBerryPointLight" (
+                    active = true
+                    references = None
+                )
+                {
+                    quatf xformOp:orient = (1, 0, 3.0194047e-10, 0)
+                    float3 xformOp:scale = (1, 0.99999994, 1)
+                    float3 xformOp:translate = (0.5642152, 2.2516356, 4.416767)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def RealityKitComponent "PointLight"
+                    {
+                        float attenuationRadius = 1
+                        float3 color = (1, 0.48009878, 0.07893954)
+                        uniform token info:id = "RealityKit.PointLight"
+                        float intensity = 200
+                    }
+                }
+            }
+
+            def Xform "BottomLight" (
+                active = true
+                customData = {
+                    float3 rotationEulerHint = (-1.5707964, -4.1748827e-9, -4.073927e-9)
+                }
+                references = None
+            )
+            {
+                quatf xformOp:orient = (0.70710677, -0.70710677, -2.1077735e-9, -4.9884745e-9)
+                float3 xformOp:scale = (0.9999998, 0.9999998, 0.99999976)
+                float3 xformOp:translate = (0.0000017883658, -1.0404364, -0.020752592)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "SpotLight"
+                {
+                    float attenuationRadius = 30
+                    float3 color = (0.10179487, 0.8144318, 0.9832886)
+                    uniform token info:id = "RealityKit.SpotLight"
+                    float intensity = 400
+                    float outerAngle = 150
+
+                    def RealityKitStruct "Shadow"
+                    {
+                    }
+                }
+            }
+        }
+    }
+
+    def "MI_lightGreen" (
+        active = true
+        references = @../Materials/M_lights.usda@</Root/Cube/M_light>
+    )
+    {
+        int inputs:light_switch = 2 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1023.02606, 160.76202)
+                    float2 sizeInSubgraph = (143.5, 53)
+                    int stackingOrderInSubgraph = 1054
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "RB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "PB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "Switch_2"
+        {
+            float2 ui:nodegraph:node:size = (110, 289)
+        }
+    }
+
+    def "MI_lightPink" (
+        active = true
+        references = @../Materials/M_lights.usda@</Root/Cube/M_light>
+    )
+    {
+        int inputs:light_switch = 4 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1023.02606, 160.76202)
+                    float2 sizeInSubgraph = (143.5, 53)
+                    int stackingOrderInSubgraph = 1054
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/MI_lightPink/MaterialXPreviewSurface.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            color3f inputs:emissiveColor.connect = </Root/MI_lightPink/Multiply.outputs:out>
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Multiply"
+        {
+            color3f inputs:in1.connect = </Root/MI_lightPink/Switch_2.outputs:out>
+            float inputs:in2 = 5
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1054
+        }
+
+        over "RB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "PB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "Switch_2"
+        {
+            color3f inputs:in7.connect = </Root/MI_lightPink/PB.outputs:out>
+            color3f inputs:in8.connect = </Root/MI_lightPink/RB.outputs:out>
+            int inputs:which.connect = </Root/MI_lightPink.inputs:light_switch>
+            float2 ui:nodegraph:node:size = (110, 289)
+        }
+    }
+
+    def "MI_lightBlue" (
+        active = true
+        references = @../Materials/M_lights.usda@</Root/Cube/M_light>
+    )
+    {
+        int inputs:light_switch = 3 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1023.02606, 160.76202)
+                    float2 sizeInSubgraph = (143.5, 53)
+                    int stackingOrderInSubgraph = 1054
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/MI_lightBlue/MaterialXPreviewSurface.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            color3f inputs:emissiveColor.connect = </Root/MI_lightBlue/Multiply.outputs:out>
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Multiply"
+        {
+            color3f inputs:in1.connect = </Root/MI_lightBlue/Switch_2.outputs:out>
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "RB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "PB"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "Switch_2"
+        {
+            color3f inputs:in7.connect = </Root/MI_lightBlue/PB.outputs:out>
+            color3f inputs:in8.connect = </Root/MI_lightBlue/RB.outputs:out>
+            int inputs:which.connect = </Root/MI_lightBlue.inputs:light_switch>
+            float2 ui:nodegraph:node:size = (110, 289)
+        }
+    }
+
+    def "MI_dirt" (
+        active = true
+        references = @../Materials/M_environment.usda@</Root/M_env>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Image_1"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_ambientocclusion.jpg@
+            float2 inputs:texcoord.connect = </Root/MI_dirt/Multiply_1.outputs:out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 75
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        over "Range" (
+            references = None
+        )
+        {
+            float inputs:gamma
+            float inputs:inhigh = 0.8
+            float inputs:outhigh = 1
+            float inputs:outlow = 0.34
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 114
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+        }
+
+        over "Image_2"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_metallic.jpg@
+            string inputs:filtertype
+            float2 inputs:texcoord.connect = </Root/MI_dirt/Multiply_1.outputs:out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 74
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+        }
+
+        over "PreviewSurface"
+        {
+            float inputs:occlusion.connect = </Root/MI_dirt/Image_5.outputs:out>
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Image_3"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_ambientocclusion.jpg@
+            float2 inputs:texcoord.connect = </Root/MI_dirt/Multiply_1.outputs:out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 73
+        }
+
+        over "Image_4"
+        {
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_normal.jpg@
+            float2 inputs:texcoord.connect = </Root/MI_dirt/Multiply_1.outputs:out>
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 72
+        }
+
+        over "Remap" (
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:pos = (579.31116, -200.27971)
+            float2 ui:nodegraph:node:size = (94, 181)
+            int ui:nodegraph:node:stackingOrder = 111
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "Image"
+        {
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_basecolor.jpg@
+            float2 inputs:texcoord.connect = </Root/MI_dirt/Multiply_1.outputs:out>
+            string inputs:uaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 71
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode"]
+        }
+
+        over "Contrast"
+        {
+            float2 ui:nodegraph:node:size = (106, 145)
+        }
+
+        over "BC"
+        {
+            color3f inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_BaseColor.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 104
+        }
+
+        over "M"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_Metalness.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 105
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord"]
+        }
+
+        over "N" (
+            references = None
+        )
+        {
+            float3 inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_Normal.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:pos = (252.7828, -323.7136)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 113
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord", "inputs:file", "inputs:default"]
+        }
+
+        over "R"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_Roughness.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 107
+        }
+
+        over "AO"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_AmbientOcclusion.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 108
+        }
+
+        def Shader "Image_5"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/environment/textures/T_dirt_AmbientOcclusion.jpg@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (161.6368, 246.82022)
+            int ui:nodegraph:node:stackingOrder = 149
+        }
+    }
+
+    def "MI_islandTop" (
+        active = true
+        references = @../Materials/M_environment.usda@</Root/M_env>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:pos = (346.80713, 383.8073)
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 180
+        }
+
+        over "PreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "BC"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "M"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:pos = (521.2503, -248.70604)
+            float2 ui:nodegraph:node:size = (94, 181)
+            int ui:nodegraph:node:stackingOrder = 265
+        }
+
+        over "N"
+        {
+            float2 ui:nodegraph:node:pos = (1.4483855, -530.2246)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 265
+        }
+
+        over "R"
+        {
+            float2 ui:nodegraph:node:pos = (105.45946, 289.0573)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 180
+        }
+
+        over "AO" (
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 93
+        }
+    }
+
+    def "MI_islandEdge" (
+        active = true
+        references = @../Materials/M_environment.usda@</Root/M_env>
+    )
+    {
+        token outputs:mtlx:surface.connect = </Root/MI_islandEdge/PreviewSurface.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Range"
+        {
+            float inputs:in.connect = </Root/MI_islandEdge/R.outputs:out>
+            float inputs:outlow = 0.4
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 104
+        }
+
+        over "PreviewSurface"
+        {
+            color3f inputs:diffuseColor.connect = </Root/MI_islandEdge/Multiply.outputs:out>
+            float inputs:metallic.connect = </Root/MI_islandEdge/Image.outputs:out>
+            float3 inputs:normal.connect = </Root/MI_islandEdge/Remap.outputs:out>
+            float inputs:occlusion.connect = </Root/MI_islandEdge/AO.outputs:out>
+            float inputs:roughness.connect = </Root/MI_islandEdge/Range.outputs:out>
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Multiply"
+        {
+            color3f inputs:in1.connect = </Root/MI_islandEdge/BC.outputs:out>
+            color3f inputs:in2.connect = </Root/MI_islandEdge/Constant.outputs:out>
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:pos = (-139.63246, -188.62587)
+            float2 ui:nodegraph:node:size = (151, 53)
+            int ui:nodegraph:node:stackingOrder = 103
+        }
+
+        over "BC"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandEdge_BaseColor.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 95
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord", "inputs:vaddressmode"]
+        }
+
+        over "M"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandEdge_Metalness.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 97
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord"]
+        }
+
+        over "Remap"
+        {
+            float3 inputs:in.connect = </Root/MI_islandEdge/N.outputs:out>
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "N"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandEdge_Normal.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 96
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord", "inputs:file"]
+        }
+
+        over "R"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandEdge_Roughness.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 99
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default"]
+        }
+
+        over "AO"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandEdge_AmbientOcclusion.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 98
+        }
+
+        def Shader "Image"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @../Assets/environment/textures/T_islandEdge_Metalness.jpg@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (490.20517, 223.76933)
+            int ui:nodegraph:node:stackingOrder = 149
+        }
+    }
+
+    def "MI_islandBase" (
+        active = true
+        references = @../Materials/M_environment.usda@</Root/M_env>
+    )
+    {
+        token outputs:mtlx:surface.connect = </Root/MI_islandBase/PreviewSurface.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Range"
+        {
+            float inputs:in.connect = </Root/MI_islandBase/R.outputs:out>
+            float inputs:outlow = 0.2
+            float2 ui:nodegraph:node:pos = (245.92212, 335.86282)
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 175
+        }
+
+        over "PreviewSurface"
+        {
+            color3f inputs:diffuseColor.connect = </Root/MI_islandBase/Multiply.outputs:out>
+            float inputs:metallic.connect = </Root/MI_islandBase/M.outputs:out>
+            float3 inputs:normal.connect = </Root/MI_islandBase/Remap.outputs:out>
+            float inputs:occlusion.connect = </Root/MI_islandBase/AO.outputs:out>
+            float inputs:roughness.connect = </Root/MI_islandBase/Range.outputs:out>
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Multiply"
+        {
+            color3f inputs:in1.connect = </Root/MI_islandBase/BC.outputs:out>
+            color3f inputs:in2.connect = </Root/MI_islandBase/Constant.outputs:out>
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:pos = (-120.61189, -185.83287)
+            float2 ui:nodegraph:node:size = (151, 53)
+            int ui:nodegraph:node:stackingOrder = 109
+        }
+
+        over "BC"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandBase_BaseColor.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 118
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord", "inputs:vaddressmode", "inputs:texcoord", "inputs:texcoord"]
+        }
+
+        over "M"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandBase_Metalness.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 117
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord", "inputs:vaddressmode"]
+        }
+
+        over "Remap"
+        {
+            float3 inputs:in.connect = </Root/MI_islandBase/N.outputs:out>
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "N"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandBase_Normal.jpg@
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 116
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord"]
+        }
+
+        over "R"
+        {
+            asset inputs:file = @../Assets/environment/textures/T_islandBase_Roughness.jpg@
+            float2 ui:nodegraph:node:pos = (4.5744653, 241.11282)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 175
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default", "inputs:default"]
+        }
+
+        over "AO"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_islandBase_AmbientOcclusion.jpg@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 115
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+    }
+
+    def "setDressing" (
+        active = true
+        references = @setDressing.usda@
+    )
+    {
+        quatf xformOp:orient = (0.67960757, 0, 0.7335759, 0)
+        float3 xformOp:scale = (0.9999999, 0.9999998, 0.9999999)
+        float3 xformOp:translate = (0.38504162, 5.587935e-7, 0.81318027)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "bottomSetDressing" (
+            references = None
+        )
+        {
+            float3 xformOp:scale = (0.009, 0.009, 0.009)
+            float3 xformOp:translate = (0.81219536, -0.21146594, -0.26971802)
+
+            over "mat_coffeeBerry" (
+                references = None
+            )
+            {
+            }
+
+            over "mtl"
+            {
+                over "mat_poppy" (
+                    references = None
+                )
+                {
+                    token outputs:mtlx:surface
+                    token outputs:realitykit:vertex
+                }
+
+                over "mat_yucca" (
+                    references = None
+                )
+                {
+                    token outputs:mtlx:surface
+                    token outputs:realitykit:vertex
+                }
+
+                over "mat_coffeeBerry" (
+                    references = None
+                )
+                {
+                    token outputs:mtlx:surface
+                    token outputs:realitykit:vertex
+                }
+            }
+        }
+
+        over "MI_poppy" (
+            references = None
+        )
+        {
+            over "Mix_2" (
+                references = None
+            )
+            {
+                color3f inputs:fg = (0.5297824, 0.9772618, 0.9969724) (
+                    colorSpace = "srgb_displayp3"
+                )
+                int ui:nodegraph:node:stackingOrder = 6572
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:bg", "inputs:bg", "inputs:bg"]
+            }
+
+            over "Multiply_5" (
+                references = None
+            )
+            {
+                color3f inputs:in2 = (0.7040772, 0.99999994, 0.97638804) (
+                    colorSpace = "srgb_displayp3"
+                )
+                int ui:nodegraph:node:stackingOrder = 6571
+            }
+        }
+
+        over "M_bigPlant" (
+            references = None
+        )
+        {
+        }
+
+        over "foliageSetDressing" (
+            references = None
+        )
+        {
+            over "coffeeBerry_grp" (
+                references = None
+            )
+            {
+                over "foliage_coffeBerry_1_low" (
+                    references = None
+                )
+                {
+                    def RealityKitComponent "Collider"
+                    {
+                        uint group = 1
+                        uniform token info:id = "RealityKit.Collider"
+                        uint mask = 4294967295
+                        token type = "Default"
+
+                        def RealityKitStruct "Shape"
+                        {
+                            float3 extent = (90, 111.0921, 90)
+                            token shapeType = "Box"
+
+                            def RealityKitStruct "pose"
+                            {
+                                float3 position = (-294.5583, 77.876434, -127.24288)
+                            }
+                        }
+                    }
+                }
+
+                over "foliage_coffeBerry_2_low" (
+                    references = None
+                )
+                {
+                    def RealityKitComponent "Collider"
+                    {
+                        uint group = 1
+                        uniform token info:id = "RealityKit.Collider"
+                        uint mask = 4294967295
+                        token type = "Default"
+
+                        def RealityKitStruct "Shape"
+                        {
+                            float3 extent = (90, 110.0921, 90)
+                            token shapeType = "Box"
+
+                            def RealityKitStruct "pose"
+                            {
+                                float3 position = (-223.05887, 78.376434, 27.218414)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    def "planter_Hero_1" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.6471374, 0)
+        }
+        references = @planter_Hero.usda@
+    )
+    {
+        quatf xformOp:orient = (0.67960757, 0, 0.7335759, 0)
+        float3 xformOp:scale = (0.9999999, 0.9999998, 0.9999999)
+        float3 xformOp:translate = (-3.554463, 0.0000010617076, -0.70603156)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "coffeeBerry" (
+            references = None
+        )
+        {
+        }
+
+        over "yucca" (
+            active = false
+            references = None
+        )
+        {
+        }
+
+        over "MI_coffeeBerry" (
+            references = None
+        )
+        {
+            token outputs:mtlx:surface.connect = </Root/planter_Hero_1/MI_coffeeBerry/MaterialXPreviewSurface.outputs:out>
+
+            over "MaterialXPreviewSurface"
+            {
+                float inputs:clearcoat.connect = </Root/planter_Hero_1/MI_coffeeBerry/Separate3_2.outputs:outr>
+                color3f inputs:diffuseColor.connect = </Root/planter_Hero_1/MI_coffeeBerry/Mix_1.outputs:out>
+                color3f inputs:emissiveColor.connect = </Root/planter_Hero_1/MI_coffeeBerry/Mix_2.outputs:out>
+                float3 inputs:normal.connect = </Root/planter_Hero_1/MI_coffeeBerry/Remap.outputs:out>
+                float inputs:occlusion.connect = </Root/planter_Hero_1/MI_coffeeBerry/AO.outputs:out>
+                float inputs:roughness.connect = </Root/planter_Hero_1/MI_coffeeBerry/Range_1.outputs:out>
+            }
+
+            over "Clamp_2"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Image.outputs:out>
+            }
+
+            over "Separate3_2"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Clamp_2.outputs:out>
+            }
+
+            over "Remap"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/N.outputs:out>
+            }
+
+            over "Combine3_1"
+            {
+                float inputs:in1.connect = </Root/planter_Hero_1/MI_coffeeBerry/Separate4_1.outputs:outr>
+                float inputs:in2.connect = </Root/planter_Hero_1/MI_coffeeBerry/Separate4_1.outputs:outg>
+                float inputs:in3.connect = </Root/planter_Hero_1/MI_coffeeBerry/Separate4_1.outputs:outb>
+            }
+
+            over "Mix_1"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_coffeeBerry/Combine3_1.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_coffeeBerry/Saturate_1.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_coffeeBerry/Clamp.outputs:out>
+            }
+
+            over "Range"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Separate3_1.outputs:outr>
+            }
+
+            over "Mix_3"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_coffeeBerry/Multiply_6.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_coffeeBerry/Multiply_5.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_coffeeBerry/Clamp_1.outputs:out>
+            }
+
+            over "Mix"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_coffeeBerry/Constant_4.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_coffeeBerry/Constant_3.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_coffeeBerry/Mask.outputs:out>
+            }
+
+            over "Separate3_1"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Image_5.outputs:out>
+            }
+
+            over "Clamp_1"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Separate3.outputs:outr>
+            }
+
+            over "Clamp"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Separate3.outputs:outr>
+            }
+
+            over "Saturate_1"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Combine3_1.outputs:out>
+            }
+
+            over "TransformVector"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/ViewDirection.outputs:out>
+            }
+
+            over "Multiply_5"
+            {
+                color3f inputs:in1.connect = </Root/planter_Hero_1/MI_coffeeBerry/Multiply_6.outputs:out>
+            }
+
+            over "SmoothStep"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/DotProduct.outputs:out>
+            }
+
+            over "Separate3"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Mix.outputs:out>
+            }
+
+            over "Normalize_1"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/TransformVector.outputs:out>
+            }
+
+            over "Mask"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/SmoothStep.outputs:out>
+            }
+
+            over "DotProduct"
+            {
+                float3 inputs:in1.connect = </Root/planter_Hero_1/MI_coffeeBerry/Normalize.outputs:out>
+                float3 inputs:in2.connect = </Root/planter_Hero_1/MI_coffeeBerry/Normalize_1.outputs:out>
+            }
+
+            over "Separate4_1"
+            {
+                color4f inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/BC_1.outputs:out>
+            }
+
+            over "Range_1"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Image_4.outputs:out>
+            }
+
+            over "TransformNormal"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/Normal.outputs:out>
+            }
+
+            over "Multiply_6"
+            {
+                color3f inputs:in1.connect = </Root/planter_Hero_1/MI_coffeeBerry/E.outputs:out>
+                color3f inputs:in2.connect = </Root/planter_Hero_1/MI_coffeeBerry/Constant_2.outputs:out>
+            }
+
+            over "Normalize"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_coffeeBerry/TransformNormal.outputs:out>
+            }
+
+            over "Screen"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_coffeeBerry/Mix_3.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_coffeeBerry/Constant_5.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_coffeeBerry/Range.outputs:out>
+            }
+
+            over "Mix_2" (
+                references = None
+            )
+            {
+                float2 ui:nodegraph:node:pos = (80.39421, 8.466224)
+                int ui:nodegraph:node:stackingOrder = 6733
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:bg", "inputs:bg", "inputs:bg"]
+            }
+
+            over "Range_2" (
+                references = None
+            )
+            {
+                float inputs:outhigh = 0.5
+                int ui:nodegraph:node:stackingOrder = 6732
+            }
+        }
+
+        over "MI_poppy"
+        {
+            token outputs:mtlx:surface.connect = </Root/planter_Hero_1/MI_poppy/MaterialXPreviewSurface.outputs:out>
+
+            over "MaterialXPreviewSurface"
+            {
+                float inputs:clearcoat.connect = </Root/planter_Hero_1/MI_poppy/Separate3_1.outputs:outr>
+                color3f inputs:diffuseColor.connect = </Root/planter_Hero_1/MI_poppy/Mix_1.outputs:out>
+                color3f inputs:emissiveColor.connect = </Root/planter_Hero_1/MI_poppy/Mix_3.outputs:out>
+                float3 inputs:normal.connect = </Root/planter_Hero_1/MI_poppy/Remap.outputs:out>
+                float inputs:occlusion.connect = </Root/planter_Hero_1/MI_poppy/AO.outputs:out>
+                float inputs:roughness.connect = </Root/planter_Hero_1/MI_poppy/Range.outputs:out>
+            }
+
+            over "Remap"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_poppy/Image_2.outputs:out>
+            }
+
+            over "Range"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_poppy/Image_1.outputs:out>
+            }
+
+            over "Separate3"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_poppy/Mix.outputs:out>
+            }
+
+            over "TransformNormal"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_poppy/Normal.outputs:out>
+            }
+
+            over "Normalize_1"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_poppy/TransformVector.outputs:out>
+            }
+
+            over "TransformVector"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_poppy/ViewDirection.outputs:out>
+            }
+
+            over "Normalize"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_poppy/TransformNormal.outputs:out>
+            }
+
+            over "Mask"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_poppy/SmoothStep.outputs:out>
+            }
+
+            over "DotProduct"
+            {
+                float3 inputs:in1.connect = </Root/planter_Hero_1/MI_poppy/Normalize.outputs:out>
+                float3 inputs:in2.connect = </Root/planter_Hero_1/MI_poppy/Normalize_1.outputs:out>
+            }
+
+            over "SmoothStep"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_poppy/DotProduct.outputs:out>
+            }
+
+            over "Mix"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_poppy/Constant_4.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_poppy/Constant_3.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_poppy/Mask.outputs:out>
+            }
+
+            over "Mix_1"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_poppy/BC.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_poppy/Saturate_1.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_poppy/Clamp.outputs:out>
+            }
+
+            over "Clamp"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_poppy/Separate3.outputs:outr>
+            }
+
+            over "Saturate_1"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_poppy/BC.outputs:out>
+            }
+
+            over "Multiply_6"
+            {
+                color3f inputs:in1.connect = </Root/planter_Hero_1/MI_poppy/E.outputs:out>
+                color3f inputs:in2.connect = </Root/planter_Hero_1/MI_poppy/Saturate_1.outputs:out>
+            }
+
+            over "Multiply_5"
+            {
+                color3f inputs:in1.connect = </Root/planter_Hero_1/MI_poppy/Multiply_6.outputs:out>
+            }
+
+            over "Mix_3"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_poppy/Multiply_6.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_poppy/Multiply_5.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_poppy/Clamp_1.outputs:out>
+            }
+
+            over "Clamp_1"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_poppy/Separate3.outputs:outr>
+            }
+
+            over "Separate3_1"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_poppy/E.outputs:out>
+            }
+        }
+
+        over "MI_light"
+        {
+            token outputs:mtlx:surface.connect = </Root/planter_Hero_1/MI_light/MaterialXPreviewSurface.outputs:out>
+
+            over "MaterialXPreviewSurface"
+            {
+                color3f inputs:emissiveColor.connect = </Root/planter_Hero_1/MI_light/Multiply.outputs:out>
+            }
+
+            over "Switch_2"
+            {
+                color3f inputs:in7.connect = </Root/planter_Hero_1/MI_light/PB.outputs:out>
+                color3f inputs:in8.connect = </Root/planter_Hero_1/MI_light/RB.outputs:out>
+                int inputs:which.connect = </Root/planter_Hero_1/MI_light.inputs:light_switch>
+            }
+
+            over "Multiply"
+            {
+                color3f inputs:in1.connect = </Root/planter_Hero_1/MI_light/Switch_2.outputs:out>
+            }
+        }
+
+        over "MI_metal"
+        {
+            token outputs:mtlx:surface.connect = </Root/planter_Hero_1/MI_metal/PreviewSurface_1.outputs:out>
+            token outputs:surface.connect = </Root/planter_Hero_1/MI_metal/DefaultSurfaceShader.outputs:surface>
+
+            over "Multiply"
+            {
+                color3f inputs:in1.connect = </Root/planter_Hero_1/MI_metal/Saturate.outputs:out>
+                color3f inputs:in2.connect = </Root/planter_Hero_1/MI_metal/Constant.outputs:out>
+            }
+
+            over "Normal"
+            {
+                float2 inputs:uvtiling.connect = </Root/planter_Hero_1/MI_metal/Constant_1.outputs:out>
+            }
+
+            over "Remap"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_metal/Normal.outputs:out>
+            }
+
+            over "PreviewSurface_1"
+            {
+                color3f inputs:diffuseColor.connect = </Root/planter_Hero_1/MI_metal/Multiply.outputs:out>
+                float3 inputs:normal.connect = </Root/planter_Hero_1/MI_metal/Remap.outputs:out>
+                float inputs:roughness.connect = </Root/planter_Hero_1/MI_metal/Range.outputs:out>
+            }
+
+            over "Roughness"
+            {
+                float2 inputs:uvtiling.connect = </Root/planter_Hero_1/MI_metal/Constant_1.outputs:out>
+            }
+
+            over "Range"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_metal/Roughness.outputs:out>
+            }
+
+            over "BaseColor"
+            {
+                float2 inputs:uvtiling.connect = </Root/planter_Hero_1/MI_metal/Constant_1.outputs:out>
+            }
+
+            over "Saturate"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_metal/BaseColor.outputs:out>
+            }
+        }
+
+        over "MI_yucca"
+        {
+            token outputs:mtlx:surface.connect = </Root/planter_Hero_1/MI_yucca/MaterialXPreviewSurface.outputs:out>
+
+            over "MaterialXPreviewSurface"
+            {
+                float inputs:clearcoat.connect = </Root/planter_Hero_1/MI_yucca/Separate3_2.outputs:outr>
+                color3f inputs:diffuseColor.connect = </Root/planter_Hero_1/MI_yucca/Mix_1.outputs:out>
+                color3f inputs:emissiveColor.connect = </Root/planter_Hero_1/MI_yucca/Mix_3.outputs:out>
+                float3 inputs:normal.connect = </Root/planter_Hero_1/MI_yucca/Remap.outputs:out>
+                float inputs:occlusion.connect = </Root/planter_Hero_1/MI_yucca/AO.outputs:out>
+                float inputs:roughness.connect = </Root/planter_Hero_1/MI_yucca/Range_1.outputs:out>
+            }
+
+            over "Clamp_2"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Image.outputs:out>
+            }
+
+            over "Separate3_2"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Clamp_2.outputs:out>
+            }
+
+            over "Remap"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_yucca/N.outputs:out>
+            }
+
+            over "Combine3_1"
+            {
+                float inputs:in1.connect = </Root/planter_Hero_1/MI_yucca/Separate4_1.outputs:outr>
+                float inputs:in2.connect = </Root/planter_Hero_1/MI_yucca/Separate4_1.outputs:outg>
+                float inputs:in3.connect = </Root/planter_Hero_1/MI_yucca/Separate4_1.outputs:outb>
+            }
+
+            over "Mix_1"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_yucca/Combine3_1.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_yucca/Saturate_1.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_yucca/Clamp.outputs:out>
+            }
+
+            over "Range"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Separate3_1.outputs:outr>
+            }
+
+            over "Mix_3"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_yucca/Multiply_6.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_yucca/Multiply_5.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_yucca/Clamp_1.outputs:out>
+            }
+
+            over "Mix"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_yucca/Constant_4.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_yucca/Constant_3.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_yucca/Mask.outputs:out>
+            }
+
+            over "Separate3_1"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Image_5.outputs:out>
+            }
+
+            over "Clamp_1"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Separate3.outputs:outr>
+            }
+
+            over "Clamp"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Separate3.outputs:outr>
+            }
+
+            over "Saturate_1"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Combine3_1.outputs:out>
+            }
+
+            over "TransformVector"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_yucca/ViewDirection.outputs:out>
+            }
+
+            over "Multiply_5"
+            {
+                color3f inputs:in1.connect = </Root/planter_Hero_1/MI_yucca/Multiply_6.outputs:out>
+            }
+
+            over "SmoothStep"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_yucca/DotProduct.outputs:out>
+            }
+
+            over "Separate3"
+            {
+                color3f inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Mix.outputs:out>
+            }
+
+            over "Normalize_1"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_yucca/TransformVector.outputs:out>
+            }
+
+            over "Mask"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_yucca/SmoothStep.outputs:out>
+            }
+
+            over "DotProduct"
+            {
+                float3 inputs:in1.connect = </Root/planter_Hero_1/MI_yucca/Normalize.outputs:out>
+                float3 inputs:in2.connect = </Root/planter_Hero_1/MI_yucca/Normalize_1.outputs:out>
+            }
+
+            over "Separate4_1"
+            {
+                color4f inputs:in.connect = </Root/planter_Hero_1/MI_yucca/BC_1.outputs:out>
+            }
+
+            over "Range_1"
+            {
+                float inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Image_4.outputs:out>
+            }
+
+            over "TransformNormal"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_yucca/Normal.outputs:out>
+            }
+
+            over "Multiply_6"
+            {
+                color3f inputs:in1.connect = </Root/planter_Hero_1/MI_yucca/E.outputs:out>
+                color3f inputs:in2.connect = </Root/planter_Hero_1/MI_yucca/Constant_2.outputs:out>
+            }
+
+            over "Normalize"
+            {
+                float3 inputs:in.connect = </Root/planter_Hero_1/MI_yucca/TransformNormal.outputs:out>
+            }
+
+            over "Screen"
+            {
+                color3f inputs:bg.connect = </Root/planter_Hero_1/MI_yucca/Mix_3.outputs:out>
+                color3f inputs:fg.connect = </Root/planter_Hero_1/MI_yucca/Constant_5.outputs:out>
+                float inputs:mix.connect = </Root/planter_Hero_1/MI_yucca/Range.outputs:out>
+            }
+        }
+
+        over "poppy" (
+            active = false
+            references = None
+        )
+        {
+            over "mtl"
+            {
+                over "mat_poppy"
+                {
+                    token outputs:surface.connect = </Root/planter_Hero_1/poppy/mtl/mat_poppy/usdPreviewSurface1.outputs:surface>
+                }
+            }
+        }
+
+        def RealityKitCustomComponent "BOTanistAssets_PlantComponent"
+        {
+            uniform token info:id = "BOTanistAssets.PlantComponent"
+            bool interactedWith = 0
+            token plantType = "coffeeBerry"
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (1.6, 1.8013242, 1.6)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.09306955, 0.9249119, 0.093964934)
+                }
+            }
+        }
+    }
+
+    def "planter_Hero" (
+        active = true
+        references = @planter_Hero.usda@
+    )
+    {
+        quatf xformOp:orient = (0.67960757, 0, 0.7335759, 0)
+        float3 xformOp:scale = (0.9999999, 0.9999998, 0.9999999)
+        float3 xformOp:translate = (4.946053, 6.6123897e-7, 4.693912)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "poppy" (
+            references = None
+        )
+        {
+        }
+
+        over "coffeeBerry" (
+            active = false
+            references = None
+        )
+        {
+        }
+
+        over "yucca" (
+            active = false
+            references = None
+        )
+        {
+        }
+
+        over "MI_poppy" (
+            references = None
+        )
+        {
+            over "Mix_2" (
+                references = None
+            )
+            {
+                color3f inputs:fg = (0.9692132, 0.48789668, 0.9325115) (
+                    colorSpace = "srgb_displayp3"
+                )
+                int ui:nodegraph:node:stackingOrder = 6570
+            }
+
+            over "MaterialXPreviewSurface"
+            {
+                color3f inputs:emissiveColor.connect = </Root/planter_Hero/MI_poppy/Mix_2.outputs:out>
+            }
+        }
+
+        def RealityKitCustomComponent "BOTanistAssets_PlantComponent"
+        {
+            uniform token info:id = "BOTanistAssets.PlantComponent"
+            bool interactedWith = 0
+            token plantType = "poppy"
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (1.6, 1.7615409, 1.6)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (-0.06031254, 0.8860078, 0.04165271)
+                }
+            }
+        }
+    }
+
+    def "planter_Hero_2" (
+        active = true
+        references = @planter_Hero.usda@
+    )
+    {
+        quatf xformOp:orient = (0.67960757, 0, 0.7335759, 0)
+        float3 xformOp:scale = (0.9999999, 0.9999998, 0.9999999)
+        float3 xformOp:translate = (2.5433693, 6.984919e-7, -2.8429084)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "coffeeBerry" (
+            active = false
+            references = None
+        )
+        {
+        }
+
+        over "yucca" (
+            references = None
+        )
+        {
+        }
+
+        over "poppy" (
+            active = false
+            references = None
+        )
+        {
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (1.5554628, 1.8030416, 1.3622626)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.05474168, 0.9525513, 0.063067555)
+                }
+            }
+        }
+
+        def RealityKitCustomComponent "BOTanistAssets_PlantComponent"
+        {
+            uniform token info:id = "BOTanistAssets.PlantComponent"
+            bool interactedWith = 0
+            token plantType = "yucca"
+        }
+    }
+
+    def "MI_dirt_1" (
+        references = @../Materials/M_environment.usda@</Root/M_env>
+    )
+    {
+        token outputs:mtlx:surface.connect = </Root/MI_dirt_1/PreviewSurface.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Image_1"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_ambientocclusion.jpg@
+            float2 inputs:texcoord.connect = </Root/MI_dirt_1/Multiply_1.outputs:out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 75
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        over "Range" (
+            references = None
+        )
+        {
+            float inputs:gamma
+            float inputs:in.connect = </Root/MI_dirt_1/R.outputs:out>
+            float inputs:inhigh = 0.8
+            float inputs:outlow = 0.75
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 115
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+        }
+
+        over "Image_2"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_metallic.jpg@
+            string inputs:filtertype
+            float2 inputs:texcoord.connect = </Root/MI_dirt_1/Multiply_1.outputs:out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 74
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+        }
+
+        over "PreviewSurface"
+        {
+            color3f inputs:diffuseColor.connect = </Root/MI_dirt_1/Multiply.outputs:out>
+            float inputs:metallic.connect = </Root/MI_dirt_1/M.outputs:out>
+            float3 inputs:normal.connect = </Root/MI_dirt_1/Remap.outputs:out>
+            float inputs:occlusion.connect = </Root/MI_dirt_1/AO.outputs:out>
+            float inputs:roughness.connect = </Root/MI_dirt_1/Range.outputs:out>
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Image_3"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_ambientocclusion.jpg@
+            float2 inputs:texcoord.connect = </Root/MI_dirt_1/Multiply_1.outputs:out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 73
+        }
+
+        over "Image_4"
+        {
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_normal.jpg@
+            float2 inputs:texcoord.connect = </Root/MI_dirt_1/Multiply_1.outputs:out>
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 72
+        }
+
+        over "Remap" (
+            references = None
+        )
+        {
+            float3 inputs:in.connect = </Root/MI_dirt_1/N.outputs:out>
+            float2 ui:nodegraph:node:pos = (579.31116, -200.27971)
+            float2 ui:nodegraph:node:size = (94, 181)
+            int ui:nodegraph:node:stackingOrder = 111
+        }
+
+        over "Multiply"
+        {
+            color3f inputs:in1.connect = </Root/MI_dirt_1/BC.outputs:out>
+            color3f inputs:in2.connect = </Root/MI_dirt_1/Constant.outputs:out>
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "Image"
+        {
+            asset inputs:file = @../Assets/environment/textures/tiling/StylizedGround_basecolor.jpg@
+            float2 inputs:texcoord.connect = </Root/MI_dirt_1/Multiply_1.outputs:out>
+            string inputs:uaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 71
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode"]
+        }
+
+        over "Contrast"
+        {
+            float2 ui:nodegraph:node:size = (106, 145)
+        }
+
+        def Shader "Texcoord"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1031.5836, 54.297527)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 103
+        }
+
+        def Shader "Multiply_1"
+        {
+            uniform token info:id = "ND_multiply_vector2"
+            float2 inputs:in1.connect = </Root/MI_dirt_1/Texcoord.outputs:out>
+            float2 inputs:in2 = (7, 7)
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-806.33417, 18.916162)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 99
+        }
+
+        over "BC"
+        {
+            color3f inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_BaseColor.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 104
+        }
+
+        over "M"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_Metalness.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 105
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord"]
+        }
+
+        over "N" (
+            references = None
+        )
+        {
+            float3 inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_Normal.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:pos = (252.7828, -323.7136)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 113
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord", "inputs:file", "inputs:default"]
+        }
+
+        over "R"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_Roughness.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 107
+        }
+
+        over "AO"
+        {
+            float inputs:default
+            asset inputs:file = @../Assets/environment/textures/T_dirt_AmbientOcclusion.jpg@
+            float2 inputs:texcoord.connect = None
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 108
+        }
+    }
+}
+

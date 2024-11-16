@@ -1,0 +1,1633 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["B1", "B3", "H1", "H2", "H3", "BP1", "BP2", "BP3", "Group", "B2"]
+    def Cube "B1" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["M_metal_B1", "DefaultMaterial"]
+        rel material:binding = </Root/B1/M_metal_B1> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (-0.7788647, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_metal_B1" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "light_switch", "roughness", "metal", "emissiveMask", "Switch_2", "ao", "normal", "Inside", "OB", "PB", "RB", "Multiply", "Switch", "green", "grey", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-598.9727, -112.26425)
+                        float2 sizeInSubgraph = (140, 53)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/B1/M_metal_B1/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (863.60925, 58.33442)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1012
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/B1/M_metal_B1/Switch.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic.connect = </Root/B1/M_metal_B1/metal.outputs:out>
+                float3 inputs:normal.connect = </Root/B1/M_metal_B1/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/B1/M_metal_B1/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (609.10925, 58.33442)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 1012
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body1/T_body1_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-752.77856, -335.0768)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/B1/M_metal_B1/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/B1/M_metal_B1/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/B1/M_metal_B1/green.outputs:out>
+                color3f inputs:in4.connect = </Root/B1/M_metal_B1/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/B1/M_metal_B1.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in4"]
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body1/T_body1_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-751.63293, -548.28723)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/body1/T_body1_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-753.8211, -774.4324)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:vaddressmode"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body1/T_body1_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-717.45996, -978.4012)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:uaddressmode"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/body1/T_body1_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "metal"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/body1/T_body1_Metalness_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1143.0343, 92.00697)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body1/T_body1_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (78.20304, -235.4143)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/B1/M_metal_B1/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (285.3139, -237.76263)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 1076
+            }
+        }
+    }
+
+    def Cube "B3" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["M_metal_B3", "M_metal_BP3"]
+        rel material:binding = </Root/B3/M_metal_B3> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (0.3703552, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_metal_B3" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "light_switch", "roughness", "metal", "emissiveMask", "Switch_2", "ao", "normal", "Inside", "OB", "PB", "RB", "Multiply", "Switch", "green", "grey", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-374.61594, -125.82774)
+                        float2 sizeInSubgraph = (140, 53)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/B3/M_metal_B3/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/B3/M_metal_B3/Switch.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic.connect = </Root/B3/M_metal_B3/metal.outputs:out>
+                float3 inputs:normal.connect = </Root/B3/M_metal_B3/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/B3/M_metal_B3/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 329
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body3/T_body3_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-752.77856, -335.0768)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 823
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:file"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/B3/M_metal_B3/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/B3/M_metal_B3/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/B3/M_metal_B3/green.outputs:out>
+                color3f inputs:in4.connect = </Root/B3/M_metal_B3/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/B3/M_metal_B3.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 132
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body3/T_body3_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-751.63293, -548.28723)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 822
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/body3/T_body3_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-753.8211, -774.4324)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 821
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:file"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body3/T_body3_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-783.3485, -1031.4958)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 820
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/body3/T_body3_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 825
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "metal"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/body3/T_body3_Metalness_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1143.0343, 92.00697)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 826
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body3/T_body3_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (78.20304, -235.4143)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 824
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/B3/M_metal_B3/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (285.3139, -237.76263)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 817
+            }
+        }
+    }
+
+    def Cube "H1" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/H1/M_metal_H1> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (0.7828955, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_metal_H1" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "light_switch", "roughness", "metal", "emissiveMask", "Switch_2", "ao", "normal", "Inside", "OB", "PB", "RB", "Multiply", "Switch", "green", "grey", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-374.61594, -125.82774)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/H1/M_metal_H1/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/H1/M_metal_H1/Switch.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic = 1
+                float3 inputs:normal.connect = </Root/H1/M_metal_H1/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/H1/M_metal_H1/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 851
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head1/T_head1_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-752.77856, -335.0768)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 837
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:file"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/H1/M_metal_H1/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/H1/M_metal_H1/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/H1/M_metal_H1/green.outputs:out>
+                color3f inputs:in4.connect = </Root/H1/M_metal_H1/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/H1/M_metal_H1.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 849
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head1/T_head1_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-751.63293, -548.28723)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 836
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/head1/T_head1_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-753.8211, -774.4324)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 850
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:file"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head1/T_head1_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-783.3485, -1031.4958)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 848
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord", "inputs:uaddressmode", "inputs:uaddressmode"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/head1/T_head1_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 839
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head1/T_head1_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (78.20304, -235.4143)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 838
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/H1/M_metal_H1/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (285.3139, -237.76263)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 817
+            }
+        }
+    }
+
+    def Cube "H2" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["DefaultMaterial", "M_metal_H2"]
+        rel material:binding = </Root/H2/M_metal_H2> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (1.2682853, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_metal_H2" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "light_switch", "roughness", "metal", "emissiveMask", "Switch_2", "ao", "normal", "Inside", "OB", "PB", "RB", "Multiply", "Switch", "green", "grey", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-374.61594, -125.82774)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/H2/M_metal_H2/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/H2/M_metal_H2/Switch.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic = 1
+                float3 inputs:normal.connect = </Root/H2/M_metal_H2/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/H2/M_metal_H2/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 932
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head2/T_head2_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-752.77856, -335.0768)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 930
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:file"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/H2/M_metal_H2/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/H2/M_metal_H2/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/H2/M_metal_H2/green.outputs:out>
+                color3f inputs:in4.connect = </Root/H2/M_metal_H2/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/H2/M_metal_H2.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 132
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head2/T_head2_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-751.63293, -548.28723)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 929
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/head2/T_head2_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-753.8211, -774.4324)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 928
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:file"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head2/T_head2_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-783.3485, -1031.4958)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 927
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/head2/T_head2_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 925
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head2/T_head2_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (78.20304, -235.4143)
+                float2 ui:nodegraph:node:size = (250, 319)
+                int ui:nodegraph:node:stackingOrder = 931
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/H2/M_metal_H2/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (285.3139, -237.76263)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 817
+            }
+        }
+    }
+
+    def Cube "H3" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["M_metal_BP1", "M_metal_H3"]
+        rel material:binding = </Root/H3/M_metal_H3> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (-1.2807436, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_metal_H3" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "light_switch", "roughness", "metal", "emissiveMask", "Switch_2", "ao", "normal", "Inside", "OB", "PB", "RB", "Multiply", "Switch", "green", "grey", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-374.61594, -125.82774)
+                        float2 sizeInSubgraph = (140, 53)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/H3/M_metal_H3/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/H3/M_metal_H3/Switch.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic = 1
+                float3 inputs:normal.connect = </Root/H3/M_metal_H3/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/H3/M_metal_H3/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 940
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head3/T_head3_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-752.77856, -335.0768)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 936
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:file", "inputs:uaddressmode"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/H3/M_metal_H3/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/H3/M_metal_H3/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/H3/M_metal_H3/green.outputs:out>
+                color3f inputs:in4.connect = </Root/H3/M_metal_H3/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/H3/M_metal_H3.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 132
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head3/T_head3_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-751.63293, -548.28723)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 935
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/head3/T_head3_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-753.8211, -774.4324)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 934
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:file"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head3/T_head3_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-783.3485, -1031.4958)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 933
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/head3/T_head3_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 939
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/head3/T_head3_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (78.20304, -235.4143)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 937
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/H3/M_metal_H3/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (285.3139, -237.76263)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 817
+            }
+        }
+    }
+
+    def Cube "BP1" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["DefaultMaterial", "M_metal_BP1"]
+        rel material:binding = </Root/BP1/M_metal_BP1> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (-1.681885, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_metal_BP1" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "roughness", "metal", "ao", "normal", "Remap", "opacity", "Switch", "green", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-374.61594, -125.82774)
+                        float2 sizeInSubgraph = (140, 53)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/BP1/M_metal_BP1/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/BP1/M_metal_BP1/Switch.outputs:out>
+                color3f inputs:emissiveColor.connect = None
+                float inputs:ior
+                float inputs:metallic.connect = </Root/BP1/M_metal_BP1/metal.outputs:out>
+                float3 inputs:normal.connect = </Root/BP1/M_metal_BP1/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity.connect = </Root/BP1/M_metal_BP1/opacity.outputs:out>
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/BP1/M_metal_BP1/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 329
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack1/T_backpack1_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-752.77856, -335.0768)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 945
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:file", "inputs:uaddressmode", "inputs:texcoord"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/BP1/M_metal_BP1/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/BP1/M_metal_BP1/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/BP1/M_metal_BP1/green.outputs:out>
+                color3f inputs:in4.connect = </Root/BP1/M_metal_BP1/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/BP1/M_metal_BP1.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 132
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack1/T_backpack1_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-751.63293, -548.28723)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 944
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack1/T_backpack1_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-753.8211, -774.4324)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 999
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:file", "inputs:uaddressmode"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack1/T_backpack1_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-418.66867, -974.1108)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1000
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord", "inputs:default", "inputs:texcoord", "inputs:filtertype"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack1/T_backpack1_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 948
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "metal"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack1/T_backpack1_Metalness_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1143.0343, 92.00697)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 949
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord", "inputs:texcoord", "inputs:uaddressmode"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack1/T_backpack1_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (78.20304, -235.4143)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 946
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord", "inputs:default"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/BP1/M_metal_BP1/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (285.3139, -237.76263)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 817
+            }
+
+            def Shader "opacity"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack1/T_backpack1_Opacity_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-254.61049, 414.55667)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 993
+            }
+        }
+    }
+
+    def Cube "BP2" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["DefaultMaterial", "M_metal_BP2"]
+        rel material:binding = </Root/BP2/M_metal_BP2> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (1.6432728, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_metal_BP2" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "light_switch", "roughness", "metal", "emissiveMask", "Switch_2", "ao", "normal", "Remap", "opacity", "Inside", "OB", "PB", "RB", "Multiply", "Switch", "green", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-374.61594, -125.82774)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/BP2/M_metal_BP2/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/BP2/M_metal_BP2/Switch.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic.connect = </Root/BP2/M_metal_BP2/metal.outputs:out>
+                float3 inputs:normal.connect = </Root/BP2/M_metal_BP2/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity.connect = </Root/BP2/M_metal_BP2/opacity.outputs:out>
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/BP2/M_metal_BP2/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 329
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack2/T_backpack2_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-752.77856, -335.0768)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 959
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:file", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/BP2/M_metal_BP2/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/BP2/M_metal_BP2/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/BP2/M_metal_BP2/green.outputs:out>
+                color3f inputs:in4.connect = </Root/BP2/M_metal_BP2/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/BP2/M_metal_BP2.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 132
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack2/T_backpack2_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-751.63293, -548.28723)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 958
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack2/T_backpack2_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-753.8211, -774.4324)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 957
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:file", "inputs:uaddressmode", "inputs:texcoord"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack2/T_backpack2_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-783.3485, -1031.4958)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 956
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord", "inputs:default", "inputs:vaddressmode"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack2/T_backpack2_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 961
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "metal"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack2/T_backpack2_Metalness_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1143.0343, 92.00697)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 974
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord", "inputs:texcoord", "inputs:uaddressmode"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack2/T_backpack2_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (78.20304, -235.4143)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 960
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/BP2/M_metal_BP2/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (285.3139, -237.76263)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 817
+            }
+
+            def Shader "opacity"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack2/T_backpack2_Opacity_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-550.05853, -6.512781)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 973
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+            }
+        }
+    }
+
+    def Cube "BP3" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["M_metal_BP3", "DefaultMaterial"]
+        rel material:binding = </Root/BP3/M_metal_BP3> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+
+        def Material "M_metal_BP3" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "light_switch", "roughness", "metal", "emissiveMask", "Switch_2", "ao", "normal", "Remap", "opacity", "Inside", "OB", "PB", "RB", "Multiply", "Switch", "green", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-374.61594, -125.82774)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/BP3/M_metal_BP3/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/BP3/M_metal_BP3/Switch.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic.connect = </Root/BP3/M_metal_BP3/metal.outputs:out>
+                float3 inputs:normal.connect = </Root/BP3/M_metal_BP3/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity.connect = </Root/BP3/M_metal_BP3/opacity.outputs:out>
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/BP3/M_metal_BP3/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 329
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack3/T_backpack3_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-752.77856, -335.0768)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 970
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:file", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/BP3/M_metal_BP3/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/BP3/M_metal_BP3/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/BP3/M_metal_BP3/green.outputs:out>
+                color3f inputs:in4.connect = </Root/BP3/M_metal_BP3/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/BP3/M_metal_BP3.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 132
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack3/T_backpack3_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-751.63293, -548.28723)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 969
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode", "inputs:default", "inputs:default", "inputs:texcoord"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack3/T_backpack3_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-753.8211, -774.4324)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 968
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:file", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack3/T_backpack3_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-783.3485, -1031.4958)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 967
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:texcoord", "inputs:default", "inputs:vaddressmode", "inputs:file"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack3/T_backpack3_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 974
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "metal"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack3/T_backpack3_Metalness_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1143.0343, 92.00697)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 975
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord", "inputs:texcoord", "inputs:uaddressmode", "inputs:uaddressmode"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack3/T_backpack3_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (78.20304, -235.4143)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 971
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/BP3/M_metal_BP3/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (285.3139, -237.76263)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 817
+            }
+
+            def Shader "opacity"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/backpack3/T_backpack3_Opacity_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-570.11523, 215.16281)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 981
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+            }
+        }
+    }
+
+    def Cube "B2" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        reorder nameChildren = ["M_metal_B2", "DefaultMaterial"]
+        rel material:binding = </Root/B2/M_metal_B2> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.7788647, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "M_metal_B2" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["MaterialXPreviewSurface", "blue", "mat_switch", "light_switch", "roughness", "metal", "emissiveMask", "Switch_2", "ao", "normal", "Inside", "OB", "PB", "RB", "Multiply", "Switch", "green", "grey", "orange", "pink"]
+            int inputs:mat_switch = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-598.9727, -112.26425)
+                        float2 sizeInSubgraph = (140, 53)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/B2/M_metal_B2/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (863.60925, 58.33442)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1012
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/B2/M_metal_B2/Switch.outputs:out>
+                color3f inputs:emissiveColor.connect = None
+                float inputs:ior
+                float inputs:metallic.connect = </Root/B2/M_metal_B2/metal.outputs:out>
+                float3 inputs:normal.connect = </Root/B2/M_metal_B2/Remap.outputs:out>
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/B2/M_metal_B2/roughness.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (609.10925, 58.33442)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 1012
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "blue"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body2/T_body2_BaseColor_metal_blue.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1545.1948, -422.46426)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1183
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/B2/M_metal_B2/pink.outputs:out>
+                color3f inputs:in2.connect = </Root/B2/M_metal_B2/orange.outputs:out>
+                color3f inputs:in3.connect = </Root/B2/M_metal_B2/green.outputs:out>
+                color3f inputs:in4.connect = </Root/B2/M_metal_B2/blue.outputs:out>
+                color3f inputs:in5.connect = None
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/B2/M_metal_B2.inputs:mat_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.59488, -268.51666)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 1076
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in4"]
+            }
+
+            def Shader "green"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body2/T_body2_BaseColor_metal_green.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1221.7133, -678.0421)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1184
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:uaddressmode"]
+            }
+
+            def Shader "orange"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/body2/T_body2_BaseColor_metal_orange.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1158.79, -1029.9679)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1167
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:file", "inputs:texcoord", "inputs:vaddressmode", "inputs:vaddressmode"]
+            }
+
+            def Shader "pink"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body2/T_body2_BaseColor_metal_pink.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1132.3048, -1370.1532)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1164
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:texcoord", "inputs:uaddressmode", "inputs:texcoord", "inputs:uaddressmode"]
+            }
+
+            def Shader "roughness"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @../Assets/Robot/textures/metal/body2/T_body2_Roughness_metal_.jpg@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1135.2852, -136.55289)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1210
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "metal"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/metal/body2/T_body2_Metalness_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1409.2076, 104.13162)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1229
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file"]
+            }
+
+            def Shader "normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @../Assets/Robot/textures/metal/body2/T_body2_Normal_metal_.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (81.77335, -246.07056)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 1238
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:file", "inputs:default", "inputs:texcoord"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/B2/M_metal_B2/normal.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (383.46234, -223.26654)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 1233
+            }
+        }
+    }
+}
+

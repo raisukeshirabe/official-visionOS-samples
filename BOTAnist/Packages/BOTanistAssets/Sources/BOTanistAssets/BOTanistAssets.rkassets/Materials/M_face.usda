@@ -1,0 +1,428 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["F", "M_Face"]
+    def Cube "F" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/F/M_Face> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+
+        def Material "M_Face" (
+            references = None
+        )
+        {
+            int inputs:face_switch = 0 (
+                colorSpace = ""
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-2002.8475, -623.6092)
+                        float2 sizeInSubgraph = (142.5, 53)
+                        int stackingOrderInSubgraph = 4869
+                    }
+                }
+            )
+            int inputs:light_switch = 7 (
+                colorSpace = ""
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-1795.6753, -895.71466)
+                        float2 sizeInSubgraph = (143.5, 53)
+                        int stackingOrderInSubgraph = 4862
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/F/M_Face/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (398.4336, -643.6797)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 4865
+
+            def Shader "Constant_3"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 0.5
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2310.0579, 409.23376)
+                float2 ui:nodegraph:node:size = (157, 53)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_color3FA"
+                color3f inputs:in1.connect = </Root/F/M_Face/Inside.outputs:out>
+                float inputs:in2 = 2
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-417.5661, -631.6969)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 4862
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in2"]
+            }
+
+            def Shader "Combine2"
+            {
+                uniform token info:id = "ND_combine2_vector2"
+                float inputs:in1.connect = </Root/F/M_Face/columns.outputs:out>
+                float inputs:in2.connect = </Root/F/M_Face/rows.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-2275.0706, -79.66162)
+                float2 ui:nodegraph:node:size = (144.5, 53)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "eyes1"
+            {
+                uniform token info:id = "ND_tiledimage_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/eyes/eyes1_blink_anim.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord.connect = </Root/F/M_Face/Fractional_3.outputs:out>
+                float2 inputs:uvoffset
+                float2 inputs:uvtiling
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1077.1868, -427.32916)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 4967
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "Switch_4"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1 = (1, 0.08381789, 0) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in1.connect = None
+                color3f inputs:in2 = (1, 0.8687503, 0) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in2.connect = None
+                color3f inputs:in3 = (0.065773055, 1, 0.0017936085) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in3.connect = None
+                color3f inputs:in4 = (0, 0.72659516, 0.88235295) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in4.connect = None
+                color3f inputs:in5 = (0.6527058, 0, 1) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:in5.connect = None
+                color3f inputs:in6 = (0.99966586, 1, 0.98670185) (
+                    colorSpace = "srgb_displayp3"
+                )
+                color3f inputs:in7.connect = </Root/F/M_Face/RB_1.outputs:out>
+                color3f inputs:in8.connect = </Root/F/M_Face/TiledImage.outputs:out>
+                color3f inputs:in9.connect = None
+                color3f inputs:in10
+                int inputs:which.connect = </Root/F/M_Face.inputs:light_switch>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-987.64136, -1000.7692)
+                float2 ui:nodegraph:node:size = (109.5, 289)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Combine2_2"
+            {
+                uniform token info:id = "ND_combine2_vector2"
+                float inputs:in1.connect = </Root/F/M_Face/Fractional.outputs:out>
+                float inputs:in2.connect = </Root/F/M_Face/Oneminus_2.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-2053.2554, 211.06439)
+                float2 ui:nodegraph:node:size = (160, 53)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Divide"
+            {
+                uniform token info:id = "ND_divide_vector2"
+                float2 inputs:in1.connect = </Root/F/M_Face/Texcoord.outputs:out>
+                float2 inputs:in2 = (4, 4)
+                float2 inputs:in2.connect = </Root/F/M_Face/Combine2.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1535.4065, -76.76898)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Inside"
+            {
+                uniform token info:id = "ND_inside_color3"
+                color3f inputs:in.connect = </Root/F/M_Face/Switch_4.outputs:out>
+                float inputs:mask.connect = </Root/F/M_Face/Switch_3.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-550.398, -611.81573)
+                float2 ui:nodegraph:node:size = (88.5, 127)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Oneminus_2"
+            {
+                uniform token info:id = "ND_realitykit_oneminus_float"
+                float inputs:in.connect = </Root/F/M_Face/Fractional.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2315.6685, 391.0526)
+                float2 ui:nodegraph:node:size = (158, 109)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Fractional"
+            {
+                uniform token info:id = "ND_realitykit_fractional_float"
+                float inputs:in.connect = </Root/F/M_Face/Multiply_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2298.7048, 200.2428)
+                float2 ui:nodegraph:node:size = (154.5, 109)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Multiply_3"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/F/M_Face/columns.outputs:out>
+                float inputs:in2.connect = </Root/F/M_Face/rows.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2254.6338, 19.06781)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Multiply_1"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/F/M_Face/Time.outputs:out>
+                float inputs:in2.connect = </Root/F/M_Face/Constant_3.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2464.9102, 373.74353)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Fractional_3"
+            {
+                uniform token info:id = "ND_realitykit_fractional_vector2"
+                float2 inputs:in.connect = </Root/F/M_Face/Add.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1408.0515, -240.80841)
+                float2 ui:nodegraph:node:size = (154.5, 109)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Texcoord"
+            {
+                uniform token info:id = "ND_texcoord_vector2"
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-2066.4038, -138.77985)
+                float2 ui:nodegraph:node:size = (180.5, 53)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "rows"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 9
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2693.4875, 56.90735)
+                float2 ui:nodegraph:node:size = (115, 53)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Add"
+            {
+                uniform token info:id = "ND_add_vector2"
+                float2 inputs:in1.connect = </Root/F/M_Face/Divide.outputs:out>
+                float2 inputs:in2.connect = </Root/F/M_Face/Divide_1.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1392.3403, -97.90283)
+                float2 ui:nodegraph:node:size = (61.5, 36.5)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Time"
+            {
+                uniform token info:id = "ND_time_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2701.5989, 243.2024)
+                float2 ui:nodegraph:node:size = (122.5, 53)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "eyes3"
+            {
+                uniform token info:id = "ND_tiledimage_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/eyes/eyes3_blink_anim.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord.connect = </Root/F/M_Face/Fractional_3.outputs:out>
+                float2 inputs:uvoffset
+                float2 inputs:uvtiling
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1067.8446, 291.98096)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 4969
+            }
+
+            def Shader "Switch_3"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Root/F/M_Face/eyes1.outputs:out>
+                float inputs:in2.connect = </Root/F/M_Face/eyes2.outputs:out>
+                float inputs:in3.connect = </Root/F/M_Face/eyes3.outputs:out>
+                float inputs:in4.connect = None
+                float inputs:in5
+                float inputs:in6
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Root/F/M_Face.inputs:face_switch>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-767.32404, -536.7782)
+                float2 ui:nodegraph:node:size = (109.5, 289)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor = (0, 0, 0) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:diffuseColor.connect = None
+                color3f inputs:emissiveColor.connect = </Root/F/M_Face/Multiply.outputs:out>
+                float inputs:ior
+                float inputs:metallic
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness = 0
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (-0.6224365, -619.7189)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 4866
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "Combine2_1"
+            {
+                uniform token info:id = "ND_combine2_vector2"
+                float inputs:in1.connect = </Root/F/M_Face/Multiply_3.outputs:out>
+                float inputs:in2.connect = </Root/F/M_Face/rows.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1981.884, 72.550964)
+                float2 ui:nodegraph:node:size = (157, 53)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Multiply_2"
+            {
+                uniform token info:id = "ND_multiply_vector2"
+                float2 inputs:in1.connect = </Root/F/M_Face/Combine2_1.outputs:out>
+                float2 inputs:in2.connect = </Root/F/M_Face/Combine2_2.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1795.344, 122.42053)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "eyes2"
+            {
+                uniform token info:id = "ND_tiledimage_float"
+                float inputs:default
+                asset inputs:file = @../Assets/Robot/textures/eyes/eyes2_blink_anim.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord.connect = </Root/F/M_Face/Fractional_3.outputs:out>
+                float2 inputs:uvoffset
+                float2 inputs:uvtiling
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-1063.411, -60.35492)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 4968
+            }
+
+            def Shader "Divide_1"
+            {
+                uniform token info:id = "ND_divide_vector2"
+                float2 inputs:in1.connect = </Root/F/M_Face/Floor.outputs:out>
+                float2 inputs:in2.connect = </Root/F/M_Face/Combine2.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1543.5017, 40.699646)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "Floor"
+            {
+                uniform token info:id = "ND_floor_vector2"
+                float2 inputs:in.connect = </Root/F/M_Face/Multiply_2.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-1662.5555, 191.30206)
+                float2 ui:nodegraph:node:size = (118, 40)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "RB_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_tiledimage_color3"
+                color3f inputs:default
+                asset inputs:file = @../Assets/Robot/textures/lights/RB.jpg@
+                string inputs:filtertype
+                float2 inputs:realworldimagesize
+                float2 inputs:realworldtilesize
+                float2 inputs:texcoord
+                float2 inputs:uvoffset = (0, 0.06)
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1400.6389, -755.59143)
+                float2 ui:nodegraph:node:size = (158.5, 235)
+                int ui:nodegraph:node:stackingOrder = 5006
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "columns"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 7
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-2534.6406, -96.62317)
+                float2 ui:nodegraph:node:size = (137.5, 53)
+                int ui:nodegraph:node:stackingOrder = 4862
+            }
+
+            def Shader "TiledImage" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_tiledimage_color3"
+                asset inputs:file = @../Assets/Robot/textures/lights/PB.jpg@
+                float2 inputs:uvtiling = (0.2, 1)
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-1346.635, -1151.7253)
+                int ui:nodegraph:node:stackingOrder = 5009
+            }
+        }
+    }
+}
+
