@@ -1,0 +1,219 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "Dragon" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707963, 0, 0)
+        }
+        prepend references = @Dragon.usdc@
+    )
+    {
+        rel material:binding = </Root/Material> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.7071067, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Material "Material"
+    {
+        float inputs:eta = 0.5 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-984.34375, 101.41797)
+                    float2 sizeInSubgraph = (98, 53)
+                    int stackingOrderInSubgraph = 281
+                }
+            }
+        )
+        float inputs:roughness = 0.2 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-477.23047, -264.6289)
+                    float2 sizeInSubgraph = (133.5, 53)
+                    int stackingOrderInSubgraph = 232
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/Material/PBRSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (939.3008, -29.824219)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 260
+
+        def Shader "PreviewSurface"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (-685.60547, -72.22656)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 12
+        }
+
+        def Shader "UnlitSurface"
+        {
+            uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+            bool inputs:applyPostProcessToneMap
+            color3f inputs:color.connect = None
+            bool inputs:hasPremultipliedAlpha
+            float inputs:opacity
+            float inputs:opacityThreshold
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (621.6797, 126.578125)
+            float2 ui:nodegraph:node:size = (194.5, 181)
+            int ui:nodegraph:node:stackingOrder = 260
+        }
+
+        def Shader "RealitykitEnvironmentRadiance"
+        {
+            uniform token info:id = "ND_realitykit_environment_radiance"
+            color3f inputs:baseColor = (0.5183496, 1, 0.5285322) (
+                colorSpace = "srgb_displayp3"
+            )
+            half inputs:metallic = 1
+            float3 inputs:normal.connect = </Root/Material/Normalize.outputs:out>
+            half inputs:roughness = 0.170044
+            half inputs:roughness.connect = </Root/Material/Convert.outputs:out>
+            half inputs:specular = 0
+            color3f outputs:diffuseRadiance
+            color3f outputs:specularRadiance
+            float2 ui:nodegraph:node:pos = (173.08984, -36.9375)
+            float2 ui:nodegraph:node:size = (244.5, 199)
+            int ui:nodegraph:node:stackingOrder = 267
+        }
+
+        def Shader "Normal"
+        {
+            uniform token info:id = "ND_normal_vector3"
+            string inputs:space = "world"
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-777.3828, 65.984375)
+            float2 ui:nodegraph:node:size = (128.5, 40)
+            int ui:nodegraph:node:stackingOrder = 194
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
+        }
+
+        def Shader "ViewDirection"
+        {
+            uniform token info:id = "ND_realitykit_viewdirection_vector3"
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-977.65625, 194.95703)
+            float2 ui:nodegraph:node:size = (210, 53)
+            int ui:nodegraph:node:stackingOrder = 271
+        }
+
+        def Shader "Refract"
+        {
+            uniform token info:id = "ND_realitykit_refract_vector3"
+            float inputs:eta = 1
+            float inputs:eta.connect = </Root/Material.inputs:eta>
+            float3 inputs:in.connect = </Root/Material/ViewDirection.outputs:out>
+            float3 inputs:normal.connect = </Root/Material/Normal.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-503.77734, 84.52734)
+            float2 ui:nodegraph:node:size = (141, 145)
+            int ui:nodegraph:node:stackingOrder = 274
+        }
+
+        def Shader "Add"
+        {
+            uniform token info:id = "ND_add_vector3"
+            float3 inputs:in1.connect = </Root/Material/Multiply.outputs:out>
+            float3 inputs:in2.connect = </Root/Material/Refract.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-272.97266, 100.11334)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 276
+        }
+
+        def Shader "Normalize"
+        {
+            uniform token info:id = "ND_normalize_vector3"
+            float3 inputs:in.connect = </Root/Material/Add.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-135.71875, 123.11328)
+            float2 ui:nodegraph:node:size = (149, 40)
+            int ui:nodegraph:node:stackingOrder = 188
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_vector3FA"
+            prepend float3 inputs:in1.connect = </Root/Material/ViewDirection.outputs:out>
+            float inputs:in2 = -1
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-756.2539, 204.25)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 279
+        }
+
+        def Shader "PBRSurface"
+        {
+            uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+            float inputs:ambientOcclusion
+            color3f inputs:baseColor = (0, 0, 0) (
+                colorSpace = "srgb_displayp3"
+            )
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:emissiveColor.connect = </Root/Material/Add_1.outputs:out>
+            bool inputs:hasPremultipliedAlpha
+            float inputs:metallic
+            float3 inputs:normal
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness = 0.20104
+            float inputs:specular = 0.13823
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (621.64844, -166.26562)
+            float2 ui:nodegraph:node:size = (167, 307)
+            int ui:nodegraph:node:stackingOrder = 260
+        }
+
+        def Shader "Convert"
+        {
+            uniform token info:id = "ND_convert_float_half"
+            prepend float inputs:in.connect = </Root/Material.inputs:roughness>
+            half outputs:out
+            float2 ui:nodegraph:node:pos = (-244.83203, -227.27734)
+            float2 ui:nodegraph:node:size = (101.5, 109)
+            int ui:nodegraph:node:stackingOrder = 230
+        }
+
+        def Shader "Add_1"
+        {
+            uniform token info:id = "ND_add_color3"
+            color3f inputs:in1.connect = </Root/Material/RealitykitEnvironmentRadiance.outputs:diffuseRadiance>
+            color3f inputs:in2.connect = </Root/Material/RealitykitEnvironmentRadiance.outputs:specularRadiance>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (403.48438, -120.359375)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 266
+        }
+    }
+
+    def Sphere "Sphere" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/Material> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double radius = 0.1
+        quatf xformOp:orient = (0.99999994, 0, 0, 0)
+        float3 xformOp:scale = (0.39717364, 0.39717364, 0.39717364)
+        float3 xformOp:translate = (-0.15993139, 0.042946525, 3.7252903e-9)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

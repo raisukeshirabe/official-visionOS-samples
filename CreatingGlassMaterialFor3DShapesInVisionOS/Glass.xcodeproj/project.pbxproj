@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF02DE3A2BDC38AA008047B2 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02DE392BDC38AA008047B2 /* EntryPoint.swift */; };
+		DF02DE3C2BDC38AA008047B2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02DE3B2BDC38AA008047B2 /* MainView.swift */; };
+		DF02DE402BDC38AC008047B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF02DE3F2BDC38AC008047B2 /* Assets.xcassets */; };
+		DF02DE522BDC3D3C008047B2 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02DE512BDC3D3C008047B2 /* Entity.swift */; };
+		DF02DE562BDC3F20008047B2 /* Dragon.usdc in Resources */ = {isa = PBXBuildFile; fileRef = DF02DE542BDC3F20008047B2 /* Dragon.usdc */; };
+		DF02DE572BDC3F20008047B2 /* DragonGlass.usda in Resources */ = {isa = PBXBuildFile; fileRef = DF02DE552BDC3F20008047B2 /* DragonGlass.usda */; };
+		F52647FD2C4714E0007C5299 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F52647FC2C4714E0007C5299 /* Preview Assets.xcassets */; };
+		F52647FF2C4714F7007C5299 /* GlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52647FE2C4714F7007C5299 /* GlassView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		82DDB95AD9580856EA6DDAA5 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		CCFBA2E5E2A99B69E0F1E799 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		DF02DE322BDC38AA008047B2 /* Glass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF02DE392BDC38AA008047B2 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		DF02DE3B2BDC38AA008047B2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DF02DE3F2BDC38AC008047B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF02DE442BDC38AC008047B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF02DE512BDC3D3C008047B2 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		DF02DE542BDC3F20008047B2 /* Dragon.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dragon.usdc; sourceTree = "<group>"; };
+		DF02DE552BDC3F20008047B2 /* DragonGlass.usda */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DragonGlass.usda; sourceTree = "<group>"; };
+		EB857D01B103D7A619460362 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F52647FC2C4714E0007C5299 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F52647FE2C4714F7007C5299 /* GlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF02DE2F2BDC38AA008047B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2DEA7967F3E90FED8DE4A46 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				CCFBA2E5E2A99B69E0F1E799 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		DF02DE292BDC38AA008047B2 = {
+			isa = PBXGroup;
+			children = (
+				EB857D01B103D7A619460362 /* README.md */,
+				DF02DE342BDC38AA008047B2 /* Glass */,
+				DF02DE332BDC38AA008047B2 /* Products */,
+				EF28439EDE92384F400B54A4 /* Configuration */,
+				D2DEA7967F3E90FED8DE4A46 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		DF02DE332BDC38AA008047B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DE322BDC38AA008047B2 /* Glass.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF02DE342BDC38AA008047B2 /* Glass */ = {
+			isa = PBXGroup;
+			children = (
+				F52647FA2C47148D007C5299 /* Views */,
+				DF02DE532BDC3D55008047B2 /* Extentions */,
+				F52647FB2C4714A2007C5299 /* Resources */,
+				F52647F92C47147F007C5299 /* App */,
+			);
+			path = Glass;
+			sourceTree = "<group>";
+		};
+		DF02DE532BDC3D55008047B2 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DE512BDC3D3C008047B2 /* Entity.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		EF28439EDE92384F400B54A4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				82DDB95AD9580856EA6DDAA5 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		F52647F92C47147F007C5299 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DE392BDC38AA008047B2 /* EntryPoint.swift */,
+				DF02DE442BDC38AC008047B2 /* Info.plist */,
+				DF02DE3F2BDC38AC008047B2 /* Assets.xcassets */,
+				F52647FC2C4714E0007C5299 /* Preview Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F52647FA2C47148D007C5299 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DE3B2BDC38AA008047B2 /* MainView.swift */,
+				F52647FE2C4714F7007C5299 /* GlassView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F52647FB2C4714A2007C5299 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DE542BDC3F20008047B2 /* Dragon.usdc */,
+				DF02DE552BDC3F20008047B2 /* DragonGlass.usda */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF02DE312BDC38AA008047B2 /* Glass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF02DE472BDC38AC008047B2 /* Build configuration list for PBXNativeTarget "Glass" */;
+			buildPhases = (
+				DF02DE2E2BDC38AA008047B2 /* Sources */,
+				DF02DE2F2BDC38AA008047B2 /* Frameworks */,
+				DF02DE302BDC38AA008047B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Glass;
+			productName = Glass;
+			productReference = DF02DE322BDC38AA008047B2 /* Glass.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF02DE2A2BDC38AA008047B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					DF02DE312BDC38AA008047B2 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = DF02DE2D2BDC38AA008047B2 /* Build configuration list for PBXProject "Glass" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF02DE292BDC38AA008047B2;
+			productRefGroup = DF02DE332BDC38AA008047B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF02DE312BDC38AA008047B2 /* Glass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF02DE302BDC38AA008047B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52647FD2C4714E0007C5299 /* Preview Assets.xcassets in Resources */,
+				DF02DE572BDC3F20008047B2 /* DragonGlass.usda in Resources */,
+				DF02DE562BDC3F20008047B2 /* Dragon.usdc in Resources */,
+				DF02DE402BDC38AC008047B2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF02DE2E2BDC38AA008047B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF02DE522BDC3D3C008047B2 /* Entity.swift in Sources */,
+				DF02DE3C2BDC38AA008047B2 /* MainView.swift in Sources */,
+				F52647FF2C4714F7007C5299 /* GlassView.swift in Sources */,
+				DF02DE3A2BDC38AA008047B2 /* EntryPoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF02DE452BDC38AC008047B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82DDB95AD9580856EA6DDAA5 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		DF02DE462BDC38AC008047B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82DDB95AD9580856EA6DDAA5 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
+		DF02DE482BDC38AC008047B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82DDB95AD9580856EA6DDAA5 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ModifyingGlassMaterial;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.glass${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		DF02DE492BDC38AC008047B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82DDB95AD9580856EA6DDAA5 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ModifyingGlassMaterial;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.glass${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF02DE2D2BDC38AA008047B2 /* Build configuration list for PBXProject "Glass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF02DE452BDC38AC008047B2 /* Debug */,
+				DF02DE462BDC38AC008047B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF02DE472BDC38AC008047B2 /* Build configuration list for PBXNativeTarget "Glass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF02DE482BDC38AC008047B2 /* Debug */,
+				DF02DE492BDC38AC008047B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF02DE2A2BDC38AA008047B2 /* Project object */;
+}
