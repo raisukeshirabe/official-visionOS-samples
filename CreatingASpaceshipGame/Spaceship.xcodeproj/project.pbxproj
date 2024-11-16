@@ -1,0 +1,1243 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0701FCE72BC4BE3200787198 /* Exhaust.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 0701FCE62BC4BE3200787198 /* Exhaust.aiff */; };
+		072852642BE5F29400B453F0 /* Entity+Portal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072852632BE5F29400B453F0 /* Entity+Portal.swift */; };
+		072852682BE5FF7200B453F0 /* ImmersiveViewModel+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072852672BE5FF7200B453F0 /* ImmersiveViewModel+Audio.swift */; };
+		0728526F2BE6021200B453F0 /* Damage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728526E2BE6021200B453F0 /* Damage.swift */; };
+		072852712BE6022900B453F0 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072852702BE6022900B453F0 /* Planet.swift */; };
+		072852762BE6045600B453F0 /* Cargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072852752BE6045600B453F0 /* Cargo.swift */; };
+		072852782BE6046900B453F0 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072852772BE6046900B453F0 /* Asteroid.swift */; };
+		0728527C2BE6084000B453F0 /* AudioMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728527B2BE6084000B453F0 /* AudioMaterial.swift */; };
+		073A166C2BFA9D21003D44CB /* PinchToThrotle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A166B2BFA9D21003D44CB /* PinchToThrotle.swift */; };
+		073BF2762BC0834600DAED55 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073BF2752BC0834600DAED55 /* AppModel.swift */; };
+		073BF2782BC0875400DAED55 /* SceneReconstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073BF2772BC0875400DAED55 /* SceneReconstruction.swift */; };
+		073BF27E2BC0A43F00DAED55 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073BF27D2BC0A43F00DAED55 /* MenuView.swift */; };
+		073DB2A02BF677A300642FED /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 073DB29F2BF677A300642FED /* Algorithms */; };
+		073DB2A22BF6B8AC00642FED /* JoyRideMusic.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 073DB2A12BF6B8AC00642FED /* JoyRideMusic.aiff */; };
+		074979062BED7C6B0049673A /* Studio in Frameworks */ = {isa = PBXBuildFile; productRef = 074979052BED7C6B0049673A /* Studio */; };
+		075125F32BFFCA18000DB9D6 /* WorkMusic.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 075125F22BFFCA18000DB9D6 /* WorkMusic.aiff */; };
+		07590B4D2C03F352000A057D /* Rock_Rock_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B472C03F352000A057D /* Rock_Rock_3.aiff */; };
+		07590B4E2C03F352000A057D /* Rock_Rock_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B482C03F352000A057D /* Rock_Rock_4.aiff */; };
+		07590B4F2C03F352000A057D /* Rock_Rock_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B452C03F352000A057D /* Rock_Rock_1.aiff */; };
+		07590B502C03F352000A057D /* Rock_Rock_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B4A2C03F352000A057D /* Rock_Rock_5.aiff */; };
+		07590B512C03F352000A057D /* Rock_Rock_6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B4B2C03F352000A057D /* Rock_Rock_6.aiff */; };
+		07590B522C03F352000A057D /* Rock_Rock_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B462C03F352000A057D /* Rock_Rock_2.aiff */; };
+		07590B542C03F352000A057D /* Rock_Rock_7.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B4C2C03F352000A057D /* Rock_Rock_7.aiff */; };
+		07590B5A2C03F8B0000A057D /* Plastic_Rock_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B572C03F8B0000A057D /* Plastic_Rock_3.aiff */; };
+		07590B5B2C03F8B0000A057D /* Plastic_Rock_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B562C03F8B0000A057D /* Plastic_Rock_2.aiff */; };
+		07590B5C2C03F8B0000A057D /* Plastic_Rock_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B592C03F8B0000A057D /* Plastic_Rock_5.aiff */; };
+		07590B5D2C03F8B0000A057D /* Plastic_Rock_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B552C03F8B0000A057D /* Plastic_Rock_1.aiff */; };
+		07590B5E2C03F8B0000A057D /* Plastic_Rock_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07590B582C03F8B0000A057D /* Plastic_Rock_4.aiff */; };
+		075A206F2BEC0B500033276B /* UnorderedPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A206E2BEC0B500033276B /* UnorderedPair.swift */; };
+		075A20712BEC3D410033276B /* HangarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A20702BEC3D410033276B /* HangarViewModel.swift */; };
+		075C79D32C051FB900CABF88 /* PlanetTone_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 075C79CE2C051FB100CABF88 /* PlanetTone_3.aiff */; };
+		075C79D42C051FB900CABF88 /* PlanetTone_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 075C79CD2C051FB100CABF88 /* PlanetTone_2.aiff */; };
+		075C79D52C051FB900CABF88 /* PlanetTone_7.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 075C79D22C051FB100CABF88 /* PlanetTone_7.aiff */; };
+		075C79D62C051FB900CABF88 /* PlanetTone_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 075C79D02C051FB100CABF88 /* PlanetTone_5.aiff */; };
+		075C79D72C051FB900CABF88 /* PlanetTone_6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 075C79D12C051FB100CABF88 /* PlanetTone_6.aiff */; };
+		075C79D82C051FB900CABF88 /* PlanetTone_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 075C79CF2C051FB100CABF88 /* PlanetTone_4.aiff */; };
+		075C79D92C051FB900CABF88 /* PlanetTone_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 075C79CC2C051FB100CABF88 /* PlanetTone_1.aiff */; };
+		075C79DB2C05362300CABF88 /* Starfield.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 075C79DA2C05362300CABF88 /* Starfield.jpg */; };
+		0764C6892BFAC8A400B9D92C /* FlightSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0764C6882BFAC8A400B9D92C /* FlightSchoolView.swift */; };
+		0764C68B2BFAF7FE00B9D92C /* SpaceshipAudioStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0764C68A2BFAF7FE00B9D92C /* SpaceshipAudioStorage.swift */; };
+		0764C68E2BFAF86000B9D92C /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0764C68D2BFAF86000B9D92C /* Closure.swift */; };
+		0764C6902BFB07ED00B9D92C /* AudioMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0764C68F2BFB07ED00B9D92C /* AudioMixerView.swift */; };
+		076E69932BFA8B7000B49611 /* SpaceshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E69922BFA8B7000B49611 /* SpaceshipTests.swift */; };
+		076FD2D22BF5334800277E3C /* ImmersiveViewModel+Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076FD2D12BF5334800277E3C /* ImmersiveViewModel+Trailer.swift */; };
+		0777FCD62BDDAB070060A96B /* SIMD+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777FCD52BDDAB070060A96B /* SIMD+.swift */; };
+		0777FCD92BDDABB90060A96B /* ImmersiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777FCD82BDDABB90060A96B /* ImmersiveViewModel.swift */; };
+		0777FCE12BDECD7A0060A96B /* HandsShipControlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777FCE02BDECD7A0060A96B /* HandsShipControlProvider.swift */; };
+		0777FCE32BDECFD60060A96B /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777FCE22BDECFD60060A96B /* Throttle.swift */; };
+		0777FCE52BDED1310060A96B /* PitchRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777FCE42BDED1310060A96B /* PitchRoll.swift */; };
+		0777FCE72BDED4CD0060A96B /* ShipFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777FCE62BDED4CD0060A96B /* ShipFlight.swift */; };
+		0777FCE92BDEEACF0060A96B /* ShipAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777FCE82BDEEACF0060A96B /* ShipAudio.swift */; };
+		078028802BD9D579006A4598 /* DecibelsSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780287F2BD9D579006A4598 /* DecibelsSlider.swift */; };
+		078028822BD9DF78006A4598 /* Gravity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078028812BD9DF78006A4598 /* Gravity.swift */; };
+		07845B312BF40B29004BA9C9 /* Studio_Collision.usda in Resources */ = {isa = PBXBuildFile; fileRef = 07845B302BF40B29004BA9C9 /* Studio_Collision.usda */; };
+		0791A50B2BF7D5980081A16F /* ImmersiveViewModel+AstronomicalObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791A50A2BF7D5980081A16F /* ImmersiveViewModel+AstronomicalObjects.swift */; };
+		0791A50D2BF8272E0081A16F /* ImmersiveViewModel+Collisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791A50C2BF8272E0081A16F /* ImmersiveViewModel+Collisions.swift */; };
+		07B368782BE2BD2F00DC920A /* HangarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B368772BE2BD2F00DC920A /* HangarView.swift */; };
+		07B36A772BE2DDBA00DC920A /* Entity+Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B36A762BE2DDBA00DC920A /* Entity+Spaceship.swift */; };
+		07B93E672BACCF2300D5233B /* VaporTrail.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 07B93E512BACCF2300D5233B /* VaporTrail.aiff */; };
+		07D7C2B32C0177FF004EABA8 /* ImmersiveViewModel+Surroundings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7C2B22C0177FF004EABA8 /* ImmersiveViewModel+Surroundings.swift */; };
+		07E6C2652C01A7650046AA5D /* AudioMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6C2642C01A7650046AA5D /* AudioMixer.swift */; };
+		07E6C2672C026C080046AA5D /* ImmersiveViewModel+GamePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6C2662C026C080046AA5D /* ImmersiveViewModel+GamePhase.swift */; };
+		07E6C2692C0287E30046AA5D /* ImmersiveViewModel+Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6C2682C0287E30046AA5D /* ImmersiveViewModel+Spaceship.swift */; };
+		07E6C26D2C02B1550046AA5D /* SurroundingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6C26C2C02B1550046AA5D /* SurroundingsPicker.swift */; };
+		07E806D42BCDBD880059CAA7 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		07E807612BD078D70059CAA7 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 07E807602BD078D70059CAA7 /* RealityKitContent */; };
+		07EF1FF12BDF6046005FD9AB /* ShipVisuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EF1FF02BDF6046005FD9AB /* ShipVisuals.swift */; };
+		10317B192BEC32EB004C80B4 /* Plastic_Glass_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AFB2BEC32EB004C80B4 /* Plastic_Glass_1.aiff */; };
+		10317B1A2BEC32EB004C80B4 /* ShipDestruct_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B172BEC32EB004C80B4 /* ShipDestruct_4.aiff */; };
+		10317B1B2BEC32EB004C80B4 /* ShipDestruct_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B182BEC32EB004C80B4 /* ShipDestruct_5.aiff */; };
+		10317B1C2BEC32EB004C80B4 /* Plastic_Metal_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B0A2BEC32EB004C80B4 /* Plastic_Metal_3.aiff */; };
+		10317B1D2BEC32EB004C80B4 /* Plastic_Metal_6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B0D2BEC32EB004C80B4 /* Plastic_Metal_6.aiff */; };
+		10317B1E2BEC32EB004C80B4 /* Plastic_Glass_8.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B022BEC32EB004C80B4 /* Plastic_Glass_8.aiff */; };
+		10317B202BEC32EB004C80B4 /* Plastic_Metal_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B092BEC32EB004C80B4 /* Plastic_Metal_2.aiff */; };
+		10317B212BEC32EB004C80B4 /* Plastic_Concrete_7.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AEC2BEC32EB004C80B4 /* Plastic_Concrete_7.aiff */; };
+		10317B222BEC32EB004C80B4 /* Plastic_Fabric_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF32BEC32EB004C80B4 /* Plastic_Fabric_2.aiff */; };
+		10317B232BEC32EB004C80B4 /* Plastic_Fabric_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF42BEC32EB004C80B4 /* Plastic_Fabric_3.aiff */; };
+		10317B242BEC32EB004C80B4 /* Plastic_Glass_10.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B052BEC32EB004C80B4 /* Plastic_Glass_10.aiff */; };
+		10317B262BEC32EB004C80B4 /* ShipDestruct_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B152BEC32EB004C80B4 /* ShipDestruct_2.aiff */; };
+		10317B272BEC32EB004C80B4 /* Plastic_Glass_7.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B012BEC32EB004C80B4 /* Plastic_Glass_7.aiff */; };
+		10317B282BEC32EB004C80B4 /* Plastic_Fabric_6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF72BEC32EB004C80B4 /* Plastic_Fabric_6.aiff */; };
+		10317B292BEC32EB004C80B4 /* Plastic_Metal_7.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B0E2BEC32EB004C80B4 /* Plastic_Metal_7.aiff */; };
+		10317B2A2BEC32EB004C80B4 /* Plastic_Glass_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AFC2BEC32EB004C80B4 /* Plastic_Glass_2.aiff */; };
+		10317B2B2BEC32EB004C80B4 /* ShipDestruct_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B142BEC32EB004C80B4 /* ShipDestruct_1.aiff */; };
+		10317B2C2BEC32EB004C80B4 /* Plastic_Glass_10.aif in Resources */ = {isa = PBXBuildFile; fileRef = 10317B042BEC32EB004C80B4 /* Plastic_Glass_10.aif */; };
+		10317B2D2BEC32EB004C80B4 /* Plastic_Concrete_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AE72BEC32EB004C80B4 /* Plastic_Concrete_2.aiff */; };
+		10317B2E2BEC32EB004C80B4 /* Plastic_Fabric_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF52BEC32EB004C80B4 /* Plastic_Fabric_4.aiff */; };
+		10317B2F2BEC32EB004C80B4 /* Plastic_Fabric_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF62BEC32EB004C80B4 /* Plastic_Fabric_5.aiff */; };
+		10317B302BEC32EB004C80B4 /* Plastic_Concrete_12.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF12BEC32EB004C80B4 /* Plastic_Concrete_12.aiff */; };
+		10317B312BEC32EB004C80B4 /* Plastic_Concrete_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AE82BEC32EB004C80B4 /* Plastic_Concrete_3.aiff */; };
+		10317B322BEC32EB004C80B4 /* Plastic_Concrete_8.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AED2BEC32EB004C80B4 /* Plastic_Concrete_8.aiff */; };
+		10317B332BEC32EB004C80B4 /* Plastic_Concrete_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AE92BEC32EB004C80B4 /* Plastic_Concrete_4.aiff */; };
+		10317B342BEC32EB004C80B4 /* Plastic_Glass_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AFE2BEC32EB004C80B4 /* Plastic_Glass_4.aiff */; };
+		10317B352BEC32EB004C80B4 /* Plastic_Fabric_8.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF92BEC32EB004C80B4 /* Plastic_Fabric_8.aiff */; };
+		10317B372BEC32EB004C80B4 /* Plastic_Metal_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B0C2BEC32EB004C80B4 /* Plastic_Metal_5.aiff */; };
+		10317B382BEC32EB004C80B4 /* Plastic_Concrete_10.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AEF2BEC32EB004C80B4 /* Plastic_Concrete_10.aiff */; };
+		10317B392BEC32EB004C80B4 /* Plastic_Fabric_9.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AFA2BEC32EB004C80B4 /* Plastic_Fabric_9.aiff */; };
+		10317B3A2BEC32EB004C80B4 /* Plastic_Concrete_6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AEB2BEC32EB004C80B4 /* Plastic_Concrete_6.aiff */; };
+		10317B3B2BEC32EB004C80B4 /* Plastic_Glass_6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B002BEC32EB004C80B4 /* Plastic_Glass_6.aiff */; };
+		10317B3E2BEC32EB004C80B4 /* Plastic_Glass_12.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B072BEC32EB004C80B4 /* Plastic_Glass_12.aiff */; };
+		10317B3F2BEC32EB004C80B4 /* Plastic_Fabric_7.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF82BEC32EB004C80B4 /* Plastic_Fabric_7.aiff */; };
+		10317B402BEC32EB004C80B4 /* Plastic_Glass_11.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B062BEC32EB004C80B4 /* Plastic_Glass_11.aiff */; };
+		10317B412BEC32EB004C80B4 /* ShipDestruct_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B162BEC32EB004C80B4 /* ShipDestruct_3.aiff */; };
+		10317B422BEC32EB004C80B4 /* Plastic_Concrete_9.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AEE2BEC32EB004C80B4 /* Plastic_Concrete_9.aiff */; };
+		10317B432BEC32EB004C80B4 /* Plastic_Concrete_11.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF02BEC32EB004C80B4 /* Plastic_Concrete_11.aiff */; };
+		10317B442BEC32EB004C80B4 /* Plastic_Concrete_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AE62BEC32EB004C80B4 /* Plastic_Concrete_1.aiff */; };
+		10317B452BEC32EB004C80B4 /* Plastic_Fabric_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AF22BEC32EB004C80B4 /* Plastic_Fabric_1.aiff */; };
+		10317B462BEC32EB004C80B4 /* Plastic_Glass_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AFF2BEC32EB004C80B4 /* Plastic_Glass_5.aiff */; };
+		10317B472BEC32EB004C80B4 /* Plastic_Concrete_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AEA2BEC32EB004C80B4 /* Plastic_Concrete_5.aiff */; };
+		10317B482BEC32EB004C80B4 /* Plastic_Glass_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317AFD2BEC32EB004C80B4 /* Plastic_Glass_3.aiff */; };
+		10317B492BEC32EB004C80B4 /* Plastic_Metal_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B0B2BEC32EB004C80B4 /* Plastic_Metal_4.aiff */; };
+		10317B4A2BEC32EB004C80B4 /* Plastic_Glass_9.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B032BEC32EB004C80B4 /* Plastic_Glass_9.aiff */; };
+		10317B4B2BEC32EB004C80B4 /* Plastic_Metal_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B082BEC32EB004C80B4 /* Plastic_Metal_1.aiff */; };
+		10317B512BEC3961004C80B4 /* Plastic_Wood_3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B4E2BEC3961004C80B4 /* Plastic_Wood_3.aiff */; };
+		10317B522BEC3961004C80B4 /* Plastic_Wood_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B4C2BEC3961004C80B4 /* Plastic_Wood_1.aiff */; };
+		10317B532BEC3961004C80B4 /* Plastic_Wood_5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B502BEC3961004C80B4 /* Plastic_Wood_5.aiff */; };
+		10317B542BEC3961004C80B4 /* Plastic_Wood_2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B4D2BEC3961004C80B4 /* Plastic_Wood_2.aiff */; };
+		10317B552BEC3961004C80B4 /* Plastic_Wood_4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 10317B4F2BEC3961004C80B4 /* Plastic_Wood_4.aiff */; };
+		10317B922BEC420E004C80B4 /* AudioUnitTurbine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10317B8D2BEC420E004C80B4 /* AudioUnitTurbine.mm */; };
+		11097B7C2BD300CB00B1105E /* Entity+Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11097B7B2BD300CB00B1105E /* Entity+Planet.swift */; };
+		110B6F0C2BE4477600903336 /* ShipControlView_visionOSSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B6F0B2BE4477600903336 /* ShipControlView_visionOSSimulator.swift */; };
+		110B6F0E2BE4478B00903336 /* ShipControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B6F0D2BE4478B00903336 /* ShipControl.swift */; };
+		111104782BE9837F00F53594 /* ShipControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111104772BE9837F00F53594 /* ShipControlView.swift */; };
+		115447A62C01300300C01EF3 /* EnvironmentLightingFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115447A52C012FFF00C01EF3 /* EnvironmentLightingFade.swift */; };
+		116530D32BE5AAAF005C73C0 /* ShipControlView_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116530D22BE5AAAF005C73C0 /* ShipControlView_iOS.swift */; };
+		116D5B872C09123700075CCA /* ImmersiveViewModel+Portal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D5B862C09123100075CCA /* ImmersiveViewModel+Portal.swift */; };
+		119EAB342C06AEBA00A7BA33 /* Sunlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EAB332C06AEBA00A7BA33 /* Sunlight.png */; };
+		11F011E32C07C91A008D2A65 /* RealityView+WorldTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F011E22C07C913008D2A65 /* RealityView+WorldTracking.swift */; };
+		11F011E52C07CB20008D2A65 /* View+CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F011E42C07CB1C008D2A65 /* View+CustomLayout.swift */; };
+		77DB51582B8448A700A747BC /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 77DB51572B8448A700A747BC /* RealityKitContent */; };
+		77DB515A2B8448A700A747BC /* SpaceshipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DB51592B8448A700A747BC /* SpaceshipApp.swift */; };
+		77DB515E2B8448A700A747BC /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DB515D2B8448A700A747BC /* ImmersiveView.swift */; };
+		77DB51602B8448A800A747BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DB515F2B8448A800A747BC /* Assets.xcassets */; };
+		77DB51632B8448A800A747BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DB51622B8448A800A747BC /* Preview Assets.xcassets */; };
+		91EF88042BF46E790058262E /* Entity+AudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF88032BF46E730058262E /* Entity+AudioUnit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		076E69942BFA8B7000B49611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77DB514A2B8448A700A747BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77DB51512B8448A700A747BC;
+			remoteInfo = Spaceship;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0701FCE62BC4BE3200787198 /* Exhaust.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Exhaust.aiff; sourceTree = "<group>"; };
+		072852632BE5F29400B453F0 /* Entity+Portal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Portal.swift"; sourceTree = "<group>"; };
+		072852672BE5FF7200B453F0 /* ImmersiveViewModel+Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveViewModel+Audio.swift"; sourceTree = "<group>"; };
+		0728526E2BE6021200B453F0 /* Damage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage.swift; sourceTree = "<group>"; };
+		072852702BE6022900B453F0 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		072852752BE6045600B453F0 /* Cargo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cargo.swift; sourceTree = "<group>"; };
+		072852772BE6046900B453F0 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
+		0728527B2BE6084000B453F0 /* AudioMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMaterial.swift; sourceTree = "<group>"; };
+		073A166B2BFA9D21003D44CB /* PinchToThrotle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchToThrotle.swift; sourceTree = "<group>"; };
+		073BF2752BC0834600DAED55 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		073BF2772BC0875400DAED55 /* SceneReconstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneReconstruction.swift; sourceTree = "<group>"; };
+		073BF27D2BC0A43F00DAED55 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		073DB2A12BF6B8AC00642FED /* JoyRideMusic.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = JoyRideMusic.aiff; sourceTree = "<group>"; };
+		075125F22BFFCA18000DB9D6 /* WorkMusic.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = WorkMusic.aiff; sourceTree = "<group>"; };
+		07590B452C03F352000A057D /* Rock_Rock_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Rock_Rock_1.aiff; sourceTree = "<group>"; };
+		07590B462C03F352000A057D /* Rock_Rock_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Rock_Rock_2.aiff; sourceTree = "<group>"; };
+		07590B472C03F352000A057D /* Rock_Rock_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Rock_Rock_3.aiff; sourceTree = "<group>"; };
+		07590B482C03F352000A057D /* Rock_Rock_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Rock_Rock_4.aiff; sourceTree = "<group>"; };
+		07590B4A2C03F352000A057D /* Rock_Rock_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Rock_Rock_5.aiff; sourceTree = "<group>"; };
+		07590B4B2C03F352000A057D /* Rock_Rock_6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Rock_Rock_6.aiff; sourceTree = "<group>"; };
+		07590B4C2C03F352000A057D /* Rock_Rock_7.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Rock_Rock_7.aiff; sourceTree = "<group>"; };
+		07590B552C03F8B0000A057D /* Plastic_Rock_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Rock_1.aiff; sourceTree = "<group>"; };
+		07590B562C03F8B0000A057D /* Plastic_Rock_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Rock_2.aiff; sourceTree = "<group>"; };
+		07590B572C03F8B0000A057D /* Plastic_Rock_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Rock_3.aiff; sourceTree = "<group>"; };
+		07590B582C03F8B0000A057D /* Plastic_Rock_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Rock_4.aiff; sourceTree = "<group>"; };
+		07590B592C03F8B0000A057D /* Plastic_Rock_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Rock_5.aiff; sourceTree = "<group>"; };
+		075A206E2BEC0B500033276B /* UnorderedPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnorderedPair.swift; sourceTree = "<group>"; };
+		075A20702BEC3D410033276B /* HangarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangarViewModel.swift; sourceTree = "<group>"; };
+		075C79CC2C051FB100CABF88 /* PlanetTone_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = PlanetTone_1.aiff; sourceTree = "<group>"; };
+		075C79CD2C051FB100CABF88 /* PlanetTone_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = PlanetTone_2.aiff; sourceTree = "<group>"; };
+		075C79CE2C051FB100CABF88 /* PlanetTone_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = PlanetTone_3.aiff; sourceTree = "<group>"; };
+		075C79CF2C051FB100CABF88 /* PlanetTone_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = PlanetTone_4.aiff; sourceTree = "<group>"; };
+		075C79D02C051FB100CABF88 /* PlanetTone_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = PlanetTone_5.aiff; sourceTree = "<group>"; };
+		075C79D12C051FB100CABF88 /* PlanetTone_6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = PlanetTone_6.aiff; sourceTree = "<group>"; };
+		075C79D22C051FB100CABF88 /* PlanetTone_7.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = PlanetTone_7.aiff; sourceTree = "<group>"; };
+		075C79DA2C05362300CABF88 /* Starfield.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starfield.jpg; sourceTree = "<group>"; };
+		0764C6882BFAC8A400B9D92C /* FlightSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSchoolView.swift; sourceTree = "<group>"; };
+		0764C68A2BFAF7FE00B9D92C /* SpaceshipAudioStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipAudioStorage.swift; sourceTree = "<group>"; };
+		0764C68D2BFAF86000B9D92C /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		0764C68F2BFB07ED00B9D92C /* AudioMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixerView.swift; sourceTree = "<group>"; };
+		076E69902BFA8B7000B49611 /* SpaceshipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceshipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		076E69922BFA8B7000B49611 /* SpaceshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipTests.swift; sourceTree = "<group>"; };
+		076FD2D12BF5334800277E3C /* ImmersiveViewModel+Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveViewModel+Trailer.swift"; sourceTree = "<group>"; };
+		0777FCD52BDDAB070060A96B /* SIMD+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SIMD+.swift"; sourceTree = "<group>"; };
+		0777FCD82BDDABB90060A96B /* ImmersiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveViewModel.swift; sourceTree = "<group>"; };
+		0777FCE02BDECD7A0060A96B /* HandsShipControlProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsShipControlProvider.swift; sourceTree = "<group>"; };
+		0777FCE22BDECFD60060A96B /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
+		0777FCE42BDED1310060A96B /* PitchRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchRoll.swift; sourceTree = "<group>"; };
+		0777FCE62BDED4CD0060A96B /* ShipFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipFlight.swift; sourceTree = "<group>"; };
+		0777FCE82BDEEACF0060A96B /* ShipAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipAudio.swift; sourceTree = "<group>"; };
+		0780287F2BD9D579006A4598 /* DecibelsSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelsSlider.swift; sourceTree = "<group>"; };
+		078028812BD9DF78006A4598 /* Gravity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gravity.swift; sourceTree = "<group>"; };
+		07845B302BF40B29004BA9C9 /* Studio_Collision.usda */ = {isa = PBXFileReference; lastKnownFileType = text; path = Studio_Collision.usda; sourceTree = "<group>"; };
+		0791A50A2BF7D5980081A16F /* ImmersiveViewModel+AstronomicalObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveViewModel+AstronomicalObjects.swift"; sourceTree = "<group>"; };
+		0791A50C2BF8272E0081A16F /* ImmersiveViewModel+Collisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveViewModel+Collisions.swift"; sourceTree = "<group>"; };
+		07B368772BE2BD2F00DC920A /* HangarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangarView.swift; sourceTree = "<group>"; };
+		07B36A762BE2DDBA00DC920A /* Entity+Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Spaceship.swift"; sourceTree = "<group>"; };
+		07B93E512BACCF2300D5233B /* VaporTrail.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = VaporTrail.aiff; sourceTree = "<group>"; };
+		07D7C2B22C0177FF004EABA8 /* ImmersiveViewModel+Surroundings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveViewModel+Surroundings.swift"; sourceTree = "<group>"; };
+		07E6C2642C01A7650046AA5D /* AudioMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixer.swift; sourceTree = "<group>"; };
+		07E6C2662C026C080046AA5D /* ImmersiveViewModel+GamePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveViewModel+GamePhase.swift"; sourceTree = "<group>"; };
+		07E6C2682C0287E30046AA5D /* ImmersiveViewModel+Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveViewModel+Spaceship.swift"; sourceTree = "<group>"; };
+		07E6C26C2C02B1550046AA5D /* SurroundingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurroundingsPicker.swift; sourceTree = "<group>"; };
+		07EF1FF02BDF6046005FD9AB /* ShipVisuals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipVisuals.swift; sourceTree = "<group>"; };
+		10317AE62BEC32EB004C80B4 /* Plastic_Concrete_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_1.aiff; sourceTree = "<group>"; };
+		10317AE72BEC32EB004C80B4 /* Plastic_Concrete_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_2.aiff; sourceTree = "<group>"; };
+		10317AE82BEC32EB004C80B4 /* Plastic_Concrete_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_3.aiff; sourceTree = "<group>"; };
+		10317AE92BEC32EB004C80B4 /* Plastic_Concrete_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_4.aiff; sourceTree = "<group>"; };
+		10317AEA2BEC32EB004C80B4 /* Plastic_Concrete_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_5.aiff; sourceTree = "<group>"; };
+		10317AEB2BEC32EB004C80B4 /* Plastic_Concrete_6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_6.aiff; sourceTree = "<group>"; };
+		10317AEC2BEC32EB004C80B4 /* Plastic_Concrete_7.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_7.aiff; sourceTree = "<group>"; };
+		10317AED2BEC32EB004C80B4 /* Plastic_Concrete_8.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_8.aiff; sourceTree = "<group>"; };
+		10317AEE2BEC32EB004C80B4 /* Plastic_Concrete_9.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_9.aiff; sourceTree = "<group>"; };
+		10317AEF2BEC32EB004C80B4 /* Plastic_Concrete_10.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_10.aiff; sourceTree = "<group>"; };
+		10317AF02BEC32EB004C80B4 /* Plastic_Concrete_11.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_11.aiff; sourceTree = "<group>"; };
+		10317AF12BEC32EB004C80B4 /* Plastic_Concrete_12.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Concrete_12.aiff; sourceTree = "<group>"; };
+		10317AF22BEC32EB004C80B4 /* Plastic_Fabric_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_1.aiff; sourceTree = "<group>"; };
+		10317AF32BEC32EB004C80B4 /* Plastic_Fabric_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_2.aiff; sourceTree = "<group>"; };
+		10317AF42BEC32EB004C80B4 /* Plastic_Fabric_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_3.aiff; sourceTree = "<group>"; };
+		10317AF52BEC32EB004C80B4 /* Plastic_Fabric_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_4.aiff; sourceTree = "<group>"; };
+		10317AF62BEC32EB004C80B4 /* Plastic_Fabric_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_5.aiff; sourceTree = "<group>"; };
+		10317AF72BEC32EB004C80B4 /* Plastic_Fabric_6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_6.aiff; sourceTree = "<group>"; };
+		10317AF82BEC32EB004C80B4 /* Plastic_Fabric_7.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_7.aiff; sourceTree = "<group>"; };
+		10317AF92BEC32EB004C80B4 /* Plastic_Fabric_8.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_8.aiff; sourceTree = "<group>"; };
+		10317AFA2BEC32EB004C80B4 /* Plastic_Fabric_9.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Fabric_9.aiff; sourceTree = "<group>"; };
+		10317AFB2BEC32EB004C80B4 /* Plastic_Glass_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_1.aiff; sourceTree = "<group>"; };
+		10317AFC2BEC32EB004C80B4 /* Plastic_Glass_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_2.aiff; sourceTree = "<group>"; };
+		10317AFD2BEC32EB004C80B4 /* Plastic_Glass_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_3.aiff; sourceTree = "<group>"; };
+		10317AFE2BEC32EB004C80B4 /* Plastic_Glass_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_4.aiff; sourceTree = "<group>"; };
+		10317AFF2BEC32EB004C80B4 /* Plastic_Glass_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_5.aiff; sourceTree = "<group>"; };
+		10317B002BEC32EB004C80B4 /* Plastic_Glass_6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_6.aiff; sourceTree = "<group>"; };
+		10317B012BEC32EB004C80B4 /* Plastic_Glass_7.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_7.aiff; sourceTree = "<group>"; };
+		10317B022BEC32EB004C80B4 /* Plastic_Glass_8.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_8.aiff; sourceTree = "<group>"; };
+		10317B032BEC32EB004C80B4 /* Plastic_Glass_9.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_9.aiff; sourceTree = "<group>"; };
+		10317B042BEC32EB004C80B4 /* Plastic_Glass_10.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Plastic_Glass_10.aif; sourceTree = "<group>"; };
+		10317B052BEC32EB004C80B4 /* Plastic_Glass_10.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_10.aiff; sourceTree = "<group>"; };
+		10317B062BEC32EB004C80B4 /* Plastic_Glass_11.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_11.aiff; sourceTree = "<group>"; };
+		10317B072BEC32EB004C80B4 /* Plastic_Glass_12.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Glass_12.aiff; sourceTree = "<group>"; };
+		10317B082BEC32EB004C80B4 /* Plastic_Metal_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Metal_1.aiff; sourceTree = "<group>"; };
+		10317B092BEC32EB004C80B4 /* Plastic_Metal_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Metal_2.aiff; sourceTree = "<group>"; };
+		10317B0A2BEC32EB004C80B4 /* Plastic_Metal_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Metal_3.aiff; sourceTree = "<group>"; };
+		10317B0B2BEC32EB004C80B4 /* Plastic_Metal_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Metal_4.aiff; sourceTree = "<group>"; };
+		10317B0C2BEC32EB004C80B4 /* Plastic_Metal_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Metal_5.aiff; sourceTree = "<group>"; };
+		10317B0D2BEC32EB004C80B4 /* Plastic_Metal_6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Metal_6.aiff; sourceTree = "<group>"; };
+		10317B0E2BEC32EB004C80B4 /* Plastic_Metal_7.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Metal_7.aiff; sourceTree = "<group>"; };
+		10317B142BEC32EB004C80B4 /* ShipDestruct_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ShipDestruct_1.aiff; sourceTree = "<group>"; };
+		10317B152BEC32EB004C80B4 /* ShipDestruct_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ShipDestruct_2.aiff; sourceTree = "<group>"; };
+		10317B162BEC32EB004C80B4 /* ShipDestruct_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ShipDestruct_3.aiff; sourceTree = "<group>"; };
+		10317B172BEC32EB004C80B4 /* ShipDestruct_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ShipDestruct_4.aiff; sourceTree = "<group>"; };
+		10317B182BEC32EB004C80B4 /* ShipDestruct_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ShipDestruct_5.aiff; sourceTree = "<group>"; };
+		10317B4C2BEC3961004C80B4 /* Plastic_Wood_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Wood_1.aiff; sourceTree = "<group>"; };
+		10317B4D2BEC3961004C80B4 /* Plastic_Wood_2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Wood_2.aiff; sourceTree = "<group>"; };
+		10317B4E2BEC3961004C80B4 /* Plastic_Wood_3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Wood_3.aiff; sourceTree = "<group>"; };
+		10317B4F2BEC3961004C80B4 /* Plastic_Wood_4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Wood_4.aiff; sourceTree = "<group>"; };
+		10317B502BEC3961004C80B4 /* Plastic_Wood_5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Plastic_Wood_5.aiff; sourceTree = "<group>"; };
+		10317B8C2BEC420E004C80B4 /* AudioUnitTurbine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitTurbine.h; sourceTree = "<group>"; };
+		10317B8D2BEC420E004C80B4 /* AudioUnitTurbine.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioUnitTurbine.mm; sourceTree = "<group>"; };
+		10317B912BEC420E004C80B4 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		11097B7B2BD300CB00B1105E /* Entity+Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Planet.swift"; sourceTree = "<group>"; };
+		110B6F0B2BE4477600903336 /* ShipControlView_visionOSSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipControlView_visionOSSimulator.swift; sourceTree = "<group>"; };
+		110B6F0D2BE4478B00903336 /* ShipControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipControl.swift; sourceTree = "<group>"; };
+		111104772BE9837F00F53594 /* ShipControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipControlView.swift; sourceTree = "<group>"; };
+		115447A52C012FFF00C01EF3 /* EnvironmentLightingFade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLightingFade.swift; sourceTree = "<group>"; };
+		116530D22BE5AAAF005C73C0 /* ShipControlView_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipControlView_iOS.swift; sourceTree = "<group>"; };
+		116D5B862C09123100075CCA /* ImmersiveViewModel+Portal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveViewModel+Portal.swift"; sourceTree = "<group>"; };
+		119EAB332C06AEBA00A7BA33 /* Sunlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sunlight.png; sourceTree = "<group>"; };
+		11F011E22C07C913008D2A65 /* RealityView+WorldTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityView+WorldTracking.swift"; sourceTree = "<group>"; };
+		11F011E42C07CB1C008D2A65 /* View+CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CustomLayout.swift"; sourceTree = "<group>"; };
+		3C4E05450CD208225B266934 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		77DB51522B8448A700A747BC /* Spaceship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spaceship.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DB51592B8448A700A747BC /* SpaceshipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipApp.swift; sourceTree = "<group>"; };
+		77DB515D2B8448A700A747BC /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		77DB515F2B8448A800A747BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77DB51622B8448A800A747BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		77DB51642B8448A800A747BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81ECE40D18D6B80B5A2FA2DD /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		91EF88032BF46E730058262E /* Entity+AudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+AudioUnit.swift"; sourceTree = "<group>"; };
+		C1DF9A863AAD686DA8828DB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		076E698D2BFA8B7000B49611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DB514F2B8448A700A747BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073DB2A02BF677A300642FED /* Algorithms in Frameworks */,
+				77DB51582B8448A700A747BC /* RealityKitContent in Frameworks */,
+				07E807612BD078D70059CAA7 /* RealityKitContent in Frameworks */,
+				074979062BED7C6B0049673A /* Studio in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0701FCD92BC47FE500787198 /* Collisions */ = {
+			isa = PBXGroup;
+			children = (
+				10317B4C2BEC3961004C80B4 /* Plastic_Wood_1.aiff */,
+				10317B4D2BEC3961004C80B4 /* Plastic_Wood_2.aiff */,
+				10317B4E2BEC3961004C80B4 /* Plastic_Wood_3.aiff */,
+				10317B4F2BEC3961004C80B4 /* Plastic_Wood_4.aiff */,
+				10317B502BEC3961004C80B4 /* Plastic_Wood_5.aiff */,
+				10317AE62BEC32EB004C80B4 /* Plastic_Concrete_1.aiff */,
+				10317AE72BEC32EB004C80B4 /* Plastic_Concrete_2.aiff */,
+				10317AE82BEC32EB004C80B4 /* Plastic_Concrete_3.aiff */,
+				10317AE92BEC32EB004C80B4 /* Plastic_Concrete_4.aiff */,
+				10317AEA2BEC32EB004C80B4 /* Plastic_Concrete_5.aiff */,
+				10317AEB2BEC32EB004C80B4 /* Plastic_Concrete_6.aiff */,
+				10317AEC2BEC32EB004C80B4 /* Plastic_Concrete_7.aiff */,
+				10317AED2BEC32EB004C80B4 /* Plastic_Concrete_8.aiff */,
+				10317AEE2BEC32EB004C80B4 /* Plastic_Concrete_9.aiff */,
+				10317AEF2BEC32EB004C80B4 /* Plastic_Concrete_10.aiff */,
+				10317AF02BEC32EB004C80B4 /* Plastic_Concrete_11.aiff */,
+				10317AF12BEC32EB004C80B4 /* Plastic_Concrete_12.aiff */,
+				10317AF22BEC32EB004C80B4 /* Plastic_Fabric_1.aiff */,
+				10317AF32BEC32EB004C80B4 /* Plastic_Fabric_2.aiff */,
+				10317AF42BEC32EB004C80B4 /* Plastic_Fabric_3.aiff */,
+				10317AF52BEC32EB004C80B4 /* Plastic_Fabric_4.aiff */,
+				10317AF62BEC32EB004C80B4 /* Plastic_Fabric_5.aiff */,
+				10317AF72BEC32EB004C80B4 /* Plastic_Fabric_6.aiff */,
+				10317AF82BEC32EB004C80B4 /* Plastic_Fabric_7.aiff */,
+				10317AF92BEC32EB004C80B4 /* Plastic_Fabric_8.aiff */,
+				10317AFA2BEC32EB004C80B4 /* Plastic_Fabric_9.aiff */,
+				10317AFB2BEC32EB004C80B4 /* Plastic_Glass_1.aiff */,
+				10317AFC2BEC32EB004C80B4 /* Plastic_Glass_2.aiff */,
+				10317AFD2BEC32EB004C80B4 /* Plastic_Glass_3.aiff */,
+				10317AFE2BEC32EB004C80B4 /* Plastic_Glass_4.aiff */,
+				10317AFF2BEC32EB004C80B4 /* Plastic_Glass_5.aiff */,
+				10317B002BEC32EB004C80B4 /* Plastic_Glass_6.aiff */,
+				10317B012BEC32EB004C80B4 /* Plastic_Glass_7.aiff */,
+				10317B022BEC32EB004C80B4 /* Plastic_Glass_8.aiff */,
+				10317B032BEC32EB004C80B4 /* Plastic_Glass_9.aiff */,
+				10317B042BEC32EB004C80B4 /* Plastic_Glass_10.aif */,
+				10317B052BEC32EB004C80B4 /* Plastic_Glass_10.aiff */,
+				10317B062BEC32EB004C80B4 /* Plastic_Glass_11.aiff */,
+				10317B072BEC32EB004C80B4 /* Plastic_Glass_12.aiff */,
+				10317B082BEC32EB004C80B4 /* Plastic_Metal_1.aiff */,
+				10317B092BEC32EB004C80B4 /* Plastic_Metal_2.aiff */,
+				10317B0A2BEC32EB004C80B4 /* Plastic_Metal_3.aiff */,
+				10317B0B2BEC32EB004C80B4 /* Plastic_Metal_4.aiff */,
+				10317B0C2BEC32EB004C80B4 /* Plastic_Metal_5.aiff */,
+				10317B0D2BEC32EB004C80B4 /* Plastic_Metal_6.aiff */,
+				10317B0E2BEC32EB004C80B4 /* Plastic_Metal_7.aiff */,
+				07590B552C03F8B0000A057D /* Plastic_Rock_1.aiff */,
+				07590B562C03F8B0000A057D /* Plastic_Rock_2.aiff */,
+				07590B572C03F8B0000A057D /* Plastic_Rock_3.aiff */,
+				07590B582C03F8B0000A057D /* Plastic_Rock_4.aiff */,
+				07590B592C03F8B0000A057D /* Plastic_Rock_5.aiff */,
+				07590B452C03F352000A057D /* Rock_Rock_1.aiff */,
+				07590B462C03F352000A057D /* Rock_Rock_2.aiff */,
+				07590B472C03F352000A057D /* Rock_Rock_3.aiff */,
+				07590B482C03F352000A057D /* Rock_Rock_4.aiff */,
+				07590B4A2C03F352000A057D /* Rock_Rock_5.aiff */,
+				07590B4B2C03F352000A057D /* Rock_Rock_6.aiff */,
+				07590B4C2C03F352000A057D /* Rock_Rock_7.aiff */,
+				10317B142BEC32EB004C80B4 /* ShipDestruct_1.aiff */,
+				10317B152BEC32EB004C80B4 /* ShipDestruct_2.aiff */,
+				10317B162BEC32EB004C80B4 /* ShipDestruct_3.aiff */,
+				10317B172BEC32EB004C80B4 /* ShipDestruct_4.aiff */,
+				10317B182BEC32EB004C80B4 /* ShipDestruct_5.aiff */,
+			);
+			path = Collisions;
+			sourceTree = "<group>";
+		};
+		0701FCE82BC4C72B00787198 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				075125F22BFFCA18000DB9D6 /* WorkMusic.aiff */,
+				073DB2A12BF6B8AC00642FED /* JoyRideMusic.aiff */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		071390F62BAE07A900D9C02F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		072852692BE6012500B453F0 /* SpaceshipControl */ = {
+			isa = PBXGroup;
+			children = (
+				110B6F0D2BE4478B00903336 /* ShipControl.swift */,
+				0777FCE02BDECD7A0060A96B /* HandsShipControlProvider.swift */,
+			);
+			path = SpaceshipControl;
+			sourceTree = "<group>";
+		};
+		0728526A2BE6018F00B453F0 /* SpaceshipBehavior */ = {
+			isa = PBXGroup;
+			children = (
+				115447A52C012FFF00C01EF3 /* EnvironmentLightingFade.swift */,
+				0777FCE22BDECFD60060A96B /* Throttle.swift */,
+				0777FCE42BDED1310060A96B /* PitchRoll.swift */,
+				0777FCE62BDED4CD0060A96B /* ShipFlight.swift */,
+				0777FCE82BDEEACF0060A96B /* ShipAudio.swift */,
+				07EF1FF02BDF6046005FD9AB /* ShipVisuals.swift */,
+			);
+			path = SpaceshipBehavior;
+			sourceTree = "<group>";
+		};
+		0728526B2BE601B500B453F0 /* Gameplay */ = {
+			isa = PBXGroup;
+			children = (
+				0728526E2BE6021200B453F0 /* Damage.swift */,
+				072852702BE6022900B453F0 /* Planet.swift */,
+				072852772BE6046900B453F0 /* Asteroid.swift */,
+				072852752BE6045600B453F0 /* Cargo.swift */,
+			);
+			path = Gameplay;
+			sourceTree = "<group>";
+		};
+		073A166A2BFA9D10003D44CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				073A166B2BFA9D21003D44CB /* PinchToThrotle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		073BF27F2BC0B3B100DAED55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11F011E42C07CB1C008D2A65 /* View+CustomLayout.swift */,
+				11F011E22C07C913008D2A65 /* RealityView+WorldTracking.swift */,
+				073BF27D2BC0A43F00DAED55 /* MenuView.swift */,
+				07B368772BE2BD2F00DC920A /* HangarView.swift */,
+				0764C6882BFAC8A400B9D92C /* FlightSchoolView.swift */,
+				77DB515D2B8448A700A747BC /* ImmersiveView.swift */,
+				0780287F2BD9D579006A4598 /* DecibelsSlider.swift */,
+				0764C68F2BFB07ED00B9D92C /* AudioMixerView.swift */,
+				111104772BE9837F00F53594 /* ShipControlView.swift */,
+				116530D22BE5AAAF005C73C0 /* ShipControlView_iOS.swift */,
+				110B6F0B2BE4477600903336 /* ShipControlView_visionOSSimulator.swift */,
+				07E6C26C2C02B1550046AA5D /* SurroundingsPicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		073BF2802BC0B3B800DAED55 /* ECS */ = {
+			isa = PBXGroup;
+			children = (
+				072852692BE6012500B453F0 /* SpaceshipControl */,
+				0728526A2BE6018F00B453F0 /* SpaceshipBehavior */,
+				0728526B2BE601B500B453F0 /* Gameplay */,
+				91EF88032BF46E730058262E /* Entity+AudioUnit.swift */,
+				11097B7B2BD300CB00B1105E /* Entity+Planet.swift */,
+				07B36A762BE2DDBA00DC920A /* Entity+Spaceship.swift */,
+				072852632BE5F29400B453F0 /* Entity+Portal.swift */,
+				078028812BD9DF78006A4598 /* Gravity.swift */,
+				0728527B2BE6084000B453F0 /* AudioMaterial.swift */,
+				0764C68D2BFAF86000B9D92C /* Closure.swift */,
+			);
+			path = ECS;
+			sourceTree = "<group>";
+		};
+		076E69912BFA8B7000B49611 /* SpaceshipTests */ = {
+			isa = PBXGroup;
+			children = (
+				076E69922BFA8B7000B49611 /* SpaceshipTests.swift */,
+			);
+			path = SpaceshipTests;
+			sourceTree = "<group>";
+		};
+		0777FCD42BDDAAFC0060A96B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				073BF2772BC0875400DAED55 /* SceneReconstruction.swift */,
+				0777FCD52BDDAB070060A96B /* SIMD+.swift */,
+				075A206E2BEC0B500033276B /* UnorderedPair.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0777FCD72BDDABA50060A96B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0777FCD82BDDABB90060A96B /* ImmersiveViewModel.swift */,
+				07E6C2682C0287E30046AA5D /* ImmersiveViewModel+Spaceship.swift */,
+				07E6C2662C026C080046AA5D /* ImmersiveViewModel+GamePhase.swift */,
+				07D7C2B22C0177FF004EABA8 /* ImmersiveViewModel+Surroundings.swift */,
+				072852672BE5FF7200B453F0 /* ImmersiveViewModel+Audio.swift */,
+				076FD2D12BF5334800277E3C /* ImmersiveViewModel+Trailer.swift */,
+				0791A50C2BF8272E0081A16F /* ImmersiveViewModel+Collisions.swift */,
+				116D5B862C09123100075CCA /* ImmersiveViewModel+Portal.swift */,
+				0791A50A2BF7D5980081A16F /* ImmersiveViewModel+AstronomicalObjects.swift */,
+				075A20702BEC3D410033276B /* HangarViewModel.swift */,
+				0764C68A2BFAF7FE00B9D92C /* SpaceshipAudioStorage.swift */,
+				07E6C2642C01A7650046AA5D /* AudioMixer.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		07845B2F2BF40B1E004BA9C9 /* Studio */ = {
+			isa = PBXGroup;
+			children = (
+				07845B302BF40B29004BA9C9 /* Studio_Collision.usda */,
+			);
+			path = Studio;
+			sourceTree = "<group>";
+		};
+		07B93E4C2BACCBC000D5233B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07845B2F2BF40B1E004BA9C9 /* Studio */,
+				07E806DE2BCDF13C0059CAA7 /* Audio */,
+				116DCE202BCDAD9300D92E09 /* Outerspace */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07E806DE2BCDF13C0059CAA7 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				07E806F22BCDFE3A0059CAA7 /* Spaceship */,
+				07E806DF2BCDF14E0059CAA7 /* Planets */,
+				0701FCD92BC47FE500787198 /* Collisions */,
+				0701FCE82BC4C72B00787198 /* Music */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		07E806DF2BCDF14E0059CAA7 /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				075C79CC2C051FB100CABF88 /* PlanetTone_1.aiff */,
+				075C79CD2C051FB100CABF88 /* PlanetTone_2.aiff */,
+				075C79CE2C051FB100CABF88 /* PlanetTone_3.aiff */,
+				075C79CF2C051FB100CABF88 /* PlanetTone_4.aiff */,
+				075C79D02C051FB100CABF88 /* PlanetTone_5.aiff */,
+				075C79D12C051FB100CABF88 /* PlanetTone_6.aiff */,
+				075C79D22C051FB100CABF88 /* PlanetTone_7.aiff */,
+			);
+			path = Planets;
+			sourceTree = "<group>";
+		};
+		07E806F22BCDFE3A0059CAA7 /* Spaceship */ = {
+			isa = PBXGroup;
+			children = (
+				07B93E512BACCF2300D5233B /* VaporTrail.aiff */,
+				0701FCE62BC4BE3200787198 /* Exhaust.aiff */,
+			);
+			path = Spaceship;
+			sourceTree = "<group>";
+		};
+		10317B902BEC420E004C80B4 /* AudioUnitTurbine */ = {
+			isa = PBXGroup;
+			children = (
+				10317B8C2BEC420E004C80B4 /* AudioUnitTurbine.h */,
+				10317B8D2BEC420E004C80B4 /* AudioUnitTurbine.mm */,
+			);
+			path = AudioUnitTurbine;
+			sourceTree = "<group>";
+		};
+		116DCE202BCDAD9300D92E09 /* Outerspace */ = {
+			isa = PBXGroup;
+			children = (
+				075C79DA2C05362300CABF88 /* Starfield.jpg */,
+				119EAB332C06AEBA00A7BA33 /* Sunlight.png */,
+			);
+			path = Outerspace;
+			sourceTree = "<group>";
+		};
+		28D3F1BC29F8A48EB8A585BA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3C4E05450CD208225B266934 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		77DB51492B8448A700A747BC = {
+			isa = PBXGroup;
+			children = (
+				C1DF9A863AAD686DA8828DB0 /* README.md */,
+				77DB51542B8448A700A747BC /* Spaceship */,
+				076E69912BFA8B7000B49611 /* SpaceshipTests */,
+				77DB51532B8448A700A747BC /* Products */,
+				071390F62BAE07A900D9C02F /* Frameworks */,
+				28D3F1BC29F8A48EB8A585BA /* Configuration */,
+				DFD33B21BA13339A3C583B43 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		77DB51532B8448A700A747BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77DB51522B8448A700A747BC /* Spaceship.app */,
+				076E69902BFA8B7000B49611 /* SpaceshipTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77DB51542B8448A700A747BC /* Spaceship */ = {
+			isa = PBXGroup;
+			children = (
+				77DB51592B8448A700A747BC /* SpaceshipApp.swift */,
+				073BF2752BC0834600DAED55 /* AppModel.swift */,
+				073BF27F2BC0B3B100DAED55 /* Views */,
+				0777FCD72BDDABA50060A96B /* ViewModels */,
+				073BF2802BC0B3B800DAED55 /* ECS */,
+				073A166A2BFA9D10003D44CB /* Model */,
+				0777FCD42BDDAAFC0060A96B /* Utility */,
+				10317B902BEC420E004C80B4 /* AudioUnitTurbine */,
+				07B93E4C2BACCBC000D5233B /* Resources */,
+				10317B912BEC420E004C80B4 /* Bridging-Header.h */,
+				77DB515F2B8448A800A747BC /* Assets.xcassets */,
+				77DB51642B8448A800A747BC /* Info.plist */,
+				77DB51612B8448A800A747BC /* Preview Content */,
+			);
+			path = Spaceship;
+			sourceTree = "<group>";
+		};
+		77DB51612B8448A800A747BC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				77DB51622B8448A800A747BC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DFD33B21BA13339A3C583B43 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				81ECE40D18D6B80B5A2FA2DD /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		076E698F2BFA8B7000B49611 /* SpaceshipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076E69962BFA8B7000B49611 /* Build configuration list for PBXNativeTarget "SpaceshipTests" */;
+			buildPhases = (
+				076E698C2BFA8B7000B49611 /* Sources */,
+				076E698D2BFA8B7000B49611 /* Frameworks */,
+				076E698E2BFA8B7000B49611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076E69952BFA8B7000B49611 /* PBXTargetDependency */,
+			);
+			name = SpaceshipTests;
+			productName = SpaceshipTests;
+			productReference = 076E69902BFA8B7000B49611 /* SpaceshipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		77DB51512B8448A700A747BC /* Spaceship */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DB51672B8448A800A747BC /* Build configuration list for PBXNativeTarget "Spaceship" */;
+			buildPhases = (
+				77DB514E2B8448A700A747BC /* Sources */,
+				77DB514F2B8448A700A747BC /* Frameworks */,
+				77DB51502B8448A700A747BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spaceship;
+			packageProductDependencies = (
+				77DB51572B8448A700A747BC /* RealityKitContent */,
+				07E807602BD078D70059CAA7 /* RealityKitContent */,
+				074979052BED7C6B0049673A /* Studio */,
+				073DB29F2BF677A300642FED /* Algorithms */,
+			);
+			productName = Spaceship;
+			productReference = 77DB51522B8448A700A747BC /* Spaceship.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77DB514A2B8448A700A747BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1520;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					076E698F2BFA8B7000B49611 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 77DB51512B8448A700A747BC;
+					};
+					77DB51512B8448A700A747BC = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 77DB514D2B8448A700A747BC /* Build configuration list for PBXProject "Spaceship" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77DB51492B8448A700A747BC;
+			packageReferences = (
+				073DB29E2BF677A300642FED /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				07E8075F2BD078D70059CAA7 /* XCLocalSwiftPackageReference "Packages/RealityKitContent" */,
+				074979042BED7C6B0049673A /* XCLocalSwiftPackageReference "Packages/Studio" */,
+			);
+			productRefGroup = 77DB51532B8448A700A747BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77DB51512B8448A700A747BC /* Spaceship */,
+				076E698F2BFA8B7000B49611 /* SpaceshipTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		076E698E2BFA8B7000B49611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DB51502B8448A700A747BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E806D42BCDBD880059CAA7 /* (null) in Resources */,
+				77DB51632B8448A800A747BC /* Preview Assets.xcassets in Resources */,
+				77DB51602B8448A800A747BC /* Assets.xcassets in Resources */,
+				10317B192BEC32EB004C80B4 /* Plastic_Glass_1.aiff in Resources */,
+				10317B1A2BEC32EB004C80B4 /* ShipDestruct_4.aiff in Resources */,
+				10317B1B2BEC32EB004C80B4 /* ShipDestruct_5.aiff in Resources */,
+				10317B1C2BEC32EB004C80B4 /* Plastic_Metal_3.aiff in Resources */,
+				10317B1D2BEC32EB004C80B4 /* Plastic_Metal_6.aiff in Resources */,
+				10317B1E2BEC32EB004C80B4 /* Plastic_Glass_8.aiff in Resources */,
+				10317B202BEC32EB004C80B4 /* Plastic_Metal_2.aiff in Resources */,
+				10317B212BEC32EB004C80B4 /* Plastic_Concrete_7.aiff in Resources */,
+				07590B5A2C03F8B0000A057D /* Plastic_Rock_3.aiff in Resources */,
+				07590B5B2C03F8B0000A057D /* Plastic_Rock_2.aiff in Resources */,
+				07590B5C2C03F8B0000A057D /* Plastic_Rock_5.aiff in Resources */,
+				07590B5D2C03F8B0000A057D /* Plastic_Rock_1.aiff in Resources */,
+				07590B5E2C03F8B0000A057D /* Plastic_Rock_4.aiff in Resources */,
+				10317B222BEC32EB004C80B4 /* Plastic_Fabric_2.aiff in Resources */,
+				10317B232BEC32EB004C80B4 /* Plastic_Fabric_3.aiff in Resources */,
+				10317B242BEC32EB004C80B4 /* Plastic_Glass_10.aiff in Resources */,
+				10317B262BEC32EB004C80B4 /* ShipDestruct_2.aiff in Resources */,
+				10317B272BEC32EB004C80B4 /* Plastic_Glass_7.aiff in Resources */,
+				10317B282BEC32EB004C80B4 /* Plastic_Fabric_6.aiff in Resources */,
+				10317B292BEC32EB004C80B4 /* Plastic_Metal_7.aiff in Resources */,
+				10317B2A2BEC32EB004C80B4 /* Plastic_Glass_2.aiff in Resources */,
+				10317B2B2BEC32EB004C80B4 /* ShipDestruct_1.aiff in Resources */,
+				10317B2C2BEC32EB004C80B4 /* Plastic_Glass_10.aif in Resources */,
+				10317B2D2BEC32EB004C80B4 /* Plastic_Concrete_2.aiff in Resources */,
+				10317B2E2BEC32EB004C80B4 /* Plastic_Fabric_4.aiff in Resources */,
+				10317B2F2BEC32EB004C80B4 /* Plastic_Fabric_5.aiff in Resources */,
+				10317B302BEC32EB004C80B4 /* Plastic_Concrete_12.aiff in Resources */,
+				10317B312BEC32EB004C80B4 /* Plastic_Concrete_3.aiff in Resources */,
+				10317B322BEC32EB004C80B4 /* Plastic_Concrete_8.aiff in Resources */,
+				10317B332BEC32EB004C80B4 /* Plastic_Concrete_4.aiff in Resources */,
+				10317B342BEC32EB004C80B4 /* Plastic_Glass_4.aiff in Resources */,
+				10317B352BEC32EB004C80B4 /* Plastic_Fabric_8.aiff in Resources */,
+				10317B372BEC32EB004C80B4 /* Plastic_Metal_5.aiff in Resources */,
+				10317B382BEC32EB004C80B4 /* Plastic_Concrete_10.aiff in Resources */,
+				10317B392BEC32EB004C80B4 /* Plastic_Fabric_9.aiff in Resources */,
+				075C79D32C051FB900CABF88 /* PlanetTone_3.aiff in Resources */,
+				075C79DB2C05362300CABF88 /* Starfield.jpg in Resources */,
+				075C79D42C051FB900CABF88 /* PlanetTone_2.aiff in Resources */,
+				075C79D52C051FB900CABF88 /* PlanetTone_7.aiff in Resources */,
+				075C79D62C051FB900CABF88 /* PlanetTone_5.aiff in Resources */,
+				075C79D72C051FB900CABF88 /* PlanetTone_6.aiff in Resources */,
+				075C79D82C051FB900CABF88 /* PlanetTone_4.aiff in Resources */,
+				075C79D92C051FB900CABF88 /* PlanetTone_1.aiff in Resources */,
+				10317B3A2BEC32EB004C80B4 /* Plastic_Concrete_6.aiff in Resources */,
+				10317B512BEC3961004C80B4 /* Plastic_Wood_3.aiff in Resources */,
+				10317B522BEC3961004C80B4 /* Plastic_Wood_1.aiff in Resources */,
+				10317B532BEC3961004C80B4 /* Plastic_Wood_5.aiff in Resources */,
+				10317B542BEC3961004C80B4 /* Plastic_Wood_2.aiff in Resources */,
+				10317B552BEC3961004C80B4 /* Plastic_Wood_4.aiff in Resources */,
+				073DB2A22BF6B8AC00642FED /* JoyRideMusic.aiff in Resources */,
+				10317B3B2BEC32EB004C80B4 /* Plastic_Glass_6.aiff in Resources */,
+				10317B3E2BEC32EB004C80B4 /* Plastic_Glass_12.aiff in Resources */,
+				10317B3F2BEC32EB004C80B4 /* Plastic_Fabric_7.aiff in Resources */,
+				10317B402BEC32EB004C80B4 /* Plastic_Glass_11.aiff in Resources */,
+				10317B412BEC32EB004C80B4 /* ShipDestruct_3.aiff in Resources */,
+				10317B422BEC32EB004C80B4 /* Plastic_Concrete_9.aiff in Resources */,
+				10317B432BEC32EB004C80B4 /* Plastic_Concrete_11.aiff in Resources */,
+				10317B442BEC32EB004C80B4 /* Plastic_Concrete_1.aiff in Resources */,
+				07590B4D2C03F352000A057D /* Rock_Rock_3.aiff in Resources */,
+				07590B4E2C03F352000A057D /* Rock_Rock_4.aiff in Resources */,
+				07590B4F2C03F352000A057D /* Rock_Rock_1.aiff in Resources */,
+				07590B502C03F352000A057D /* Rock_Rock_5.aiff in Resources */,
+				119EAB342C06AEBA00A7BA33 /* Sunlight.png in Resources */,
+				07590B512C03F352000A057D /* Rock_Rock_6.aiff in Resources */,
+				07590B522C03F352000A057D /* Rock_Rock_2.aiff in Resources */,
+				07590B542C03F352000A057D /* Rock_Rock_7.aiff in Resources */,
+				10317B452BEC32EB004C80B4 /* Plastic_Fabric_1.aiff in Resources */,
+				10317B462BEC32EB004C80B4 /* Plastic_Glass_5.aiff in Resources */,
+				10317B472BEC32EB004C80B4 /* Plastic_Concrete_5.aiff in Resources */,
+				07845B312BF40B29004BA9C9 /* Studio_Collision.usda in Resources */,
+				10317B482BEC32EB004C80B4 /* Plastic_Glass_3.aiff in Resources */,
+				10317B492BEC32EB004C80B4 /* Plastic_Metal_4.aiff in Resources */,
+				10317B4A2BEC32EB004C80B4 /* Plastic_Glass_9.aiff in Resources */,
+				10317B4B2BEC32EB004C80B4 /* Plastic_Metal_1.aiff in Resources */,
+				075125F32BFFCA18000DB9D6 /* WorkMusic.aiff in Resources */,
+				0701FCE72BC4BE3200787198 /* Exhaust.aiff in Resources */,
+				07B93E672BACCF2300D5233B /* VaporTrail.aiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		076E698C2BFA8B7000B49611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E69932BFA8B7000B49611 /* SpaceshipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DB514E2B8448A700A747BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B36A772BE2DDBA00DC920A /* Entity+Spaceship.swift in Sources */,
+				072852782BE6046900B453F0 /* Asteroid.swift in Sources */,
+				0764C6892BFAC8A400B9D92C /* FlightSchoolView.swift in Sources */,
+				07E6C26D2C02B1550046AA5D /* SurroundingsPicker.swift in Sources */,
+				91EF88042BF46E790058262E /* Entity+AudioUnit.swift in Sources */,
+				110B6F0C2BE4477600903336 /* ShipControlView_visionOSSimulator.swift in Sources */,
+				0777FCD92BDDABB90060A96B /* ImmersiveViewModel.swift in Sources */,
+				07D7C2B32C0177FF004EABA8 /* ImmersiveViewModel+Surroundings.swift in Sources */,
+				111104782BE9837F00F53594 /* ShipControlView.swift in Sources */,
+				072852642BE5F29400B453F0 /* Entity+Portal.swift in Sources */,
+				075A20712BEC3D410033276B /* HangarViewModel.swift in Sources */,
+				072852712BE6022900B453F0 /* Planet.swift in Sources */,
+				07E6C2692C0287E30046AA5D /* ImmersiveViewModel+Spaceship.swift in Sources */,
+				110B6F0E2BE4478B00903336 /* ShipControl.swift in Sources */,
+				116D5B872C09123700075CCA /* ImmersiveViewModel+Portal.swift in Sources */,
+				116530D32BE5AAAF005C73C0 /* ShipControlView_iOS.swift in Sources */,
+				0764C6902BFB07ED00B9D92C /* AudioMixerView.swift in Sources */,
+				078028822BD9DF78006A4598 /* Gravity.swift in Sources */,
+				0777FCE32BDECFD60060A96B /* Throttle.swift in Sources */,
+				075A206F2BEC0B500033276B /* UnorderedPair.swift in Sources */,
+				072852682BE5FF7200B453F0 /* ImmersiveViewModel+Audio.swift in Sources */,
+				076FD2D22BF5334800277E3C /* ImmersiveViewModel+Trailer.swift in Sources */,
+				073BF2762BC0834600DAED55 /* AppModel.swift in Sources */,
+				77DB515A2B8448A700A747BC /* SpaceshipApp.swift in Sources */,
+				0777FCE92BDEEACF0060A96B /* ShipAudio.swift in Sources */,
+				07B368782BE2BD2F00DC920A /* HangarView.swift in Sources */,
+				072852762BE6045600B453F0 /* Cargo.swift in Sources */,
+				0777FCE52BDED1310060A96B /* PitchRoll.swift in Sources */,
+				0764C68B2BFAF7FE00B9D92C /* SpaceshipAudioStorage.swift in Sources */,
+				77DB515E2B8448A700A747BC /* ImmersiveView.swift in Sources */,
+				0777FCE72BDED4CD0060A96B /* ShipFlight.swift in Sources */,
+				0728526F2BE6021200B453F0 /* Damage.swift in Sources */,
+				0728527C2BE6084000B453F0 /* AudioMaterial.swift in Sources */,
+				0791A50B2BF7D5980081A16F /* ImmersiveViewModel+AstronomicalObjects.swift in Sources */,
+				0791A50D2BF8272E0081A16F /* ImmersiveViewModel+Collisions.swift in Sources */,
+				10317B922BEC420E004C80B4 /* AudioUnitTurbine.mm in Sources */,
+				07E6C2652C01A7650046AA5D /* AudioMixer.swift in Sources */,
+				073A166C2BFA9D21003D44CB /* PinchToThrotle.swift in Sources */,
+				07E6C2672C026C080046AA5D /* ImmersiveViewModel+GamePhase.swift in Sources */,
+				07EF1FF12BDF6046005FD9AB /* ShipVisuals.swift in Sources */,
+				0764C68E2BFAF86000B9D92C /* Closure.swift in Sources */,
+				0777FCE12BDECD7A0060A96B /* HandsShipControlProvider.swift in Sources */,
+				11F011E32C07C91A008D2A65 /* RealityView+WorldTracking.swift in Sources */,
+				115447A62C01300300C01EF3 /* EnvironmentLightingFade.swift in Sources */,
+				11097B7C2BD300CB00B1105E /* Entity+Planet.swift in Sources */,
+				073BF2782BC0875400DAED55 /* SceneReconstruction.swift in Sources */,
+				073BF27E2BC0A43F00DAED55 /* MenuView.swift in Sources */,
+				11F011E52C07CB20008D2A65 /* View+CustomLayout.swift in Sources */,
+				0777FCD62BDDAB070060A96B /* SIMD+.swift in Sources */,
+				078028802BD9D579006A4598 /* DecibelsSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		076E69952BFA8B7000B49611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77DB51512B8448A700A747BC /* Spaceship */;
+			targetProxy = 076E69942BFA8B7000B49611 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		076E69972BFA8B7000B49611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4E05450CD208225B266934 /* SampleCode.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.SpaceshipTests${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator iphonesimulator iphoneos";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spaceship.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Spaceship";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		076E69982BFA8B7000B49611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4E05450CD208225B266934 /* SampleCode.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.SpaceshipTests${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator iphonesimulator iphoneos";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spaceship.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Spaceship";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		77DB51652B8448A800A747BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4E05450CD208225B266934 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		77DB51662B8448A800A747BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4E05450CD208225B266934 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		77DB51682B8448A800A747BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4E05450CD208225B266934 /* SampleCode.xcconfig */;
+			buildSettings = {
+				AD_HOC_CODE_SIGNING_ALLOWED = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Spaceship/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "On iOS, this app uses camera feed for its AR spaceship experience";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Spaceship${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spaceship/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		77DB51692B8448A800A747BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4E05450CD208225B266934 /* SampleCode.xcconfig */;
+			buildSettings = {
+				AD_HOC_CODE_SIGNING_ALLOWED = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Spaceship/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "On iOS, this app uses camera feed for its AR spaceship experience";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Spaceship${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spaceship/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		076E69962BFA8B7000B49611 /* Build configuration list for PBXNativeTarget "SpaceshipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E69972BFA8B7000B49611 /* Debug */,
+				076E69982BFA8B7000B49611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77DB514D2B8448A700A747BC /* Build configuration list for PBXProject "Spaceship" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DB51652B8448A800A747BC /* Debug */,
+				77DB51662B8448A800A747BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77DB51672B8448A800A747BC /* Build configuration list for PBXNativeTarget "Spaceship" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DB51682B8448A800A747BC /* Debug */,
+				77DB51692B8448A800A747BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		073DB29E2BF677A300642FED /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		074979042BED7C6B0049673A /* XCLocalSwiftPackageReference "Packages/Studio" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Studio;
+		};
+		07E8075F2BD078D70059CAA7 /* XCLocalSwiftPackageReference "Packages/RealityKitContent" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/RealityKitContent;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		073DB29F2BF677A300642FED /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 073DB29E2BF677A300642FED /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		074979052BED7C6B0049673A /* Studio */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Studio;
+		};
+		07E807602BD078D70059CAA7 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+		77DB51572B8448A700A747BC /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 77DB514A2B8448A700A747BC /* Project object */;
+}

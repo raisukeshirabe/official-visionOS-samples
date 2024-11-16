@@ -1,0 +1,29 @@
+{
+  "pathsToIds" : {
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "CB766F92-EE55-4A63-9401-E7B8C009764D",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Immersive.usda" : "65F6F990-A780-4474-B78B-572E0E4E273D",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "0A9B4653-B11E-4D6A-850E-C6FCB621626C",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Untitled Scene.usda" : "D560BB77-AAF3-4BDE-B7C4-989332A4688B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/AsteroidAssembly.usda" : "5862BBE2-7FA1-4580-8C1D-3F1B9B9C5E61",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Asteroids.usda" : "64C2A6EE-4BC8-4DFA-819A-7B207E31ACE8",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/AsteroidsAssembly.usda" : "7DC00DA6-5C14-4DD8-B776-FBD95DC3A323",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Cargo_01.usdc" : "7A147714-A44B-44B1-9491-BB406C487B10",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/destroyed_ship.usdc" : "399274A1-5C9A-43D1-BC8F-442DE86E865E",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/geometry\/Planet_01.usda" : "7989F968-612A-4826-B9CE-D34D219BFF30",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/geometry\/Planet_assembly.usda" : "9DB234E4-F2CA-4C8F-82DD-8FA50C42420E",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "66168B71-AB05-424E-8B6C-D33D6E61B08F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Immersive.usda" : "AF09ED6F-1707-48FD-8720-65B998362C09",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/jet.usdc" : "06286BC8-7D1C-4C57-808F-F5E27D000B6B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/landingpad.usdc" : "B07F385D-B70A-4272-9369-F10E1CE42C54",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/LandingPadAssembly.usda" : "84B12759-69C5-4686-855C-DD0DC815D892",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Planet.usda" : "DFDA73C2-1DAF-4ABF-9910-9B4A357A1C63",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/PortalParticles.usda" : "0CFEB071-71FB-4E01-8D75-AC734D3BE0E3",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "D66134B1-3681-4A8E-AFE5-29F257229F3B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/ship.usdc" : "E7EACB90-2A2A-4002-93AF-41C2E0958F04",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/ShipAssembly.usda" : "9E326BC2-CD67-4A49-AB88-724D8E1D2C8B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Trailer.usdc" : "CE516D7A-5C8E-45A2-A33C-C2D5A572AA9A",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TrailerAssembly.usda" : "1C9C66E3-9A18-4927-89B9-4A51C0E8A420",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Untitled Scene.usda" : "2AAF0725-8512-41AF-95E0-A058FDED592B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Untitled%20Scene.usda" : "307A76FE-D45E-46A6-B55F-56B5B2D43E75"
+  }
+}

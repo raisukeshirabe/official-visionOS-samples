@@ -1,0 +1,1253 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Trailer", "Cargo_01", "Cargo_2", "Cargo_3", "Cargo_4", "Cargo_5", "Cargo_6", "Cargo_7", "Cargo_8", "Cargo_9", "Cargo_10", "Cargo"]
+    def "Trailer" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0, 0)
+        }
+        references = @Trailer.usdc@
+    )
+    {
+        quatf xformOp:orient = (0.99999994, 0, 0, 0)
+        float3 xformOp:scale = (0.09999999, 0.09999999, 0.09999999)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geometry" (
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
+            references = None
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "flat" (
+                references = None
+            )
+            {
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.47032356, 0.05257571, 0.91282725)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (0, -0.029331772, 0.5322951)
+                        }
+                    }
+                }
+
+                over "RigidBody"
+                {
+                    float angularDamping = 0
+                    bool gravityEnabled = 0
+                    float linearDamping = 0
+                    token motionType = "Kinematic"
+
+                    def RealityKitStruct "massFrame"
+                    {
+                    }
+
+                    def RealityKitStruct "material"
+                    {
+                    }
+                }
+            }
+
+            over "rail_Front" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.35564485, 0.038825553, 0.020152926)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (1.4901161e-8, 0.01636886, 0.085957944)
+                        }
+                    }
+                }
+
+                over "RigidBody" (
+                    active = false
+                )
+                {
+                    float angularDamping = 0
+                    bool gravityEnabled = 0
+                    float linearDamping = 0
+                    token motionType = "Kinematic"
+
+                    def RealityKitStruct "massFrame"
+                    {
+                    }
+
+                    def RealityKitStruct "material"
+                    {
+                    }
+                }
+            }
+
+            over "rail_left" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.01975587, 0.03882552, 0.9128276)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (-0.18770038, 0.016368844, 0.53229547)
+                        }
+                    }
+                }
+
+                over "RigidBody" (
+                    active = false
+                )
+                {
+                    float angularDamping = 0
+                    bool gravityEnabled = 0
+                    float linearDamping = 0
+                    token motionType = "Kinematic"
+
+                    def RealityKitStruct "massFrame"
+                    {
+                    }
+
+                    def RealityKitStruct "material"
+                    {
+                    }
+                }
+            }
+
+            over "rail_Right" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.01975587, 0.03882552, 0.9128276)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (0.18770038, 0.016368844, 0.53229547)
+                        }
+                    }
+                }
+
+                over "RigidBody" (
+                    active = false
+                )
+                {
+                    float angularDamping = 0
+                    bool gravityEnabled = 0
+                    float linearDamping = 0
+                    token motionType = "Kinematic"
+
+                    def RealityKitStruct "massFrame"
+                    {
+                    }
+
+                    def RealityKitStruct "material"
+                    {
+                    }
+                }
+            }
+
+            over "TailGate" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.35564482, 0.16964486, 0.020152926)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (0, 0.08177851, 0.97863287)
+                        }
+                    }
+                }
+
+                over "RigidBody" (
+                    active = false
+                )
+                {
+                    float angularDamping = 0
+                    bool gravityEnabled = 0
+                    float linearDamping = 0
+                    token motionType = "Kinematic"
+
+                    def RealityKitStruct "massFrame"
+                    {
+                    }
+
+                    def RealityKitStruct "material"
+                    {
+                    }
+                }
+            }
+
+            over "attachment" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def RealityKitComponent "GroundingShadow"
+            {
+                bool enableIBLShadow = 1
+                bool enableMeshShadow = 1
+                uniform token info:id = "RealityKit.GroundingShadow"
+            }
+
+            def Mesh "rail_Front_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = </Root/Trailer/geometry/rail_Front>
+            )
+            {
+                float3[] extent = [(-0.17782241, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 4, 6, 7, 1, 2, 3, 0, 1, 0, 4, 5, 0, 3, 6, 4, 3, 2, 7, 6, 2, 1, 5, 7]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(0.17782244, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.07588148), (0.17782244, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441), (-0.17782241, 0.035781637, 0.09603441), (0.17782244, 0.035781637, 0.07588148), (-0.17782241, 0.035781637, 0.07588148)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 9, 10, 11, 4, 7, 6, 5, 0, 1, 9, 8, 1, 3, 10, 9, 3, 2, 11, 10, 2, 0, 8, 11]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0.13068356, 0)
+                float3 xformOp:translate:pivot = (0, 0.016368844, 0.08595803)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.35564485, 0.038825553, 0.020152926)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (1.4901161e-8, 0.01636886, 0.085957944)
+                        }
+                    }
+                }
+            }
+
+            def Mesh "rail_left_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = </Root/Trailer/geometry/rail_left>
+            )
+            {
+                float3[] extent = [(-0.19757831, -0.003043917, 0.07588163), (-0.17782244, 0.035781603, 0.9887093)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 4, 6, 7, 1, 2, 3, 0, 1, 0, 4, 5, 0, 3, 6, 4, 3, 2, 7, 6, 2, 1, 5, 7]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, 1, 0), (0, -1, 0), (0, -0.99999994, 0), (0, -1, 0), (0, -1, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-0.7071084, 0, -0.7071052), (-0.7071084, 0, -0.7071052), (-0.7071084, 0, -0.7071052), (-0.7071084, 0, -0.7071052), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(-0.17782244, -0.003043917, 0.9887093), (-0.19757831, -0.003043917, 0.9887093), (-0.19757831, -0.003043917, 0.09563759), (-0.17782244, -0.003043917, 0.07588163), (-0.17782244, 0.035781603, 0.9887093), (-0.19757831, 0.035781603, 0.9887093), (-0.17782244, 0.035781603, 0.07588163), (-0.19757831, 0.035781603, 0.09563759)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 9, 10, 11, 4, 7, 6, 5, 0, 1, 9, 8, 1, 3, 10, 9, 3, 2, 11, 10, 2, 0, 8, 11]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0.13068356, 0)
+                float3 xformOp:translate:pivot = (-0.18770038, 0.016368844, 0.53229547)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.01975587, 0.03882552, 0.9128276)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (-0.18770038, 0.016368844, 0.53229547)
+                        }
+                    }
+                }
+            }
+
+            def Mesh "rail_Right_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                references = </Root/Trailer/geometry/rail_Right>
+            )
+            {
+                float3[] extent = [(0.17782244, -0.003043917, 0.07588163), (0.19757831, 0.035781603, 0.9887093)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 7, 6, 4, 1, 0, 3, 2, 1, 5, 4, 0, 0, 4, 6, 3, 3, 6, 7, 2, 2, 7, 5, 1]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 1, 0), (0, 0.99999994, 0), (0, 1, 0), (0, 1, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -1, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0.7071084, 0, -0.7071052), (0.7071084, 0, -0.7071052), (0.7071084, 0, -0.7071052), (0.7071084, 0, -0.7071052), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(0.17782244, -0.003043917, 0.9887093), (0.19757831, -0.003043917, 0.9887093), (0.19757831, -0.003043917, 0.09563759), (0.17782244, -0.003043917, 0.07588163), (0.17782244, 0.035781603, 0.9887093), (0.19757831, 0.035781603, 0.9887093), (0.17782244, 0.035781603, 0.07588163), (0.19757831, 0.035781603, 0.09563759)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 11, 10, 9, 4, 5, 6, 7, 0, 8, 9, 1, 1, 9, 10, 3, 3, 10, 11, 2, 2, 11, 8, 0]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0.13068356, 0)
+                float3 xformOp:translate:pivot = (0.18770038, 0.016368844, 0.53229547)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.01975587, 0.03882552, 0.9128276)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (0.18770038, 0.016368844, 0.53229547)
+                        }
+                    }
+                }
+            }
+
+            def Mesh "rail_left_2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (1.7864453e-7, 1.8659604e-7, -1.5707964)
+                }
+                references = </Root/Trailer/geometry/rail_left>
+            )
+            {
+                float3[] extent = [(-0.19757831, -0.003043917, 0.07588163), (-0.17782244, 0.035781603, 0.9887093)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 4, 6, 7, 1, 2, 3, 0, 1, 0, 4, 5, 0, 3, 6, 4, 3, 2, 7, 6, 2, 1, 5, 7]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, 1, 0), (0, -1, 0), (0, -0.99999994, 0), (0, -1, 0), (0, -1, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-0.7071084, 0, -0.7071052), (-0.7071084, 0, -0.7071052), (-0.7071084, 0, -0.7071052), (-0.7071084, 0, -0.7071052), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(-0.17782244, -0.003043917, 0.9887093), (-0.19757831, -0.003043917, 0.9887093), (-0.19757831, -0.003043917, 0.09563759), (-0.17782244, -0.003043917, 0.07588163), (-0.17782244, 0.035781603, 0.9887093), (-0.19757831, 0.035781603, 0.9887093), (-0.17782244, 0.035781603, 0.07588163), (-0.19757831, 0.035781603, 0.09563759)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 9, 10, 11, 4, 7, 6, 5, 0, 1, 9, 8, 1, 3, 10, 9, 3, 2, 11, 10, 2, 0, 8, 11]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (0.70710677, 1.2913203e-7, 2.8112794e-9, -0.70710677)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (-0.068754666, 0.12109423, -4.987845e-9)
+                float3 xformOp:translate:pivot = (-0.18770038, 0.016368844, 0.53229547)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.01975587, 0.03882552, 0.9128276)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (-0.18770038, 0.016368844, 0.53229547)
+                        }
+                    }
+                }
+            }
+
+            def Mesh "rail_Right_2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (0, 0, 1.5707964)
+                }
+                references = </Root/Trailer/geometry/rail_Right>
+            )
+            {
+                float3[] extent = [(0.17782244, -0.003043917, 0.07588163), (0.19757831, 0.035781603, 0.9887093)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 7, 6, 4, 1, 0, 3, 2, 1, 5, 4, 0, 0, 4, 6, 3, 3, 6, 7, 2, 2, 7, 5, 1]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 1, 0), (0, 0.99999994, 0), (0, 1, 0), (0, 1, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -1, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0.7071084, 0, -0.7071052), (0.7071084, 0, -0.7071052), (0.7071084, 0, -0.7071052), (0.7071084, 0, -0.7071052), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(0.17782244, -0.003043917, 0.9887093), (0.19757831, -0.003043917, 0.9887093), (0.19757831, -0.003043917, 0.09563759), (0.17782244, -0.003043917, 0.07588163), (0.17782244, 0.035781603, 0.9887093), (0.19757831, 0.035781603, 0.9887093), (0.17782244, 0.035781603, 0.07588163), (0.19757831, 0.035781603, 0.09563759)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 11, 10, 9, 4, 5, 6, 7, 0, 8, 9, 1, 1, 9, 10, 3, 3, 10, 11, 2, 2, 11, 8, 0]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0.084309146, 0.120610744, -9.051294e-8)
+                float3 xformOp:translate:pivot = (0.18770038, 0.016368844, 0.53229547)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.01975587, 0.03882552, 0.9128276)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (0.18770038, 0.016368844, 0.53229547)
+                        }
+                    }
+                }
+            }
+
+            def Mesh "rail_Front_2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (2.3823078e-7, 1.1864871e-7, -1.5707964)
+                }
+                references = </Root/Trailer/geometry/rail_Front>
+            )
+            {
+                float3[] extent = [(-0.17782241, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 4, 6, 7, 1, 2, 3, 0, 1, 0, 4, 5, 0, 3, 6, 4, 3, 2, 7, 6, 2, 1, 5, 7]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(0.17782244, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.07588148), (0.17782244, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441), (-0.17782241, 0.035781637, 0.09603441), (0.17782244, 0.035781637, 0.07588148), (-0.17782241, 0.035781637, 0.07588148)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 9, 10, 11, 4, 7, 6, 5, 0, 1, 9, 8, 1, 3, 10, 9, 3, 2, 11, 10, 2, 0, 8, 11]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (0.70710677, 1.2617595e-7, -4.2278646e-8, -0.70710677)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (-0.067781605, 0.12121574, 1.6773473e-8)
+                float3 xformOp:translate:pivot = (0, 0.016368844, 0.08595803)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.35564485, 0.038825553, 0.020152926)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (1.4901161e-8, 0.01636886, 0.085957944)
+                        }
+                    }
+                }
+            }
+
+            def Mesh "rail_Front_3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (2.3823078e-7, 1.1864871e-7, -1.5707964)
+                }
+                references = </Root/Trailer/geometry/rail_Front>
+            )
+            {
+                float3[] extent = [(-0.17782241, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 4, 6, 7, 1, 2, 3, 0, 1, 0, 4, 5, 0, 3, 6, 4, 3, 2, 7, 6, 2, 1, 5, 7]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(0.17782244, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.07588148), (0.17782244, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441), (-0.17782241, 0.035781637, 0.09603441), (0.17782244, 0.035781637, 0.07588148), (-0.17782241, 0.035781637, 0.07588148)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 9, 10, 11, 4, 7, 6, 5, 0, 1, 9, 8, 1, 3, 10, 9, 3, 2, 11, 10, 2, 0, 8, 11]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (0.70710677, 1.2617596e-7, -4.2278653e-8, -0.70710677)
+                float3 xformOp:scale = (0.99999976, 0.99999976, 0.99999976)
+                float3 xformOp:translate = (0.05118593, 0.12121574, 3.463357e-8)
+                float3 xformOp:translate:pivot = (0, 0.016368844, 0.08595803)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.35564485, 0.038825553, 0.020152926)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (1.4901161e-8, 0.01636886, 0.085957944)
+                        }
+                    }
+                }
+            }
+
+            def Mesh "rail_Front_4" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (2.3823078e-7, 1.1864871e-7, -1.5707964)
+                }
+                references = </Root/Trailer/geometry/rail_Front>
+            )
+            {
+                float3[] extent = [(-0.17782241, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 4, 6, 7, 1, 2, 3, 0, 1, 0, 4, 5, 0, 3, 6, 4, 3, 2, 7, 6, 2, 1, 5, 7]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(0.17782244, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.07588148), (0.17782244, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441), (-0.17782241, 0.035781637, 0.09603441), (0.17782244, 0.035781637, 0.07588148), (-0.17782241, 0.035781637, 0.07588148)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 9, 10, 11, 4, 7, 6, 5, 0, 1, 9, 8, 1, 3, 10, 9, 3, 2, 11, 10, 2, 0, 8, 11]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (0.70710677, 1.2617596e-7, -4.2278653e-8, -0.70710677)
+                float3 xformOp:scale = (0.99999976, 0.99999976, 0.99999976)
+                float3 xformOp:translate = (-0.06778177, 0.12121444, 0.8884954)
+                float3 xformOp:translate:pivot = (0, 0.016368844, 0.08595803)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.35564485, 0.038825553, 0.020152926)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (1.4901161e-8, 0.01636886, 0.085957944)
+                        }
+                    }
+                }
+            }
+
+            def Mesh "rail_Front_5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (2.3823078e-7, 1.1864871e-7, -1.5707964)
+                }
+                references = </Root/Trailer/geometry/rail_Front>
+            )
+            {
+                float3[] extent = [(-0.17782241, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441)]
+                int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+                int[] faceVertexIndices = [5, 4, 6, 7, 1, 2, 3, 0, 1, 0, 4, 5, 0, 3, 6, 4, 3, 2, 7, 6, 2, 1, 5, 7]
+                rel material:binding = </Root/Trailer/Looks/Trailer_MATSG>
+                normal3f[] normals = [(0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, 0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, -0.99999994, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "faceVarying"
+                )
+                point3f[] points = [(0.17782244, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.09603441), (-0.17782241, -0.003043916, 0.07588148), (0.17782244, -0.003043916, 0.07588148), (0.17782244, 0.035781637, 0.09603441), (-0.17782241, 0.035781637, 0.09603441), (0.17782244, 0.035781637, 0.07588148), (-0.17782241, 0.035781637, 0.07588148)]
+                texCoord2f[] primvars:st = [(0.375, 0.34677064), (0.625, 0.34677064), (0.375, 0.4945894), (0.625, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894), (0.375, 0.34677064), (0.625, 0.34677064), (0.625, 0.4945894), (0.375, 0.4945894)] (
+                    customData = {
+                        dictionary Maya = {
+                            token name = "map1"
+                        }
+                    }
+                    interpolation = "faceVarying"
+                )
+                int[] primvars:st:indices = [8, 9, 10, 11, 4, 7, 6, 5, 0, 1, 9, 8, 1, 3, 10, 9, 3, 2, 11, 10, 2, 0, 8, 11]
+                uniform token subdivisionScheme = "none"
+                quatf xformOp:orient = (0.70710677, 1.2617596e-7, -4.2278646e-8, -0.70710677)
+                float3 xformOp:scale = (0.99999964, 0.99999964, 0.99999964)
+                float3 xformOp:translate = (0.051185753, 0.12121444, 0.8884954)
+                float3 xformOp:translate:pivot = (0, 0.016368844, 0.08595803)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.35564485, 0.038825553, 0.020152926)
+                        token shapeType = "Box"
+
+                        def RealityKitStruct "pose"
+                        {
+                            float3 position = (1.4901161e-8, 0.01636886, 0.085957944)
+                        }
+                    }
+                }
+            }
+        }
+
+        over "Looks" (
+            references = None
+        )
+        {
+            over "Trailer_MATSG" (
+                references = None
+            )
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+
+                over "Trailer_MAT"
+                {
+                    color3f inputs:diffuseColor = (0.045454547, 0.045454547, 0.045454547) (
+                        colorSpace = "lin_srgb"
+                    )
+                    float inputs:metallic = 0
+                    float inputs:roughness = 0.9
+                }
+            }
+        }
+
+        def RealityKitComponent "GroundingShadow"
+        {
+            bool enableIBLShadow = 1
+            bool enableMeshShadow = 1
+            uniform token info:id = "RealityKit.GroundingShadow"
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            bool gravityEnabled = 0
+            uniform token info:id = "RealityKit.RigidBody"
+            token motionType = "Dynamic"
+
+            def RealityKitStruct "massFrame"
+            {
+                float m_mass = 0.25
+
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Trigger"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.47032356, 0.33469877, 0.98870933)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0, 0.111729756, 0.49435467)
+                }
+            }
+        }
+    }
+
+    def Xform "Cargo" (
+        customData = {
+            float3 rotationEulerHint = (0, 0, 0)
+        }
+        references = None
+    )
+    {
+        reorder nameChildren = ["Cargo_2", "Cargo_1", "Cargo_3", "Cargo_4", "Cargo_6", "Cargo_7", "Cargo_8", "Cargo_9"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def "Cargo_1" (
+            customData = {
+                float3 rotationEulerHint = (0, 1.9164772, 0)
+            }
+            references = @Cargo_01.usdc@
+        )
+        {
+            quatf xformOp:orient = (0.57496196, 0, 0.81818014, 0)
+            float3 xformOp:scale = (0.1, 0.1, 0.10000001)
+            float3 xformOp:translate = (0.007683307, -0.00024016225, 0.08497947)
+
+            over "Collider"
+            {
+            }
+
+            over "RigidBody"
+            {
+                bool gravityEnabled = 0
+                token motionType = "Dynamic"
+
+                def RealityKitStruct "massFrame"
+                {
+                    float m_mass = 0.3
+                }
+
+                def RealityKitStruct "material"
+                {
+                    double dynamicFriction = 10
+                    double staticFriction = 10
+                }
+            }
+
+            over "Looks" (
+                references = None
+            )
+            {
+                over "cargo_MATSG" (
+                    references = None
+                )
+                {
+                    token outputs:mtlx:surface
+                    token outputs:realitykit:vertex
+                    token outputs:surface.connect = </Root/Cargo/Cargo_1/Looks/cargo_MATSG/cargo_MAT.outputs:surface>
+
+                    over "cargo_MAT"
+                    {
+                        color3f inputs:diffuseColor = (0.7514615, 0.70476025, 0.59534633) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float inputs:metallic = 0.8
+                        float inputs:roughness = 0
+                    }
+                }
+            }
+        }
+
+        def "Cargo_3" (
+            customData = {
+                float3 rotationEulerHint = (0, 3.103133, 0)
+            }
+            references = @Cargo_01.usdc@
+        )
+        {
+            quatf xformOp:orient = (0.019228578, 0, 0.99981505, 0)
+            float3 xformOp:scale = (0.1, 0.1, 0.10000001)
+            float3 xformOp:translate = (0.007940187, -0.00024016551, 0.03962859)
+
+            over "Collider"
+            {
+            }
+
+            over "RigidBody"
+            {
+                bool gravityEnabled = 0
+                token motionType = "Dynamic"
+
+                over "massFrame"
+                {
+                    float m_mass = 0.3
+                }
+
+                over "material"
+                {
+                    double dynamicFriction = 10
+                    double staticFriction = 10
+                }
+            }
+
+            over "Looks"
+            {
+                reorder nameChildren = ["cargo_MATSG", "cargo_MATSG_1"]
+                over "cargo_MATSG" (
+                    references = None
+                )
+                {
+                    token outputs:surface.connect = </Root/Cargo/Cargo_3/Looks/cargo_MATSG/cargo_MAT.outputs:surface>
+
+                    over "cargo_MAT"
+                    {
+                        color3f inputs:diffuseColor = (0.7514615, 0.70476025, 0.59534633) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float inputs:metallic = 0.8
+                        float inputs:roughness = 0
+                    }
+                }
+            }
+        }
+
+        def "Cargo_5" (
+            customData = {
+                float3 rotationEulerHint = (0, 3.103133, 0)
+            }
+            references = @Cargo_01.usdc@
+        )
+        {
+            quatf xformOp:orient = (0.019228578, 0, 0.99981505, 0)
+            float3 xformOp:scale = (0.1, 0.1, 0.10000001)
+            float3 xformOp:translate = (0.0068410444, -0.0002401637, 0.06819339)
+
+            over "Collider"
+            {
+            }
+
+            over "RigidBody"
+            {
+                bool gravityEnabled = 0
+                token motionType = "Dynamic"
+
+                over "massFrame"
+                {
+                    float m_mass = 0.3
+                }
+
+                over "material"
+                {
+                    double dynamicFriction = 10
+                    double staticFriction = 10
+                }
+            }
+
+            over "Looks"
+            {
+                over "cargo_MATSG" (
+                    references = None
+                )
+                {
+                    token outputs:surface.connect = </Root/Cargo/Cargo_5/Looks/cargo_MATSG/cargo_MAT.outputs:surface>
+
+                    over "cargo_MAT"
+                    {
+                        color3f inputs:diffuseColor = (0.7514615, 0.70476025, 0.59534633) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float inputs:metallic = 0.8
+                        float inputs:roughness = 0
+                    }
+                }
+            }
+        }
+
+        def "Cargo_6" (
+            customData = {
+                float3 rotationEulerHint = (0, 4.601917, 0)
+            }
+            references = @Cargo_01.usdc@
+        )
+        {
+            quatf xformOp:orient = (0.6669904, 0, -0.7450663, 0)
+            float3 xformOp:scale = (0.1, 0.1, 0.10000001)
+            float3 xformOp:translate = (-0.009232475, -0.00024015928, 0.08546178)
+
+            over "Collider"
+            {
+            }
+
+            over "RigidBody"
+            {
+                bool gravityEnabled = 0
+                token motionType = "Dynamic"
+
+                def RealityKitStruct "massFrame"
+                {
+                    float m_mass = 0.08
+                }
+
+                def RealityKitStruct "material"
+                {
+                    double dynamicFriction = 10
+                    double staticFriction = 10
+                }
+            }
+
+            over "Looks" (
+                references = None
+            )
+            {
+                over "cargo_MATSG" (
+                    references = None
+                )
+                {
+                    token outputs:surface.connect = </Root/Cargo/Cargo_6/Looks/cargo_MATSG/cargo_MAT.outputs:surface>
+
+                    over "cargo_MAT"
+                    {
+                        color3f inputs:diffuseColor = (0.7514615, 0.70476025, 0.59534633) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float inputs:metallic = 0.8
+                        float inputs:roughness = 0
+                    }
+                }
+            }
+        }
+
+        def "Cargo_8" (
+            customData = {
+                float3 rotationEulerHint = (0, 6.2515273, 0)
+            }
+            references = @Cargo_01.usdc@
+        )
+        {
+            quatf xformOp:orient = (-0.99987465, 0, 0.015828134, 0)
+            float3 xformOp:scale = (0.1, 0.1, 0.10000001)
+            float3 xformOp:translate = (-0.009095905, -0.00024016696, 0.04032253)
+
+            over "Collider"
+            {
+            }
+
+            over "RigidBody"
+            {
+                bool gravityEnabled = 0
+                token motionType = "Dynamic"
+
+                over "massFrame"
+                {
+                    float m_mass = 0.3
+                }
+
+                over "material"
+                {
+                    double dynamicFriction = 10
+                    double staticFriction = 10
+                }
+            }
+
+            over "Looks"
+            {
+                over "cargo_MATSG" (
+                    references = None
+                )
+                {
+                    token outputs:surface.connect = </Root/Cargo/Cargo_8/Looks/cargo_MATSG/cargo_MAT.outputs:surface>
+
+                    over "cargo_MAT"
+                    {
+                        color3f inputs:diffuseColor = (0.7514615, 0.70476025, 0.59534633) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float inputs:metallic = 0.8
+                        float inputs:roughness = 0
+                    }
+                }
+            }
+        }
+
+        def "Cargo_10" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (0, 6.2515273, 0)
+            }
+            references = @Cargo_01.usdc@
+        )
+        {
+            quatf xformOp:orient = (-0.99987465, 0, 0.015828134, 0)
+            float3 xformOp:scale = (0.1, 0.1, 0.10000001)
+            float3 xformOp:translate = (-0.008496868, 0.0018100468, 0.021411147)
+
+            over "Collider"
+            {
+            }
+
+            over "RigidBody"
+            {
+                bool gravityEnabled = 0
+                token motionType = "Dynamic"
+
+                over "massFrame"
+                {
+                    float m_mass = 0.3
+                }
+
+                over "material"
+                {
+                    double dynamicFriction = 10
+                    double staticFriction = 10
+                }
+            }
+
+            over "Looks"
+            {
+                over "cargo_MATSG" (
+                    references = None
+                )
+                {
+                    token outputs:surface.connect = </Root/Cargo/Cargo_10/Looks/cargo_MATSG/cargo_MAT.outputs:surface>
+
+                    over "cargo_MAT"
+                    {
+                        color3f inputs:diffuseColor = (0.7514615, 0.70476025, 0.59534633) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float inputs:metallic = 0.8
+                        float inputs:roughness = 0
+                    }
+                }
+            }
+        }
+
+        def "Cargo_4" (
+            customData = {
+                float3 rotationEulerHint = (0, 3.103133, 0)
+            }
+            references = @Cargo_01.usdc@
+        )
+        {
+            quatf xformOp:orient = (0.019228578, 0, 0.99981505, 0)
+            float3 xformOp:scale = (0.1, 0.1, 0.10000001)
+            float3 xformOp:translate = (0.008769715, -0.00024016551, 0.018069664)
+
+            over "Collider"
+            {
+            }
+
+            over "RigidBody"
+            {
+                bool gravityEnabled = 0
+                token motionType = "Dynamic"
+
+                over "massFrame"
+                {
+                    float m_mass = 0.3
+                }
+
+                over "material"
+                {
+                    double dynamicFriction = 10
+                    double staticFriction = 10
+                }
+            }
+
+            over "Looks"
+            {
+                over "cargo_MATSG" (
+                    references = None
+                )
+                {
+                    token outputs:surface.connect = </Root/Cargo/Cargo_4/Looks/cargo_MATSG/cargo_MAT.outputs:surface>
+
+                    over "cargo_MAT"
+                    {
+                        color3f inputs:diffuseColor = (0.7514615, 0.70476025, 0.59534633) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float inputs:metallic = 0.8
+                        float inputs:roughness = 0
+                    }
+                }
+            }
+        }
+
+        def "Cargo_9" (
+            customData = {
+                float3 rotationEulerHint = (0, 6.2515273, 0)
+            }
+            references = @Cargo_01.usdc@
+        )
+        {
+            quatf xformOp:orient = (-0.99987465, 0, 0.015828134, 0)
+            float3 xformOp:scale = (0.1, 0.1, 0.10000001)
+            float3 xformOp:translate = (-0.0075565455, -0.00024016603, 0.055160098)
+
+            over "Collider"
+            {
+            }
+
+            over "RigidBody"
+            {
+                bool gravityEnabled = 0
+                token motionType = "Dynamic"
+
+                over "massFrame"
+                {
+                    float m_mass = 0.3
+                }
+
+                over "material"
+                {
+                    double dynamicFriction = 10
+                    double staticFriction = 10
+                }
+            }
+
+            over "Looks" (
+                references = None
+            )
+            {
+                over "cargo_MATSG" (
+                    references = None
+                )
+                {
+                    token outputs:surface.connect = </Root/Cargo/Cargo_9/Looks/cargo_MATSG/cargo_MAT.outputs:surface>
+
+                    over "cargo_MAT"
+                    {
+                        float inputs:clearcoatRoughness = 0
+                        color3f inputs:diffuseColor = (0.7514615, 0.70476025, 0.59534633) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float inputs:metallic = 0.8
+                        float inputs:roughness = 0
+                    }
+                }
+            }
+        }
+    }
+}
+

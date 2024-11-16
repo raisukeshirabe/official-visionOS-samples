@@ -1,0 +1,69 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    reorder nameChildren = ["Planet_01", "Glow_card", "Meteoroid3", "ImageBasedLight", "Meteoroid3_1", "Meteoroid3_2", "Meteoroid3_3", "Meteoroid3_4", "Meteoroid3_5", "Meteoroid3_6", "Meteoroid3_7", "Planet_Light", "ShipAssembly", "VirtualEnvironmentProbe", "asteroid_realistic"]
+    def "Planet_01" (
+        active = true
+        references = @Planet_01.usda@
+    )
+    {
+        reorder nameChildren = ["planet_MAT", "ImageBasedLightReceiver", "Glow_card", "Planet_Light"]
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "ImageBasedLightReceiver"
+        {
+            rel iblEntity = </Root>
+            uniform token info:id = "RealityKit.ImageBasedLightReceiver"
+        }
+
+        def "Glow_card" (
+            references = @Glow_card.usda@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.8570248, 0.8570248, 0.8570248)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "Billboard"
+            {
+                uniform token info:id = "RealityKit.Billboard"
+            }
+        }
+
+        def Xform "Planet_Light" (
+            references = None
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "PointLight"
+            {
+                float3 color = (1, 0.16302615, 1)
+                token info:id = "RealityKit.PointLight"
+                float intensity = 300000
+            }
+        }
+
+        over "planet_MAT" (
+            references = None
+        )
+        {
+        }
+    }
+}
+

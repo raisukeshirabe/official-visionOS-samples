@@ -1,0 +1,89 @@
+#usda 1.0
+(
+    defaultPrim = "ParticleEmitter"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["", "", "", "ParticleEmitter"]
+
+def Xform "ParticleEmitter" (
+    customData = {
+        float3 rotationEulerHint = (1.5707964, 0, 0)
+    }
+    references = None
+)
+{
+    quatf xformOp:orient = (0.70710677, 0.70710677, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0.005)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Component "VFXEmitter"
+    {
+        token info:id = "RealityKit.VFXEmitter"
+
+        def Struct "currentState"
+        {
+            token birthLocation = "Surface"
+            float3 birthLocationVertex = (5, 5, 5)
+            int64 burstCount = 100
+            float3 emissionDirection = (1, 0, 0)
+            token emitterShape = "Cylinder"
+            bool isLocal = 1
+            bool isLocalFields = 1
+            bool isSpawningEnabled = 0
+            float particleSpeed = 0
+            float3 shapeSize = (0.5, 0, 0.5)
+
+            def Struct "mainEmitter"
+            {
+                float3 billboardAxis = (1, 0, 0)
+                token billboardMode = "Billboard"
+                float birthRate = 1000
+                token blendMode = "Additive"
+                float4 endColorA = (0.05206337, 0.32577443, 0.46092242, 1)
+                float4 endColorB = (0.45572916, 0.85048413, 1, 1)
+                float noiseAnimationSpeed = 0.1
+                float noiseScale = 0.8
+                float noiseStrength = 0.05
+                float particleAngle = 0
+                double particleLifeSpan = 0.8
+                double particleLifeSpanVariation = 0.15
+                float particleSize = 0.1
+                float3 radialGravityCenter = (0, 0, 0)
+                float radialGravityStrength = 0
+                float sizeMultiplierAtEndOfLifespan = 0
+                float sizeMultiplierAtEndOfLifespanPower = 0.3
+                float4 startColorA = (0.0114084305, 0.044998035, 0.05784338, 1)
+                float4 startColorB = (1, 1, 1, 1)
+                float stretchFactor = 20
+                bool useEndColor = 1
+                bool useEndColorRange = 0
+                bool useStartColorRange = 0
+                float3 vortexDirection = (0, 1, 0)
+                float vortexStrength = 2
+            }
+
+            def Struct "spawnedEmitter"
+            {
+                token billboardMode = "Billboard"
+                token blendMode = "Additive"
+                float4 endColorA = (0.9363188, 1, 0.45416135, 1)
+                float noiseAnimationSpeed = 0.1
+                float noiseScale = 2
+                float noiseStrength = 4
+                double particleLifeSpan = 0.4
+                double particleLifeSpanVariation = 0.1
+                float particleSize = 0.003
+                float4 startColorA = (0.36801127, 0.60705, 1, 1)
+                float stretchFactor = 20
+                bool useEndColor = 1
+                bool useEndColorRange = 0
+                bool useStartColorRange = 0
+                float vortexStrength = 0
+            }
+        }
+    }
+}
+

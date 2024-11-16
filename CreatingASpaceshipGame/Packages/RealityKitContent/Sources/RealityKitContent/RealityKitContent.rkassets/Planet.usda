@@ -1,0 +1,103 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    def "Planet_assembly" (
+        active = true
+        references = @geometry/Planet_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "ImageBasedLight"
+        {
+            asset ibl = @Studio_IBL_LatLong_Dark.exr@
+            float intensityExponent = 3.7257283
+            bool isGlobalIBL = 0
+        }
+
+        over "Planet_01" (
+            references = None
+        )
+        {
+            over "planet_MAT" (
+                references = None
+            )
+            {
+                color3f inputs:Color1 = (1, 0.58273095, 0.1640625) (
+                    colorSpace = "srgb_texture"
+                )
+                color3f inputs:Color2 = (0.1527955, 1, 1) (
+                    colorSpace = "srgb_texture"
+                )
+
+                over "PBRSurface" (
+                    references = None
+                )
+                {
+                    float inputs:specular = 0.05
+                    float2 ui:nodegraph:node:pos = (620.78033, -164.17384)
+                    int ui:nodegraph:node:stackingOrder = 476
+                }
+            }
+
+            over "Glow_card" (
+                active = false
+                references = None
+            )
+            {
+                over "Material" (
+                    references = None
+                )
+                {
+                    over "Image" (
+                        references = None
+                    )
+                    {
+                        int ui:nodegraph:node:stackingOrder = 183
+                    }
+                }
+
+                over "Billboard" (
+                    active = false
+                )
+                {
+                }
+            }
+
+            over "Planet_Light" (
+                references = None
+            )
+            {
+                over "PointLight"
+                {
+                    float intensity = 5000
+                }
+            }
+        }
+
+        over "VirtualEnvironmentProbe"
+        {
+            def RealityKitStruct "Resource1"
+            {
+                float intensityExponent = 0.062217195
+            }
+
+            def RealityKitStruct "Resource2"
+            {
+            }
+        }
+    }
+}
+

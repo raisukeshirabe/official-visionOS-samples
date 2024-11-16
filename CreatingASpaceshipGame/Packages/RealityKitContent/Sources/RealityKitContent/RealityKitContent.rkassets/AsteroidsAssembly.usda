@@ -1,0 +1,612 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    reorder nameChildren = ["Asteroids", "Variants"]
+    def "Asteroids" (
+        active = true
+        references = @geometry/Asteroids.usdc@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Root_002" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+
+            over "asteroid1_normals_001" (
+                references = None
+            )
+            {
+                over "Icosphere_020_001" (
+                    references = None
+                )
+                {
+                    over "Icosphere_020_001" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                        references = None
+                    )
+                    {
+                        rel material:binding = </Root/Asteroids/_materials/Material_004> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+            }
+        }
+
+        over "_materials" (
+            references = None
+        )
+        {
+            over "Material_004" (
+                references = None
+            )
+            {
+                token outputs:mtlx:surface.connect = </Root/Asteroids/_materials/Material_004/PBRSurface.outputs:out>
+                token outputs:realitykit:vertex
+                token outputs:surface.connect = </Root/Asteroids/_materials/Material_004/Principled_BSDF.outputs:surface>
+                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 112.75)
+
+                over "Principled_BSDF" (
+                    active = false
+                )
+                {
+                }
+
+                def Shader "Multiply" (
+                    references = @geometry/Meteoroid1.usdz@</Root/Material/Multiply>
+                )
+                {
+                    uniform token info:id = "ND_multiply_vector3FA"
+                    float3 inputs:in1.connect = </Root/Asteroids/_materials/Material_004/Position.outputs:out>
+                    float inputs:in2.connect = </Root/Asteroids/_materials/Material_004/PositionScale.outputs:out>
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-992.0553, -77.87846)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+
+                def Shader "AOTexture" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_image_float"
+                    asset inputs:file = @geometry/textures/AO_1.png@
+                    string inputs:filtertype
+                    float2 inputs:texcoord.connect = </Root/Asteroids/_materials/Material_004/Texcoord.outputs:out>
+                    string inputs:uaddressmode
+                    string inputs:vaddressmode
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-789.8418, 332.93387)
+                    int ui:nodegraph:node:stackingOrder = 620
+                    string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
+                }
+
+                def Shader "BaseColor" (
+                    references = @geometry/Meteoroid1.usdz@</Root/Material/Constant_1>
+                )
+                {
+                    uniform token info:id = "ND_constant_color3"
+                    color3f inputs:value = (0.082469255, 0.082469255, 0.082469255) (
+                        colorSpace = "lin_srgb"
+                    )
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-636.7506, 68.7231)
+                    int ui:nodegraph:node:stackingOrder = 627
+                }
+
+                def Shader "Normal" (
+                    references = @geometry/Meteoroid1.usdz@</Root/Material/Normal>
+                )
+                {
+                    uniform token info:id = "ND_normal_vector3"
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1017.89124, 107.68013)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+
+                def Shader "Texcoord" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_texcoord_vector2"
+                    float2 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1103.098, 417.11694)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+
+                def Shader "NoiseTexture" (
+                    references = @geometry/Meteoroid1.usdz@</Root/Material/Constant_2>
+                )
+                {
+                    uniform token info:id = "ND_constant_filename"
+                    asset inputs:value = @geometry/textures/asteroidNoise.png@
+                    asset outputs:out
+                    float2 ui:nodegraph:node:pos = (-978.6334, -207.86284)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+
+                def Shader "Power" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_power_float"
+                    float inputs:in1.connect = </Root/Asteroids/_materials/Material_004/AOTexture.outputs:out>
+                    float inputs:in2 = 4
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-492.41864, 451.9765)
+                    int ui:nodegraph:node:stackingOrder = 626
+                }
+
+                def Shader "PBRSurface" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                    float inputs:ambientOcclusion.connect = </Root/Asteroids/_materials/Material_004/Power.outputs:out>
+                    color3f inputs:baseColor.connect = </Root/Asteroids/_materials/Material_004/Multiply_1.outputs:out>
+                    float inputs:clearcoat
+                    float3 inputs:clearcoatNormal
+                    float inputs:clearcoatRoughness
+                    color3f inputs:emissiveColor = (0, 0, 0) (
+                        colorSpace = "lin_srgb"
+                    )
+                    bool inputs:hasPremultipliedAlpha
+                    float inputs:metallic
+                    float3 inputs:normal
+                    float inputs:opacity
+                    float inputs:opacityThreshold
+                    float inputs:roughness = 1
+                    float inputs:specular
+                    token outputs:out
+                    float2 ui:nodegraph:node:pos = (-219.30078, 80.14844)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+
+                def Shader "Multiply_1" (
+                    references = @geometry/Meteoroid1.usdz@</Root/Material/Multiply_1>
+                )
+                {
+                    uniform token info:id = "ND_multiply_color3"
+                    color3f inputs:in1.connect = </Root/Asteroids/_materials/Material_004/TriplanarProjection.outputs:out>
+                    color3f inputs:in2.connect = </Root/Asteroids/_materials/Material_004/BaseColor.outputs:out>
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-478.95764, -29.448776)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+
+                def Shader "PositionScale" (
+                    references = @geometry/Meteoroid1.usdz@</Root/Material/Constant_3>
+                )
+                {
+                    uniform token info:id = "ND_constant_float"
+                    float inputs:value = 0.3
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-1165.8405, -6.710495)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+
+                def Shader "TriplanarProjection" (
+                    references = @geometry/Meteoroid1.usdz@</Root/Material/TriplanarProjection>
+                )
+                {
+                    uniform token info:id = "ND_triplanarprojection_color3"
+                    asset inputs:filex.connect = </Root/Asteroids/_materials/Material_004/NoiseTexture.outputs:out>
+                    asset inputs:filey.connect = </Root/Asteroids/_materials/Material_004/NoiseTexture.outputs:out>
+                    asset inputs:filez.connect = </Root/Asteroids/_materials/Material_004/NoiseTexture.outputs:out>
+                    float3 inputs:normal.connect = </Root/Asteroids/_materials/Material_004/Normal.outputs:out>
+                    float3 inputs:position.connect = </Root/Asteroids/_materials/Material_004/Multiply.outputs:out>
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-729.9811, -96.10112)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+
+                def Shader "Position" (
+                    references = @geometry/Meteoroid1.usdz@</Root/Material/Position>
+                )
+                {
+                    uniform token info:id = "ND_position_vector3"
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1174.8483, -95.9644)
+                    int ui:nodegraph:node:stackingOrder = 618
+                }
+            }
+
+            over "Material_001" (
+                references = None
+            )
+            {
+                token outputs:mtlx:surface.connect = </Root/Asteroids/_materials/Material_001/PBRSurface.outputs:out>
+                token outputs:realitykit:vertex
+                token outputs:surface.connect = </Root/Asteroids/_materials/Material_001/Principled_BSDF.outputs:surface>
+                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 112.75)
+
+                over "Principled_BSDF" (
+                    active = false
+                )
+                {
+                }
+
+                def Shader "Texcoord" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_texcoord_vector2"
+                    float2 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1143.098, 377.11694)
+                    int ui:nodegraph:node:stackingOrder = 585
+                }
+
+                def Shader "PBRSurface" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                    float inputs:ambientOcclusion.connect = </Root/Asteroids/_materials/Material_001/Power.outputs:out>
+                    color3f inputs:baseColor.connect = </Root/Asteroids/_materials/Material_001/Multiply_1.outputs:out>
+                    float inputs:clearcoat
+                    float3 inputs:clearcoatNormal
+                    float inputs:clearcoatRoughness
+                    color3f inputs:emissiveColor = (0, 0, 0) (
+                        colorSpace = "lin_srgb"
+                    )
+                    bool inputs:hasPremultipliedAlpha
+                    float inputs:metallic
+                    float3 inputs:normal
+                    float inputs:opacity
+                    float inputs:opacityThreshold
+                    float inputs:roughness = 1
+                    float inputs:specular
+                    token outputs:out
+                    float2 ui:nodegraph:node:pos = (-287.55792, 33.278664)
+                    int ui:nodegraph:node:stackingOrder = 561
+                }
+
+                def Shader "Power" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_power_float"
+                    float inputs:in1.connect = </Root/Asteroids/_materials/Material_001/AOTexture.outputs:out>
+                    float inputs:in2 = 4
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-532.41864, 411.9765)
+                    int ui:nodegraph:node:stackingOrder = 586
+                }
+
+                def Shader "Multiply" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_multiply_vector3FA"
+                    float3 inputs:in1.connect = </Root/Asteroids/_materials/Material_001/Position.outputs:out>
+                    float inputs:in2.connect = </Root/Asteroids/_materials/Material_001/PositionScale.outputs:out>
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1032.0553, -117.87846)
+                    int ui:nodegraph:node:stackingOrder = 581
+                }
+
+                def Shader "TriplanarProjection" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_triplanarprojection_color3"
+                    asset inputs:filex.connect = </Root/Asteroids/_materials/Material_001/NoiseTexture.outputs:out>
+                    asset inputs:filey.connect = </Root/Asteroids/_materials/Material_001/NoiseTexture.outputs:out>
+                    asset inputs:filez.connect = </Root/Asteroids/_materials/Material_001/NoiseTexture.outputs:out>
+                    float3 inputs:normal.connect = </Root/Asteroids/_materials/Material_001/Normal.outputs:out>
+                    float3 inputs:position.connect = </Root/Asteroids/_materials/Material_001/Multiply.outputs:out>
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-769.9811, -136.10112)
+                    int ui:nodegraph:node:stackingOrder = 580
+                }
+
+                def Shader "Normal" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_normal_vector3"
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1057.8912, 67.68013)
+                    int ui:nodegraph:node:stackingOrder = 576
+                }
+
+                def Shader "Multiply_1" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_multiply_color3"
+                    color3f inputs:in1.connect = </Root/Asteroids/_materials/Material_001/TriplanarProjection.outputs:out>
+                    color3f inputs:in2.connect = </Root/Asteroids/_materials/Material_001/BaseColor.outputs:out>
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-518.95764, -69.44878)
+                    int ui:nodegraph:node:stackingOrder = 572
+                }
+
+                def Shader "Position" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_position_vector3"
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1214.8483, -135.9644)
+                    int ui:nodegraph:node:stackingOrder = 578
+                }
+
+                def Shader "NoiseTexture" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_constant_filename"
+                    asset inputs:value = @geometry/textures/asteroidNoise.png@
+                    asset outputs:out
+                    float2 ui:nodegraph:node:pos = (-1018.6334, -247.86284)
+                    int ui:nodegraph:node:stackingOrder = 579
+                }
+
+                def Shader "PositionScale" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_constant_float"
+                    float inputs:value = 0.3
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-1205.8405, -46.710495)
+                    int ui:nodegraph:node:stackingOrder = 577
+                }
+
+                def Shader "BaseColor" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_constant_color3"
+                    color3f inputs:value = (0.10113104, 0.10113104, 0.10113104) (
+                        colorSpace = "lin_srgb"
+                    )
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-676.7506, 28.723099)
+                    int ui:nodegraph:node:stackingOrder = 571
+                }
+
+                def Shader "AOTexture" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_image_float"
+                    asset inputs:file = @geometry/textures/AOTexture_3.png@
+                    string inputs:filtertype
+                    float2 inputs:texcoord.connect = </Root/Asteroids/_materials/Material_001/Texcoord.outputs:out>
+                    string inputs:uaddressmode
+                    string inputs:vaddressmode
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-829.8418, 292.93387)
+                    int ui:nodegraph:node:stackingOrder = 584
+                    string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
+                }
+            }
+
+            over "Material_002" (
+                references = None
+            )
+            {
+                token outputs:mtlx:surface.connect = </Root/Asteroids/_materials/Material_002/PBRSurface.outputs:out>
+                token outputs:realitykit:vertex
+                token outputs:surface.connect = </Root/Asteroids/_materials/Material_002/Principled_BSDF.outputs:surface>
+                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 112.75)
+
+                over "Principled_BSDF" (
+                    active = false
+                )
+                {
+                }
+
+                def Shader "Texcoord" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_texcoord_vector2"
+                    float2 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1123.098, 397.11694)
+                    int ui:nodegraph:node:stackingOrder = 642
+                }
+
+                def Shader "Power" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_power_float"
+                    float inputs:in1.connect = </Root/Asteroids/_materials/Material_002/AOTexture.outputs:out>
+                    float inputs:in2 = 4
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-512.41864, 431.9765)
+                    int ui:nodegraph:node:stackingOrder = 640
+                }
+
+                def Shader "Multiply" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_multiply_vector3FA"
+                    float3 inputs:in1.connect = </Root/Asteroids/_materials/Material_002/Position.outputs:out>
+                    float inputs:in2.connect = </Root/Asteroids/_materials/Material_002/PositionScale.outputs:out>
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1012.0553, -97.87846)
+                    int ui:nodegraph:node:stackingOrder = 632
+                }
+
+                def Shader "BaseColor" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_constant_color3"
+                    color3f inputs:value = (0.082469255, 0.082469255, 0.082469255) (
+                        colorSpace = "lin_srgb"
+                    )
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-656.7506, 48.7231)
+                    int ui:nodegraph:node:stackingOrder = 637
+                }
+
+                def Shader "Position" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_position_vector3"
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1194.8483, -115.9644)
+                    int ui:nodegraph:node:stackingOrder = 633
+                }
+
+                def Shader "TriplanarProjection" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_triplanarprojection_color3"
+                    asset inputs:filex.connect = </Root/Asteroids/_materials/Material_002/NoiseTexture.outputs:out>
+                    asset inputs:filey.connect = </Root/Asteroids/_materials/Material_002/NoiseTexture.outputs:out>
+                    asset inputs:filez.connect = </Root/Asteroids/_materials/Material_002/NoiseTexture.outputs:out>
+                    float3 inputs:normal.connect = </Root/Asteroids/_materials/Material_002/Normal.outputs:out>
+                    float3 inputs:position.connect = </Root/Asteroids/_materials/Material_002/Multiply.outputs:out>
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-749.9811, -116.10112)
+                    int ui:nodegraph:node:stackingOrder = 635
+                }
+
+                def Shader "NoiseTexture" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_constant_filename"
+                    asset inputs:value = @geometry/textures/asteroidNoise.png@
+                    asset outputs:out
+                    float2 ui:nodegraph:node:pos = (-998.6334, -227.86284)
+                    int ui:nodegraph:node:stackingOrder = 631
+                }
+
+                def Shader "PositionScale" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_constant_float"
+                    float inputs:value = 0.3
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-1185.8405, -26.710495)
+                    int ui:nodegraph:node:stackingOrder = 634
+                }
+
+                def Shader "AOTexture" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_image_float"
+                    asset inputs:file = @geometry/textures/AOTexture_2.png@
+                    string inputs:filtertype
+                    float2 inputs:texcoord.connect = </Root/Asteroids/_materials/Material_002/Texcoord.outputs:out>
+                    string inputs:uaddressmode
+                    string inputs:vaddressmode
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (-809.8418, 312.93387)
+                    int ui:nodegraph:node:stackingOrder = 641
+                    string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
+                }
+
+                def Shader "PBRSurface" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+                    float inputs:ambientOcclusion.connect = </Root/Asteroids/_materials/Material_002/Power.outputs:out>
+                    color3f inputs:baseColor.connect = </Root/Asteroids/_materials/Material_002/Multiply_1.outputs:out>
+                    float inputs:clearcoat
+                    float3 inputs:clearcoatNormal
+                    float inputs:clearcoatRoughness
+                    color3f inputs:emissiveColor = (0, 0, 0) (
+                        colorSpace = "lin_srgb"
+                    )
+                    bool inputs:hasPremultipliedAlpha
+                    float inputs:metallic
+                    float3 inputs:normal
+                    float inputs:opacity
+                    float inputs:opacityThreshold
+                    float inputs:roughness = 1
+                    float inputs:specular
+                    token outputs:out
+                    float2 ui:nodegraph:node:pos = (-239.30078, 60.148438)
+                    int ui:nodegraph:node:stackingOrder = 639
+                    string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:opacityThreshold"]
+                }
+
+                def Shader "Normal" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_normal_vector3"
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-1037.8912, 87.68013)
+                    int ui:nodegraph:node:stackingOrder = 636
+                }
+
+                def Shader "Multiply_1" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_multiply_color3"
+                    color3f inputs:in1.connect = </Root/Asteroids/_materials/Material_002/TriplanarProjection.outputs:out>
+                    color3f inputs:in2.connect = </Root/Asteroids/_materials/Material_002/BaseColor.outputs:out>
+                    color3f outputs:out
+                    float2 ui:nodegraph:node:pos = (-498.95764, -49.448776)
+                    int ui:nodegraph:node:stackingOrder = 638
+                }
+            }
+        }
+
+        over "Root_001" (
+            references = None
+        )
+        {
+            over "Icosphere_022" (
+                references = None
+            )
+            {
+                over "Icosphere_022" (
+                    references = None
+                )
+                {
+                }
+            }
+        }
+
+        over "Root" (
+            references = None
+        )
+        {
+            over "Icosphere_003" (
+                references = None
+            )
+            {
+                over "Icosphere_003" (
+                    references = None
+                )
+                {
+                }
+            }
+        }
+    }
+}
+
