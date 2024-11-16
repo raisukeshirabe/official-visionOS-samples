@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B580BAFD2BFFA24200288404 /* DrawableQueueSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580BAFC2BFFA24200288404 /* DrawableQueueSystem.swift */; };
+		B580BAFF2BFFA29000288404 /* DrawableQueueComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580BAFE2BFFA29000288404 /* DrawableQueueComponent.swift */; };
+		DFC59B2D2BFEC95800238E11 /* ProceduralTextureGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC59B2C2BFEC95800238E11 /* ProceduralTextureGenerator.swift */; };
+		DFC59B2F2BFECD5100238E11 /* DrawableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC59B2E2BFECD5100238E11 /* DrawableView.swift */; };
+		DFC59B342BFEE54C00238E11 /* Torus.usda in Resources */ = {isa = PBXBuildFile; fileRef = DFC59B332BFEE54C00238E11 /* Torus.usda */; };
+		DFC59B362BFEE58600238E11 /* DynamicTextureShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = DFC59B352BFEE58600238E11 /* DynamicTextureShaders.metal */; };
+		DFE08FD22BFEC6120088F7F5 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE08FD12BFEC6120088F7F5 /* Drawable.swift */; };
+		DFE08FD82BFEC6140088F7F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE08FD72BFEC6140088F7F5 /* Assets.xcassets */; };
+		DFE08FDB2BFEC6140088F7F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE08FDA2BFEC6140088F7F5 /* Preview Assets.xcassets */; };
+		DFE08FE32BFEC74C0088F7F5 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE08FE22BFEC74C0088F7F5 /* EntityView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		702EE9A3D79B1A5A43A14619 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		B580BAFC2BFFA24200288404 /* DrawableQueueSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableQueueSystem.swift; sourceTree = "<group>"; };
+		B580BAFE2BFFA29000288404 /* DrawableQueueComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableQueueComponent.swift; sourceTree = "<group>"; };
+		B991E32CC96A676BF3C98BE4 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		C8D19CABA0EB799A4B5B89DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DFC59B2C2BFEC95800238E11 /* ProceduralTextureGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceduralTextureGenerator.swift; sourceTree = "<group>"; };
+		DFC59B2E2BFECD5100238E11 /* DrawableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableView.swift; sourceTree = "<group>"; };
+		DFC59B332BFEE54C00238E11 /* Torus.usda */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Torus.usda; sourceTree = "<group>"; };
+		DFC59B352BFEE58600238E11 /* DynamicTextureShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DynamicTextureShaders.metal; sourceTree = "<group>"; };
+		DFE08FCA2BFEC6120088F7F5 /* RealityKit-Drawable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RealityKit-Drawable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE08FD12BFEC6120088F7F5 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		DFE08FD72BFEC6140088F7F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFE08FDA2BFEC6140088F7F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFE08FDC2BFEC6140088F7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE08FE22BFEC74C0088F7F5 /* EntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFE08FC72BFEC6120088F7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		138B89637A423F2E6EFCCF5A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				702EE9A3D79B1A5A43A14619 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		19B3ECD16B42C5A0062BE9AF /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				B991E32CC96A676BF3C98BE4 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		DFE08FC12BFEC6120088F7F5 = {
+			isa = PBXGroup;
+			children = (
+				C8D19CABA0EB799A4B5B89DD /* README.md */,
+				DFE08FCC2BFEC6120088F7F5 /* RealityKit-Drawable */,
+				DFE08FCB2BFEC6120088F7F5 /* Products */,
+				138B89637A423F2E6EFCCF5A /* Configuration */,
+				19B3ECD16B42C5A0062BE9AF /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		DFE08FCB2BFEC6120088F7F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFE08FCA2BFEC6120088F7F5 /* RealityKit-Drawable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFE08FCC2BFEC6120088F7F5 /* RealityKit-Drawable */ = {
+			isa = PBXGroup;
+			children = (
+				F57BEE1A2C40870100B5C566 /* Views */,
+				F57BEE1B2C40871800B5C566 /* Systems */,
+				F57BEE1D2C40872F00B5C566 /* Resources */,
+				F57BEE1C2C40872600B5C566 /* Textures */,
+				F57BEE192C4086D400B5C566 /* App */,
+			);
+			path = "RealityKit-Drawable";
+			sourceTree = "<group>";
+		};
+		F57BEE192C4086D400B5C566 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DFE08FD12BFEC6120088F7F5 /* Drawable.swift */,
+				DFE08FDC2BFEC6140088F7F5 /* Info.plist */,
+				DFE08FD72BFEC6140088F7F5 /* Assets.xcassets */,
+				DFE08FDA2BFEC6140088F7F5 /* Preview Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F57BEE1A2C40870100B5C566 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFC59B2E2BFECD5100238E11 /* DrawableView.swift */,
+				DFE08FE22BFEC74C0088F7F5 /* EntityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F57BEE1B2C40871800B5C566 /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				B580BAFE2BFFA29000288404 /* DrawableQueueComponent.swift */,
+				B580BAFC2BFFA24200288404 /* DrawableQueueSystem.swift */,
+			);
+			path = Systems;
+			sourceTree = "<group>";
+		};
+		F57BEE1C2C40872600B5C566 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				DFC59B352BFEE58600238E11 /* DynamicTextureShaders.metal */,
+				DFC59B2C2BFEC95800238E11 /* ProceduralTextureGenerator.swift */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		F57BEE1D2C40872F00B5C566 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFC59B332BFEE54C00238E11 /* Torus.usda */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFE08FC92BFEC6120088F7F5 /* RealityKit-Drawable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE08FDF2BFEC6140088F7F5 /* Build configuration list for PBXNativeTarget "RealityKit-Drawable" */;
+			buildPhases = (
+				DFE08FC62BFEC6120088F7F5 /* Sources */,
+				DFE08FC72BFEC6120088F7F5 /* Frameworks */,
+				DFE08FC82BFEC6120088F7F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RealityKit-Drawable";
+			productName = "RealityKit-Drawable";
+			productReference = DFE08FCA2BFEC6120088F7F5 /* RealityKit-Drawable.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFE08FC22BFEC6120088F7F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					DFE08FC92BFEC6120088F7F5 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = DFE08FC52BFEC6120088F7F5 /* Build configuration list for PBXProject "RealityKit-Drawable" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFE08FC12BFEC6120088F7F5;
+			productRefGroup = DFE08FCB2BFEC6120088F7F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFE08FC92BFEC6120088F7F5 /* RealityKit-Drawable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFE08FC82BFEC6120088F7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE08FDB2BFEC6140088F7F5 /* Preview Assets.xcassets in Resources */,
+				DFE08FD82BFEC6140088F7F5 /* Assets.xcassets in Resources */,
+				DFC59B342BFEE54C00238E11 /* Torus.usda in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFE08FC62BFEC6120088F7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B580BAFD2BFFA24200288404 /* DrawableQueueSystem.swift in Sources */,
+				DFC59B2D2BFEC95800238E11 /* ProceduralTextureGenerator.swift in Sources */,
+				DFC59B362BFEE58600238E11 /* DynamicTextureShaders.metal in Sources */,
+				DFE08FE32BFEC74C0088F7F5 /* EntityView.swift in Sources */,
+				DFC59B2F2BFECD5100238E11 /* DrawableView.swift in Sources */,
+				DFE08FD22BFEC6120088F7F5 /* Drawable.swift in Sources */,
+				B580BAFF2BFFA29000288404 /* DrawableQueueComponent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DFE08FDD2BFEC6140088F7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702EE9A3D79B1A5A43A14619 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		DFE08FDE2BFEC6140088F7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702EE9A3D79B1A5A43A14619 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
+		DFE08FE02BFEC6140088F7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702EE9A3D79B1A5A43A14619 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "RealityKit-Drawable/App";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CreatingDrawable;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.realitykit-drawable${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		DFE08FE12BFEC6140088F7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702EE9A3D79B1A5A43A14619 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "RealityKit-Drawable/App";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CreatingDrawable;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.realitykit-drawable${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFE08FC52BFEC6120088F7F5 /* Build configuration list for PBXProject "RealityKit-Drawable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE08FDD2BFEC6140088F7F5 /* Debug */,
+				DFE08FDE2BFEC6140088F7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE08FDF2BFEC6140088F7F5 /* Build configuration list for PBXNativeTarget "RealityKit-Drawable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE08FE02BFEC6140088F7F5 /* Debug */,
+				DFE08FE12BFEC6140088F7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFE08FC22BFEC6120088F7F5 /* Project object */;
+}
