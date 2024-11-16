@@ -1,0 +1,435 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "A 145-mile river that flows through Yosemite Valley, beginning in the Sierra Nevada and ending in the San Joaquin River." : {
+      "comment" : "An informative description of a geographical location.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein 233 Kilometer langer Fluss durch das Yosemite Valley, der in der Sierra Nevada beginnt und in den San Joaquin River mündet."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une rivière longue de 235 km serpentant à travers la vallée de Yosemite, depuis la Sierra Nevada jusqu’au fleuve San Joaquin."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シエラネバダ山脈から流れ出し、サンホアキン川にそそぐ、ヨセミテ渓谷を流れる全長145マイルの川。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 강은 시에라네바다에서 시작해 요세미티 밸리를 따라 샌호아킨강까지 장장 145마일(약 233km)에 걸쳐 흐릅니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一条长145英里的河流穿越优胜美地山谷，起始于内华达山脉，最终汇入圣华金河。"
+          }
+        }
+      }
+    },
+    "A popular destination for rock climbers, this formation is composed almost entirely of granite and is approximately 100 million years old." : {
+      "comment" : "An informative description of a geographical location.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Formation ist besonders beliebt zum Felsklettern. Sie besteht fast vollständig aus Granit und ist ca. 100 Millionen Jahre alt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Destination populaire pour les adeptes de la varappe, cette formation est presque entièrement composée de granit et est apparue il y a environ 100 millions d’années."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ロッククライマーの聖地。ほぼすべてが花こう岩でできていて、誕生は約1億年前に遡ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "암벽 등반가들에게는 유명한 여행지인 이 암반 지대는 전부 화강암으로 이루어져 있으며 약 1억 년의 세월을 간직하고 있습니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这里深受攀岩者喜爱。它形成于约1亿年前，几乎全部由花岗岩构成。"
+          }
+        }
+      }
+    },
+    "A prominent rock formation comprising of many cliffs and pinnacles. The three major summits tower over 2,000 feet high above Yosemite Valley." : {
+      "comment" : "An informative description of a geographical location.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine markante Felsformation aus vielen Steilhängen und Bergspitzen. Die drei Hauptgipfel thronen 600 Meter hoch über dem Yosemite Valley."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une célèbre formation rocheuse présentant de nombreux pics et falaises. Ses trois principaux sommets surplombent la vallée de Yosemite à une hauteur de 610 mètres."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多くの崖と峰からなるひときわ目を引く岩山。3つの高峰はヨセミテ峡谷から2,000フィートの高さにそびえたちます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여러 개의 절벽과 기암으로 압도적인 지형을 자랑하는 암반 지대입니다. 요세미티 밸리에서 600미터 상공으로 우뚝 솟은 세 개의 봉우리가 탄성을 자아냅니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此处岩石遍布，悬崖尖峰众多。三座高度超2000英尺的主峰高耸入云，傲视优胜美地山谷。"
+          }
+        }
+      }
+    },
+    "Cathedral Rocks" : {
+      "comment" : "A geographical place name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cathedral Rocks"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cathedral Rocks"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カテドラルロック"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커시드럴 록"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大教堂岩石"
+          }
+        }
+      }
+    },
+    "El Capitan" : {
+      "comment" : "A geographical place name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El Capitan"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El Capitan"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エル・キャピタン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "엘 캐피탄"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "埃尔卡皮坦山"
+          }
+        }
+      }
+    },
+    "Merced River" : {
+      "comment" : "A geographical place name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merced River"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rivière Merced"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マーセド川"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "머세드강"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默塞德河"
+          }
+        }
+      }
+    },
+    "Morph" : {
+      "comment" : "Label for a slider that controls the level of morphing between two geological formations that the diorama presents.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verformen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morphing"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変形"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모핑"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "变形"
+          }
+        }
+      }
+    },
+    "Parsons Landing" : {
+      "comment" : "A geographical place name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parsons Landing"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parsons Landing"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パーソンズ・ランディング"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파슨스 랜딩"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帕森斯平台"
+          }
+        }
+      }
+    },
+    "Ribbon Beach" : {
+      "comment" : "A geographical place name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ribbon Beach"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ribbon Beach"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リボン・ビーチ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리본 비치"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "里本海滩"
+          }
+        }
+      }
+    },
+    "Scale" : {
+      "comment" : "Label for a slider that controls the scale of the diorama.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skalieren"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échelle"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "縮尺"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "크기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缩放"
+          }
+        }
+      }
+    },
+    "Show Diorama" : {
+      "comment" : "Label for a toggle to show the diorama",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diorama anzeigen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher le diorama"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジオラマを表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "디오라마 보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示立体模型"
+          }
+        }
+      }
+    },
+    "Two Harbors" : {
+      "comment" : "A geographical place name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Two Harbors"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Two Harbors"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トゥー・ハーバーズ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "투 하버스"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "双港市"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
