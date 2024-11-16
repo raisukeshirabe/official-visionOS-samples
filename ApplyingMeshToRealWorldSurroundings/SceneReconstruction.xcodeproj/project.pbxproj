@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B58D9BAE2BFBEFBE004E1A78 /* MeshAnchorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D9BAD2BFBEFBE004E1A78 /* MeshAnchorGenerator.swift */; };
+		B5AD4A572BF7D916004B3BA9 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD4A562BF7D916004B3BA9 /* EntryPoint.swift */; };
+		B5AD4A592BF7D916004B3BA9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD4A582BF7D916004B3BA9 /* MainView.swift */; };
+		B5AD4A5D2BF7D917004B3BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AD4A5C2BF7D917004B3BA9 /* Assets.xcassets */; };
+		B5AD4A602BF7D917004B3BA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AD4A5F2BF7D917004B3BA9 /* Preview Assets.xcassets */; };
+		DF176E942BFBD39A00C64113 /* SceneReconstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176E932BFBD39A00C64113 /* SceneReconstructionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2117C090F3FEC3913CB721B2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A69DB024181FD6485DDDA2AB /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		B58D9BAD2BFBEFBE004E1A78 /* MeshAnchorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshAnchorGenerator.swift; sourceTree = "<group>"; };
+		B5AD4A4F2BF7D916004B3BA9 /* SceneReconstruction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneReconstruction.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AD4A562BF7D916004B3BA9 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		B5AD4A582BF7D916004B3BA9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B5AD4A5C2BF7D917004B3BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5AD4A5F2BF7D917004B3BA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5AD4A612BF7D917004B3BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF176E932BFBD39A00C64113 /* SceneReconstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneReconstructionView.swift; sourceTree = "<group>"; };
+		F7DE6722809EA35EF5DFE9D7 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5AD4A4C2BF7D916004B3BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5AD4A462BF7D916004B3BA9 = {
+			isa = PBXGroup;
+			children = (
+				2117C090F3FEC3913CB721B2 /* README.md */,
+				B5AD4A512BF7D916004B3BA9 /* SceneReconstruction */,
+				B5AD4A502BF7D916004B3BA9 /* Products */,
+				DDC526F41E1A11B73FB1C250 /* Configuration */,
+				C22D75F722A06D97E4D7EE3D /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		B5AD4A502BF7D916004B3BA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD4A4F2BF7D916004B3BA9 /* SceneReconstruction.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5AD4A512BF7D916004B3BA9 /* SceneReconstruction */ = {
+			isa = PBXGroup;
+			children = (
+				F5169C992C38954D008C743B /* Views */,
+				F5169C9A2C3895C0008C743B /* Generators */,
+				F5169C982C3894F7008C743B /* App */,
+			);
+			path = SceneReconstruction;
+			sourceTree = "<group>";
+		};
+		C22D75F722A06D97E4D7EE3D /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				A69DB024181FD6485DDDA2AB /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		DDC526F41E1A11B73FB1C250 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F7DE6722809EA35EF5DFE9D7 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		F5169C982C3894F7008C743B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD4A562BF7D916004B3BA9 /* EntryPoint.swift */,
+				B5AD4A612BF7D917004B3BA9 /* Info.plist */,
+				B5AD4A5C2BF7D917004B3BA9 /* Assets.xcassets */,
+				B5AD4A5F2BF7D917004B3BA9 /* Preview Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F5169C992C38954D008C743B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD4A582BF7D916004B3BA9 /* MainView.swift */,
+				DF176E932BFBD39A00C64113 /* SceneReconstructionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5169C9A2C3895C0008C743B /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				B58D9BAD2BFBEFBE004E1A78 /* MeshAnchorGenerator.swift */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5AD4A4E2BF7D916004B3BA9 /* SceneReconstruction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AD4A642BF7D917004B3BA9 /* Build configuration list for PBXNativeTarget "SceneReconstruction" */;
+			buildPhases = (
+				B5AD4A4B2BF7D916004B3BA9 /* Sources */,
+				B5AD4A4C2BF7D916004B3BA9 /* Frameworks */,
+				B5AD4A4D2BF7D916004B3BA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SceneReconstruction;
+			productName = SceneReconstruction;
+			productReference = B5AD4A4F2BF7D916004B3BA9 /* SceneReconstruction.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5AD4A472BF7D916004B3BA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					B5AD4A4E2BF7D916004B3BA9 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = B5AD4A4A2BF7D916004B3BA9 /* Build configuration list for PBXProject "SceneReconstruction" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5AD4A462BF7D916004B3BA9;
+			productRefGroup = B5AD4A502BF7D916004B3BA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5AD4A4E2BF7D916004B3BA9 /* SceneReconstruction */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5AD4A4D2BF7D916004B3BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AD4A602BF7D917004B3BA9 /* Preview Assets.xcassets in Resources */,
+				B5AD4A5D2BF7D917004B3BA9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5AD4A4B2BF7D916004B3BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AD4A592BF7D916004B3BA9 /* MainView.swift in Sources */,
+				DF176E942BFBD39A00C64113 /* SceneReconstructionView.swift in Sources */,
+				B58D9BAE2BFBEFBE004E1A78 /* MeshAnchorGenerator.swift in Sources */,
+				B5AD4A572BF7D916004B3BA9 /* EntryPoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B5AD4A622BF7D917004B3BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7DE6722809EA35EF5DFE9D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		B5AD4A632BF7D917004B3BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7DE6722809EA35EF5DFE9D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
+		B5AD4A652BF7D917004B3BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7DE6722809EA35EF5DFE9D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = SceneReconstruction/App;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SceneReconstructioning;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.RealityKit-SceneReconstruction${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B5AD4A662BF7D917004B3BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7DE6722809EA35EF5DFE9D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = SceneReconstruction/App;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SceneReconstructioning;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.RealityKit-SceneReconstruction${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5AD4A4A2BF7D916004B3BA9 /* Build configuration list for PBXProject "SceneReconstruction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AD4A622BF7D917004B3BA9 /* Debug */,
+				B5AD4A632BF7D917004B3BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AD4A642BF7D917004B3BA9 /* Build configuration list for PBXNativeTarget "SceneReconstruction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AD4A652BF7D917004B3BA9 /* Debug */,
+				B5AD4A662BF7D917004B3BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5AD4A472BF7D916004B3BA9 /* Project object */;
+}
