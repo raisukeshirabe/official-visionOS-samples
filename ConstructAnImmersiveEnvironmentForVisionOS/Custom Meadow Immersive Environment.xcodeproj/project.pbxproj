@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		660AFE602B44DB5600D57B8E /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 660AFE5F2B44DB5600D57B8E /* RealityKitContent */; };
+		660AFE622B44DB5600D57B8E /* MeadowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AFE612B44DB5600D57B8E /* MeadowApp.swift */; };
+		660AFE642B44DB5600D57B8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AFE632B44DB5600D57B8E /* ContentView.swift */; };
+		660AFE662B44DB5600D57B8E /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AFE652B44DB5600D57B8E /* ImmersiveView.swift */; };
+		660AFE6A2B44DB5700D57B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660AFE692B44DB5700D57B8E /* Assets.xcassets */; };
+		660AFE6D2B44DB5700D57B8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660AFE6C2B44DB5700D57B8E /* Preview Assets.xcassets */; };
+		660AFE752B44DDBD00D57B8E /* EnvironmentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AFE742B44DDBD00D57B8E /* EnvironmentLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		36D6BD1E9A502E086C41D658 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		660AFE5A2B44DB5600D57B8E /* Custom Meadow Immersive Environment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom Meadow Immersive Environment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		660AFE5E2B44DB5600D57B8E /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		660AFE612B44DB5600D57B8E /* MeadowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeadowApp.swift; sourceTree = "<group>"; };
+		660AFE632B44DB5600D57B8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		660AFE652B44DB5600D57B8E /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		660AFE692B44DB5700D57B8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		660AFE6C2B44DB5700D57B8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		660AFE6E2B44DB5700D57B8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		660AFE742B44DDBD00D57B8E /* EnvironmentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLoader.swift; sourceTree = "<group>"; };
+		7936CB17004BF9FCD83B79B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8C56D5DE41288F01940F8143 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		660AFE572B44DB5600D57B8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660AFE602B44DB5600D57B8E /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C83165F6C8B8AB54F6029C7 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				36D6BD1E9A502E086C41D658 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		4A3445DF1015F701A81332D9 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8C56D5DE41288F01940F8143 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		660AFE512B44DB5600D57B8E = {
+			isa = PBXGroup;
+			children = (
+				7936CB17004BF9FCD83B79B1 /* README.md */,
+				660AFE5C2B44DB5600D57B8E /* Meadow */,
+				660AFE5D2B44DB5600D57B8E /* Packages */,
+				660AFE5B2B44DB5600D57B8E /* Products */,
+				4A3445DF1015F701A81332D9 /* Configuration */,
+				1C83165F6C8B8AB54F6029C7 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		660AFE5B2B44DB5600D57B8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				660AFE5A2B44DB5600D57B8E /* Custom Meadow Immersive Environment.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		660AFE5C2B44DB5600D57B8E /* Meadow */ = {
+			isa = PBXGroup;
+			children = (
+				660AFE612B44DB5600D57B8E /* MeadowApp.swift */,
+				660AFE632B44DB5600D57B8E /* ContentView.swift */,
+				660AFE652B44DB5600D57B8E /* ImmersiveView.swift */,
+				660AFE742B44DDBD00D57B8E /* EnvironmentLoader.swift */,
+				660AFE692B44DB5700D57B8E /* Assets.xcassets */,
+				660AFE6E2B44DB5700D57B8E /* Info.plist */,
+				660AFE6B2B44DB5700D57B8E /* Preview Content */,
+			);
+			path = Meadow;
+			sourceTree = "<group>";
+		};
+		660AFE5D2B44DB5600D57B8E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				660AFE5E2B44DB5600D57B8E /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		660AFE6B2B44DB5700D57B8E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				660AFE6C2B44DB5700D57B8E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		660AFE592B44DB5600D57B8E /* Custom Meadow Immersive Environment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 660AFE712B44DB5700D57B8E /* Build configuration list for PBXNativeTarget "Custom Meadow Immersive Environment" */;
+			buildPhases = (
+				660AFE562B44DB5600D57B8E /* Sources */,
+				660AFE572B44DB5600D57B8E /* Frameworks */,
+				660AFE582B44DB5600D57B8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Custom Meadow Immersive Environment";
+			packageProductDependencies = (
+				660AFE5F2B44DB5600D57B8E /* RealityKitContent */,
+			);
+			productName = Meadow;
+			productReference = 660AFE5A2B44DB5600D57B8E /* Custom Meadow Immersive Environment.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		660AFE522B44DB5600D57B8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					660AFE592B44DB5600D57B8E = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 660AFE552B44DB5600D57B8E /* Build configuration list for PBXProject "Custom Meadow Immersive Environment" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 660AFE512B44DB5600D57B8E;
+			productRefGroup = 660AFE5B2B44DB5600D57B8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				660AFE592B44DB5600D57B8E /* Custom Meadow Immersive Environment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		660AFE582B44DB5600D57B8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660AFE6A2B44DB5700D57B8E /* Assets.xcassets in Resources */,
+				660AFE6D2B44DB5700D57B8E /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		660AFE562B44DB5600D57B8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660AFE642B44DB5600D57B8E /* ContentView.swift in Sources */,
+				660AFE622B44DB5600D57B8E /* MeadowApp.swift in Sources */,
+				660AFE752B44DDBD00D57B8E /* EnvironmentLoader.swift in Sources */,
+				660AFE662B44DB5600D57B8E /* ImmersiveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		660AFE6F2B44DB5700D57B8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C56D5DE41288F01940F8143 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		660AFE702B44DB5700D57B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C56D5DE41288F01940F8143 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		660AFE722B44DB5700D57B8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C56D5DE41288F01940F8143 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Meadow/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Meadow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Meadow${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		660AFE732B44DB5700D57B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C56D5DE41288F01940F8143 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Meadow/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Meadow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Meadow${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		660AFE552B44DB5600D57B8E /* Build configuration list for PBXProject "Custom Meadow Immersive Environment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660AFE6F2B44DB5700D57B8E /* Debug */,
+				660AFE702B44DB5700D57B8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		660AFE712B44DB5700D57B8E /* Build configuration list for PBXNativeTarget "Custom Meadow Immersive Environment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660AFE722B44DB5700D57B8E /* Debug */,
+				660AFE732B44DB5700D57B8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		660AFE5F2B44DB5600D57B8E /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 660AFE522B44DB5600D57B8E /* Project object */;
+}
