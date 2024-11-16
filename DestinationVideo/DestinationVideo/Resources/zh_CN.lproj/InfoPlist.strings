@@ -1,0 +1,13 @@
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+Localization file.
+*/
+
+/* Bundle display name */
+"CFBundleDisplayName" = "胜地游略";
+
+/* Bundle name */
+"CFBundleName" = "胜地游略";
+

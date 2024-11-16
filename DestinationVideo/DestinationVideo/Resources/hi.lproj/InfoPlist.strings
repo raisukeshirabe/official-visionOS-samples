@@ -1,0 +1,13 @@
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+Localization file.
+*/
+
+/* Bundle display name */
+"CFBundleDisplayName" = "डेस्टिनेशन वीडियो";
+
+/* Bundle name */
+"CFBundleName" = "डेस्टिनेशन वीडियो";
+

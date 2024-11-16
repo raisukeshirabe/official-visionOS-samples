@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "studio_thumbnail_dark.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

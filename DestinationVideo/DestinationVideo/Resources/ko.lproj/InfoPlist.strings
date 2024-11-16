@@ -1,0 +1,13 @@
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+Localization file.
+*/
+
+/* Bundle display name */
+"CFBundleDisplayName" = "여행지 비디오";
+
+/* Bundle name */
+"CFBundleName" = "여행지 비디오";
+

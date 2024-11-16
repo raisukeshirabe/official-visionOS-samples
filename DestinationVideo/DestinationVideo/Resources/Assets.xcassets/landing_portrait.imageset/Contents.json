@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "landing_portriat.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

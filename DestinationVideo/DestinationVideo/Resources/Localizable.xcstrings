@@ -1,0 +1,3407 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%@ | %@ | %@" : {
+      "comment" : "Release Year | Rating | Duration",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ | %2$@ | %3$@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ | %2$@ | %3$@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ | %2$@ | %3$@"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ | %2$@ | %3$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@年 | %2$@ | %3$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ | %2$@ | %3$@"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ | %2$@ | %3$@"
+          }
+        }
+      }
+    },
+    "A BOT-anist Adventure" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein BOT-anisches Abenteuer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une aventure BOT-aniste"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रोबोट बॉटनिस्ट के कारनामे"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BOT-anistアドベンチャー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로봇 식물학자의 모험"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "机器人植物学家的冒险之旅"
+          }
+        }
+      }
+    },
+    "A Beach" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Strand"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une plage"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बीच"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビーチ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "해변"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海滩"
+          }
+        }
+      }
+    },
+    "A mystery is brewing on a rainy Wednesday in California, as a couple of friends head to a local campsite for a weekend in the woods. They never anticipated what could be living down by the trickling, rocky creek." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An einem verregneten Mittwoch in Kalifornien kommen ein paar Freunde einem Geheimnis auf die Spur, als sie sich auf den Weg zu einem Campingplatz in den Wäldern machen. Sie hätten nie geahnt, was unten am plätschernden, steinigen Bach lebt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Par un mercredi pluvieux, le mystère s’épaissit en Californie alors que deux amis se rendent dans un camping local pour passer un week-end dans les bois. Ces derniers ne pouvaient pas imaginer qu’une créature vivait à proximité, au bord d’un mince ruisseau rocailleux."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कैलिफ़ोर्निया में बुधवार को बरसात के दिन एक मिस्ट्री शुरू होती है, जब कुछ दोस्त जंगल में वीकेंड बिताने के लिए एक लोकल कैंप साइट की ओर जा रहे होते हैं। उन्हें यह अंदाज़ा क़तई नहीं था कि चट्टानों के नीचे धीरे-धीरे बहने वाली धारा में आख़िर क्या हो सकता है।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カリフォルニアでは水曜日に雨が降ると、ある不思議な噂が流れます。とある週末に森の中のキャンプ場に向かった友達同士の2人組。水の流れる岩だらけの沢には、2人の思いもよらぬ生物が生息していました。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캘리포니아의 비오는 수요일, 미스터리가 시작됩니다. 숲속 캠핑장으로 주말 여행을 즐기러 간 친구들. 바위를 타고 졸졸 흐르는 개울에 무엇이 살고 있는지 그때는 알지 못했습니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加利福尼亚，周三，落雨。一段神秘旅程即将开启。几位好友将前往当地的露营地，在林野中度过周末。他们完全无法预知岩石遍布的潺潺溪水中居住着怎样的生灵。"
+          }
+        }
+      }
+    },
+    "Action" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Action"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Action"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ऐक्शन"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "액션"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "动作片"
+          }
+        }
+      }
+    },
+    "Add to Up Next" : {
+      "comment" : "Button title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zu „Als Nächstes“ hinzufügen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter à la file d’attente"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आगामी में जोड़ें"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“次はこちら”に追加"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재생 대기 목록에 추가"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加到待播清单"
+          }
+        }
+      }
+    },
+    "Adventure" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abenteuer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aventure"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "एडवेंचर"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アドベンチャー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모험"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冒险片"
+          }
+        }
+      }
+    },
+    "After a long journey through the stars, the robot botanist and its trusty spaceship finally arrive at Wolf 1069 B, ready to explore the mysteries that lie on the planet’s surface. New plants to catalog, new animals to discover, and cool rocks to unearth. Follow along as the botanist’s mission begins!" : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach einer langen Reise durch ferne Galaxien erreichen der Roboterbotaniker und sein treues Raumschiff endlich den Planten Wolf 1069 B und machen sich auf, die Geheimnisse auf der Oberfläche des Planten zu erforschen. Neue Pflanzen katalogisieren, unbekannte Tiere entdecken und coole Steine ausgraben. Sei hautnah dabei beim Start dieser botanischen Mission!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Après un long voyage à travers les étoiles, le robot botaniste et son fidèle vaisseau spatial atterrissent enfin sur Wolf 1069 B, prêts à percer les mystères que cache la surface de cette planète : nouvelles plantes à enregistrer dans l’inventaire, nouveaux animaux à découvrir et nouvelles pierres à déterrer. Suivez le botaniste dans sa nouvelle mission !"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "तारों से भरे आसमान के नीचे एक लंबी यात्रा के बाद, रोबोट बॉटनिस्ट और उसका भरोसेमंद स्पेसशिप आख़िरकार Wolf 1069 B पर पहुँचते हैं और वे ग्रह की सतह पर मौजूद रहस्यों का पता लगाने के लिए तैयार हैं। लिस्ट तैयार करने के लिए नए पौधे, खोजने के लिए नए जानवर और एक्सप्लोर करने के लिए बेहतरीन चट्टानें। जैसे ही बॉटनिस्ट का मिशन शुरू हो, उसे फ़ॉलो करें!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宇宙船に乗ってWolf 1069 Bに辿り着いたロボット植物学者は、未知の植物、動物、岩石を調査する準備を始めます。一緒に任務を追ってみましょう!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "수많은 별들을 지나는 기나긴 여정 끝에, 로봇 식물학자와 든든한 우주선이 마침내 울프 1069 B 행성에 도착했습니다. 이제 새로운 식물과 동물, 멋진 암석들을 비롯해 이 행성 곳곳에 숨겨져 있는 미스터리를 탐험할 시간입니다. 식물학자와 함께 임무를 수행해 보세요!"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "经历了漫长的旅途，穿越群星，承载着机器人植物学家的宇宙飞船终于抵达Wolf 1069 B星。它整装待发，准备探索星球表面的奥秘。这里有亟需编录的新植物，等待发现的新动物，还有前所未见的岩石可供挖掘。植物学家即将开始执行任务，跟随它一探究竟！"
+          }
+        }
+      }
+    },
+    "After filling its backpack to the brim with dozens of plant samples, it’s time for the robot botanist to return to the lab and learn more about these mysterious alien plants. Hours of demanding research lie ahead as the botanist gets to work." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Dutzenden Pflanzenproben im Gepäck ist es für den Roboterbotaniker an der Zeit, ins Labor zurückzukehren und mehr über diese geheimnisvollen außerirdischen Pflanzen zu lernen. Vor dem Botaniker liegen mehrere Stunden anspruchsvoller Forschungsarbeit."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Après avoir rempli son sac à dos à ras bord de plusieurs dizaines d’échantillons de plantes différentes, il est temps pour le robot botaniste de retourner au laboratoire et d’en savoir plus sur ces mystérieuses plantes extraterrestres. Le botaniste se met au travail car des heures de recherche rigoureuses l’attendent."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अपने बैग में दर्जनों पौधों के सैंपल भरने के बाद, रोबोट बॉटनिस्ट के लिए लैब में लौटने और इन रहस्यमय विदेशी पौधों के बारे में और जानने का समय आ गया है। बॉटनिस्ट का काम शुरू होने पर, आगे घंटों तक रिसर्च करने की ज़रूरत पड़ेगी।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バックパックが植物サンプルでいっぱいになると、ロボット植物学者はラボに戻って、採取した未知の外来種についてさらに詳しく調べます。この先、長時間にわたる骨の折れる研究が続きます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "수십 가지의 식물 샘플로 배낭을 꽉 채운 로봇 식물학자. 이제는 연구실로 돌아가서 이 미지의 외계 식물들을 탐구할 시간입니다. 연구를 마치려면 아주 오랜 시간이 걸릴 수도 있겠네요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "植物学家的背包里塞满了各种各样的植物样本。现在，它要返回实验室，进一步探究这些神秘的外星植物。植物学家即将开始长达数小时的艰苦科研工作。"
+          }
+        }
+      }
+    },
+    "All" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सभी"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべて"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모두"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部"
+          }
+        }
+      }
+    },
+    "Always determined to discover new species of plants, the robot botanist explores further and further. Eventually, its mission brings it deep below the planet’s surface into a vast network of underground caves. Though the terrain may become challenging for a robot, the botanist pushes on." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stets entschlossen, neue Pflanzenarten zu entdecken, forscht der Roboterbotaniker unermüdlich weiter. Während seiner Mission stößt er schließlich tief unter der Oberfläche des Planeten auf ein ausgedehntes Netz unterirdischer Höhlen. Obwohl das Gelände eine Herausforderung für einen Roboter sein kann, gibt der Botaniker nicht auf."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toujours déterminé à découvrir de nouvelles espèces de plantes, le robot botaniste explore toujours plus en détail ce nouvel environnement. Sa mission finit par l’emmener sous la surface de sa nouvelle planète, à travers un vaste réseau profond de grottes souterraines. Malgré le terrain accidenté et difficile à parcourir pour un robot, le botaniste poursuit son avancée."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हमेशा पौधों की नई प्रजातियों की खोज करने के लिए तैयार, रोबोट बॉटनिस्ट आगे और आगे की खोज करता है। आख़िरकार, इसका मिशन इसे ग्रह की सतह के काफ़ी नीचे बनी गुफाओं के बड़े नेटवर्क तक ले आता है। हालाँकि, ज़मीन के अंदर का हिस्सा रोबोट के लिए चुनौतीपूर्ण हो सकता है, लेकिन बॉटनिस्ट आगे बढ़ता है।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新種の植物を発見すべく、ロボット植物学者は奥へ奥へと進みます。そして、ついに地下洞窟の巨大なネットワークへと辿り着きます。ロボットにとっては足場が悪く困難ですが、それでもロボット植物学者は突入します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 식물종을 찾아내는 데 진심인 우리의 로봇 식물학자는 점점 더 멀리까지 탐험을 나섭니다. 그렇게 해서 마침내 도달한 행성의 지표면 아래 깊은 곳에는 광대한 영역에 걸쳐 서로 연결된 지하 동굴이 있습니다. 이 지대는 로봇이 다니기에는 어려울 수도 있지만, 우리의 로봇 식물학자는 포기하지 않고 나아갑니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "机器人植物学家不断探索，致力于发现新植物。最终，随着任务不断推进，它深入星球表面之下，进入庞大的地下洞穴体系。尽管这一地形对机器人而言充满挑战，但植物学家依然努力向前。"
+          }
+        }
+      }
+    },
+    "Amazing Animation" : {
+      "comment" : "Collection name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atemberaubende Animation"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animation extraordinaire"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शानदार ऐनिमेशन"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すばらしいアニメーション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "경이로운 애니메이션"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精美动画"
+          }
+        }
+      }
+    },
+    "An awe-inspiring tale of a beloved robot, on a quest to save extraordinary vegetation from extinction. Uncover the mysterious plant life inhabiting an alien planet, and cheer on the robot botanist as it sets out to discover and save new and exciting plants." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die inspirierende Geschichte eines beliebten Roboters auf seiner Mission, außergewöhnliche Pflanzen vor dem Aussterben zu retten. Entdecke die geheimnisvolle Welt der Pflanzen auf einem außerirdischen Planeten und fiebere mit dem Roboterbotaniker mit, wenn er neue und aufregende Pflanzen erforscht und rettet."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un formidable conte sur un adorable robot ayant pour mission d’empêcher l’extinction de plusieurs végétaux extraordinaires. Découvrez les plantes mystérieuses qui jonchent les sols d’une planète extraterrestre et encouragez le robot botaniste à mesure qu’il identifie et consigne de nouvelles plantes curieuses."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "असाधारण वनस्पति को विलुप्त होने से बचाने की खोज में निकले प्यारे रोबोट की हैरतअंगेज़ कहानी। एलियन ग्रह पर रहने वाले रहस्यमय पौधों के जीवन को समझें और रोबोट बॉटनिस्ट को ख़ुश करें क्योंकि वह नए और रोमांचक पौधों की खोज करने और उन्हें बचाने के लिए निकला है।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "稀有な植物を絶滅から救う任務に就いた、愛すべきロボットの偉業の物語です。新種の希少植物の発見と救済の旅に出るロボット植物学者を応援しながら、別の惑星に生息する未知の植物を発見しましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "멸종 위기에 처한 희귀 식물을 보존하기 위한 한 로봇의 눈을 뗄 수 없는 이야기가 시작됩니다. 외계 행성에서 서식하는 미지의 식물을 알아가고, 우리가 알지 못했던 새로운 식물을 찾아 지켜내는 로봇 식물학자의 여정을 응원해 보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是一个令人震撼的故事，讲述了一个广受喜爱的机器人不断探求，拯救各种濒危植物的历程。揭开外星植物的神秘面纱，为机器人植物学家加油鼓劲——它已迫不及待，去发现并拯救新奇植物。"
+          }
+        }
+      }
+    },
+    "Animation" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animation"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animation"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ऐनिमेशन"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アニメーション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "애니메이션"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "动画片"
+          }
+        }
+      }
+    },
+    "Animations" : {
+      "comment" : "Tab title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animationen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animations"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ऐनिमेशन"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アニメーション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "애니메이션"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "动画"
+          }
+        }
+      }
+    },
+    "Anne Johnson" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anne Johnson"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anne Johnson"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anne Johnson"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アン・ジョンソン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앤 존슨"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安妮·约翰逊"
+          }
+        }
+      }
+    },
+    "Birds in the Park" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vögel im Park"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Des oiseaux dans le parc"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पार्क में पंछियों की रौनक"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公園の鳥"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공원의 새"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "园中鸟"
+          }
+        }
+      }
+    },
+    "By the Lake" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Am See"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Au bord du lac"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "झील के किनारे"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "湖畔"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호숫가"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "湖畔"
+          }
+        }
+      }
+    },
+    "By the Sea" : {
+      "comment" : "Collection name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Am Meer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Au bord de la mer"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "समंदर के किनारे"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海辺"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "바닷가"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海边"
+          }
+        }
+      }
+    },
+    "Camping in the Woods" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Campen im Wald"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Camping dans les bois"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जंगल में कैंपिंग"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "森でキャンプ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "숲속 캠핑"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "林野露营"
+          }
+        }
+      }
+    },
+    "Cast & Crew" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besetzung & Crew"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distribution et équipe technique"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कास्ट और क्रू"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出演者とスタッフ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "출연진 및 제작진"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "演职员表"
+          }
+        }
+      }
+    },
+    "Celebrate the art of cinematography with beautifully-captured videos and animation. The perfect collection for any cinema lover." : {
+      "comment" : "The description of a collection of videos.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Lobgesang auf die Kinokunst mit wunderschönen Videoaufnahmen und Animationen. Die perfekte Sammlung für alle, die Kino lieben."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Célébrez l’art du cinéma grâce à des animations et des vidéos capturées avec élégance. La collection idéale pour les amateurs du septième art."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ख़ूबसूरती से कैप्चर किए गए वीडियो और ऐनिमेशन के साथ सिनेमैटोग्राफ़ी के आर्ट का जश्न मनाएँ। किसी भी सिनेमा प्रेमी के लिए सबसे सही संग्रह।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美しいビデオとアニメーションを駆使した映画撮影の技術を堪能できます。映画好きにぴったりのコレクションです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아름다운 풍경으로 가득한 비디오 및 애니메이션과 함께 시네마토그래피의 정수를 느껴보세요. 시네필을 위한 완벽한 모음입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "观看精美视频和动画，尽享绝伦拍摄艺术。多种精选集，电影爱好者的不二之选。"
+          }
+        }
+      }
+    },
+    "Cinematic Shots" : {
+      "comment" : "Collection name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aufnahmen wie im Kino"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plans cinématographiques"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सिनमैटिक शॉट"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シネマティック撮影"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시네마틱 샷"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "影视镜头"
+          }
+        }
+      }
+    },
+    "Collections" : {
+      "comment" : "Tab title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammlungen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collections"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "संग्रह"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コレクション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모음"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精选集"
+          }
+        }
+      }
+    },
+    "Come along for a journey of epic proportion as the perfect camp site is discovered. Listen to the magical wildlife and feel the gentle breeze of the wind as you watch the daisies dance in the field of flowers." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Komm mit auf eine Reise epischen Ausmaßes zum perfekten Campingplatz. Lausche der magischen Tierwelt und spüre eine leichte Brise, während du die Gänseblümchen bei ihrem Tanz im Blumenfeld beobachtest."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suivez les personnages dans un voyage épique et séjournez avec eux dans le camping idéal. Écoutez la faune magique et ressentez le doux souffle du vent en regardant les marguerites danser dans un champ de fleurs."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सबसे सही कैंप साइट की खोज होने पर कभी न भूलने वाली हैरतअंगेज़ यात्रा में साथ आएँ। जादुई वाइल्ड लाइफ़ की आवाज़ें सुनें और फूलों से भरे मैदान में डेज़ी फूलों की ख़ूबसूरती देखते हुए हवा के कोमल एहसास को महसूस करें।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "理想のキャンプ場を見つけるまでの大冒険に出発しましょう。ヒナギクが揺れる花畑を見ながら、魅惑的な野生生物の声を聞き、そよ風を感じてみましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "압도적인 규모의 자연을 배경으로 완벽한 캠핑장을 찾아 떠나는 여정에 함께하세요. 드넓은 꽃밭에서 부드러운 산들바람을 따라 살랑살랑 춤추는 데이지꽃을 감상하면서 신비로운 야생의 소리에 귀 기울여보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发现绝佳营地！快来开启一段前所未有的旅程。倾听野生动物窃窃私语，欣赏山野中雏菊随微风轻轻舞动。"
+          }
+        }
+      }
+    },
+    "Comedy" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Komödie"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comédie"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कॉमेडी"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コメディ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "코미디"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喜剧片"
+          }
+        }
+      }
+    },
+    "Cute Animals" : {
+      "comment" : "Collection name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niedliche Tiere"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animaux mignons"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मासूम जानवर"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "かわいい動物"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "귀여운 동물"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可爱动物"
+          }
+        }
+      }
+    },
+    "Dance" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanz"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danse"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डांस"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダンス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "댄스"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳舞"
+          }
+        }
+      }
+    },
+    "Dark" : {
+      "comment" : "Label for Dark environment",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dunkel"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sombre"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डार्क"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダーク"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다크"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深色"
+          }
+        }
+      }
+    },
+    "Details" : {
+      "comment" : "Tap to view video details",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Details"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détails"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जानकारी"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "詳細"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세부사항"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "详细信息"
+          }
+        }
+      }
+    },
+    "Director" : {
+      "comment" : "A participant in making a video.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regie"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réalisation"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "निर्देशक"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "監督"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "감독"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导演"
+          }
+        }
+      }
+    },
+    "Discover the beauty beyond the highway, just steps away from your normal commute. What lies beyond is a stunning show of delicate fog rolling over the hillside." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entdecke die Schönheit jenseits des Highways, nur wenige Schritte von deinem üblichen Weg zur Arbeit entfernt. Beobachte die sanften Nebelschwaden, wie sie über die Hügel ziehen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Découvrez la beauté qui réside par-delà l’autoroute, à quelques pas seulement de votre parcours quotidien. Vous assisterez au spectacle éblouissant d’un brouillard délicat déferlant sur les collines."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अपने सामान्य आवागमन से कुछ ही कदम की दूरी पर, हाईवे से दूर सुंदर जगह की खोज करें। इसके आगे जो कुछ है वह पहाड़ी पर छाए हुए कोहरे का हैरान कर देने वाला नज़ारा है।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "いつもの通勤経路を少し外れて、幹線道路の向こう側にある美しい風景を見つけに行きましょう。この先には、丘陵の斜面を伝って霧が流れ込む見事な光景が広がっています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매일 출퇴근하는 도로 저편에서 전에는 미처 몰랐던 아름다움을 발견해 보세요. 저 너머에서 언덕을 따라 옅은 안개가 깔리며 눈을 뗄 수 없는 풍경을 선사합니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发现高速公路外的美景，距日常通勤路线仅几步之遥。远处，雾霭笼罩群山，夺人心魄。"
+          }
+        }
+      }
+    },
+    "Discovering" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entdecken"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Découverte"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "खोज करना"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "発見"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탐험"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索发现"
+          }
+        }
+      }
+    },
+    "Documentary" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dokumentation"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Documentaire"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डॉक्यूमेंट्री"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ドキュメンタリー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다큐멘터리"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "纪录片"
+          }
+        }
+      }
+    },
+    "Drama" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drama"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drame"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ड्रामा"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ドラマ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "드라마"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "戏剧"
+          }
+        }
+      }
+    },
+    "Everyone needs a break from work sometimes, even the trusty robot botanist. Take a beat and unwind while the robot botanist breaks out its best dance moves during an impromptu dance party." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine Pause von der Arbeit tut allen manchmal gut, sogar dem fleißigen Roboterbotaniker. Gönn dir eine Auszeit und entspanne dich, während der Roboterbotaniker seine Tanzkünste auf einer improvisierten Party zum Besten gibt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On a tous besoin de prendre une pause et de s’arrêter de travailler, même notre petit robot botaniste. Prenez un moment pour vous et détendez-vous pendant que le robot botaniste vous montre ses meilleurs pas lors d’une danse improvisée."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हर किसी को कभी-कभी काम से छुट्टी की ज़रूरत होती है, यहाँ तक कि भरोसेमंद रोबोट बॉटनिस्ट को भी। जब रोबोट बॉटनिस्ट डांस पार्टी के दौरान अपने डांस मूव दिखाए, तो आराम करें और तनाव से मुक्त हो जाएँ।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "誰しも休息は必要です。ロボット植物学者も同じです。一息つきましょう。その間、即興のダンスパーティーが始まり、ロボット植物学者がキレキレのダンスを披露してくれます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제아무리 듬직한 로봇 식물학자라도 휴식은 필요합니다. 즉석에서 열린 댄스 파티에서 로봇 식물학자가 댄스 실력을 뽐내는 동안 잠시 숨을 돌리며 휴식해 보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每个人都有需要停下手头工作，休息放松的时刻，勤勉可靠的机器人植物学家也不例外。在即兴舞蹈派对中，随机器人植物学家的轻巧舞步尽情放松身心。"
+          }
+        }
+      }
+    },
+    "Experience the great flight of a black beetle, as it crawls along a giant rock near the lake preparing for takeoff. Where it will go, nobody knows!" : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Begleite einen schwarzen Käfer auf seinem großen Flug und beobachte, wie er sich auf einem riesigen Felsen in der Nähe des Sees auf den Start vorbereitet. Wohin die Reise geht, weiß niemand!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suivez le vol extraordinaire d’un scarabée noir prêt pour le décollage, après avoir gravi un rocher gigantesque au bord d’un lac. Où va-t-il aller ? Personne ne le sait !"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ब्लैक बीटल की शानदार उड़ान का अनुभव करें, क्योंकि वह झील के पास एक विशाल चट्टान पर रेंगते हुए उड़ान भरने की तैयारी कर रहा है। यह कहाँ जाएगा, कोई नहीं जानता!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黒い甲虫が湖の側の巨大な岩をよじ登って飛び立とうとしています。一緒に大飛行を体験しましょう。どこへ向かうのかは誰にもわかりません!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호수 근처의 거대한 암석 위로 기어올라 하늘로 비상할 준비를 하는 검은 딱정벌레의 대장정을 함께하세요. 어디로 가는지는 아무도 몰라요!"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑甲虫沿湖畔巨石爬行，准备振翅起飞。快来体验惊险刺激的飞行之旅。它要飞往何处，无人知晓！"
+          }
+        }
+      }
+    },
+    "Extraordinary" : {
+      "comment" : "Collection name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Außergewöhnlich"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extraordinaire"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अनोखा"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "決定的瞬間"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "독보적인 순간"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非凡时刻"
+          }
+        }
+      }
+    },
+    "Extras" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extras"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonus"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "एक्स्ट्रा"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エクストラ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "엑스트라"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "特辑"
+          }
+        }
+      }
+    },
+    "Favorites" : {
+      "comment" : "Tab title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoriten"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoris"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पसंदीदा"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お気に入り"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "즐겨찾기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收藏"
+          }
+        }
+      }
+    },
+    "Featured" : {
+      "comment" : "Title for Featured videos",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ähnliches"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommandé"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फ़ीचर्ड"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おすすめ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精选"
+          }
+        }
+      }
+    },
+    "Forest Life" : {
+      "comment" : "Collection name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leben im Wald"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La vie dans la forêt"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वन जीवन"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "森の生命"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "숲속 생활"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "林中时光"
+          }
+        }
+      }
+    },
+    "From an award-winning producer and actor, ”A Beach” is a sweeping, drama depicting waves crashing on a scenic California beach. Sit back and enjoy the sweet sounds of the ocean while relaxing on a soft, sandy beach." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das mitreißende Drama „Ein Strand“ wurde von einer preisgekrönten Produzentin und Schauspielerin kreiert und zeigt Wellen, die an einen malerischen kalifornischen Strand treiben. Lehne dich zurück und genieße die beruhigenden Geräusche des Ozeans, während du auf einem weichen Sandstrand die Seele baumeln lässt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créé par un acteur et producteur primé, « Une plage » est un drame saisissant montrant les vagues s’écraser sur le rivage d’une magnifique plage de Californie. Détendez-vous et écoutez les sons relaxants de l’océan, comme si vous étiez en train de vous reposer sur une plage de sable blanc."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पुरस्कार विजेता निर्माता और अभिनेता की “ए बीच” एक ड्रामा है जिसमें कैलिफ़ोर्निया के सुंदर बीच पर टकराती लहरों को दिखाया गया है। नरम, रेतीले बीच पर आराम करते हुए बैठें और समंदर की मधुर आवाज़ों का आनंद लें।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "受賞歴のあるプロデューサー兼俳優がお届けする“ビーチ”は、風光明媚なカリフォルニアのビーチに打ち寄せる波を描いたドラマチックな作品です。波の音を聞きながら柔らかな砂のビーチでくつろぎましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다양한 수상 경력을 지닌 제작자 및 배우가 함께하는 ‘해변’은 아름다운 캘리포니아 해변에 부서지는 파도를 묘사한 드라마입니다. 부드러운 모래사장에 편안히 앉아 바다가 자아내는 평온한 소리에 귀 기울여 보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“海滩”由获奖制片人和演员倾力打造，呈现了海浪冲刷秀丽加州海岸的如画美景。在松软沙滩上放松就坐，享受大海的甜美声息。"
+          }
+        }
+      }
+    },
+    "In Up Next" : {
+      "comment" : "Displayed when a video is already in the Up Next queue",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In „Als Nächstes“"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dans la file d’attente"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आगामी में"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次はこちら"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재생 대기 목록에 포함됨"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在待播清单中"
+          }
+        }
+      }
+    },
+    "Landing" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Landung"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atterrissage"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लैंडिंग"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "着陸"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "착륙"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "着陆"
+          }
+        }
+      }
+    },
+    "Library" : {
+      "comment" : "Tab title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mediathek"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bibliothèque"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लाइब्रेरी"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライブラリ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보관함"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "资料库"
+          }
+        }
+      }
+    },
+    "Light" : {
+      "comment" : "Label for Light environment",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hell"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clair"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लाइट"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライト"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라이트"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浅色"
+          }
+        }
+      }
+    },
+    "Mystery" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mystery"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mystère"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रहस्य"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ミステリー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미스터리"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "悬疑片"
+          }
+        }
+      }
+    },
+    "Mystery at the Creek" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Geheimnis am Bach"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mystère près du ruisseau"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "क्रीक का रहस्य"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小川の不思議"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개울 속 미스터리"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "神秘溪流"
+          }
+        }
+      }
+    },
+    "NR" : {
+      "comment" : "A content rating that indicates this video is Not Rated.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OB"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune catégorie"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NR"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "制限指定なし"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "등급 없음"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未评级"
+          }
+        }
+      }
+    },
+    "New" : {
+      "comment" : "Tab title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neu"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nouveautés"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नया"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新着"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "신규"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新建"
+          }
+        }
+      }
+    },
+    "None" : {
+      "comment" : "Label for environment that is neither dark nor light",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohne"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कोई नहीं"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "なし"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "없음"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无"
+          }
+        }
+      }
+    },
+    "Ocean Breeze" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meeresbrise"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brise marine"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "समंदर की हवा"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海風"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "해변의 산들바람"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海风轻拂"
+          }
+        }
+      }
+    },
+    "On a dreamy spring day near the California hillside, some friendly little birds flutter about, hopping from stalk to stalk munching on some tasty seeds. Listen to them chatter as they go about their busy afternoon." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An einem träumerischen Frühlingstag in der Nähe der kalifornischen Hügellandschaft flattern einige freundliche kleine Vögel umher, hüpfen von Stängel zu Stängel und futtern leckere Samen. Höre ihnen beim Zwitschern zu, während sie sich ihrem geschäftigen Nachmittag widmen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Par une journée de printemps magique près des collines californiennes, de petits oiseaux amicaux volettent, sautant de tige en tige à la recherche de graines savoureuses. Écoutez-les pépier et suivez-les le temps d’un après-midi riche en activité."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कैलिफ़ोर्निया पहाड़ी के पास ख़ूबसूरत वसंत का दिन, मस्ती में खोए कुछ छोटे पक्षी इधर-उधर फड़फड़ा रहे हैं, एक डाली से दूसरी डाली तक उछल-कूद कर कुछ स्वादिष्ट बीज खा रहे हैं। जब वे अपनी व्यस्त दोपहर का समय बिता रहे हों, तो उनकी बातें सुनें।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "うららかな春のある日、カリフォルニアの丘陵付近で、人懐っこい小鳥が枝から枝へと羽ばたいて飛び移りながらおいしい木の実をついばんでいます。日中忙しく飛び回る小鳥のさえずりに耳を傾けてみましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "꿈결 같은 봄날의 캘리포니아 언덕 근처. 작은 새들이 이리저리 폴짝폴짝 뛰어다니며 맛 좋은 씨앗을 바지런히 먹어치웁니다. 나름대로 바쁜 오후를 보내는 새들의 재잘대는 소리를 들으며 한가로이 시간을 보내보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "梦幻春日，加州山边，一群可爱的小鸟振翅飞翔，蹦跳着从一处枝丫来到另一处，津津有味地啄食美味种子。去听听小鸟如何叽叽喳喳，度过繁忙的下午。"
+          }
+        }
+      }
+    },
+    "On a planet covered in lush jungles and thriving vegetation there’s bound to be some unique plants out there, and the robot botanist is on a mission to find and catalog them all. But as the botanist explores this new planet, it comes to discover more than just new plants." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf einem Planeten bedeckt mit üppigem Dschungel und einer florierenden Pflanzenwelt gibt es bestimmt einige einzigartige Pflanzen. Der Roboterbotaniker befindet sich auf einer Mission, sie alle aufzuspüren und zu katalogisieren. Bei seiner Entdeckungstour auf diesem neuen Planeten stößt der Botaniker jedoch auf mehr als nur neue Pflanzen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une planète recouverte de végétation et de jungles luxuriantes regorge forcément de plantes uniques, et le robot botaniste a pour mission de toutes les trouver et de les répertorier. Mais à mesure qu’il explore cette planète, il découvre qu’elle offre bien plus que de nouvelles plantes."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हरे-भरे जंगलों और समृद्ध वनस्पतियों से घिरे ग्रह पर कुछ अनोखे पौधे ज़रूर होंगे, और रोबोट बॉटनिस्ट उन सभी को खोजने और उनका कैटलॉग तैयार करने के मिशन पर है। लेकिन जैसे-जैसे बॉटनिस्ट इस नए ग्रह को एक्सप्लोर करता है, उसे नए पौधों के अलावा और भी बहुत कुछ पता चलता है।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生い茂る密林と植物に覆われた惑星には、固有種が存在するはずです。ロボット植物学者の任務は、固有種の植物を発見してすべて分類することですが、この新しい惑星の探索中には新種の植物以外の発見もあります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "초목과 정글이 우거진 행성에는 그 어디에도 없는 독특한 식물이 있기 마련입니다. 우리의 로봇 식물학자의 임무는 그런 식물들을 찾아 분류하는 것입니다. 탐험이 계속되면서 로봇 식물학자는 새로운 식물 그 이상의 무언가를 발견하게 됩니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "丛林茂密，植物繁盛的星球上，奇花异草必不可少。机器人植物学家正在执行任务，找到所有独特植物并分门别类做好记录。然而，随着探索不断深入，植物学家发现了新植物之外的更多精彩。"
+          }
+        }
+      }
+    },
+    "Play" : {
+      "comment" : "Button title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wiedergeben"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lire"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "चलाएँ"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再生"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재생"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "玩游戏"
+          }
+        }
+      }
+    },
+    "Play Movie" : {
+      "comment" : "Button title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Film wiedergeben"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lire le film"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फ़िल्म चलाएँ"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ムービーを再生"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "동영상 재생"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "播放电影"
+          }
+        }
+      }
+    },
+    "Play Next" : {
+      "comment" : "Button title on up next alert after a video is finished playing",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Nächstes wiedergeben"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lire ensuite"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अगला चलाएँ"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次に再生"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "바로 다음에 재생"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "插播"
+          }
+        }
+      }
+    },
+    "Preview" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorschau"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aperçu"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रीव्यू"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プレビュー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미리보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预览"
+          }
+        }
+      }
+    },
+    "Released %@, rated %@, %lld seconds" : {
+      "comment" : "Release year, rating, and video duration",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erschienen: %1$@, Bewertung: %2$@, %3$lld Sekunden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Released %1$@, rated %2$@, %3$lld seconds"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date de sortie : %1$@, catégorie d’âge : %2$@, %3$lld secondes."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रिलीज़ %1$@, रेटिंग %2$@, %3$lld सेकंड"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リリース: %1$@年、制限指定: %2$@、%3$lld秒"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 출시, %2$@ 등급, %3$lld초"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@发行，%2$@评级，总长%3$lld秒"
+          }
+        }
+      }
+    },
+    "Romance" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Romantik"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Romance"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रोमांस"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ロマンス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로맨스"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "爱情片"
+          }
+        }
+      }
+    },
+    "Sci-Fi" : {
+      "comment" : "The name of a movie genre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sci-Fi"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Science-fiction"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "साइंस-फ़िक्शन"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SF"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공상 과학"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "科幻片"
+          }
+        }
+      }
+    },
+    "Search" : {
+      "comment" : "Tab title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suche"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recherche"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "खोजें"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検索"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "검색"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索"
+          }
+        }
+      }
+    },
+    "Seed Sampling" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pflanzenprobe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échantillonnage des graines"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सीड सैंपलिंग"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新種のサンプリング"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "씨앗 표본 채취"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "种子采样"
+          }
+        }
+      }
+    },
+    "Stars" : {
+      "comment" : "A participant in making a video.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besetzung"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distribution"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कलाकार"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出演"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "출연"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "演员"
+          }
+        }
+      }
+    },
+    "Step on to another planet as you follow the robot botanist on its mission to explore the universe and discover new and exciting plant life. Come see what exciting adventures lay in store." : {
+      "comment" : "The description of a collection of videos.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wage dich auf einen anderen Planeten, während du dem Roboterbotaniker auf seiner Mission durch das unbekannte Universum folgst und gemeinsam mit ihm neue und aufregende Pflanzen entdeckst. Komm mit und erfahre, welche aufregenden Abenteuer auf dich warten."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foulez le sol d’une autre planète et suivez le robot botaniste dans son exploration de l’univers et dans sa découverte d’une nouvelle vie végétale stupéfiante. Cette aventure vous réserve bien des surprises !"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जब आप ब्रह्मांड का पता लगाने और नए और रोमांचक पौधों के जीवन की खोज करने के मिशन पर रोबोट बॉटनिस्ट को फ़ॉलो करेंगे, तो दूसरे ग्रह पर कदम रखें। आइए, देखें कि आगे कौन-कौन से रोमांचक कारनामे छिपे हैं।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宇宙を探索して新種の貴重な植物を発見する任務を遂行しているロボット植物学者を追って、別の惑星に足を踏み入れてみましょう。どんなおもしろいアドベンチャーが待ち受けているのかを見てみましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "우주를 누비며 새롭고도 흥미로운 식물을 발견하는 임무를 수행 중인 로봇 식물학자를 따라 또 다른 행성 위에 발을 디뎌 보세요. 놀라운 모험이 우리를 기다리고 있답니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "踏上另一星球，跟随机器人植物学家完成任务，探索宇宙并发现新奇植物。会有怎样的冒险奇遇？让我们拭目以待。"
+          }
+        }
+      }
+    },
+    "Studio" : {
+      "comment" : "Show Studio environment",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Studio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Studio"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्टूडियो"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スタジオ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스튜디오"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "摄影室"
+          }
+        }
+      }
+    },
+    "Switch profiles" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile wechseln"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changer de profil"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रोफ़ाइल स्विच करें"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プロファイルを切り替える"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필 전환"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "切换描述文件"
+          }
+        }
+      }
+    },
+    "Take a break from the busyness of city life and immerse yourself in nature with a curated collection of videos. Focus your attention on the forests of California and learn about the variety of cool plants." : {
+      "comment" : "The description of a collection of videos.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönn dir eine Pause vom hektischen Stadtleben und tauche ein in die Natur mit einer sorgfältig zusammengestellten Sammlung von Videos. Lenke deine Aufmerksamkeit auf die Wälder in Kalifornien und lerne die Vielfalt interessanter Pflanzen kennen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Évadez-vous du brouhaha urbain et plongez au cœur de la nature grâce à une collection de vidéos spécialement créées pour cette expérience. Concentrez votre attention sur les forêts de Californie et apprenez-en plus sur un grand nombre de plantes extraordinaires."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शहरी जीवन की व्यस्तता से छुट्टी लें और वीडियो के क्यूरेट किए गए संग्रह के साथ ख़ुद को प्रकृति के बीच में होने जैसा महसूस करें। अपना ध्यान कैलिफ़ोर्निया के जंगलों पर लगाएँ और कई तरह के शानदार पौधों के बारे में जानें।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "都会の喧騒を離れて、キュレーションされたビデオコレクションで自然に浸りましょう。カリフォルニアの森林に焦点を当てて、さまざまなすばらしい植物について学びましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "엄선된 이 비디오 모음과 함께 숨가쁜 도시의 삶에서 벗어나 자연 속에 파묻혀 보세요. 캘리포니아의 숲으로 관심의 초점을 이동하여 다채로운 식물에 관해 알아가는 시간을 가질 수 있습니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂离城市生活的喧嚣，通过视频精选集让自己沉浸在大自然中。集中探索加州森林，深入了解丰富多样的植物。"
+          }
+        }
+      }
+    },
+    "Take a closer look at some of nature’s cutest animals. Feathered and shelled friends star in this adorable collection of animal videos. From little birds soaring through the sky to turtles in a lake fighting for the sunniest spot." : {
+      "comment" : "The description of a collection of videos.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wirf einen genaueren Blick auf einige der niedlichsten Tiere der Natur. Gefiederte und gepanzerte Freunde sind die Stars in dieser bezaubernden Sammlung von Tiervideos – von Vöglein, die durch den Himmel segeln, bis hin zu Schildkröten in einem See beim Streit um den besten Sonnenplatz."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Observez de plus près certains des animaux les plus mignons dans leur habitat naturel. Retrouvez ces amis à plumes ou à carapace dans cette collection adorable de vidéos animalières, montrant notamment l’envol de petits oiseaux ou encore la lutte à laquelle se livrent les tortues pour obtenir la place la plus ensoleillée au bord du lac."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रकृति के कुछ सबसे प्यारे जानवरों को क़रीब से देखें। जानवरों के वीडियो के इस मनमोहक संग्रह में पंख वाले और शंख वाले दोस्त मुख्य हैं। आकाश में उड़ते छोटे पक्षियों से लेकर, झील में सबसे ज़्यादा धूप वाली जगह के लिए लड़ने वाले कछुओं तक।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自然界のかわいらしい動物に接近してみましょう。この人気の動物ビデオのコレクションに登場するのは、羽を持つ生き物（鳥）と甲羅を背負った生き物（亀）です。空高く舞い上がる小鳥と日当たりの一番よい場所を求めて湖で戦いを繰り広げる亀を紹介します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자연 속의 귀여운 동물들을 자세히 관찰해 보세요. 깃털 달린 새부터 단단한 껍질을 지닌 거북이까지, 다양하고 사랑스러운 동물들을 담아낸 비디오 모음입니다. 이들은 호숫가에서 햇볕이 잘 드는 자리를 차지하기 위해 치열한 경쟁을 벌입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近距离观察大自然中最可爱的动物。这一萌趣动物视频精选集中，有的朋友生有翅膀，有的朋友身披甲壳，他们都是我们的超级明星。你将看到小鸟展翅翱翔天际，也会看到乌龟在湖中互相争抢阳光最充沛的地方。"
+          }
+        }
+      }
+    },
+    "The Lab" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Labor"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le laboratoire"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लैब"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ラボ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연구실"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "实验室"
+          }
+        }
+      }
+    },
+    "The Rolling Hills" : {
+      "comment" : "The title of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hügellandschaften"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brouillard sur les collines"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रोलिंग हिल"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "丘陵地帯"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "굽이치는 언덕"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "群山起伏"
+          }
+        }
+      }
+    },
+    "The battle for the sunniest spot continues, as a group of turtles take their positions on the log. Find out who the last survivor is, and who swims away cold." : {
+      "comment" : "The synopsis of a video.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Kampf um den besten Platz in der Sonne geht weiter, als es sich eine Gruppe von Schildkröten auf den Baumstämmen gemütlich macht. Finde heraus, wer sich als Sieger küren darf und wer das Handtuch werfen muss."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La bataille pour obtenir la place la plus ensoleillée continue pour ce groupe de tortues qui s’installent sur un rondin de bois. Découvrez qui gagnera cette place convoitée et qui repartira bredouille."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सबसे ज़्यादा धूप वाली जगह के लिए लड़ाई जारी है, क्योंकि कछुओं का एक समूह लॉग पर अपना स्थान ले लेता है। पता लगाएँ कि आख़िरी सर्वाइवर कौन है और कौन ठंड में तैरकर दूर चला जाता है।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "亀のグループが倒木の上で、日当たりの一番よい場所を求めて場所取り合戦を繰り広げます。果たしてどの亀が勝ち残るのか、そしてどの亀が泳ぎ去るのかを見届けましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "거북이 한 무리가 통나무에 자리를 잡으면서 햇볕이 잘 드는 자리를 향한 경쟁이 계속됩니다. 최후의 승자는 누구일지, 그리고 차디찬 곳으로 밀려나는 것은 누구일지 지켜보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阳光之地争夺战仍在继续，一群乌龟正在圆木上你争我抢。去看看谁是最后赢家，谁又会黯然游开。"
+          }
+        }
+      }
+    },
+    "This category isn’t available" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Kategorie ist nicht verfügbar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette catégorie n’est pas disponible"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यह श्रेणी उपलब्ध नहीं है"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このカテゴリは使用できません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 카테고리는 사용할 수 없습니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此类别不可用"
+          }
+        }
+      }
+    },
+    "This video isn’t available" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Video ist nicht verfügbar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette vidéo n’est pas disponible"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यह वीडियो उपलब्ध नहीं है"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このビデオは視聴できません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 비디오는 사용할 수 없습니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此视频不可用"
+          }
+        }
+      }
+    },
+    "This view is intentionally blank" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Ansicht ist absichtlich leer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette vue doit rester vide"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यह दृश्य जानबूझकर ख़ाली छोड़ा गया है"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この表示は意図的に空白になっています"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 보기는 의도적으로 비워 두었습니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此视野刻意留白"
+          }
+        }
+      }
+    },
+    "Up Next" : {
+      "comment" : "Used as window title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Nächstes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File d’attente"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आगामी"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次はこちら"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재생 대기 목록"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "待播清单"
+          }
+        }
+      }
+    },
+    "Watch Now" : {
+      "comment" : "Tab title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jetzt ansehen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regarder"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अभी देखें"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今すぐ観る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금 보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立即观看"
+          }
+        }
+      }
+    },
+    "Whether you’re a fan of 2D or 3D animation, this collection includes the best of both. Step into the world of a robot botanist with this new series of animated films." : {
+      "comment" : "The description of a collection of videos.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sowohl Fans von 2D- als auch von 3D-Animation kommen in dieser Sammlung auf ihre Kosten. Tauche ein in die Welt eines Roboterbotanikers mit dieser neuen Serie von animierten Filmen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette collection réjouira les fans d’animations en 2D et en 3D. Entrez dans le monde d’un robot botaniste à travers cette nouvelle série de films d’animation."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "चाहे आप 2D या 3D ऐनिमेशन के फ़ैन हों, इस संग्रह में दोनों सबसे बेहतरीन रूप में शामिल हैं। ऐनिमेटेड फ़िल्मों की इस नई सिरीज़ के साथ रोबोट बॉटनिस्ट की दुनिया में क़दम रखें।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2Dアニメーション、3Dアニメーション、どちらのファンでも楽しめる作品集です。アニメーションフィルムの新シリーズでロボット植物学者の世界に足を踏み入れてみましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2D, 3D에 상관없이 애니메이션을 좋아하는 사람이라면 누구나 좋아할 만한 모음입니다. 이 애니메이션 영화 시리즈를 통해 로봇 식물학자와 함께 새로운 세계로 탐험해 보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此精选集囊括精美的2D和3D动画，总有一款为你所爱。观看这一全新动画系列，走进机器人植物学家的世界。"
+          }
+        }
+      }
+    },
+    "Writers" : {
+      "comment" : "A participant in making a video.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drehbuch"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écriture"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लेखक"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脚本"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "작가"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编剧"
+          }
+        }
+      }
+    },
+    "You can almost feel the calming sea breeze and the refreshing ocean mist as you take in the wonder of the vast Pacific Ocean. The perfect collection of videos for those that feel the call of the ocean." : {
+      "comment" : "The description of a collection of videos.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kannst fast schon die beruhigende Meeresbrise und den erfrischenden Meeresnebel spüren, während du dich vom weiten pazifischen Ozean bezaubern lässt. Die perfekte Videosammlung für alle, die das Meer rufen hören."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous pouvez presque ressentir la brise marine relaxante et la brume rafraîchissante du vaste océan Pacifique pendant cette expédition. Cette collection est idéale pour tous ceux qui veulent répondre à l’appel de l’océan."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जब आप विशाल प्रशांत महासागर के अनोखेपन का आनंद लेते हैं, तो आप समंदर की शांत हवा और ताज़ा समुद्री धुँध को क़रीब से महसूस कर सकते हैं। उन लोगों के लिए वीडियो का सबसे बढ़िया संग्रह जो समंदर से जुड़ाव महसूस करते हैं।"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "広大な太平洋に包まれて、海を渡る穏やかな風と立ち上る爽快なミストが感じられそうなほどの臨場感です。海が好きな人にぴったりのビデオコレクションです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "드넓은 태평양의 경이로움 속에 있노라면 고요한 바닷바람과 상쾌한 바다 안개가 저절로 떠올려지는 기분을 느낄 수 있습니다. 지금 바다로 훌쩍 떠나고 싶은 사람에게 꼭 맞는 비디오입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "领略广袤太平洋的壮丽景色，你几乎可以感受到凉爽海风拂面，温润的海洋空气让人神清气爽。聆听大洋的召唤，尽在此视频精选集。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "cinematic_poster.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
