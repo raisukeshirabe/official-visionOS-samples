@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5D85E4C2BFEAC450086AA66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D85E4B2BFEAC450086AA66 /* Assets.xcassets */; };
+		B5D85E4F2BFEAC450086AA66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D85E4E2BFEAC450086AA66 /* Preview Assets.xcassets */; };
+		B5D85E572BFEAC5D0086AA66 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D85E562BFEAC5D0086AA66 /* MainView.swift */; };
+		B5D85E592BFEAC850086AA66 /* ClosureComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D85E582BFEAC850086AA66 /* ClosureComponent.swift */; };
+		B5D85E5D2BFEACCA0086AA66 /* HandTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D85E5C2BFEACCA0086AA66 /* HandTracking.swift */; };
+		B5D85E5F2BFEACE50086AA66 /* HandTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D85E5E2BFEACE50086AA66 /* HandTrackingView.swift */; };
+		F5DE73772C35A68F006F83AA /* Finger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DE73762C35A688006F83AA /* Finger.swift */; };
+		F5DE73792C35A719006F83AA /* Bone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DE73782C35A716006F83AA /* Bone.swift */; };
+		F5DE737B2C35A872006F83AA /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DE737A2C35A871006F83AA /* Hand.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		396D370875D9CF7D9CF7B6F2 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		68A7A28C8B8DC1F7AD917495 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5D85E3E2BFEAC440086AA66 /* RealityKit-HandTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RealityKit-HandTracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D85E4B2BFEAC450086AA66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5D85E4E2BFEAC450086AA66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5D85E502BFEAC450086AA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D85E562BFEAC5D0086AA66 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B5D85E582BFEAC850086AA66 /* ClosureComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureComponent.swift; sourceTree = "<group>"; };
+		B5D85E5C2BFEACCA0086AA66 /* HandTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTracking.swift; sourceTree = "<group>"; };
+		B5D85E5E2BFEACE50086AA66 /* HandTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTrackingView.swift; sourceTree = "<group>"; };
+		E0952AAD4306467EF330B9AB /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		F5DE73762C35A688006F83AA /* Finger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finger.swift; sourceTree = "<group>"; };
+		F5DE73782C35A716006F83AA /* Bone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bone.swift; sourceTree = "<group>"; };
+		F5DE737A2C35A871006F83AA /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5D85E3B2BFEAC440086AA66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3F621A03296B5362BDBCA47 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				396D370875D9CF7D9CF7B6F2 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		B5B187DC2ED4925D51E3ECB4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E0952AAD4306467EF330B9AB /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		B5D85E352BFEAC440086AA66 = {
+			isa = PBXGroup;
+			children = (
+				68A7A28C8B8DC1F7AD917495 /* README.md */,
+				B5D85E402BFEAC440086AA66 /* RealityKit-HandTracking */,
+				B5D85E3F2BFEAC440086AA66 /* Products */,
+				B5B187DC2ED4925D51E3ECB4 /* Configuration */,
+				B3F621A03296B5362BDBCA47 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		B5D85E3F2BFEAC440086AA66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5D85E3E2BFEAC440086AA66 /* RealityKit-HandTracking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5D85E402BFEAC440086AA66 /* RealityKit-HandTracking */ = {
+			isa = PBXGroup;
+			children = (
+				F51726472C2E1CBF00A23901 /* Views */,
+				F51726482C2E1CD100A23901 /* Entities */,
+				F51726462C2E1C6F00A23901 /* Systems */,
+				F587560F2C2DCE9F00D6E665 /* App */,
+			);
+			path = "RealityKit-HandTracking";
+			sourceTree = "<group>";
+		};
+		F51726462C2E1C6F00A23901 /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				B5D85E582BFEAC850086AA66 /* ClosureComponent.swift */,
+			);
+			path = Systems;
+			sourceTree = "<group>";
+		};
+		F51726472C2E1CBF00A23901 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5D85E562BFEAC5D0086AA66 /* MainView.swift */,
+				B5D85E5E2BFEACE50086AA66 /* HandTrackingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F51726482C2E1CD100A23901 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE737A2C35A871006F83AA /* Hand.swift */,
+				F5DE73762C35A688006F83AA /* Finger.swift */,
+				F5DE73782C35A716006F83AA /* Bone.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F587560F2C2DCE9F00D6E665 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B5D85E5C2BFEACCA0086AA66 /* HandTracking.swift */,
+				B5D85E502BFEAC450086AA66 /* Info.plist */,
+				B5D85E4B2BFEAC450086AA66 /* Assets.xcassets */,
+				B5D85E4E2BFEAC450086AA66 /* Preview Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5D85E3D2BFEAC440086AA66 /* RealityKit-HandTracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D85E532BFEAC450086AA66 /* Build configuration list for PBXNativeTarget "RealityKit-HandTracking" */;
+			buildPhases = (
+				B5D85E3A2BFEAC440086AA66 /* Sources */,
+				B5D85E3B2BFEAC440086AA66 /* Frameworks */,
+				B5D85E3C2BFEAC440086AA66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RealityKit-HandTracking";
+			productName = "RealityKit-HandTracking";
+			productReference = B5D85E3E2BFEAC440086AA66 /* RealityKit-HandTracking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5D85E362BFEAC440086AA66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					B5D85E3D2BFEAC440086AA66 = {
+						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
+					};
+				};
+			};
+			buildConfigurationList = B5D85E392BFEAC440086AA66 /* Build configuration list for PBXProject "RealityKit-HandTracking" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5D85E352BFEAC440086AA66;
+			productRefGroup = B5D85E3F2BFEAC440086AA66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5D85E3D2BFEAC440086AA66 /* RealityKit-HandTracking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5D85E3C2BFEAC440086AA66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D85E4F2BFEAC450086AA66 /* Preview Assets.xcassets in Resources */,
+				B5D85E4C2BFEAC450086AA66 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5D85E3A2BFEAC440086AA66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5DE737B2C35A872006F83AA /* Hand.swift in Sources */,
+				F5DE73792C35A719006F83AA /* Bone.swift in Sources */,
+				B5D85E572BFEAC5D0086AA66 /* MainView.swift in Sources */,
+				B5D85E5F2BFEACE50086AA66 /* HandTrackingView.swift in Sources */,
+				B5D85E592BFEAC850086AA66 /* ClosureComponent.swift in Sources */,
+				F5DE73772C35A68F006F83AA /* Finger.swift in Sources */,
+				B5D85E5D2BFEACCA0086AA66 /* HandTracking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B5D85E512BFEAC450086AA66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0952AAD4306467EF330B9AB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		B5D85E522BFEAC450086AA66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0952AAD4306467EF330B9AB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
+		B5D85E542BFEAC450086AA66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0952AAD4306467EF330B9AB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "RealityKit-HandTracking/App";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.realitykit-hand-tracking${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B5D85E552BFEAC450086AA66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0952AAD4306467EF330B9AB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "RealityKit-HandTracking/App";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.realitykit-hand-tracking${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5D85E392BFEAC440086AA66 /* Build configuration list for PBXProject "RealityKit-HandTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D85E512BFEAC450086AA66 /* Debug */,
+				B5D85E522BFEAC450086AA66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5D85E532BFEAC450086AA66 /* Build configuration list for PBXNativeTarget "RealityKit-HandTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D85E542BFEAC450086AA66 /* Debug */,
+				B5D85E552BFEAC450086AA66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5D85E362BFEAC440086AA66 /* Project object */;
+}
