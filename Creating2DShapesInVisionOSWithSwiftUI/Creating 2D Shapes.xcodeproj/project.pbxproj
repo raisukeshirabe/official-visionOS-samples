@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF74AC912BC59755003723AB /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74AC902BC59755003723AB /* EntryPoint.swift */; };
+		DFB904102BC58517004DF0A3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB9040F2BC58517004DF0A3 /* MainView.swift */; };
+		DFB904162BC58519004DF0A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB904152BC58519004DF0A3 /* Assets.xcassets */; };
+		DFB904192BC58519004DF0A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB904182BC58519004DF0A3 /* Preview Assets.xcassets */; };
+		DFB904212BC58702004DF0A3 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB904202BC58702004DF0A3 /* ShapesView.swift */; };
+		EB45756D2BD6D44C00D3E814 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB45756C2BD6D44C00D3E814 /* Triangle.swift */; };
+		EB45756F2BD6D46A00D3E814 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB45756E2BD6D46A00D3E814 /* Line.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		475EF0378A89C74FE7BF1F63 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		DF74AC902BC59755003723AB /* EntryPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		DFB904062BC58517004DF0A3 /* Creating 2D Shapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Creating 2D Shapes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFB9040F2BC58517004DF0A3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DFB904152BC58519004DF0A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFB904182BC58519004DF0A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFB9041A2BC58519004DF0A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFB904202BC58702004DF0A3 /* ShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
+		EB4575682BD37A0A00D3E814 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EB45756C2BD6D44C00D3E814 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		EB45756E2BD6D46A00D3E814 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		EFE98B97816FE2A47C474E2A /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFB904032BC58517004DF0A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F8C46A90A3DE5814F782155 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				EFE98B97816FE2A47C474E2A /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		DFB903FD2BC58517004DF0A3 = {
+			isa = PBXGroup;
+			children = (
+				EB4575682BD37A0A00D3E814 /* README.md */,
+				DFB904082BC58517004DF0A3 /* Creating 2D Shapes */,
+				DFB904072BC58517004DF0A3 /* Products */,
+				EF1D67C9913A96815F1A236D /* Configuration */,
+				6F8C46A90A3DE5814F782155 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		DFB904072BC58517004DF0A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFB904062BC58517004DF0A3 /* Creating 2D Shapes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFB904082BC58517004DF0A3 /* Creating 2D Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				EB45756A2BD6D30200D3E814 /* Views */,
+				EB45756B2BD6D40700D3E814 /* Shapes */,
+				EB4575692BD6D27A00D3E814 /* App */,
+			);
+			path = "Creating 2D Shapes";
+			sourceTree = "<group>";
+		};
+		EB4575692BD6D27A00D3E814 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF74AC902BC59755003723AB /* EntryPoint.swift */,
+				DFB9041A2BC58519004DF0A3 /* Info.plist */,
+				DFB904152BC58519004DF0A3 /* Assets.xcassets */,
+				DFB904182BC58519004DF0A3 /* Preview Assets.xcassets */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		EB45756A2BD6D30200D3E814 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFB9040F2BC58517004DF0A3 /* MainView.swift */,
+				DFB904202BC58702004DF0A3 /* ShapesView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EB45756B2BD6D40700D3E814 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				EB45756E2BD6D46A00D3E814 /* Line.swift */,
+				EB45756C2BD6D44C00D3E814 /* Triangle.swift */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
+		EF1D67C9913A96815F1A236D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				475EF0378A89C74FE7BF1F63 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFB904052BC58517004DF0A3 /* Creating 2D Shapes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFB9041D2BC58519004DF0A3 /* Build configuration list for PBXNativeTarget "Creating 2D Shapes" */;
+			buildPhases = (
+				DFB904022BC58517004DF0A3 /* Sources */,
+				DFB904032BC58517004DF0A3 /* Frameworks */,
+				DFB904042BC58517004DF0A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Creating 2D Shapes";
+			productName = "2D Shapes";
+			productReference = DFB904062BC58517004DF0A3 /* Creating 2D Shapes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFB903FE2BC58517004DF0A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					DFB904052BC58517004DF0A3 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = DFB904012BC58517004DF0A3 /* Build configuration list for PBXProject "Creating 2D Shapes" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFB903FD2BC58517004DF0A3;
+			productRefGroup = DFB904072BC58517004DF0A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFB904052BC58517004DF0A3 /* Creating 2D Shapes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFB904042BC58517004DF0A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFB904162BC58519004DF0A3 /* Assets.xcassets in Resources */,
+				DFB904192BC58519004DF0A3 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFB904022BC58517004DF0A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFB904102BC58517004DF0A3 /* MainView.swift in Sources */,
+				DFB904212BC58702004DF0A3 /* ShapesView.swift in Sources */,
+				DF74AC912BC59755003723AB /* EntryPoint.swift in Sources */,
+				EB45756D2BD6D44C00D3E814 /* Triangle.swift in Sources */,
+				EB45756F2BD6D46A00D3E814 /* Line.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DFB9041B2BC58519004DF0A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475EF0378A89C74FE7BF1F63 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		DFB9041C2BC58519004DF0A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475EF0378A89C74FE7BF1F63 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
+		DFB9041E2BC58519004DF0A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475EF0378A89C74FE7BF1F63 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_WARNINGS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Creating\\ 2D\\ Shapes";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.RealityKit-2DShapes${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		DFB9041F2BC58519004DF0A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475EF0378A89C74FE7BF1F63 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_WARNINGS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Creating\\ 2D\\ Shapes";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.RealityKit-2DShapes${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFB904012BC58517004DF0A3 /* Build configuration list for PBXProject "Creating 2D Shapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFB9041B2BC58519004DF0A3 /* Debug */,
+				DFB9041C2BC58519004DF0A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFB9041D2BC58519004DF0A3 /* Build configuration list for PBXNativeTarget "Creating 2D Shapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFB9041E2BC58519004DF0A3 /* Debug */,
+				DFB9041F2BC58519004DF0A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFB903FE2BC58517004DF0A3 /* Project object */;
+}
