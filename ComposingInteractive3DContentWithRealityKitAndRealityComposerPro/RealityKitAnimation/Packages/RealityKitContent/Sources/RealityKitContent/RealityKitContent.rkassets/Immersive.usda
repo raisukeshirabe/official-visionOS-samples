@@ -1,0 +1,1124 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Root", "GridMaterial"]
+
+def Xform "Root" (
+    references = None
+)
+{
+    reorder nameChildren = ["volume", "rotate_wheel_m4a", "robot_watering_m4a", "walk_m4a", "RobotMove", "MoveToPoppy", "MoveToCoffeeBerry", "MoveToYucca", "Butterfly", "GridMaterial"]
+    def RealityKitTimeline "Butterfly" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["Track", "Track2", "Track3"]
+        uniform token info:id = "99B3763B-82BA-4CA4-BC26-E119E585230D"
+
+        def RealityKitTrack "Track"
+        {
+            uniform token info:id = "132E15B8-A005-43C4-8467-AEF3072DAEC3"
+
+            def RealityKitAction "Animation"
+            {
+                string actionKind = "animation"
+                string animation = "default subtree animation"
+                double duration = 0.4000000059604645
+                uniform token info:id = "3857A070-64B4-45BF-8287-3CB087129A9B"
+                int loopCount = 0
+                bool separateAnimatedValue = 1
+                double startTime = 0
+                rel target = </Root/volume/butterfly_fly_cycle>
+
+                def RealityKitStruct "handoffType"
+                {
+                }
+            }
+        }
+    }
+
+    def RealityKitTimeline "MoveToPoppy" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        uniform token info:id = "095C6697-9474-4641-ADAD-C1B974DB6B64"
+
+        def RealityKitTrack "Track" (
+            references = None
+        )
+        {
+            reorder nameChildren = ["Notification2", "Notification4", "Transform_To", "Spin"]
+            uniform token info:id = "BEF661F3-2D80-4095-96EB-E72B735E2997"
+
+            def RealityKitAction "Play_Audio"
+            {
+                string actionKind = "audio"
+                string audioResourceName = "rotate_wheel.m4a"
+                bool controlPlayback = 1
+                double duration = 0.9800000000000001
+                uniform token info:id = "47B60FC2-B2C8-4577-AA56-7191757207C3"
+                double startTime = 0
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "handoffType"
+                {
+                }
+            }
+
+            def RealityKitAction "Transform_To"
+            {
+                string actionKind = "moveTo"
+                int blendLayer = 300
+                double duration = 1.6
+                uniform token info:id = "72B2B855-326B-4500-9CF3-72C88828074F"
+                float3 position = (4.08061, 0, 3.79443)
+                quatf rotation = (0.67960757, 0, 0.7335759, 0)
+                float3 scale = (0.009999998, 0.009999997, 0.009999998)
+                double startTime = 2.2
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "transformMode"
+                {
+                    rel referenceEntity = </Root>
+                    token type = "parent"
+                }
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+        }
+
+        def RealityKitTrack "Track2" (
+            references = None
+        )
+        {
+            reorder nameChildren = ["RobotMove", "Notification", "Notification2", "Notification4", "Notification5", "Spin"]
+            uniform token info:id = "2133EC71-D985-421C-8028-241DC903F73F"
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "7DF67D4F-5FD6-4000-AE67-D45ED8EE56EC"
+                string notificationName = "ReachToPoppy"
+                double startTime = 4.4
+                rel target = </Root/volume/planter_Hero_Poppy/hero_poppy>
+            }
+
+            def RealityKitAction "Notification2"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "04149A83-CE16-40ED-93D1-A158B88B5A61"
+                string notificationName = "StartWatering"
+                double startTime = 5.7
+                rel target = </Root/volume/planter_Hero_Poppy/hero_poppy>
+            }
+
+            def RealityKitAction "Notification4"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "F04C38FD-08A1-4D03-9BF4-71DF8B493AD7"
+                string notificationName = "StopWatering"
+                double startTime = 8.7
+                rel target = </Root/volume/planter_Hero_Poppy/hero_poppy>
+            }
+
+            def RealityKitAction "Notification5"
+            {
+                string actionKind = "notification"
+                uniform token info:id = "EC50B953-B72C-4389-919C-79E921ACBAAE"
+                string notificationName = "ReturnHome"
+                double startTime = 9.4
+                rel target = </Root/volume/planter_Hero_Poppy/hero_poppy>
+            }
+
+            def RealityKitAction "Spin"
+            {
+                string actionKind = "spin"
+                int blendLayer = 400
+                double duration = 1
+                uniform token info:id = "25DE81D8-589B-4087-8013-9043FD2A0C0A"
+                float revolutions = 0.12
+                double startTime = 0
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+
+            def RealityKitAction "RobotMove"
+            {
+                string actionKind = "timeline"
+                int blendLayer = 500
+                double duration = 3.359555396709836
+                uniform token info:id = "8387C29E-D3C5-4E1A-BDA6-876D2BB185A6"
+                double startTime = 1.0000000001000002
+                rel timeline = </Root/RobotMove>
+            }
+        }
+    }
+
+    def RealityKitTimeline "MoveToCoffeeBerry" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        uniform token info:id = "C02A4E9C-CB93-47CC-9441-B80B0391E46F"
+
+        def RealityKitTrack "Track" (
+            references = None
+        )
+        {
+            reorder nameChildren = ["Notification", "Notification2", "Notification4", "RobotMove", "Notification5", "Play_Audio", "Play_Audio_1"]
+            uniform token info:id = "42291068-D2F4-4877-B142-BCBE7CD65790"
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "1CBDF0E6-35CB-4EF0-A6F4-B41A73C4EE02"
+                string notificationName = "ReachToCoffeeBerry"
+                double startTime = 4.4
+                rel target = </Root/volume/planter_Hero_CoffeeBerry/hero_coffeeBerry>
+            }
+
+            def RealityKitAction "Notification2"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "996F4946-4374-4296-9082-AA26A6E7D5A8"
+                string notificationName = "StartWatering"
+                double startTime = 5.7
+                rel target = </Root/volume/planter_Hero_CoffeeBerry/hero_coffeeBerry>
+            }
+
+            def RealityKitAction "Notification4"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "822BB849-986B-4EF4-A7EA-A4D3903CFE31"
+                string notificationName = "StopWatering"
+                double startTime = 8.7
+                rel target = </Root/volume/planter_Hero_CoffeeBerry/hero_coffeeBerry>
+            }
+
+            def RealityKitAction "Notification5"
+            {
+                string actionKind = "notification"
+                uniform token info:id = "642788DA-A567-449A-A9A4-2DF815EC7DB3"
+                string notificationName = "ReturnHome"
+                double startTime = 9.4
+                rel target = </Root/volume/planter_Hero_CoffeeBerry/hero_coffeeBerry>
+            }
+
+            def RealityKitAction "Play_Audio"
+            {
+                string actionKind = "audio"
+                string audioResourceName = "rotate_wheel.m4a"
+                bool controlPlayback = 1
+                double duration = 0.9800000000000001
+                uniform token info:id = "447C996A-4F1A-40AF-B2B9-A7A34E70E926"
+                double startTime = 0
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "handoffType"
+                {
+                }
+            }
+
+            def RealityKitAction "Transform_To"
+            {
+                string actionKind = "moveTo"
+                int blendLayer = 300
+                double duration = 1.6
+                uniform token info:id = "2033A395-327F-4D13-8DA8-CA864BDA7021"
+                float3 position = (-2.0160859, -7.152558e-7, -0.52334595)
+                quatf rotation = (0.67960757, 0, 0.7335759, 0)
+                float3 scale = (0.009999998, 0.009999997, 0.009999998)
+                double startTime = 2.2
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "transformMode"
+                {
+                    rel referenceEntity = </Root>
+                    token type = "parent"
+                }
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+        }
+
+        def RealityKitTrack "Track2" (
+            references = None
+        )
+        {
+            uniform token info:id = "B3DF3C72-1FA5-43F5-80F5-28FE61895187"
+
+            def RealityKitAction "Spin"
+            {
+                string actionKind = "spin"
+                int blendLayer = 400
+                double duration = 1
+                uniform token info:id = "CF32AF19-791B-4190-B7C0-2FAEF60F1D53"
+                float revolutions = 0.5
+                double startTime = 0
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+
+            def RealityKitAction "RobotMove"
+            {
+                string actionKind = "timeline"
+                int blendLayer = 500
+                double duration = 3.359555396709836
+                uniform token info:id = "567961D4-901C-4A51-82A9-CEDE240C9C29"
+                double startTime = 1.0000000001000002
+                rel timeline = </Root/RobotMove>
+            }
+        }
+    }
+
+    def RealityKitTimeline "MoveToYucca" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        uniform token info:id = "A0BD6ABE-7C4A-4985-945C-51A4E27010DD"
+
+        def RealityKitTrack "Track" (
+            references = None
+        )
+        {
+            reorder nameChildren = ["Spin", "Transform_To"]
+            uniform token info:id = "ED2E3752-0640-40F6-9E19-A3E3332551DC"
+
+            def RealityKitAction "Play_Audio"
+            {
+                string actionKind = "audio"
+                string audioResourceName = "rotate_wheel.m4a"
+                bool controlPlayback = 1
+                double duration = 0.9800000000000001
+                uniform token info:id = "35741636-B6E0-4EF6-B5CB-827A6571C1F8"
+                double startTime = 0
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "handoffType"
+                {
+                }
+            }
+
+            def RealityKitAction "Transform_To"
+            {
+                string actionKind = "moveTo"
+                int blendLayer = 300
+                double duration = 1.6
+                uniform token info:id = "D6B78977-9FE5-4E69-865E-57FEACFD7068"
+                float3 position = (1.72466, 0, -1.85788)
+                quatf rotation = (0.67960757, 0, 0.7335759, 0)
+                float3 scale = (0.009999998, 0.009999997, 0.009999998)
+                double startTime = 2.2
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "transformMode"
+                {
+                    rel referenceEntity = </Root>
+                    token type = "parent"
+                }
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+        }
+
+        def RealityKitTrack "Track2" (
+            references = None
+        )
+        {
+            reorder nameChildren = ["Notification", "Notification2", "Notification4", "Play_Audio", "RobotMove", "Notification5", "Play_Audio2"]
+            uniform token info:id = "60113C3A-B59B-497E-8CFD-8AD893877A89"
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "9C801702-7ECB-47B6-A1CB-3318D463A06B"
+                string notificationName = "ReachToYucca"
+                double startTime = 4.4
+                rel target = </Root/volume/planter_Hero_Yucca/hero_yucca>
+            }
+
+            def RealityKitAction "Notification2"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "9BE4AFA1-439D-4D10-B11D-E684D02F0B68"
+                string notificationName = "StartWatering"
+                double startTime = 5.7
+                rel target = </Root/volume/planter_Hero_Yucca/hero_yucca>
+            }
+
+            def RealityKitAction "Notification4"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "3FCA1275-DDB9-4FCC-9581-7F86AC851BE6"
+                string notificationName = "StopWatering"
+                double startTime = 8.7
+                rel target = </Root/volume/planter_Hero_Yucca/hero_yucca>
+            }
+
+            def RealityKitAction "Notification5"
+            {
+                string actionKind = "notification"
+                double duration = 0.8371134610706467
+                uniform token info:id = "E05D9EF7-D3DF-42E3-AC5C-1DE75D99A6C9"
+                string notificationName = "ReturnHome"
+                double startTime = 9.4
+                rel target = </Root/volume/planter_Hero_Yucca/hero_yucca>
+            }
+
+            def RealityKitAction "Spin"
+            {
+                string actionKind = "spin"
+                int blendLayer = 400
+                double duration = 1
+                uniform token info:id = "13D1196A-04B0-420C-ACD8-36AC5B00609E"
+                float revolutions = 0.12
+                token spinDirection = "counterclockwise"
+                double startTime = 0
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "timingFunction"
+                {
+                }
+            }
+
+            def RealityKitAction "RobotMove"
+            {
+                string actionKind = "timeline"
+                int blendLayer = 500
+                double duration = 3.359555396709836
+                uniform token info:id = "BDCE7580-37B0-462B-8119-E7FEE70038AE"
+                double startTime = 1.0000000001000002
+                rel timeline = </Root/RobotMove>
+            }
+        }
+    }
+
+    def "GridMaterial" (
+        active = true
+        references = @Materials/GridMaterial.usda@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def RealityKitTimeline "RobotMove" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["Track", "Track2", "Track3"]
+        uniform token info:id = "1B5FF6EB-9584-44DC-9B6E-069B8CDA3825"
+
+        def RealityKitTrack "Track"
+        {
+            uniform token info:id = "8481317E-D78E-443D-AD43-95FCF7A0C30D"
+
+            def RealityKitAction "Animation"
+            {
+                string actionKind = "animation"
+                string animation = "startWalk"
+                int blendLayer = 500
+                double duration = 1.888611111111111
+                uniform token info:id = "694E5281-0FBD-4A13-A89E-9E14444991AE"
+                bool separateAnimatedValue = 1
+                double startTime = 0
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "handoffType"
+                {
+                }
+            }
+
+            def RealityKitAction "Animation2"
+            {
+                string actionKind = "animation"
+                string animation = "endWalk"
+                int blendLayer = 500
+                double duration = 1.470944285498725
+                uniform token info:id = "7F64BB84-3B0D-4BB8-90A5-EB1AAB610577"
+                bool separateAnimatedValue = 1
+                double startTime = 1.8886111112111108
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "handoffType"
+                {
+                }
+            }
+        }
+
+        def RealityKitTrack "Track2"
+        {
+            uniform token info:id = "1176F2D0-9701-4A52-8CD7-710BAA3739D6"
+
+            def RealityKitAction "Play_Audio"
+            {
+                string actionKind = "audio"
+                string audioResourceName = "walk.m4a"
+                bool controlPlayback = 1
+                double duration = 3.0472083333333333
+                uniform token info:id = "6052AD35-8595-4D69-83FF-8A9E193014D9"
+                double startTime = 0.119
+                rel target = </Root/volume/hero_robot>
+
+                def RealityKitStruct "handoffType"
+                {
+                }
+            }
+        }
+    }
+
+    def RealityKitAudioFile "robot_watering_m4a"
+    {
+        uniform asset file = @Assets/robots/sounds/robot_watering.m4a@
+        uniform bool shouldLoop = 0
+    }
+
+    def RealityKitAudioFile "walk_m4a"
+    {
+        uniform asset file = @Assets/robots/sounds/walk.m4a@
+        uniform bool shouldLoop = 0
+    }
+
+    def "volume" (
+        active = true
+        references = @Assets/volume.usda@
+    )
+    {
+        reorder nameChildren = ["hero_robot", "planter_Hero_Yucca", "planter_Hero_Poppy", "planter_Hero_CoffeeBerry", "lighting", "MI_planters", "MI_islandTop", "MI_islandEdge", "MI_islandBase", "MI_dirt", "MI_lightGreen", "MI_lightPink", "MI_lightBlue", "setDressing", "volume", "EnvironmentLightingConfiguration", "MovementBoundaries", "robot_home", "butterfly_fly_cycle", "robot", "flight_center", "hero_yucca_reach", "hero_coffeeBerry_reach", "hero_poppy_reach"]
+        float3 xformOp:scale = (0.2, 0.2, 0.2)
+        float3 xformOp:translate = (0, 0.75, -2.1)
+
+        over "planter_Hero_2" (
+            references = None
+        )
+        {
+            over "hero_yucca" (
+                references = None
+            )
+            {
+            }
+
+            over "hero_poppy" (
+                active = false
+                references = None
+            )
+            {
+            }
+
+            over "hero_coffeeBerry" (
+                active = false
+                references = None
+            )
+            {
+            }
+        }
+
+        def Xform "robot_home" (
+            active = true
+            references = None
+        )
+        {
+            quatf xformOp:orient = (0.67960757, 0, 0.7335759, 0)
+            float3 xformOp:scale = (4.999998, 4.999998, 4.999998)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "butterfly_fly_cycle" (
+            active = true
+            references = @Assets/butterfly_fly_cycle.usdz@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 4.7058198e-11, 0)
+            float3 xformOp:scale = (0.019999998, 0.019999998, 0.019999998)
+            float3 xformOp:translate = (1.1599313, 2.3716614, 5.1490602)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "RCP_BehaviorsContainer"
+            {
+                rel behaviors = </Root/volume/butterfly_fly_cycle/OnAddedToScene>
+                uniform token info:id = "RCP.BehaviorsContainer"
+            }
+
+            def Preliminary_Behavior "OnAddedToScene"
+            {
+                rel actions = </Root/volume/butterfly_fly_cycle/OnAddedToScene/Action>
+                uniform bool exclusive
+                rel triggers = </Root/volume/butterfly_fly_cycle/OnAddedToScene/Trigger>
+
+                def Preliminary_Trigger "Trigger"
+                {
+                    rel affectedObjects = </Root/volume/butterfly_fly_cycle>
+                    token info:id = "SceneTransition"
+                }
+
+                def Preliminary_Action "Action"
+                {
+                    rel affectedObjects = </Root>
+                    rel animationLibraryKey = </Root/Butterfly>
+                    rel animationLibraryKeyOverrideKey = </Root/volume/butterfly_fly_cycle/OnAddedToScene/Trigger>
+                    token info:id = "PlayTimeline"
+                    int loops = 0
+                    int performCount = 1
+                    token type = "serial"
+                }
+            }
+
+            def RealityKitComponent "AnimationLibrary"
+            {
+                token info:id = "RealityKit.AnimationLibrary"
+
+                def RealityKitAnimationFile "default_subtree_animation"
+                {
+                    uniform bool looping = 1
+                    uniform string name = "default subtree animation"
+                }
+            }
+
+            over "butterfly_rig" (
+                references = None
+            )
+            {
+                over "butterfly_skinned_mesh" (
+                    references = None
+                )
+                {
+                }
+            }
+
+            over "Looks" (
+                references = None
+            )
+            {
+                over "rig_skin_usdpreviewsurface1sg" (
+                    references = None
+                )
+                {
+                    token outputs:mtlx:surface
+                    token outputs:realitykit:vertex
+                }
+            }
+
+            def RealityKitCustomComponent "RealityKitContent_EntityMoverComponent"
+            {
+                uniform token info:id = "RealityKitContent.EntityMoverComponent"
+                float movementExtentMultiplierX = 1
+                float movementExtentMultiplierY = 2
+                float movementExtentX = 0.4
+                float movementExtentY = 0.2
+            }
+        }
+
+        def "robot" (
+            active = true
+            customData = {
+                float3 rotationEulerHint = (0, 2.7925265, 0)
+            }
+            references = @Assets/robots/robot1/robot.usdz@
+        )
+        {
+            reorder nameChildren = ["geo_grp", "rig_grp", "mtl", "Materials", "RealityKitContent_StationaryRobotComponent", "RobotHeadPos"]
+            quatf xformOp:orient = (0.17364822, 0, 0.9848077, 0)
+            float3 xformOp:scale = (0.009999998, 0.009999997, 0.009999998)
+            float3 xformOp:translate = (0.92340094, 1.6184856, 5.996192)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "RealityKitContent_StationaryRobotComponent"
+            {
+                float3 ikOffset = (0, -7, 0)
+                uniform token info:id = "RealityKitContent.StationaryRobotComponent"
+            }
+
+            over "geo_grp" (
+                references = None
+            )
+            {
+            }
+        }
+
+        over "setDressing"
+        {
+            over "bottomSetDressing" (
+                references = None
+            )
+            {
+            }
+
+            over "foliageSetDressing" (
+                references = None
+            )
+            {
+            }
+        }
+
+        over "volume"
+        {
+            over "base" (
+                references = None
+            )
+            {
+            }
+
+            over "edge_grp" (
+                references = None
+            )
+            {
+            }
+
+            over "planters_grp" (
+                references = None
+            )
+            {
+                over "planter_coffeeBerry_1" (
+                    active = false
+                    references = None
+                )
+                {
+                }
+            }
+
+            over "dirt_grp" (
+                references = None
+            )
+            {
+                over "dirt_coffeeBerry_1" (
+                    active = false
+                    references = None
+                )
+                {
+                }
+            }
+        }
+
+        over "MovementBoundaries" (
+            references = None
+        )
+        {
+        }
+
+        def Sphere "hero_yucca_reach" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0.78539807, 0)
+            }
+            references = None
+        )
+        {
+            reorder nameChildren = ["DefaultMaterial", "hero_yucca_particles"]
+            rel material:binding = </Root/volume/hero_yucca_reach/DefaultMaterial>
+            double radius = 0.001
+            quatf xformOp:orient = (0.92387956, 0, 0.3826833, 0)
+            float3 xformOp:scale = (0.9999993, 0.9999993, 0.9999993)
+            float3 xformOp:translate = (1.9873782, 0.69997317, -2.49273)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/volume/hero_poppy_reach/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+
+            def RealityKitCustomComponent "RealityKitContent_EntityMoverComponent"
+            {
+                uniform token info:id = "RealityKitContent.EntityMoverComponent"
+                float movementExtentMultiplierY = 2
+                float movementExtentY = 0.25
+            }
+
+            def RealityKitComponent "VFXEmitter"
+            {
+                uniform token info:id = "RealityKit.VFXEmitter"
+
+                def RealityKitStruct "currentState"
+                {
+                    token emitterShape = "Cone"
+                    bool isEmitting = 0
+                    float particleSpeed = 0.15
+                    float radialAmount = 0.034906585
+
+                    def RealityKitStruct "mainEmitter"
+                    {
+                        float3 acceleration = (0.1, -1, 0)
+                        float particleAngle = 3.3161256
+                        float particleAngularVelocity = 1
+                        double particleLifeSpan = 0.7
+                        float particleSize = 0.01
+                        float spreadingAngle = 1.0471976
+                        float4 startColorA = (0, 0.3067719, 1, 1)
+                        bool useStartColorRange = 0
+                    }
+
+                    def RealityKitStruct "spawnedEmitter"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Sphere "hero_coffeeBerry_reach" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 2.0943952, 0)
+            }
+            references = None
+        )
+        {
+            reorder nameChildren = ["DefaultMaterial", "hero_coffeeBerry_particles"]
+            rel material:binding = </Root/volume/hero_coffeeBerry_reach/DefaultMaterial>
+            double radius = 0.001
+            quatf xformOp:orient = (0.50000006, 0, 0.8660254, 0)
+            float3 xformOp:scale = (0.9999991, 0.9999991, 0.99999905)
+            float3 xformOp:translate = (-2.77576, 0.69992024, -0.18715347)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/volume/hero_poppy_reach/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+
+            def RealityKitCustomComponent "RealityKitContent_EntityMoverComponent"
+            {
+                uniform token info:id = "RealityKitContent.EntityMoverComponent"
+                float movementExtentMultiplierY = 2
+                float movementExtentY = 0.25
+            }
+
+            def RealityKitComponent "VFXEmitter"
+            {
+                uniform token info:id = "RealityKit.VFXEmitter"
+
+                def RealityKitStruct "currentState"
+                {
+                    token emitterShape = "Cone"
+                    bool isEmitting = 0
+                    float particleSpeed = 0.15
+                    float radialAmount = 0.034906585
+
+                    def RealityKitStruct "mainEmitter"
+                    {
+                        float3 acceleration = (0.1, -1, 0)
+                        float particleAngle = 3.3161256
+                        float particleAngularVelocity = 1
+                        double particleLifeSpan = 0.7
+                        float spreadingAngle = 1.0471976
+                        float4 startColorA = (0, 0.3067719, 1, 1)
+                        bool useStartColorRange = 0
+                    }
+
+                    def RealityKitStruct "spawnedEmitter"
+                    {
+                    }
+                }
+            }
+        }
+
+        def Sphere "hero_poppy_reach" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 5.061455, 0)
+            }
+            references = None
+        )
+        {
+            reorder nameChildren = ["flight_center", "DefaultMaterial", "RealityKitContent_EntityMoverComponent", "VFXEmitter"]
+            rel material:binding = </Root/volume/hero_poppy_reach/DefaultMaterial>
+            double radius = 0.001
+            quatf xformOp:orient = (0.819152, 0, -0.5735765, 0)
+            float3 xformOp:scale = (0.99999946, 0.9999995, 0.9999994)
+            float3 xformOp:translate = (4.7453103, 0.6999994, 3.996927)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/volume/hero_poppy_reach/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+
+            def RealityKitCustomComponent "RealityKitContent_EntityMoverComponent"
+            {
+                uniform token info:id = "RealityKitContent.EntityMoverComponent"
+                float movementExtentMultiplierY = 2
+                float movementExtentY = 0.25
+            }
+
+            def RealityKitComponent "VFXEmitter"
+            {
+                uniform token info:id = "RealityKit.VFXEmitter"
+
+                def RealityKitStruct "currentState"
+                {
+                    token emitterShape = "Cone"
+                    bool isEmitting = 0
+                    float particleSpeed = 0.15
+                    float radialAmount = 0.034906585
+
+                    def RealityKitStruct "mainEmitter"
+                    {
+                        float3 acceleration = (0.1, -1, 0)
+                        float particleAngle = 3.3161256
+                        double particleLifeSpan = 0.7
+                        float particleSize = 0.01
+                        float spreadingAngle = 1.0471976
+                        float4 startColorA = (0, 0.3067719, 1, 1)
+                        bool useStartColorRange = 0
+                    }
+
+                    def RealityKitStruct "spawnedEmitter"
+                    {
+                    }
+                }
+            }
+        }
+
+        over "planter_Hero_Yucca" (
+            references = None
+        )
+        {
+            def RealityKitComponent "RCP_BehaviorsContainer"
+            {
+                rel behaviors = </Root/volume/planter_Hero_Yucca/OnTap>
+                uniform token info:id = "RCP.BehaviorsContainer"
+            }
+
+            def Preliminary_Behavior "OnTap"
+            {
+                rel actions = </Root/volume/planter_Hero_Yucca/OnTap/Action>
+                uniform bool exclusive
+                rel triggers = </Root/volume/planter_Hero_Yucca/OnTap/Trigger>
+
+                def Preliminary_Trigger "Trigger"
+                {
+                    rel affectedObjects = </Root/volume/planter_Hero_Yucca>
+                    token info:id = "TapGesture"
+                }
+
+                def Preliminary_Action "Action"
+                {
+                    rel affectedObjects = </Root>
+                    rel animationLibraryKey = </Root/MoveToYucca>
+                    rel animationLibraryKeyOverrideKey = </Root/volume/planter_Hero_Yucca/OnTap/Trigger>
+                    token info:id = "PlayTimeline"
+                    int loops = 0
+                    int performCount = 1
+                    token type = "serial"
+                }
+            }
+
+            over "hero_yucca" (
+                references = None
+            )
+            {
+                def RealityKitCustomComponent "RealityKitContent_HeroPlantComponent"
+                {
+                    uniform token info:id = "RealityKitContent.HeroPlantComponent"
+                }
+            }
+        }
+
+        over "planter_Hero_Poppy" (
+            references = None
+        )
+        {
+            def RealityKitComponent "RCP_BehaviorsContainer"
+            {
+                rel behaviors = </Root/volume/planter_Hero_Poppy/OnTap>
+                uniform token info:id = "RCP.BehaviorsContainer"
+            }
+
+            def Preliminary_Behavior "OnTap"
+            {
+                rel actions = </Root/volume/planter_Hero_Poppy/OnTap/Action>
+                uniform bool exclusive
+                rel triggers = </Root/volume/planter_Hero_Poppy/OnTap/Trigger>
+
+                def Preliminary_Trigger "Trigger"
+                {
+                    rel affectedObjects = </Root/volume/planter_Hero_Poppy>
+                    token info:id = "TapGesture"
+                }
+
+                def Preliminary_Action "Action"
+                {
+                    rel affectedObjects = </Root>
+                    rel animationLibraryKey = </Root/MoveToPoppy>
+                    rel animationLibraryKeyOverrideKey = </Root/volume/planter_Hero_Poppy/OnTap/Trigger>
+                    token info:id = "PlayTimeline"
+                    int loops = 0
+                    int performCount = 1
+                    token type = "serial"
+                }
+            }
+
+            over "hero_poppy" (
+                references = None
+            )
+            {
+                def RealityKitCustomComponent "RealityKitContent_HeroPlantComponent"
+                {
+                    uniform token info:id = "RealityKitContent.HeroPlantComponent"
+                }
+            }
+        }
+
+        over "planter_Hero_CoffeeBerry" (
+            references = None
+        )
+        {
+            def RealityKitComponent "RCP_BehaviorsContainer"
+            {
+                rel behaviors = </Root/volume/planter_Hero_CoffeeBerry/OnTap>
+                uniform token info:id = "RCP.BehaviorsContainer"
+            }
+
+            def Preliminary_Behavior "OnTap"
+            {
+                rel actions = </Root/volume/planter_Hero_CoffeeBerry/OnTap/Action>
+                uniform bool exclusive
+                rel triggers = </Root/volume/planter_Hero_CoffeeBerry/OnTap/Trigger>
+
+                def Preliminary_Trigger "Trigger"
+                {
+                    rel affectedObjects = </Root/volume/planter_Hero_CoffeeBerry>
+                    token info:id = "TapGesture"
+                }
+
+                def Preliminary_Action "Action"
+                {
+                    rel affectedObjects = </Root>
+                    rel animationLibraryKey = </Root/MoveToCoffeeBerry>
+                    rel animationLibraryKeyOverrideKey = </Root/volume/planter_Hero_CoffeeBerry/OnTap/Trigger>
+                    token info:id = "PlayTimeline"
+                    int loops = 0
+                    int performCount = 1
+                    token type = "serial"
+                }
+            }
+
+            over "hero_coffeeBerry" (
+                references = None
+            )
+            {
+                def RealityKitCustomComponent "RealityKitContent_HeroPlantComponent"
+                {
+                    uniform token info:id = "RealityKitContent.HeroPlantComponent"
+                }
+            }
+        }
+
+        def "hero_robot" (
+            active = true
+            references = @Assets/robots/robot2/robot_2.usdz@
+        )
+        {
+            quatf xformOp:orient = (0.67960757, 0, 0.7335759, 0)
+            float3 xformOp:scale = (0.009999998, 0.009999997, 0.009999998)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "RealityKitContent_HeroRobotComponent"
+            {
+                uniform token info:id = "RealityKitContent.HeroRobotComponent"
+            }
+
+            def RealityKitComponent "AudioLibrary"
+            {
+                uniform token info:id = "RealityKit.AudioLibrary"
+
+                def RealityKitDict "resources"
+                {
+                    string[] keys = ["robot_watering.m4a", "walk.m4a", "rotate_wheel.m4a"]
+                    rel values = [
+                        </Root/robot_watering_m4a>,
+                        </Root/walk_m4a>,
+                        </Root/rotate_wheel_m4a>,
+                    ]
+                }
+            }
+
+            def RealityKitComponent "AnimationLibrary"
+            {
+                uniform token info:id = "RealityKit.AnimationLibrary"
+
+                def RealityKitClipDefinition "Clip_default_subtree_animation"
+                {
+                    uniform string[] clipNames = ["startWalk", "Clip 1", "endWalk"]
+                    uniform string sourceAnimationName = "default subtree animation"
+                    uniform double[] startTimes = [0, 1.888611111111111, 3.1957222222222224]
+                }
+
+                def RealityKitAnimationFile "startWalk"
+                {
+                    uniform bool looping = 1
+                    uniform string name = "startWalk"
+                }
+
+                def RealityKitAnimationFile "endWalk"
+                {
+                    uniform bool looping = 1
+                    uniform string name = "endWalk"
+                }
+            }
+        }
+    }
+
+    def RealityKitAudioFile "rotate_wheel_m4a"
+    {
+        uniform asset file = @Assets/robots/sounds/rotate_wheel.m4a@
+        uniform bool shouldLoop = 0
+    }
+}
+

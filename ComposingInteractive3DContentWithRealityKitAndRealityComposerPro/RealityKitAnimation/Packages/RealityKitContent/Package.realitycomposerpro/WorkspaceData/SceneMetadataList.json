@@ -1,0 +1,453 @@
+{
+  "1D572CEB-057A-41C3-B575-04C37501A3C0" : {
+    "objectMetadataList" : [
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToPoppy",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToCoffeeBerry",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToCoffeeBerry"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "RobotMove"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "volume"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToPoppy"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToCoffeeBerry",
+        "Track2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "ButterflyMotion",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToPoppy",
+        "Track2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "Butterfly"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToYucca"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "Butterfly",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToYucca",
+        "Track2"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "MoveToYucca",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "RobotMove",
+        "Track2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "Butterfly",
+        "Track3"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D572CEB-057A-41C3-B575-04C37501A3C0",
+        "Root",
+        "RobotMove",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "228A1F79-1F90-41D3-AB5C-9C7728CC42AD" : {
+    "objectMetadataList" : [
+      [
+        "228A1F79-1F90-41D3-AB5C-9C7728CC42AD",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "228A1F79-1F90-41D3-AB5C-9C7728CC42AD",
+        "Root",
+        "bottomSetDressing"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "4336B9BC-37E7-47F4-9444-5E30F4610C35" : {
+    "objectMetadataList" : [
+      [
+        "4336B9BC-37E7-47F4-9444-5E30F4610C35",
+        "setDressing"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "517D8F1E-BE7D-4055-9D27-5FD6840D0307" : {
+    "objectMetadataList" : [
+      [
+        "517D8F1E-BE7D-4055-9D27-5FD6840D0307",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "9AA293F1-6DA5-441B-8B58-507F3296B1B4" : {
+    "objectMetadataList" : [
+      [
+        "9AA293F1-6DA5-441B-8B58-507F3296B1B4",
+        "volume"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9AA293F1-6DA5-441B-8B58-507F3296B1B4",
+        "volume",
+        "planters_grp"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9AA293F1-6DA5-441B-8B58-507F3296B1B4",
+        "volume",
+        "dirt_grp"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "AE9EFD2C-E63E-4795-ABFF-128ABB41D808" : {
+    "objectMetadataList" : [
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "setDressing"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "volume"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "planter_Hero",
+        "poppy"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "volume",
+        "planter_coffeeBerry_3"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "volume",
+        "base"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "volume",
+        "lights_grp"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "setDressing",
+        "bottomSetDressing"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "volume",
+        "top"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "planter_Hero",
+        "poppy",
+        "mtl"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "volume",
+        "planter_coffeeBerry_2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "setDressing",
+        "bottomSetDressing",
+        "mtl"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "volume",
+        "dirt_grp",
+        "dirt_coffeeBerry_1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+        "Root",
+        "volume",
+        "mtl"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "F666B837-4739-4EA3-8805-F177403A07F9" : {
+    "objectMetadataList" : [
+      [
+        "F666B837-4739-4EA3-8805-F177403A07F9",
+        "lighting",
+        "Lighting",
+        "SidePlanterLights"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "F666B837-4739-4EA3-8805-F177403A07F9",
+        "lighting",
+        "Lighting",
+        "PlantLightGroup_2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "F666B837-4739-4EA3-8805-F177403A07F9",
+        "lighting"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "F666B837-4739-4EA3-8805-F177403A07F9",
+        "lighting",
+        "Lighting"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "F85F37FA-5159-4A70-AC11-409405E37D80" : {
+    "objectMetadataList" : [
+      [
+        "F85F37FA-5159-4A70-AC11-409405E37D80",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}

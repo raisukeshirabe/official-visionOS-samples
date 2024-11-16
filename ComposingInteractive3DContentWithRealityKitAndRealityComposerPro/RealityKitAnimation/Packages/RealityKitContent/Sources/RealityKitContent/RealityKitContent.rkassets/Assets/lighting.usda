@@ -1,0 +1,218 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.14)"
+    }
+    defaultPrim = "lighting"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "lighting"
+{
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Xform "Lighting" (
+        active = true
+        references = None
+    )
+    {
+        reorder nameChildren = ["PlantLightGroup", "PlantLightGroup_1", "PlantLightGroup_2", "BigPlanterLights", "DirectionalLight", "SidePlanterLights"]
+        def Xform "DirectionalLight" (
+            customData = {
+                float3 rotationEulerHint = (-2.4274433, -0.1064315, 0.35495046)
+            }
+            references = None
+        )
+        {
+            quatf xformOp:orient = (-0.35235587, 0.9176188, 0.18347494, -0.012568527)
+            float3 xformOp:scale = (0.9999998, 0.9999999, 0.99999994)
+            float3 xformOp:translate = (-3.2596293e-7, 4.777564, 1.6298148e-7)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "DirectionalLight"
+            {
+                float3 color = (0.99607843, 0.9764706, 0.8901961)
+                token info:id = "RealityKit.DirectionalLight"
+                float intensity = 2000
+
+                def RealityKitStruct "Shadow"
+                {
+                    bool isEnabled = 1
+                    float maximumDistance = 0.5
+                }
+            }
+        }
+
+        def Xform "PlantLightGroup" (
+            active = true
+            references = None
+        )
+        {
+            reorder nameChildren = ["PinkPointLight", "PinkSpotLight"]
+            quatf xformOp:orient = (1, 0, -6.8273645e-9, 0)
+            float3 xformOp:scale = (0.9999999, 0.9999998, 0.9999999)
+            float3 xformOp:translate = (5, -6.658956e-7, 4.72)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Xform "PinkPointLight" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, -1.3876262e-9, 0)
+                float3 xformOp:scale = (0.99999994, 0.9999999, 0.9999999)
+                float3 xformOp:translate = (0.0027198792, 0.48857662, 0.00072193146)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "PointLight"
+                {
+                    float attenuationRadius = 0.1
+                    float3 color = (1, 0, 0.9139307)
+                    uniform token info:id = "RealityKit.PointLight"
+                    float intensity = 200
+                }
+            }
+        }
+
+        def Xform "PlantLightGroup_1" (
+            active = true
+            references = None
+        )
+        {
+            reorder nameChildren = ["BluePointLight", "BlueSpotLight"]
+            quatf xformOp:orient = (1, 0, 4.3990784e-8, 0)
+            float3 xformOp:scale = (0.99999976, 0.9999997, 0.99999976)
+            float3 xformOp:translate = (-3.5129633, -5.261972e-7, 2.3895764)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Xform "BluePointLight" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, -1.3876262e-9, 0)
+                float3 xformOp:scale = (0.99999994, 0.9999999, 0.9999999)
+                float3 xformOp:translate = (0.0027198792, 0.48857662, 0.00072193146)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "PointLight"
+                {
+                    float attenuationRadius = 0.1
+                    float3 color = (0, 0.8843563, 0.65356547)
+                    uniform token info:id = "RealityKit.PointLight"
+                    float intensity = 200
+                }
+            }
+        }
+
+        def Xform "PlantLightGroup_2" (
+            active = true
+            references = None
+        )
+        {
+            reorder nameChildren = ["GreenPointLight", "GreenSpotLight"]
+            quatf xformOp:orient = (1, 0, -7.1271017e-10, 0)
+            float3 xformOp:scale = (0.9999997, 0.9999995, 0.9999997)
+            float3 xformOp:translate = (3.4074783, -5.8207655e-7, -2.2331276)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Xform "GreenPointLight" (
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, -1.3876262e-9, 0)
+                float3 xformOp:scale = (0.99999994, 0.9999999, 0.9999999)
+                float3 xformOp:translate = (0.0027198792, 0.48857662, 0.00072193146)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "PointLight"
+                {
+                    float attenuationRadius = 0.1
+                    float3 color = (0, 0.89082867, 0)
+                    uniform token info:id = "RealityKit.PointLight"
+                    float intensity = 200
+                }
+            }
+        }
+
+        def Xform "BigPlanterLights" (
+            active = true
+            references = None
+        )
+        {
+            def Xform "YellowPointLight1" (
+                active = true
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, -1.1220619e-8, 0)
+                float3 xformOp:scale = (0.9999998, 0.9999997, 0.99999976)
+                float3 xformOp:translate = (1.381457, 2.2432532, -5.4850955)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "PointLight"
+                {
+                    float attenuationRadius = 0.15
+                    float3 color = (1, 0.97969496, 0.25298873)
+                    uniform token info:id = "RealityKit.PointLight"
+                    float intensity = 150
+                }
+            }
+        }
+
+        def Xform "SidePlanterLights" (
+            active = true
+            references = None
+        )
+        {
+            quatf xformOp:orient = (1, 0, -6.8273645e-9, 0)
+            float3 xformOp:scale = (0.9999999, 0.9999998, 0.9999999)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Xform "Transform_1" (
+                active = true
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, 3.8922607e-8, 0)
+                float3 xformOp:scale = (0.99999994, 0.9999999, 0.9999999)
+                float3 xformOp:translate = (-6.4511476, 1.5978616, 2.372207)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "PointLight"
+                {
+                    float attenuationRadius = 1
+                    float3 color = (1, 0.14053239, 0.1293565)
+                    uniform token info:id = "RealityKit.PointLight"
+                    float intensity = 200
+                }
+            }
+
+            def Xform "Transform_2" (
+                active = true
+                customData = {
+                    float3 rotationEulerHint = (0, 0, 0)
+                }
+                references = None
+            )
+            {
+                quatf xformOp:orient = (1, 0, -5.780877e-9, 0)
+                float3 xformOp:scale = (0.9999998, 0.9999997, 0.9999998)
+                float3 xformOp:translate = (-5.684433, 1.5978509, 4.0906706)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "PointLight"
+                {
+                    float attenuationRadius = 1
+                    float3 color = (1, 0.14053239, 0.1293565)
+                    uniform token info:id = "RealityKit.PointLight"
+                    float intensity = 200
+                }
+            }
+        }
+    }
+}
+

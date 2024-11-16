@@ -1,0 +1,25 @@
+{
+  "pathsToIds" : {
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "95052448-183C-40B5-9E52-3717AF9B48FA",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Immersive.usda" : "65F6F990-A780-4474-B78B-572E0E4E273D",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "0A9B4653-B11E-4D6A-850E-C6FCB621626C",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/environment\/planter_Hero_CoffeeBerry.usda" : "A11CDAD0-4836-45A4-8051-AAB2104A3F62",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/environment\/planter_Hero_Poppy.usda" : "AA2C4443-5FFC-4407-889B-FD96DFAB8EAD",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/environment\/planter_Hero_Yucca.usda" : "D2506514-890A-4226-A91D-3D8FCC5054BD",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/environment\/volume.usda" : "6632BB40-4AA4-45C7-8CC2-402DB50508CE",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/lighting.usda" : "F666B837-4739-4EA3-8805-F177403A07F9",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/planter_Hero.usda" : "F85F37FA-5159-4A70-AC11-409405E37D80",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/planter_Hero_CoffeeBerry.usda" : "9F573547-4285-4DCC-BEB6-45776D977A1C",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/planter_Hero_Poppy.usda" : "A426EE1A-008F-402F-B2E0-A9957504E153",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/planter_Hero_Yucca.usda" : "75B17952-CAFA-4591-9ADA-5C6BB512B796",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/setDressing.usda" : "228A1F79-1F90-41D3-AB5C-9C7728CC42AD",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/volume.usda" : "AE9EFD2C-E63E-4795-ABFF-128ABB41D808",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/volume_references\/M_lights.usda" : "517D8F1E-BE7D-4055-9D27-5FD6840D0307",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/volume_references\/M_plants.usda" : "76271219-3E2E-4506-997B-3C0997E5469A",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/volume_references\/foliageSetDressing.usd" : "4336B9BC-37E7-47F4-9444-5E30F4610C35",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Assets\/volume_references\/volume.usd" : "9AA293F1-6DA5-441B-8B58-507F3296B1B4",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "A21C1E11-ABB0-4972-8159-55AD3A9AA5B3",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Immersive.usda" : "1D572CEB-057A-41C3-B575-04C37501A3C0",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "D66134B1-3681-4A8E-AFE5-29F257229F3B"
+  }
+}
