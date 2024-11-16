@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AE5A9812A49FA8B00DF4E75 /* StereoViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5A9802A49FA8B00DF4E75 /* StereoViewerApp.swift */; };
+		3AE5A9852A49FA8C00DF4E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AE5A9842A49FA8C00DF4E75 /* Assets.xcassets */; };
+		3AE5A9882A49FA8C00DF4E75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AE5A9872A49FA8C00DF4E75 /* Preview Assets.xcassets */; };
+		3AE5A9902A49FD8700DF4E75 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5A98F2A49FD8700DF4E75 /* LaunchView.swift */; };
+		3AE5A9922A4A025500DF4E75 /* MediaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5A9912A4A025500DF4E75 /* MediaDetailView.swift */; };
+		3AE5A9942A4A0CC900DF4E75 /* MediaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5A9932A4A0CC900DF4E75 /* MediaDetailViewModel.swift */; };
+		3AE5A9962A4A2CE800DF4E75 /* StereoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5A9952A4A2CE800DF4E75 /* StereoView.swift */; };
+		3AE5A99C2A4A32EC00DF4E75 /* StereoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5A99B2A4A32EC00DF4E75 /* StereoViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3AE5A97D2A49FA8B00DF4E75 /* StereoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StereoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE5A9802A49FA8B00DF4E75 /* StereoViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StereoViewerApp.swift; sourceTree = "<group>"; };
+		3AE5A9842A49FA8C00DF4E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AE5A9872A49FA8C00DF4E75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3AE5A9892A49FA8C00DF4E75 /* StereoViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StereoViewer.entitlements; sourceTree = "<group>"; };
+		3AE5A98F2A49FD8700DF4E75 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		3AE5A9912A4A025500DF4E75 /* MediaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailView.swift; sourceTree = "<group>"; };
+		3AE5A9932A4A0CC900DF4E75 /* MediaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewModel.swift; sourceTree = "<group>"; };
+		3AE5A9952A4A2CE800DF4E75 /* StereoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StereoView.swift; sourceTree = "<group>"; };
+		3AE5A99B2A4A32EC00DF4E75 /* StereoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StereoViewModel.swift; sourceTree = "<group>"; };
+		7518A70AD36844F9BE50D797 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		7CE364333B899693457023AE /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		E99B7CE171FB09842837D350 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AE5A97A2A49FA8B00DF4E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AE5A9742A49FA8B00DF4E75 = {
+			isa = PBXGroup;
+			children = (
+				E99B7CE171FB09842837D350 /* README.md */,
+				3AE5A97F2A49FA8B00DF4E75 /* StereoViewer */,
+				3AE5A97E2A49FA8B00DF4E75 /* Products */,
+				FB165BC2A71191B4CE14FF2D /* Configuration */,
+				52657A4DD7B79D507A056C56 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		3AE5A97E2A49FA8B00DF4E75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AE5A97D2A49FA8B00DF4E75 /* StereoViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AE5A97F2A49FA8B00DF4E75 /* StereoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				3AE5A9952A4A2CE800DF4E75 /* StereoView.swift */,
+				3AE5A99B2A4A32EC00DF4E75 /* StereoViewModel.swift */,
+				3AE5A9802A49FA8B00DF4E75 /* StereoViewerApp.swift */,
+				3AE5A98F2A49FD8700DF4E75 /* LaunchView.swift */,
+				3AE5A9912A4A025500DF4E75 /* MediaDetailView.swift */,
+				3AE5A9932A4A0CC900DF4E75 /* MediaDetailViewModel.swift */,
+				3AE5A9842A49FA8C00DF4E75 /* Assets.xcassets */,
+				3AE5A9892A49FA8C00DF4E75 /* StereoViewer.entitlements */,
+				3AE5A9862A49FA8C00DF4E75 /* Preview Content */,
+			);
+			path = StereoViewer;
+			sourceTree = "<group>";
+		};
+		3AE5A9862A49FA8C00DF4E75 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3AE5A9872A49FA8C00DF4E75 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52657A4DD7B79D507A056C56 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				7518A70AD36844F9BE50D797 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		FB165BC2A71191B4CE14FF2D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7CE364333B899693457023AE /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AE5A97C2A49FA8B00DF4E75 /* StereoViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AE5A98C2A49FA8C00DF4E75 /* Build configuration list for PBXNativeTarget "StereoViewer" */;
+			buildPhases = (
+				3AE5A9792A49FA8B00DF4E75 /* Sources */,
+				3AE5A97A2A49FA8B00DF4E75 /* Frameworks */,
+				3AE5A97B2A49FA8B00DF4E75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StereoViewer;
+			productName = StereoViewer;
+			productReference = 3AE5A97D2A49FA8B00DF4E75 /* StereoViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AE5A9752A49FA8B00DF4E75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1520;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					3AE5A97C2A49FA8B00DF4E75 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 3AE5A9782A49FA8B00DF4E75 /* Build configuration list for PBXProject "StereoViewer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AE5A9742A49FA8B00DF4E75;
+			productRefGroup = 3AE5A97E2A49FA8B00DF4E75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AE5A97C2A49FA8B00DF4E75 /* StereoViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AE5A97B2A49FA8B00DF4E75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE5A9882A49FA8C00DF4E75 /* Preview Assets.xcassets in Resources */,
+				3AE5A9852A49FA8C00DF4E75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AE5A9792A49FA8B00DF4E75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE5A9962A4A2CE800DF4E75 /* StereoView.swift in Sources */,
+				3AE5A9902A49FD8700DF4E75 /* LaunchView.swift in Sources */,
+				3AE5A9922A4A025500DF4E75 /* MediaDetailView.swift in Sources */,
+				3AE5A99C2A4A32EC00DF4E75 /* StereoViewModel.swift in Sources */,
+				3AE5A9942A4A0CC900DF4E75 /* MediaDetailViewModel.swift in Sources */,
+				3AE5A9812A49FA8B00DF4E75 /* StereoViewerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3AE5A98A2A49FA8C00DF4E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE364333B899693457023AE /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AE5A98B2A49FA8C00DF4E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE364333B899693457023AE /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		3AE5A98D2A49FA8C00DF4E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE364333B899693457023AE /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StereoViewer/StereoViewer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"StereoViewer/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.StereoViewer${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3AE5A98E2A49FA8C00DF4E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE364333B899693457023AE /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StereoViewer/StereoViewer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"StereoViewer/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.StereoViewer${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AE5A9782A49FA8B00DF4E75 /* Build configuration list for PBXProject "StereoViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AE5A98A2A49FA8C00DF4E75 /* Debug */,
+				3AE5A98B2A49FA8C00DF4E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AE5A98C2A49FA8C00DF4E75 /* Build configuration list for PBXNativeTarget "StereoViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AE5A98D2A49FA8C00DF4E75 /* Debug */,
+				3AE5A98E2A49FA8C00DF4E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AE5A9752A49FA8B00DF4E75 /* Project object */;
+}
