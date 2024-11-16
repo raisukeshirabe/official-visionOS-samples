@@ -1,0 +1,2824 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " " : {
+      "comment" : "Separator between accessibility description components.\nThis separator is a space to separate the sentences.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        }
+      }
+    },
+    "A %@ orbits close to the earth." : {
+      "comment" : "Describes an attribute of the Earth model. The first parameter is any satellite.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein %@ kreist nahe um die Erde."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un %@ qui gravite autour de la Terre à faible distance."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@は地球の近くを周回しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구에 인접한 %@의 궤도입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@近地运行。"
+          }
+        }
+      }
+    },
+    "A Day in the Life" : {
+      "comment" : "The subtitle of the Planet Earth module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Tag im Leben"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un jour dans la vie"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球の1日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구에서의 하루"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生命中的一天"
+          }
+        }
+      }
+    },
+    "A lot goes into making a day happen on Planet Earth! Discover how our globe turns and tilts to give us hot summer days, chilly autumn nights, and more." : {
+      "comment" : "Detail text explaining the Planet Earth module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für einen Tag auf dem Planeten Erde muss viel passieren! Entdecke, wie sich unser Planet dreht und neigt und uns so heiße Sommertage, kühle Herbstnächte und mehr bringt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il se passe bien des choses en une journée sur la planète Terre ! Découvrez comment notre globe tourne et s’incline pour nous offrir de chaudes journées d’été, de fraîches nuits d’automne et plus encore."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球の1日の成立ちには多くのことが関係しています。地球の自転と自転軸の傾きにより、どのように暑い夏の日や肌寒い秋の夜が生じるかなどを学びましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구의 하루는 바쁘게 돌아갑니다. 지구의 자전과 기울기로 인해 어떻게 뜨거운 여름날부터 쌀쌀한 가을밤에 이르는 계절의 변화가 생기는지 알아보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "形成地球上的一天需要多种条件！探索我们的地球如何通过旋转和倾斜，为我们带来炎炎夏日和凉爽秋夜。"
+          }
+        }
+      }
+    },
+    "All planets in the solar system orbit within 3°–7° of this plane." : {
+      "comment" : "An educational fact displayed in the Solar System module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Planeten im Sonnensystem kreisen in einem Bereich von 3°–7° auf dieser Ebene."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toutes les planètes du Système solaire gravitent autour du Soleil à un angle compris entre 3 ° et 7 ° par rapport à cet axe."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽系のすべての惑星は、この平面の3°〜7°以内の軌道上を公転しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양계의 모든 행성은 이 기준면의 3°~7° 이내에서 공전합니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太阳系所有行星运行时均与此平面形成3°–7°夹角。"
+          }
+        }
+      }
+    },
+    "Altitude" : {
+      "comment" : "A slider control to change the altitude of the satellit's orbit.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Höhe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altitude"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高度"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "고도"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高度"
+          }
+        }
+      }
+    },
+    "Angle" : {
+      "comment" : "A setting to control which angle the sunlight is coming from.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Winkel"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angle"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "角度"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "각도"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "角度"
+          }
+        }
+      }
+    },
+    "As the Earth orbits the Sun, its axial tilt exposes one hemisphere to more sunlight for half of the year." : {
+      "comment" : "An educational fact displayed in the Solar System module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Während die Erde um die Sonne kreist, hat eine Hemisphäre aufgrund der Neigung der Erdachse ein halbes Jahr lang mehr Sonnenlicht."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À mesure que la Terre gravite autour du Soleil, son inclinaison axiale expose un hémisphère à davantage de lumière du soleil pendant la moitié de l’année."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球が太陽の周りを公転するにつれて、自転軸の傾きによって、1年のうちの半分の期間、半球のどちらか一方により多くの太陽光が届きます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구가 태양을 공전할 때 자전축 기울기로 인해 한쪽 반구가 반년 동안 햇빛에 더 많이 노출됩니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球绕太阳运行，地轴倾斜会导致一个半球在半年内获得更多光照。"
+          }
+        }
+      }
+    },
+    "December solstice" : {
+      "comment" : "Tilt the Earth to the December solstice.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wintersonnenwende"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solstice d’hiver"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12月の至点"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "동지"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冬至"
+          }
+        }
+      }
+    },
+    "Discover a new way of looking at the world." : {
+      "comment" : "The app's subtitle, appearing immediately below the title in a smaller font, on the splash screen.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entdecke eine neue Perspektive auf die Welt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Découvrez une nouvelle manière de voir le monde."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しい世界の見方を見つけましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세상을 새로운 시선에서 탐구해 보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发现观察世界的新方式。"
+          }
+        }
+      }
+    },
+    "Distance to Earth" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entfernung zur Erde"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distance jusqu’à la Terre"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球までの距離"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구까지의 거리"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "与地球的距离"
+          }
+        }
+      }
+    },
+    "Earth" : {
+      "comment" : "Section title of the settings for Earth.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erde"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terre"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球"
+          }
+        }
+      }
+    },
+    "Earth model" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erdmodell"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modèle de la Terre"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球モデル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구 모형"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球模型"
+          }
+        }
+      }
+    },
+    "Earth’s axial tilt is why different hemispheres experience different seasons." : {
+      "comment" : "An educational fact displayed in the Solar System module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aufgrund der Neigung der Erdachse herrschen auf den beiden Hemisphären unterschiedliche Jahreszeiten."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’inclinaison axiale de la Terre est la raison pour laquelle ses deux hémisphères connaissent des saisons différentes."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北半球と南半球とで季節が異なるのは、地軸が傾いているからです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구의 자전축이 기울어져 있기 때문에 각각의 반구에 다른 계절이 나타납니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地轴倾斜是不同半球季节不同的原因。"
+          }
+        }
+      }
+    },
+    "Entered the immersive star filled solar system!" : {
+      "comment" : "Accessibility message describing the model shown.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast das mit Sternen übersäte Sonnensystem betreten!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entrée en immersion dans le ciel étoilé du Système solaire !"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "臨場感あふれる星に満ちた太陽系に突入しました!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "별이 가득한 태양계의 몰입형 환경 속으로 들어왔습니다!"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已沉浸在繁星漫天的太阳系！"
+          }
+        }
+      }
+    },
+    "Every 365¼ days, Earth and its satellites completely orbit the Sun — the star that anchors our solar system. It’s a journey of about 940 million kilometers a year!\n\nOn its journey, the Earth moves counter-clockwise in a slightly elliptical orbit. It travels a path called the ecliptic plane — an important part of how we navigate through our solar system.\n\nWant to explore Earth’s orbit in detail? Take a trip to the solar system and watch how Earth and its satellites move around the Sun." : {
+      "comment" : "Educational text displayed in the Solar System module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle 365¼ Tage drehen sich die Erde und ihre Satelliten einmal komplett um die Sonne – den Stern, der sich im Mittelpunkt unseres Solarsystems befindet. Sie legen also eine Strecke von 940 Millionen Kilometern pro Jahr zurück!\n\nAuf ihrer Reise bewegt sich die Erde gegen den Uhrzeigersinn auf einer leicht elliptischen Umlaufbahn. Sie kreist auf einer Ebene namens Ekliptik, die ein wichtiger Teil unserer Reise durch das Solarsystem ist.\n\nMöchtest du die Umlaufbahn der Erde genauer erforschen? Reise zum Sonnensystem und sieh dir an, wie die Erde und ihre Satelliten um die Sonne kreisen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tous les 365,25 jours, la Terre et ses satellites effectuent un tour complet autour du Soleil, cette étoile située au centre de notre Système solaire. Le trajet effectué par la Terre représente une distance de 940 millions de kilomètres par an !\n\nSur son chemin, la Terre tourne dans le sens opposé des aiguilles d’une montre sur une orbite de forme légèrement elliptique. Elle se déplace le long d’un axe appelé l’écliptique, un élément clé de notre parcours à travers le Système solaire.\n\nVous voulez explorer l’orbite de la Terre en détail ? Voyagez à travers le Système solaire et observez comment la Terre, la Lune et les satellites se déplacent autour du Soleil."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "365と¼日ごとに、地球と衛星は太陽の周りを一周します。太陽は太陽系の基点となる星です。移動距離は1年に約9億4千万キロです。\n\n地球はわずかに楕円形の軌道を反時計回りに公転しています。この軌道は黄道面と呼ばれ、太陽系の中での移動に重要な役割を果たします。\n\n地球の軌道を詳しく知りたいですか? 太陽系への旅に出て、どのように地球と衛星が太陽の周りを移動するのかを見てみましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구와 그 위성이 태양계의 중심부인 태양을 완전히 공전하기까지는 365¼일이 소요됩니다. 1년에 약 9억 4천만 킬로미터의 거리를 이동하는 셈입니다.\n\n이 기나긴 여정 속에서 지구는 살짝 타원형에 가까운 궤도를 따라 반시계 방향으로 움직입니다. 이때 지구가 움직이는 궤도를 황도면이라고 부르는데, 이 황도면은 태양계를 탐험하는 데 있어 중요한 부분을 차지합니다. \n\n지구의 궤도를 더 자세히 알아볼까요? 태양계로 날아가 지구와 그 위성이 태양 주위를 어떻게 움직이는지 확인해 보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太阳是太阳系的中心恒星。每365¼天，地球及其卫星完整绕太阳一周。也就是说，地球一年走过了大约9.4亿公里的路程！\n\n在此期间，地球沿略呈椭圆形的轨道逆时针运行，其轨道平面称为黄道面，这是我们观察太阳系的重要参考部分。\n\n想要探索地球运行轨道的各种细节？请开启太阳系之旅，观察地球及其卫星如何绕太阳运转。"
+          }
+        }
+      }
+    },
+    "Exit the Solar System" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonnensystem verlassen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quitter le Système solaire"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽系を終了"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양계에서 나가기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出太阳系"
+          }
+        }
+      }
+    },
+    "Get up close with different types of orbits to learn more about how satellites and other objects move in space relative to the Earth." : {
+      "comment" : "Detail text explaining the Objects in Orbit module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sieh dir andere Umlaufbahnen im Detail an, um mehr darüber zu erfahren, wie sich Satelliten und andere Objekte relativ zur Erde im All bewegen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorez les différents types d’orbites pour en savoir plus sur la rotation des satellites et des autres objets célestes à travers l’espace et autour de la Terre."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ほかの種類の軌道に近付いて、宇宙空間で衛星とその他の物体が地球と比較してどのように移動しているのかを学びましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "각기 다른 유형의 궤도를 가까이 관찰하면서 위성 및 기타 물체가 지구 주변의 공간에서 어떻게 움직이는지 자세히 알아보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近距离观察不同轨道类型，进一步了解相对于地球，卫星和其他天体如何在宇宙中运行。"
+          }
+        }
+      }
+    },
+    "Globe module debug settings" : {
+      "comment" : "The title of the settings presented to the viewer.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Debug-Einstellungen des Erdkugelmoduls"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages de débogage du module du globe"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球モジュールデバッグ設定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구본 모듈 디버그 설정"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球模块调试设置"
+          }
+        }
+      }
+    },
+    "Hello World" : {
+      "comment" : "The name of the app. This is the typical title for many example apps in programming tutorials.\nThe title of the app.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hallo Welt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello World"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello World"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello World"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你好，世界"
+          }
+        }
+      }
+    },
+    "Inclination" : {
+      "comment" : "A slider control to change the inclination of the satellite's orbit.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neigung"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inclinaison"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "傾斜"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "경사도"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轨道倾角"
+          }
+        }
+      }
+    },
+    "June solstice" : {
+      "comment" : "Tilt the Earth to the June solstice.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommersonnenwende"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solstice d’été"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6月の至点"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하지"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "夏至"
+          }
+        }
+      }
+    },
+    "March equinox" : {
+      "comment" : "Tilt the Earth to the March equinox.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frühlings-Tagundnachtgleiche"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Équinoxe de mars"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3月の分点"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "춘분"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "春分"
+          }
+        }
+      }
+    },
+    "Moon" : {
+      "comment" : "A configuration item to set the Moon's visibility.\nAn object in orbit around Earth.\nThe Moon in orbit around Earth.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mond"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lune"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "달"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月球"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suivant"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次へ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一个"
+          }
+        }
+      }
+    },
+    "None" : {
+      "comment" : "No tilt to the Earth's axis.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohne"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "なし"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "없음"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无"
+          }
+        }
+      }
+    },
+    "Not rotating." : {
+      "comment" : "Describes an attribute of the Earth model.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dreht sich nicht."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune rotation."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自転していません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "회전 중이 아닙니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未在旋转。"
+          }
+        }
+      }
+    },
+    "Objects in Orbit" : {
+      "comment" : "The title of a module in the app.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objekte auf der Umlaufbahn"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objets en orbite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "軌道上の物体"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "궤도상의 물체"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轨道中的天体"
+          }
+        }
+      }
+    },
+    "Orbit module debug settings" : {
+      "comment" : "The title of the settings presented to the viewer.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Debug-Einstellungen des Umlaufbahnmoduls"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages de débogage du module de l’orbite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "軌道モジュールデバッグ設定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "궤도 모듈 디버그 설정"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轨道模块调试设置"
+          }
+        }
+      }
+    },
+    "Our Nearby Neighbors" : {
+      "comment" : "The subtitle of the Objects in Orbit module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unsere nächsten Nachbarn"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nos voisins les plus proches"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近くにある物体"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가까운 이웃"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我们的近邻"
+          }
+        }
+      }
+    },
+    "Pause" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anhalten"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mettre en pause"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一時停止"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일시 정지"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂停"
+          }
+        }
+      }
+    },
+    "Planet Earth" : {
+      "comment" : "The title of a module in the app.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planet Erde"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planète Terre"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球"
+          }
+        }
+      }
+    },
+    "Play" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spielen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jouer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プレイ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "플레이"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "玩游戏"
+          }
+        }
+      }
+    },
+    "Pole height" : {
+      "comment" : "A numerical setting for how much the pole indicators stick out from the Earth display.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polhöhe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hauteur des pôles"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "極からの高さ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "극점 높이"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地极高度"
+          }
+        }
+      }
+    },
+    "Pole thickness" : {
+      "comment" : "A numerical setting for how large the pole indicators are on the Earth display.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poldicke"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épaisseur des pôles"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "極の太さ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "극점 두께"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地极粗细"
+          }
+        }
+      }
+    },
+    "Poles" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pole"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pôles"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "両極"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "극점"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地极"
+          }
+        }
+      }
+    },
+    "Previous" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Précédent"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前ヘ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이전"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上一个"
+          }
+        }
+      }
+    },
+    "Reset" : {
+      "comment" : "Action to reset all settings to their defaults.\nAction to reset the settings to their default values.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurücksetzen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réinitialiser"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リセット"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재설정"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还原"
+          }
+        }
+      }
+    },
+    "Rotate" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drehen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faire tourner"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回転"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "회전"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旋转"
+          }
+        }
+      }
+    },
+    "Rotate clockwise" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Uhrzeigersinn drehen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faire tourner vers la droite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時計回りに回転"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시계 방향으로 회전"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顺时针旋转"
+          }
+        }
+      }
+    },
+    "Rotate counterclockwise" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegen den Uhrzeigersinn drehen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faire tourner vers la gauche"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "反時計回りに回転"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "반시계 방향으로 회전"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "逆时针旋转"
+          }
+        }
+      }
+    },
+    "Rotating." : {
+      "comment" : "Describes an attribute of the Earth model.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dreht sich."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rotation."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自転しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "회전 중입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在旋转。"
+          }
+        }
+      }
+    },
+    "Rotation speed" : {
+      "comment" : "A setting to change the rotation speed of the Earth.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drehgeschwindigkeit"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vitesse de rotation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回転速度"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "회전 속도"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旋转速度"
+          }
+        }
+      }
+    },
+    "Satellite" : {
+      "comment" : "An object in orbit around Earth.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satellit"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satellite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "衛星"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위성"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "卫星"
+          }
+        }
+      }
+    },
+    "Scale" : {
+      "comment" : "A slider control to change the scale of the satellite.\nThe scale the Earth is presented at.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maßstab"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échelle"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケール"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "크기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缩放"
+          }
+        }
+      }
+    },
+    "September equinox" : {
+      "comment" : "Tilt the Earth to the September equinox.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herbst-Tagundnachtgleiche"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Équinoxe de septembre"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9月の分点"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추분"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秋分"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
+        }
+      }
+    },
+    "Show Poles" : {
+      "comment" : "A toggle to change whether the poles are marked on the Earth display.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pole anzeigen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher les pôles"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "両極を表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "극점 보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示地极"
+          }
+        }
+      }
+    },
+    "Show Sun" : {
+      "comment" : "A toggle to change whether there is sunlight shown on the Earth display.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonne anzeigen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher le Soleil"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽光を表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양 보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示太阳"
+          }
+        }
+      }
+    },
+    "Soaring Through Space" : {
+      "comment" : "The subtitle of the Solar System module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durch den Weltraum schweben"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envolée dans l’espace"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宇宙空間を進行"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "우주 공간으로의 비상"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遨游太空"
+          }
+        }
+      }
+    },
+    "Solar system module debug settings" : {
+      "comment" : "The title of the settings presented to the viewer.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Debug-Einstellungen des Sonnensystemmoduls"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages de débogage du module du Système solaire"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽系モジュールデバッグ設定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양계 모듈 디버그 설정"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太阳系模块调试设置"
+          }
+        }
+      }
+    },
+    "Speed ratio" : {
+      "comment" : "A slider control to change the speed ratio of the satellite.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschwindigkeitsverhältnis"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapport de vitesse"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "速度比"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "속도 비율"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "速度比"
+          }
+        }
+      }
+    },
+    "Start motion" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewegung starten"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mettre en mouvement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "動きを開始"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "움직임 시작"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始运动"
+          }
+        }
+      }
+    },
+    "Stop motion" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewegung stoppen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrêter le mouvement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "動きを停止"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "움직임 중단"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止运动"
+          }
+        }
+      }
+    },
+    "Sun" : {
+      "comment" : "A section of settings that control the Sun in the Earth display.\nSection title of settings for the sun.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonne"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soleil"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太阳"
+          }
+        }
+      }
+    },
+    "Sun intensity" : {
+      "comment" : "A setting to control the intensity of the sunlight.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonnenlichtintensität"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intensité du Soleil"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽光の強度"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양광 강도"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日照强度"
+          }
+        }
+      }
+    },
+    "System" : {
+      "comment" : "Section title of system level settings.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Système"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "系"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "성계"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "系统"
+          }
+        }
+      }
+    },
+    "Take a trip to the solar system and watch how the Earth, Moon, and its satellites are in constant motion rotating around the Sun." : {
+      "comment" : "Detail text explaining the Solar System module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reise zum Sonnensystem und sieh dir an, wie Erde, Mond und Satelliten immerzu um die Sonne kreisen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voyagez à travers le Système solaire et observez comment la Terre, la Lune et les satellites sont en mouvement constant autour du Soleil."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽系への旅に出て、どのように地球、月、および衛星が太陽の周りを一定の動きで移動するのかをみてみましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양계로 날아가 지구와 달, 그리고 위성이 태양 주위를 일정한 움직임으로 공전하는 모습을 탐구해 보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启太阳系之旅，观察地球、月球及其卫星不断绕太阳运动。"
+          }
+        }
+      }
+    },
+    "Telescope" : {
+      "comment" : "A space telescope in orbit around Earth.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teleskop"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Télescope"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "望遠鏡"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "망원경"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "望远镜"
+          }
+        }
+      }
+    },
+    "The Earth is not tilted." : {
+      "comment" : "Describes an attribute of the Earth model.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Erde ist nicht geneigt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La Terre n’est pas inclinée."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地軸が傾いています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구가 기울어지지 않은 상태입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球未倾斜。"
+          }
+        }
+      }
+    },
+    "The Earth is tilted for the date %@." : {
+      "comment" : "Describes an attribute of the Earth model.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Erde ist am Datum %@ geneigt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La Terre est inclinée à la date du %@."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地軸が%@に合わせて傾いています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@일 동안 기울어진 상태입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球于%@存在倾角。"
+          }
+        }
+      }
+    },
+    "The Earth orbits the Sun on an invisible path called the ecliptic plane." : {
+      "comment" : "An educational fact displayed in the Solar System module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Erde kreist auf einer unsichtbaren Ebene namens Ekliptik um die Sonne."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La Terre gravite autour du Soleil sur un axe invisible appelé l’écliptique."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球は、黄道面と呼ばれる目には見えない軌道を通って太陽の周りを公転しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구는 황도면이라고 하는 보이지 않는 궤도를 따라 태양 주위를 공전합니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球沿无形轨道绕太阳运行，轨道所在平面称为黄道面。"
+          }
+        }
+      }
+    },
+    "The Moon orbits the Earth in an elliptical orbit. It’s the most visible object in our sky, but it’s farther from us than you might think: on average, it’s about 385,000 kilometers away!\n\nMost satellites orbit Earth in a tighter orbit — some only a few hundred miles above Earth’s surface. Satellites in lower orbits circle us faster: the Hubble Telescope is approximately 534 kilometers from Earth and completes almost 15 orbits in a day, while geostationary satellites circle Earth just once in 24 hours from about 36,000 kilometers away.\n\nGet up close with different types of orbits to learn how these objects move in space relative to Earth." : {
+      "comment" : "Educational text displayed in the Objects in Orbit module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Mond kreist auf einer elliptischen Umlaufbahn um die Erde. Er ist das sichtbarste Objekt am Firmament, aber weiter entfernt, als du vielleicht denkst: Im Durchschnitt befindet er sich in einer Entfernung von ca. 385.000 Kilometer von der Erde!\n\nDie meisten Satelliten kreisen auf einer engeren Umlaufbahn um die Erde – einige sogar nur ein paar Hundert Kilometer über der Erdoberfläche. Satelliten in erdnahen Umlaufbahnen umkreisen uns schneller: Das Hubble-Weltraumteleskop ist ungefähr 534 Kilometer von der Erde entfernt und kreist fast 15 Mal pro Tag um die Erde. Geostationäre Satelliten hingegen umrunden die Erde nur einmal in 24 Stunden aus einer Höhe von ca. 36.000 Kilometer über der Erdoberfläche.\n\nSieh dir die verschiedenen Arten von Umlaufbahnen genauer an und erfahre mehr darüber, wie sich diese Objekte relativ zur Erde im All bewegen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La Lune gravite autour de la Terre sur un axe elliptique. S’il s’agit de l’objet céleste le plus visible dans notre ciel, la Lune est pourtant bien plus lointaine qu’il n’y paraît. En effet, en moyenne, elle se trouve à 385 000 km de nous !\n\nLa plupart des satellites gravitent autour de la Terre sur une orbite plus proche : certains d’entre eux ne se trouvent qu’à quelques centaines de kilomètres au-dessus de la surface terrestre. Les satellites évoluant sur des orbites plus basses tournent autour de nous plus rapidement. Par exemple, le télescope Hubble se trouve approximativement à 534 km de la Terre et effectue près de 15 révolutions par jour, tandis que les satellites géostationnaires, situés à environ 36 000 km de la Terre, n’effectuent qu’une seule révolution terrestre en 24 heures.\n\nExplorez les différents types d’orbites pour en savoir plus sur la rotation des objets célestes à travers l’espace et autour de la Terre."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月は、楕円軌道を通って地球の周りを公転しています。月は、上空で一番よく見える物体ですが、思った以上に距離は離れています。平均38万5千キロ離れています。\n\nほとんどの衛星の地球周回軌道はもっと小さいものです。中には、地表から数百マイルしか離れていないものもあります。低軌道の衛星はより速く地球を一周します。ハッブル望遠鏡は、地球から約534キロ離れていて、1日にほぼ15周します。一方、静止衛星は3万6千キロの上空にあり、24時間に1回のみ1周します。\n\n他の種類の軌道に近付いて、宇宙空間でこれらの物体が地球と比較してどのように移動しているのかを学びましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "달은 지구 주변을 타원 궤도로 공전합니다. 달은 우리 하늘에서 가장 눈에 잘 보이는 천체이지만 생각보다는 먼 거리에 있습니다. 지구와 달 사이의 거리는 약 385,000킬로미터에 달합니다.\n\n위성은 대체로 더 가까운 범위에서 공전합니다. 일부는 지표면에서 수백 킬로미터밖에 안되는 거리에 있는데, 궤도가 우리와 가까울수록 공전 주기가 더 짧습니다. 지구에서 534킬로미터 떨어진 허블 망원경은 하루에 거의 15회 공전하는 반면, 지구에서 36,000킬로미터 떨어진 정지궤도 위성의 경우 24시간 동안 지구를 딱 한 바퀴 돕니다.\n\n각기 다른 유형의 궤도를 가까이 관찰하면서 위성 및 기타 물체가 지구 주변의 공간에서 어떻게 움직이는지 자세히 알아보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月球在椭圆轨道上绕地球运行。它是天空中最易观测到的天体，但与我们的距离可能比你想象中更远：地月平均距离约达385,000公里！\n\n大多数卫星绕地球运行的轨道直径更小，部分卫星距地球表面仅有数百英里。卫星轨道较低则绕地运行速度更快：哈珀望远镜距地球约534公里，每天绕地球近15次，而同步卫星远在36,000公里之外，24小时仅绕地球一次。\n\n近距离观察不同轨道类型，了解相对于地球，这些天体如何在宇宙中运行。"
+          }
+        }
+      }
+    },
+    "The Solar System" : {
+      "comment" : "The title of a module in the app.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Sonnensystem"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le Système solaire"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽系"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양계"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太阳系"
+          }
+        }
+      }
+    },
+    "The moon orbits at some distance from the earth." : {
+      "comment" : "Describes an attribute of the Earth model.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Mond kreist in einiger Entfernung von der Erde."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La Lune gravite autour de la Terre à une certaine distance."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月は地球から少し離れたところを公転しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "달은 지구와 일정 거리를 두고 주위를 공전합니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月球距地球有一定距离，并绕地球运行。"
+          }
+        }
+      }
+    },
+    "The poles indicated." : {
+      "comment" : "Describes an attribute of the Earth model.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Pole werden angezeigt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les pôles indiqués."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "両極点が示されています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "극점이 표시된 상태입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "标明地极。"
+          }
+        }
+      }
+    },
+    "The sun is not shining." : {
+      "comment" : "Describes an attribute of the Earth model.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Sonne scheint nicht."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le Soleil ne brille pas."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽からの光が当たっていません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "해가 비추지 않는 상태입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无太阳照射。"
+          }
+        }
+      }
+    },
+    "The sun is shining." : {
+      "comment" : "Describes an attribute of the Earth model.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Sonne scheint."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le Soleil brille."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太陽からの光が当たっています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "해가 비추는 상태입니다."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有太阳照射。"
+          }
+        }
+      }
+    },
+    "Tilt" : {
+      "comment" : "The tilt of the Earth's axis.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neigung"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inclinaison"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "傾き"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기울기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地轴倾角"
+          }
+        }
+      }
+    },
+    "Trace" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spur"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trace"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トレース"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "궤적"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轨迹"
+          }
+        }
+      }
+    },
+    "Trace width" : {
+      "comment" : "A slider control to change the with of the trace the satellite's orbit draws.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spurbreite"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largeur de la trace"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トレース幅"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "궤적 넓이"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轨迹宽度"
+          }
+        }
+      }
+    },
+    "View Globe" : {
+      "comment" : "An action the viewer can take in the Planet Earth module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erdkugel anzeigen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir le globe"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地球を表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지구본 보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看地球"
+          }
+        }
+      }
+    },
+    "View Orbits" : {
+      "comment" : "An action the viewer can take in the Objects in Orbit module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umlaufbahnen anzeigen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir les orbites"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "軌道を表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "궤도 보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看轨道"
+          }
+        }
+      }
+    },
+    "View Outer Space" : {
+      "comment" : "An action the viewer can take in the Solar System module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weltraum anzeigen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir le cosmos"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宇宙空間を表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "우주 공간 보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看外太空"
+          }
+        }
+      }
+    },
+    "Visible" : {
+      "comment" : "A toggle to control the satellite's visibility.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sichtbar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visible"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보기"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可见度"
+          }
+        }
+      }
+    },
+    "X" : {
+      "comment" : "A slider to change the Earth location in the 3d volume along the X axis.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X"
+          }
+        }
+      }
+    },
+    "Y" : {
+      "comment" : "A slider to change the Earth location in the 3d volume along the Y axis.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Y"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Y"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Y"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Y"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Y"
+          }
+        }
+      }
+    },
+    "You can’t feel it, but Earth is constantly in motion. All planets spin on an invisible axis: ours makes one full turn every 24 hours, bringing days and nights to our home.\n\nWhen your part of the world faces the Sun, it’s daytime; when it rotates away, we move into night. When you see a sunrise or sunset, you’re witnessing the Earth in motion.\n\nWant to explore Earth’s rotation and axial tilt? Check out our interactive 3D globe and be hands-on with Earth’s movements." : {
+      "comment" : "Educational text displayed in the Planet Earth module.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auch wenn du es nicht merkst, ist die Erde ständig in Bewegung. Alle Planeten drehen sich um eine unsichtbare Achse. Die Erde dreht sich einmal alle 24 Stunden um die eigene Achse und lässt es so Tag und Nacht werden.\n\nWenn der Teil der Erde, auf dem du dich gerade befindest, der Sonne zugewandt ist, ist es Tag. Wenn sich die Erde von der Sonne wegdreht, bricht die Nacht an. Bei einem Sonnenaufgang oder -untergang siehst du mit eigenen Augen, wie sich die Erde bewegt.\n\nMöchtest du die Drehung der Erde und die Neigung der Erdachse erforschen? Dann sieh dir unsere interaktive 3D-Erdkugel an und entdecke die Bewegungen der Erde auf interaktive Weise."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous ne le ressentez pas mais la Terre est en mouvement permanent. Toutes les planètes tournent autour d’un axe invisible : la nôtre effectue un tour complet sur elle-même en 24 heures, nous apportant ainsi les jours et les nuits.\n\nLorsqu’une zone de la planète se trouve face au Soleil, il y fait jour. À mesure que la Terre tourne et que cette zone s’éloigne du Soleil, il commence à y faire nuit. Lorsque vous contemplez un lever ou un coucher de soleil, vous assistez au mouvement de la Terre.\n\nVous voulez en savoir plus sur la rotation de la Terre et son inclinaison axiale ? Découvrez notre globe en 3D interactif et examinez les mouvements de la Terre."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感じることはできなくても、地球は常に動いています。すべての惑星は、目には見えない軸を中心に回転しています。地球は24時間ごとに1回転して、昼と夜をもたらしています。\n\nあなたのいる側が太陽に面しているときが昼になり、回転するにつれて夜へと移っていきます。日の出や日の入を見ることができるのは、地球が動いているからにほかなりません。\n\n地球の自転と自転軸の傾きについて知りたいですか? インタラクティブな3D地球儀で地球の動きをハンズオンで体験してみましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "우리가 느낄 수는 없지만 지구는 계속해서 움직이고 있습니다. 모든 행성은 보이지 않는 축으로 자전하는데, 우리 지구는 24시간마다 한 바퀴 회전하며 낮과 밤을 만들어 냅니다.\n\n우리가 위치한 곳이 태양을 바라보게 되면 낮, 반대편으로 돌아가면 밤입니다. 해가 뜨거나 지는 광경을 보면 지구가 움직이고 있다는 것을 알 수 있습니다.\n\n지구의 자전과 자전축 기울기에 관해 탐구해 볼까요? 3D 인터랙티브 지구본으로 지구의 움직임을 직접 관찰해 보세요."
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尽管你感觉不到，但地球在不断运动。所有行星均围绕看不见的轴旋转：我们所在的地球每24小时完整旋转一周，从而产生了昼夜。\n\n你所在地区面向太阳时即为白昼；当我们随旋转逐渐远离太阳，就会进入黑夜。看到日出或日落，则意味着你目睹了地球的运动。\n\n想要探索地球的旋转和和地轴倾角？请体验我们的互动式3D地球，身临其境观察地球的运动。"
+          }
+        }
+      }
+    },
+    "Z" : {
+      "comment" : "A slider to change the Earth location in the 3d volume along the Z axis.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z"
+          }
+        }
+      }
+    },
+    "Zoom in" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergrößern"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agrandir"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拡大"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확대"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放大"
+          }
+        }
+      }
+    },
+    "Zoom out" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verkleinern"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réduire"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "縮小"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "축소"
+          }
+        },
+        "zh_CN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缩小"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}
