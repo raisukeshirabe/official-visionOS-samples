@@ -1,0 +1,19 @@
+{
+  "dependencies" : [
+
+  ],
+  "module" : {
+    "moduleName" : "SwiftSplashTrackPieces",
+    "swiftFiles" : [
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/Components/BillboardComponent.swift",
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/Components/Connectable.swift",
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/Components/ConnectableStateComponent.swift",
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/Components/MarkerComponents.swift",
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/Extensions/Entity+Utilities.swift",
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/Extensions/Float+Utilities.swift",
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/Extensions/SIMD+Utilities.swift",
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/SwiftSplashTrackPieces.swift",
+      "/Users/zkiraly/Documents/stash/swift-splash/Source/Packages/SwiftSplashTrackPieces/Sources/SwiftSplashTrackPieces/Systems/BillboardSystem.swift"
+    ]
+  }
+}

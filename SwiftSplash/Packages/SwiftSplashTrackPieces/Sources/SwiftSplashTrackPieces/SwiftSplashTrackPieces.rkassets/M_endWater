@@ -1,0 +1,607 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Root", "M_StagnantWater"]
+
+def Xform "Root"
+{
+    def Material "M_StagnantWater" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["MaterialXPreviewSurface", "TiledImage", "TiledImage_1", "Mix", "Convert", "Combine2", "Multiply", "Constant", "Separate2", "UV_Offset", "Combine2_1", "Subtract", "Floor", "Multiply_1", "Convert_2", "Multiply_2", "Time", "Subtract_1", "Remap", "Multiply_3", "Saturate", "Saturate_1", "Range", "Color_Brightness"]
+        float inputs:speed_multiplier = 0.2 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-924.72046, 675.5093)
+                    float2 sizeInSubgraph = (172.5, 53)
+                    int stackingOrderInSubgraph = 923
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/M_StagnantWater/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1521.3105, 399.56784)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1000
+
+        def Shader "MaterialXPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Root/M_StagnantWater/Saturate_1.outputs:out>
+            color3f inputs:emissiveColor
+            float inputs:ior = 1.55
+            float inputs:metallic
+            float3 inputs:normal.connect = </Root/M_StagnantWater/Remap.outputs:out>
+            float inputs:occlusion
+            float inputs:opacity.connect = </Root/M_StagnantWater/O_Intensity.outputs:out>
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/M_StagnantWater/R_Intensity.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (1236.0868, 277.91336)
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 1547
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:normal"]
+        }
+
+        def Shader "TiledImage_1"
+        {
+            uniform token info:id = "ND_tiledimage_vector3"
+            float3 inputs:default
+            asset inputs:file = @Textures/Universal/water/stagnantWater_N.png@
+            string inputs:filtertype
+            float2 inputs:realworldimagesize
+            float2 inputs:realworldtilesize
+            float2 inputs:texcoord.connect = </Root/M_StagnantWater/Add.outputs:out>
+            float2 inputs:uvoffset.connect = None
+            float2 inputs:uvtiling.connect = </Root/M_StagnantWater/UV_Tiling.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-80.2717, 474.94006)
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 1538
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:realworldimagesize"]
+        }
+
+        def Shader "Remap"
+        {
+            uniform token info:id = "ND_remap_vector3FA"
+            float3 inputs:in.connect = </Root/M_StagnantWater/TiledImage_1.outputs:out>
+            float inputs:inhigh
+            float inputs:inlow
+            float inputs:outhigh
+            float inputs:outlow = -1
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (134.61958, 485.8334)
+            float2 ui:nodegraph:node:size = (94, 181)
+            int ui:nodegraph:node:stackingOrder = 923
+        }
+
+        def Shader "Multiply_3"
+        {
+            uniform token info:id = "ND_multiply_color3"
+            color3f inputs:in1.connect = </Root/M_StagnantWater/Water_Color.outputs:out>
+            color3f inputs:in2.connect = </Root/M_StagnantWater/Saturate.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1107.9493, -112.059814)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1633
+        }
+
+        def Shader "Saturate"
+        {
+            uniform token info:id = "ND_saturate_color3"
+            float inputs:amount = 0
+            color3f inputs:in.connect = </Root/M_StagnantWater/TiledImage_2.outputs:out>
+            color3f inputs:lumacoeffs
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (878.0654, -87.71399)
+            float2 ui:nodegraph:node:size = (138.5, 145)
+            int ui:nodegraph:node:stackingOrder = 1633
+        }
+
+        def Shader "Saturate_1"
+        {
+            uniform token info:id = "ND_saturate_color3"
+            float inputs:amount.connect = </Root/M_StagnantWater/Water_Saturation.outputs:out>
+            color3f inputs:in.connect = </Root/M_StagnantWater/Range.outputs:out>
+            color3f inputs:lumacoeffs
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1662.1376, -104.13074)
+            float2 ui:nodegraph:node:size = (138.5, 145)
+            int ui:nodegraph:node:stackingOrder = 1633
+        }
+
+        def Shader "Range"
+        {
+            uniform token info:id = "ND_range_color3FA"
+            bool inputs:doclamp
+            float inputs:gamma.connect = </Root/M_StagnantWater/Water_Brightness.outputs:out>
+            color3f inputs:in.connect = </Root/M_StagnantWater/Multiply_3.outputs:out>
+            float inputs:inhigh
+            float inputs:inlow
+            float inputs:outhigh
+            float inputs:outlow
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1392.1116, -150.5094)
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 1633
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow"]
+        }
+
+        def Shader "R_Intensity"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (899.44305, 207.59909)
+            float2 ui:nodegraph:node:size = (155.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1554
+        }
+
+        def Shader "Water_Brightness"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 1
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1155.1284, -14.030028)
+            float2 ui:nodegraph:node:size = (196, 53)
+            int ui:nodegraph:node:stackingOrder = 1633
+        }
+
+        def Shader "Water_Saturation"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 2
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1508.9316, 34.704712)
+            float2 ui:nodegraph:node:size = (193.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1633
+        }
+
+        def NodeGraph "slower"
+        {
+            float inputs:speed_multiplier = 0.03 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (67.5, 468.25)
+                        float2 sizeInSubgraph = (172.5, 53)
+                        int stackingOrderInSubgraph = 751
+                    }
+                }
+            )
+            float inputs:speed_multiplier.connect = </Root/M_StagnantWater.inputs:speed_multiplier>
+            float2 outputs:Combine2_1_out.connect = </Root/M_StagnantWater/slower/Combine2_1.outputs:out>
+            float2 ui:nodegraph:node:pos = (-695.955, 660.59924)
+            float2 ui:nodegraph:node:size = (130, 109)
+            int ui:nodegraph:node:stackingOrder = 923
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1044.5, 222.625)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (229.49524, 81)
+
+            def Shader "Convert_2"
+            {
+                uniform token info:id = "ND_convert_boolean_float"
+                bool inputs:in.connect = </Root/M_StagnantWater/slower/animate.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (272, 215.75)
+                float2 ui:nodegraph:node:size = (151, 53)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "UV_Offset"
+            {
+                uniform token info:id = "ND_constant_vector2"
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (272, 63.5)
+                float2 ui:nodegraph:node:size = (154, 53)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "Multiply_1"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/M_StagnantWater/slower/Convert_2.outputs:out>
+                float inputs:in2.connect = </Root/M_StagnantWater/slower/Multiply_2.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (479.75, 344.5)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "Subtract"
+            {
+                uniform token info:id = "ND_subtract_float"
+                float inputs:in1.connect = </Root/M_StagnantWater/slower/Multiply_1.outputs:out>
+                float inputs:in2.connect = </Root/M_StagnantWater/slower/Floor.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (641.25, 374.5)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "Multiply_2"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/M_StagnantWater/slower/Time.outputs:out>
+                float inputs:in2.connect = </Root/M_StagnantWater/slower.inputs:speed_multiplier>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (272, 385.25)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "animate"
+            {
+                uniform token info:id = "ND_constant_boolean"
+                bool inputs:value = 1
+                bool outputs:out
+                float2 ui:nodegraph:node:pos = (67.5, 215.75)
+                float2 ui:nodegraph:node:size = (135, 53)
+                int ui:nodegraph:node:stackingOrder = 747
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/M_StagnantWater/slower/Separate2.outputs:outy>
+                float inputs:in2.connect = </Root/M_StagnantWater/slower/Constant.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (641.25, 106.75)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "Constant"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 1
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (479.75, 240)
+                float2 ui:nodegraph:node:size = (141.5, 53)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "Floor"
+            {
+                uniform token info:id = "ND_floor_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (479.75, 442.5)
+                float2 ui:nodegraph:node:size = (118, 40)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "Separate2"
+            {
+                uniform token info:id = "ND_separate2_vector2"
+                float2 inputs:in.connect = </Root/M_StagnantWater/slower/UV_Offset.outputs:out>
+                float outputs:outx
+                float outputs:outy
+                float2 ui:nodegraph:node:pos = (479.75, 63.5)
+                float2 ui:nodegraph:node:size = (115, 127)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+
+            def Shader "Time"
+            {
+                uniform token info:id = "ND_time_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (67.5, 355.25)
+                float2 ui:nodegraph:node:size = (122.5, 53)
+                int ui:nodegraph:node:stackingOrder = 745
+            }
+
+            def Shader "Combine2_1"
+            {
+                uniform token info:id = "ND_combine2_vector2"
+                float inputs:in1.connect = </Root/M_StagnantWater/slower/Multiply.outputs:out>
+                float inputs:in2.connect = </Root/M_StagnantWater/slower/Subtract.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (810.5, 222.625)
+                float2 ui:nodegraph:node:size = (157, 53)
+                int ui:nodegraph:node:stackingOrder = 743
+            }
+        }
+
+        def Shader "Water_Color"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0.6621411, 0.954151, 1) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (964.978, -275.45166)
+            float2 ui:nodegraph:node:size = (163, 53)
+            int ui:nodegraph:node:stackingOrder = 1633
+        }
+
+        def Shader "UV_Tiling"
+        {
+            uniform token info:id = "ND_constant_vector2"
+            float2 inputs:value = (3, 3)
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-609.408, 469.77054)
+            float2 ui:nodegraph:node:size = (154, 53)
+            int ui:nodegraph:node:stackingOrder = 1518
+        }
+
+        def Shader "O_Intensity"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.5
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (893.9639, 373.78873)
+            float2 ui:nodegraph:node:size = (156, 53)
+            int ui:nodegraph:node:stackingOrder = 1551
+        }
+
+        def Shader "Add_2"
+        {
+            uniform token info:id = "ND_add_vector2"
+            float2 inputs:in1.connect = </Root/M_StagnantWater/Texcoord_2.outputs:out>
+            float2 inputs:in2.connect = </Root/M_StagnantWater/Multiply_4.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-378.68286, 240.39848)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 1517
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_vector2"
+            float2 inputs:in1.connect = </Root/M_StagnantWater/Combine2.outputs:out>
+            float2 inputs:in2.connect = </Root/M_StagnantWater/Combine2_1.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (317.40826, -30.423018)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Multiply_2"
+        {
+            uniform token info:id = "ND_multiply_vector2FA"
+            float2 inputs:in1.connect = </Root/M_StagnantWater/Constant.outputs:out>
+            float inputs:in2.connect = </Root/M_StagnantWater/Time.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-488.03992, 24.419909)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Separate3"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_StagnantWater/Noise.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-32.74365, -58.5407)
+            float2 ui:nodegraph:node:size = (115.5, 145)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Separate3_1"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_StagnantWater/Noise1.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-39.28088, 238.13109)
+            float2 ui:nodegraph:node:size = (127.5, 145)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Time"
+        {
+            uniform token info:id = "ND_time_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-616.18567, 22.991655)
+            float2 ui:nodegraph:node:size = (122.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Multiply_4"
+        {
+            uniform token info:id = "ND_multiply_vector2FA"
+            float2 inputs:in1.connect = </Root/M_StagnantWater/Constant_1.outputs:out>
+            float inputs:in2.connect = </Root/M_StagnantWater/Time_1.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-474.23828, 293.19012)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Constant"
+        {
+            uniform token info:id = "ND_constant_vector2"
+            float2 inputs:value = (0.01, 0.01)
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-624.8406, -52.360294)
+            float2 ui:nodegraph:node:size = (154, 53)
+            int ui:nodegraph:node:stackingOrder = 1545
+        }
+
+        def Shader "Add_1"
+        {
+            uniform token info:id = "ND_add_vector2"
+            float2 inputs:in1.connect = </Root/M_StagnantWater/Texcoord_1.outputs:out>
+            float2 inputs:in2.connect = </Root/M_StagnantWater/Multiply_2.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-387.24414, 2.9774652)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 1517
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+        }
+
+        def Shader "Constant_1"
+        {
+            uniform token info:id = "ND_constant_vector2"
+            float2 inputs:value = (0.02, 0.003)
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-623.34265, 260.4489)
+            float2 ui:nodegraph:node:size = (154, 53)
+            int ui:nodegraph:node:stackingOrder = 1546
+        }
+
+        def Shader "TiledImage_2"
+        {
+            uniform token info:id = "ND_tiledimage_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Universal/water/stagnantWater_BC.png@
+            string inputs:filtertype
+            float2 inputs:realworldimagesize
+            float2 inputs:realworldtilesize
+            float2 inputs:texcoord.connect = </Root/M_StagnantWater/Add.outputs:out>
+            float2 inputs:uvoffset
+            float2 inputs:uvtiling.connect = </Root/M_StagnantWater/UV_Tiling.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (668.65106, -34.691257)
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 1542
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:realworldtilesize"]
+        }
+
+        def Shader "Combine2_1"
+        {
+            uniform token info:id = "ND_combine2_vector2"
+            float inputs:in1.connect = </Root/M_StagnantWater/Separate3_1.outputs:outg>
+            float inputs:in2.connect = </Root/M_StagnantWater/Separate3_1.outputs:outb>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (153.06213, 282.13983)
+            float2 ui:nodegraph:node:size = (157, 53)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Texcoord_1"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            int inputs:index
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-621.8168, -130.8124)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1534
+        }
+
+        def Shader "Time_1"
+        {
+            uniform token info:id = "ND_time_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-594.5342, 367.93646)
+            float2 ui:nodegraph:node:size = (122.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Texcoord_2"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            int inputs:index
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-599.1229, 174.85033)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1543
+        }
+
+        def Shader "Noise"
+        {
+            uniform token info:id = "ND_tiledimage_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Universal/water/distortion copy.png@
+            string inputs:filtertype
+            float2 inputs:realworldimagesize
+            float2 inputs:realworldtilesize
+            float2 inputs:texcoord.connect = </Root/M_StagnantWater/Add_1.outputs:out>
+            float2 inputs:uvoffset
+            float2 inputs:uvtiling.connect = None
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-226.32715, -50.949635)
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 1541
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:realworldtilesize", "inputs:realworldimagesize", "inputs:texcoord"]
+        }
+
+        def Shader "Add"
+        {
+            uniform token info:id = "ND_add_vector2"
+            float2 inputs:in1.connect = </Root/M_StagnantWater/Texcoord.outputs:out>
+            float2 inputs:in2.connect = </Root/M_StagnantWater/Multiply.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (442.65582, -49.97124)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 1517
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+        }
+
+        def Shader "Combine2"
+        {
+            uniform token info:id = "ND_combine2_vector2"
+            float inputs:in1.connect = </Root/M_StagnantWater/Separate3.outputs:outr>
+            float inputs:in2.connect = </Root/M_StagnantWater/Separate3.outputs:outg>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (151.23846, -35.389385)
+            float2 ui:nodegraph:node:size = (144.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+
+        def Shader "Noise1"
+        {
+            uniform token info:id = "ND_tiledimage_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Universal/water/distortion copy.png@
+            string inputs:filtertype
+            float2 inputs:realworldimagesize
+            float2 inputs:realworldtilesize
+            float2 inputs:texcoord.connect = </Root/M_StagnantWater/Add_2.outputs:out>
+            float2 inputs:uvoffset
+            float2 inputs:uvtiling.connect = None
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-231.39563, 245.6309)
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 1533
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:realworldtilesize"]
+        }
+
+        def Shader "Texcoord"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (295.3011, -159.12296)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1517
+        }
+    }
+
+    def Cube "Cube" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/M_StagnantWater> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            prepend token outputs:surface.connect = </Root/Cube/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+    }
+}
+

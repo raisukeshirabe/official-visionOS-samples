@@ -1,0 +1,298 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Cube", "distortion"]
+    def Cube "Cube" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/distortion> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+
+        def Material "DefaultMaterial"
+        {
+            prepend token outputs:surface.connect = </Root/Cube/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+    }
+
+    def Material "distortion" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["TiledImage", "UnlitSurface", "Noise", "Separate3", "Combine2", "Texcoord", "Add", "Time", "Texcoord_1", "Constant", "Multiply_2", "Add_1", "Time_1", "Texcoord_2", "Multiply_3", "Add_2", "Constant_1", "Noise1", "Combine2_1", "Separate3_1", "Multiply"]
+        token outputs:mtlx:surface.connect = </Root/distortion/UnlitSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (198.0426, 181.79628)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 689
+
+        def Shader "TiledImage"
+        {
+            uniform token info:id = "ND_tiledimage_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Universal/water/movingWater_BC.png@
+            string inputs:filtertype
+            float2 inputs:realworldimagesize
+            float2 inputs:realworldtilesize
+            float2 inputs:texcoord.connect = </Root/distortion/Add.outputs:out>
+            float2 inputs:uvoffset
+            float2 inputs:uvtiling
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-333.02487, 121.02617)
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 760
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:realworldtilesize"]
+        }
+
+        def Shader "UnlitSurface"
+        {
+            uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+            bool inputs:applyPostProcessToneMap
+            color3f inputs:color.connect = </Root/distortion/TiledImage.outputs:out>
+            bool inputs:hasPremultipliedAlpha
+            float inputs:opacity
+            float inputs:opacityThreshold
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (-50.232445, 150.40636)
+            float2 ui:nodegraph:node:size = (194.5, 181)
+            int ui:nodegraph:node:stackingOrder = 689
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:applyPostProcessToneMap"]
+        }
+
+        def Shader "Separate3"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/distortion/Noise.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-1171.199, 99.37948)
+            float2 ui:nodegraph:node:size = (115.5, 145)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Combine2"
+        {
+            uniform token info:id = "ND_combine2_vector2"
+            float inputs:in1.connect = </Root/distortion/Separate3.outputs:outr>
+            float inputs:in2.connect = </Root/distortion/Separate3.outputs:outg>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-987.21686, 122.530785)
+            float2 ui:nodegraph:node:size = (144.5, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Texcoord"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-843.15424, -1.2027794)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Add"
+        {
+            uniform token info:id = "ND_add_vector2"
+            float2 inputs:in1.connect = </Root/distortion/Texcoord.outputs:out>
+            float2 inputs:in2.connect = </Root/distortion/Multiply.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-695.7995, 107.94894)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 760
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+        }
+
+        def Shader "Time"
+        {
+            uniform token info:id = "ND_time_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1754.641, 180.91183)
+            float2 ui:nodegraph:node:size = (122.5, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Texcoord_1"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            int inputs:index
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1760.2721, 27.107784)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Constant"
+        {
+            uniform token info:id = "ND_constant_vector2"
+            float2 inputs:value = (0.01, 0.01)
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1763.2959, 105.55988)
+            float2 ui:nodegraph:node:size = (154, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Multiply_2"
+        {
+            uniform token info:id = "ND_multiply_vector2FA"
+            prepend float2 inputs:in1.connect = </Root/distortion/Constant.outputs:out>
+            float inputs:in2.connect = </Root/distortion/Time.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1626.4952, 182.34009)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Add_1"
+        {
+            uniform token info:id = "ND_add_vector2"
+            float2 inputs:in1.connect = </Root/distortion/Texcoord_1.outputs:out>
+            float2 inputs:in2.connect = </Root/distortion/Multiply_2.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1525.6995, 160.89764)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 760
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+        }
+
+        def Shader "Time_1"
+        {
+            uniform token info:id = "ND_time_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1732.9895, 525.8566)
+            float2 ui:nodegraph:node:size = (122.5, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Texcoord_2"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            int inputs:index
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1737.5782, 332.7705)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Multiply_3"
+        {
+            uniform token info:id = "ND_multiply_vector2FA"
+            float2 inputs:in1.connect = </Root/distortion/Constant_1.outputs:out>
+            float inputs:in2.connect = </Root/distortion/Time_1.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1612.6936, 451.1103)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Add_2"
+        {
+            uniform token info:id = "ND_add_vector2"
+            float2 inputs:in1.connect = </Root/distortion/Texcoord_2.outputs:out>
+            float2 inputs:in2.connect = </Root/distortion/Multiply_3.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1517.1382, 398.31866)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 760
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+        }
+
+        def Shader "Constant_1"
+        {
+            uniform token info:id = "ND_constant_vector2"
+            float2 inputs:value = (0.022, 0.03)
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1761.798, 418.36908)
+            float2 ui:nodegraph:node:size = (154, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Combine2_1"
+        {
+            uniform token info:id = "ND_combine2_vector2"
+            float inputs:in1.connect = </Root/distortion/Separate3_1.outputs:outg>
+            float inputs:in2.connect = </Root/distortion/Separate3_1.outputs:outb>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-985.3932, 440.06)
+            float2 ui:nodegraph:node:size = (157, 53)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Separate3_1"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/distortion/Noise1.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-1177.7362, 396.05127)
+            float2 ui:nodegraph:node:size = (127.5, 145)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_vector2"
+            prepend float2 inputs:in1.connect = </Root/distortion/Combine2.outputs:out>
+            float2 inputs:in2.connect = </Root/distortion/Combine2_1.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-821.04706, 127.49716)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Noise"
+        {
+            uniform token info:id = "ND_tiledimage_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Universal/noise.png@
+            string inputs:filtertype
+            float2 inputs:realworldimagesize
+            float2 inputs:realworldtilesize
+            float2 inputs:texcoord.connect = </Root/distortion/Add_1.outputs:out>
+            float2 inputs:uvoffset
+            float2 inputs:uvtiling
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1364.7825, 106.97054)
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 760
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:realworldtilesize", "inputs:realworldimagesize"]
+        }
+
+        def Shader "Noise1"
+        {
+            uniform token info:id = "ND_tiledimage_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Universal/noise.png@
+            string inputs:filtertype
+            float2 inputs:realworldimagesize
+            float2 inputs:realworldtilesize
+            float2 inputs:texcoord.connect = </Root/distortion/Add_2.outputs:out>
+            float2 inputs:uvoffset
+            float2 inputs:uvtiling
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1369.851, 403.5511)
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 760
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:realworldtilesize"]
+        }
+    }
+}
+

@@ -1,0 +1,260 @@
+#usda 1.0
+(
+    customLayerData = {
+        string copyright = "©2023 Apple, Inc."
+        string license = """Copyright (C) <<YEAR>> Apple Inc. All Rights Reserved.
+
+IMPORTANT:  This Apple software is supplied to you by Apple
+Inc. (\"Apple\") in consideration of your agreement to the following
+terms, and your use, installation, modification or redistribution of
+this Apple software constitutes acceptance of these terms.  If you do
+not agree with these terms, please do not use, install, modify or
+redistribute this Apple software.
+
+In consideration of your agreement to abide by the following terms, and
+subject to these terms, Apple grants you a personal, non-exclusive
+license, under Apple's copyrights in this original Apple software (the
+\"Apple Software\"), to use, reproduce, modify and redistribute the Apple
+Software, with or without modifications, in source and/or binary forms;
+provided that if you redistribute the Apple Software in its entirety and
+without modifications, you must retain this notice and the following
+text and disclaimers in all such redistributions of the Apple Software.
+Neither the name, trademarks, service marks or logos of Apple Inc. may
+be used to endorse or promote products derived from the Apple Software
+without specific prior written permission from Apple.  Except as
+expressly stated in this notice, no other rights or licenses, express or
+implied, are granted by Apple herein, including but not limited to any
+patent rights that may be infringed by your derivative works or by other
+works in which the Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an \"AS IS\" basis.  APPLE
+MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+"""
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["solidSpheres", "out_connection_vector"]
+    def "solidSpheres" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @solidSpheres.usdz@
+    )
+    {
+        reorder nameChildren = ["solidSpheres", "Looks", "connect_in", "M_solidSpheres", "connect_out", "in_connection_vector", "out_connection_vector"]
+        rel material:binding = </Root/solidSpheres/M_solidSpheres/M_SolidSpheres> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "connect_in" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "M_solidSpheres" (
+            active = true
+            references = @M_SolidSpheres.usda@
+        )
+        {
+            reorder nameChildren = ["M_SolidSpheres", "connect_in"]
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "M_SolidSpheres"
+            {
+                float inputs:speed_multiplier (
+                    customData = {
+                        dictionary realitykit = {
+                            float2 positionInSubgraph = (-1314.3931, -100.37727)
+                            float2 sizeInSubgraph = (172.5, 53)
+                            int stackingOrderInSubgraph = 1427
+                        }
+                    }
+                )
+                float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+                over "Emmissive_Intensity"
+                {
+                    float2 ui:nodegraph:node:size = (212, 53)
+                }
+
+                over "Color1"
+                {
+                    float2 ui:nodegraph:node:size = (151, 53)
+                }
+
+                over "Color2"
+                {
+                    float2 ui:nodegraph:node:size = (151, 53)
+                }
+
+                over "Color_Blend"
+                {
+                    float2 ui:nodegraph:node:size = (161, 53)
+                }
+
+                over "Ramplr"
+                {
+                    float2 ui:nodegraph:node:size = (148.5, 145)
+                }
+
+                over "Overlay"
+                {
+                    float2 ui:nodegraph:node:size = (109, 145)
+                }
+
+                over "Color_Blend2"
+                {
+                    float2 ui:nodegraph:node:size = (136, 145)
+                }
+
+                over "Clamp_1"
+                {
+                    float2 ui:nodegraph:node:size = (103, 145)
+                }
+
+                over "Separate3"
+                {
+                    float2 ui:nodegraph:node:size = (115.5, 145)
+                }
+
+                over "MaterialXPreviewSurface"
+                {
+                    float2 ui:nodegraph:node:size = (207.5, 307)
+                }
+
+                over "Contrast"
+                {
+                    float2 ui:nodegraph:node:size = (106, 145)
+                }
+
+                over "Subtract"
+                {
+                    float2 ui:nodegraph:node:size = (61.5, 36)
+                }
+
+                over "Floor"
+                {
+                    float2 ui:nodegraph:node:size = (118, 40)
+                }
+
+                over "Multiply"
+                {
+                    float2 ui:nodegraph:node:size = (60, 36)
+                }
+
+                over "Time"
+                {
+                    float2 ui:nodegraph:node:size = (122.5, 53)
+                }
+
+                over "Clamp"
+                {
+                    float2 ui:nodegraph:node:size = (92, 145)
+                }
+
+                over "Separate2"
+                {
+                    float2 ui:nodegraph:node:size = (115, 127)
+                }
+
+                over "Combine2"
+                {
+                    float2 ui:nodegraph:node:size = (144.5, 53)
+                }
+
+                over "Texcoord"
+                {
+                    float2 ui:nodegraph:node:size = (180.5, 53)
+                }
+
+                over "Ramplr_1"
+                {
+                    float2 ui:nodegraph:node:size = (148.5, 145)
+                }
+
+                over "Add"
+                {
+                    float2 ui:nodegraph:node:size = (61.5, 36.5)
+                }
+
+                over "Contrast_1"
+                {
+                    float2 ui:nodegraph:node:size = (118.5, 145)
+                }
+
+                over "Contrast_2"
+                {
+                    float2 ui:nodegraph:node:size = (121.5, 145)
+                }
+            }
+        }
+
+        def Xform "connect_out" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Xform "in_connection_vector" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, -1.788295)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Xform "out_connection_vector" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, 2.204223)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        over "solidSpheres" (
+            active = false
+        )
+        {
+            float3 xformOp:translate = (0, 1.0680071, 0.08972473)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+}
+

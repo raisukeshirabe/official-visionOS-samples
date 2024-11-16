@@ -1,0 +1,215 @@
+#usda 1.0
+(
+    customLayerData = {
+        string copyright = "©2023 Apple, Inc."
+        string license = """Copyright (C) <<YEAR>> Apple Inc. All Rights Reserved.
+
+IMPORTANT:  This Apple software is supplied to you by Apple
+Inc. (\"Apple\") in consideration of your agreement to the following
+terms, and your use, installation, modification or redistribution of
+this Apple software constitutes acceptance of these terms.  If you do
+not agree with these terms, please do not use, install, modify or
+redistribute this Apple software.
+
+In consideration of your agreement to abide by the following terms, and
+subject to these terms, Apple grants you a personal, non-exclusive
+license, under Apple's copyrights in this original Apple software (the
+\"Apple Software\"), to use, reproduce, modify and redistribute the Apple
+Software, with or without modifications, in source and/or binary forms;
+provided that if you redistribute the Apple Software in its entirety and
+without modifications, you must retain this notice and the following
+text and disclaimers in all such redistributions of the Apple Software.
+Neither the name, trademarks, service marks or logos of Apple Inc. may
+be used to endorse or promote products derived from the Apple Software
+without specific prior written permission from Apple.  Except as
+expressly stated in this notice, no other rights or licenses, express or
+implied, are granted by Apple herein, including but not limited to any
+patent rights that may be infringed by your derivative works or by other
+works in which the Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an \"AS IS\" basis.  APPLE
+MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+"""
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+}
+
+def Material "M_Glow" (
+    active = true
+)
+{
+    bool inputs:visibility = 1 (
+        customData = {
+            dictionary realitykit = {
+                float2 positionInSubgraph = (-1060.7379, 237.60919)
+                float2 sizeInSubgraph = (119.5, 53)
+                int stackingOrderInSubgraph = 430
+            }
+        }
+    )
+    prepend token outputs:mtlx:surface.connect = </M_Glow/MaterialXPreviewSurface.outputs:out>
+    token outputs:realitykit:vertex
+    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (893.40485, 141.06734)
+    float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+    int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 493
+
+    def Shader "MaterialXPreviewSurface" (
+        active = true
+    )
+    {
+        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+        float inputs:clearcoat
+        float inputs:clearcoatRoughness
+        color3f inputs:diffuseColor.connect = </M_Glow/Mix_4.outputs:out>
+        color3f inputs:emissiveColor.connect = </M_Glow/Mix_1.outputs:out>
+        float inputs:ior
+        float inputs:metallic
+        float3 inputs:normal
+        float inputs:occlusion = 0
+        float inputs:opacity.connect = </M_Glow/Mix.outputs:out>
+        float inputs:opacityThreshold
+        float inputs:roughness = 0
+        float inputs:roughness.connect = </M_Glow/Mix_3.outputs:out>
+        token outputs:out
+        float2 ui:nodegraph:node:pos = (638.90485, 141.06734)
+        float2 ui:nodegraph:node:size = (207.5, 307)
+        int ui:nodegraph:node:stackingOrder = 493
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+    }
+
+    def Shader "Separate3"
+    {
+        uniform token info:id = "ND_separate3_color3"
+        color3f inputs:in.connect = </M_Glow/Constant_1.outputs:out>
+        float outputs:outb
+        float outputs:outg
+        float outputs:outr
+        float2 ui:nodegraph:node:pos = (-450.98138, 32.57874)
+        float2 ui:nodegraph:node:size = (115.5, 145)
+        int ui:nodegraph:node:stackingOrder = 429
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:outg"]
+    }
+
+    def Shader "Constant_1"
+    {
+        uniform token info:id = "ND_constant_color3"
+        color3f inputs:value
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (-751.3695, 112.643196)
+        float2 ui:nodegraph:node:size = (155, 53)
+        int ui:nodegraph:node:stackingOrder = 446
+    }
+
+    def Shader "Mix_1"
+    {
+        uniform token info:id = "ND_mix_color3"
+        color3f inputs:bg.connect = </M_Glow/Constant_1.outputs:out>
+        color3f inputs:fg.connect = </M_Glow/SmoothStep.outputs:out>
+        float inputs:mix.connect = </M_Glow/Convert.outputs:out>
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (125.25293, 319.88165)
+        float2 ui:nodegraph:node:size = (109, 145)
+        int ui:nodegraph:node:stackingOrder = 435
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:bg"]
+    }
+
+    def Shader "Mix"
+    {
+        uniform token info:id = "ND_mix_float"
+        float inputs:bg.connect = </M_Glow/Separate3.outputs:outr>
+        float inputs:fg.connect = </M_Glow/Constant_2.outputs:out>
+        float inputs:mix.connect = </M_Glow/Convert.outputs:out>
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (117.49468, -13.877477)
+        float2 ui:nodegraph:node:size = (109, 145)
+        int ui:nodegraph:node:stackingOrder = 440
+    }
+
+    def Shader "Convert"
+    {
+        uniform token info:id = "ND_convert_boolean_float"
+        bool inputs:in.connect = </M_Glow.inputs:visibility>
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-895.6854, 241.4913)
+        float2 ui:nodegraph:node:size = (135.5, 40)
+        int ui:nodegraph:node:stackingOrder = 386
+    }
+
+    def Shader "Constant"
+    {
+        uniform token info:id = "ND_constant_color3"
+        color3f inputs:value = (0.33506405, 1, 0.9676728) (
+            colorSpace = "Input - Texture - sRGB - Display P3"
+        )
+        color3f inputs:value.connect = None
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (-235.79205, 122.57102)
+        float2 ui:nodegraph:node:size = (151, 53)
+        int ui:nodegraph:node:stackingOrder = 495
+    }
+
+    def Shader "Constant_2"
+    {
+        uniform token info:id = "ND_constant_float"
+        float inputs:value = 0.1
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-156.30006, -81.42818)
+        float2 ui:nodegraph:node:size = (157.5, 53)
+        int ui:nodegraph:node:stackingOrder = 447
+    }
+
+    def Shader "Mix_3"
+    {
+        uniform token info:id = "ND_mix_float"
+        float inputs:bg.connect = </M_Glow/Separate3.outputs:outr>
+        float inputs:fg = 0.3
+        float inputs:mix.connect = </M_Glow/Convert.outputs:out>
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (227.54611, 131.7468)
+        float2 ui:nodegraph:node:size = (109, 145)
+        int ui:nodegraph:node:stackingOrder = 454
+    }
+
+    def Shader "Mix_4"
+    {
+        uniform token info:id = "ND_mix_color3"
+        color3f inputs:bg.connect = </M_Glow/Constant_1.outputs:out>
+        color3f inputs:fg.connect = </M_Glow/Constant.outputs:out>
+        float inputs:mix.connect = </M_Glow/Convert.outputs:out>
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (232.5223, -192.45177)
+        float2 ui:nodegraph:node:size = (109, 145)
+        int ui:nodegraph:node:stackingOrder = 460
+    }
+
+    def Shader "SmoothStep"
+    {
+        uniform token info:id = "ND_smoothstep_color3FA"
+        float inputs:high = 3
+        prepend color3f inputs:in.connect = </M_Glow/Constant.outputs:out>
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (-21.03775, 150.4188)
+        float2 ui:nodegraph:node:size = (127.5, 145)
+        int ui:nodegraph:node:stackingOrder = 497
+    }
+}
+

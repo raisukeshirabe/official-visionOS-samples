@@ -1,0 +1,93 @@
+#usda 1.0
+
+def RealityKitComponents "Components"
+{
+    def RealityKitCustomComponent "SwiftSplashTrackPieces_BillboardComponent" (
+        customData = {
+            token[] attributeOrder = []
+            string sourceTypeName = "SwiftSplashTrackPieces.BillboardComponent"
+        }
+    )
+    {
+        token info:id = "SwiftSplashTrackPieces.BillboardComponent"
+    }
+
+    def RealityKitCustomComponent "SwiftSplashTrackPieces_ConnectableComponent" (
+        customData = {
+            token[] attributeOrder = []
+            string sourceTypeName = "SwiftSplashTrackPieces.ConnectableComponent"
+        }
+    )
+    {
+        token info:id = "SwiftSplashTrackPieces.ConnectableComponent"
+    }
+
+    def RealityKitCustomComponent "SwiftSplashTrackPieces_EditUILocationMarkerComponent" (
+        customData = {
+            token[] attributeOrder = []
+            string sourceTypeName = "SwiftSplashTrackPieces.EditUILocationMarkerComponent"
+        }
+    )
+    {
+        token info:id = "SwiftSplashTrackPieces.EditUILocationMarkerComponent"
+    }
+
+    def RealityKitCustomComponent "SwiftSplashTrackPieces_GlowComponent" (
+        customData = {
+            token[] attributeOrder = ["isTopPiece"]
+            string sourceTypeName = "SwiftSplashTrackPieces.GlowComponent"
+        }
+    )
+    {
+        token info:id = "SwiftSplashTrackPieces.GlowComponent"
+        bool isTopPiece = 0
+    }
+
+    def RealityKitCustomComponent "SwiftSplashTrackPieces_IdleAnimationComponent" (
+        customData = {
+            token[] attributeOrder = ["playAtEndInsteadOfBeginning"]
+            string sourceTypeName = "SwiftSplashTrackPieces.IdleAnimationComponent"
+        }
+    )
+    {
+        token info:id = "SwiftSplashTrackPieces.IdleAnimationComponent"
+        bool playAtEndInsteadOfBeginning = 0
+    }
+
+    def RealityKitCustomComponent "SwiftSplashTrackPieces_PlaceStartPieceUIMarkerComponent" (
+        customData = {
+            token[] attributeOrder = []
+            string sourceTypeName = "SwiftSplashTrackPieces.PlaceStartPieceUIMarkerComponent"
+        }
+    )
+    {
+        token info:id = "SwiftSplashTrackPieces.PlaceStartPieceUIMarkerComponent"
+    }
+
+    def RealityKitCustomComponent "SwiftSplashTrackPieces_RideAnimationComponent" (
+        customData = {
+            token[] attributeOrder = ["isPersistent", "duration", "alwaysAnimates", "timecodeWhenNotPlaying"]
+            string sourceTypeName = "SwiftSplashTrackPieces.RideAnimationComponent"
+        }
+    )
+    {
+        bool alwaysAnimates = 0
+        double duration = 1
+        token info:id = "SwiftSplashTrackPieces.RideAnimationComponent"
+        bool isPersistent = 1
+        double timecodeWhenNotPlaying = 0
+    }
+
+    def RealityKitCustomComponent "SwiftSplashTrackPieces_RideWaterComponent" (
+        customData = {
+            token[] attributeOrder = ["fillLevel", "duration"]
+            string sourceTypeName = "SwiftSplashTrackPieces.RideWaterComponent"
+        }
+    )
+    {
+        float duration = 1
+        float fillLevel = 1
+        token info:id = "SwiftSplashTrackPieces.RideWaterComponent"
+    }
+}
+
