@@ -1,0 +1,33 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Material"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Material "Material"
+{
+    prepend token outputs:mtlx:surface.connect = </Material/PreviewSurface.outputs:out>
+    token outputs:realitykit:vertex
+    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (299.25, 99.5)
+    float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+    def Shader "PreviewSurface"
+    {
+        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+        color3f inputs:diffuseColor = (0.24196601, 0.24196601, 0.24196601) (
+            colorSpace = "srgb_displayp3"
+        )
+        float inputs:metallic = 1
+        float inputs:roughness = 0.56
+        token outputs:out
+        float2 ui:nodegraph:node:pos = (74.25, 99.5)
+        float2 ui:nodegraph:node:size = (148.5, 199)
+        int ui:nodegraph:node:stackingOrder = 1
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:diffuseColor"]
+    }
+}
+

@@ -1,0 +1,149 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Material"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Material "Material"
+{
+    reorder nameChildren = ["UnlitSurface", "CuteBot_04"]
+    color3f inputs:color = (0.26671284, 0.66355693, 0.7019169) (
+        colorSpace = "srgb_displayp3"
+        customData = {
+            dictionary realitykit = {
+                float2 positionInSubgraph = (-346.20312, -116.74609)
+                float2 sizeInSubgraph = (133, 53)
+                int stackingOrderInSubgraph = 175
+            }
+        }
+    )
+    float inputs:opacity = 1 (
+        customData = {
+            dictionary realitykit = {
+                float2 positionInSubgraph = (-389.8496, 163.96875)
+                float2 sizeInSubgraph = (114, 53)
+            }
+        }
+    )
+    float inputs:power = 1 (
+        customData = {
+            dictionary realitykit = {
+                float2 positionInSubgraph = (-582.3965, 130.64062)
+                float2 sizeInSubgraph = (106.5, 53)
+                int stackingOrderInSubgraph = 171
+            }
+        }
+    )
+    token outputs:mtlx:surface.connect = </Material/UnlitSurface.outputs:out>
+    token outputs:realitykit:vertex
+    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (299.25, 99.5)
+    float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+    def Shader "UnlitSurface"
+    {
+        uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+        bool inputs:applyPostProcessToneMap
+        color3f inputs:color.connect = </Material.inputs:color>
+        bool inputs:hasPremultipliedAlpha
+        float inputs:opacity.connect = </Material/Multiply.outputs:out>
+        float inputs:opacityThreshold
+        token outputs:out
+        float2 ui:nodegraph:node:pos = (-5.7539062, 50.570312)
+        float2 ui:nodegraph:node:size = (194.5, 181)
+        int ui:nodegraph:node:stackingOrder = 172
+    }
+
+    def Shader "ViewDirection"
+    {
+        uniform token info:id = "ND_realitykit_viewdirection_vector3"
+        float3 outputs:out
+        float2 ui:nodegraph:node:pos = (-1188.5371, -111.20703)
+        float2 ui:nodegraph:node:size = (210, 53)
+        int ui:nodegraph:node:stackingOrder = 171
+    }
+
+    def Shader "Normal"
+    {
+        uniform token info:id = "ND_normal_vector3"
+        float3 outputs:out
+        float2 ui:nodegraph:node:pos = (-1152.5918, -204.6875)
+        float2 ui:nodegraph:node:size = (128.5, 40)
+        int ui:nodegraph:node:stackingOrder = 174
+    }
+
+    def Shader "DotProduct"
+    {
+        uniform token info:id = "ND_dotproduct_vector3"
+        float3 inputs:in1.connect = </Material/Normal.outputs:out>
+        float3 inputs:in2.connect = </Material/ViewDirection.outputs:out>
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-937.2715, -151.11719)
+        float2 ui:nodegraph:node:size = (153.5, 53)
+        int ui:nodegraph:node:stackingOrder = 173
+    }
+
+    def Shader "Clamp"
+    {
+        uniform token info:id = "ND_clamp_float"
+        float inputs:high
+        float inputs:in.connect = </Material/DotProduct.outputs:out>
+        float inputs:low
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-758.30664, -58.867188)
+        float2 ui:nodegraph:node:size = (91, 145)
+        int ui:nodegraph:node:stackingOrder = 171
+    }
+
+    def Shader "Oneminus"
+    {
+        uniform token info:id = "ND_realitykit_oneminus_float"
+        float inputs:in.connect = </Material/Clamp.outputs:out>
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-580.02386, -16.4375)
+        float2 ui:nodegraph:node:size = (158, 109)
+        int ui:nodegraph:node:stackingOrder = 171
+    }
+
+    def Shader "Power"
+    {
+        uniform token info:id = "ND_power_float"
+        float inputs:in1.connect = </Material/Oneminus.outputs:out>
+        float inputs:in2 = 2
+        float inputs:in2.connect = </Material.inputs:power>
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-350.80664, 35.183594)
+        float2 ui:nodegraph:node:size = (123.5, 40)
+        int ui:nodegraph:node:stackingOrder = 171
+    }
+
+    def Shader "Multiply"
+    {
+        uniform token info:id = "ND_multiply_float"
+        float inputs:in1.connect = </Material/Power.outputs:out>
+        float inputs:in2.connect = </Material.inputs:opacity>
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-228.9707, 97.13281)
+        float2 ui:nodegraph:node:size = (60, 36)
+        int ui:nodegraph:node:stackingOrder = 171
+    }
+}
+
+def "CuteBot_04" (
+    active = true
+    prepend apiSchemas = ["MaterialBindingAPI"]
+    references = @CuteBot_04.usdz@
+)
+{
+    rel material:binding = </Material> (
+        bindMaterialAs = "strongerThanDescendants"
+    )
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+}
+

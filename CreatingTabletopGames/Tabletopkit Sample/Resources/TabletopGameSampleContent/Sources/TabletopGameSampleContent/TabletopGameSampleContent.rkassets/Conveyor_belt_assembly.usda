@@ -1,0 +1,91 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Conveyor_Belt", "conveyor_1_mat", "conveyor_2_mat", "conveyor_3_mat", "conveyor_decal_mat"]
+    def "conveyor_1_mat" (
+        active = true
+        references = @conveyor_1_mat.usda@
+    )
+    {
+    }
+
+    def "conveyor_2_mat" (
+        active = true
+        references = @conveyor_2_mat.usda@
+    )
+    {
+    }
+
+    def "conveyor_3_mat" (
+        active = true
+        references = @conveyor_3_mat.usda@
+    )
+    {
+    }
+
+    def "conveyor_decal_mat" (
+        active = true
+        references = @conveyor_decal_mat.usda@
+    )
+    {
+    }
+
+    def "Conveyor_Belt" (
+        active = true
+        references = @Conveyor_Belt.usdc@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Conveyor_BeltSG" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/conveyor_1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Conveyor_BeltSG1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/conveyor_1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Conveyor_BeltSG2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/conveyor_3_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Conveyor_BeltSG3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/conveyor_decal_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+    }
+}
+

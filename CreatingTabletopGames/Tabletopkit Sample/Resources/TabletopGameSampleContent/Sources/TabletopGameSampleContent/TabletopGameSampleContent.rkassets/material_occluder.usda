@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Material_occluder"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Material "Material_occluder"
+{
+    token outputs:mtlx:surface.connect = </Material_occluder/Occlusion.outputs:out>
+    token outputs:realitykit:vertex
+    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (324.23828, 101.89844)
+    float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+    int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 3
+
+    def Shader "Occlusion"
+    {
+        uniform token info:id = "ND_realitykit_occlusion_surfaceshader"
+        token outputs:out
+        float2 ui:nodegraph:node:pos = (-11.8046875, 107.80859)
+        float2 ui:nodegraph:node:size = (194.5, 81)
+        int ui:nodegraph:node:stackingOrder = 1
+    }
+}
+

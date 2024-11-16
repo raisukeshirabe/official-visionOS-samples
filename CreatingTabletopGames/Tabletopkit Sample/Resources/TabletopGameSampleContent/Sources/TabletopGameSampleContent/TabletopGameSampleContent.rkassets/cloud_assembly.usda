@@ -1,0 +1,49 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "cloud_plane" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        prepend references = @cloud_plane.usda@
+    )
+    {
+        rel material:binding = </Root/cloud_mat> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "cloud_mat" (
+        active = true
+        prepend references = @cloud_mat.usda@
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+        }
+
+        over "PreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+        }
+    }
+}
+

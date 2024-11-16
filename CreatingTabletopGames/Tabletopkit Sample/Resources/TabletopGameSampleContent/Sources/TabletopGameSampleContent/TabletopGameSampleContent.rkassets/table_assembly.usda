@@ -1,0 +1,81 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    reorder nameChildren = ["table_rectangle", "table_mat"]
+    def "table_mat" (
+        active = true
+        references = @table_mat.usda@
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Image"
+        {
+            asset inputs:file (
+                colorSpace = "srgb_displayp3"
+            )
+            float2 ui:nodegraph:node:pos = (-540.9099, -156.28842)
+            float2 ui:nodegraph:node:size = (250, 319)
+            int ui:nodegraph:node:stackingOrder = 39
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:pos = (-827.5047, -47.987347)
+            float2 ui:nodegraph:node:size = (250, 319)
+            int ui:nodegraph:node:stackingOrder = 40
+        }
+
+        over "Image_2" (
+            references = None
+        )
+        {
+            float2 ui:nodegraph:node:pos = (-1378.8448, 28.30619)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 93
+        }
+
+        over "PreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (159.5, 307)
+            int ui:nodegraph:node:stackingOrder = 43
+        }
+
+        over "Texcoord"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 31
+        }
+
+        over "Image_3"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+            int ui:nodegraph:node:stackingOrder = 42
+        }
+    }
+
+    def "table_rectangle" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @table_rectangle.usdc@
+    )
+    {
+        rel material:binding = </Root/table_mat> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

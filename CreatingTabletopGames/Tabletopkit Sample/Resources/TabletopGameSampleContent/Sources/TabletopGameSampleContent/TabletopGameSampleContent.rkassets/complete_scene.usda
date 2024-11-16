@@ -1,0 +1,1361 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    float3 xformOp:scale = (0.01, 0.01, 0.01)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def "CuteBot_04" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.6632252, 0)
+        }
+        references = @CuteBot_04.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.9455186, 0, -0.32556817, 0)
+        float3 xformOp:scale = (0.65, 0.65, 0.65)
+        float3 xformOp:translate = (28.099009, -0.35940933, -28.04561)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "CutoutOcc" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707964, 0, 0)
+        }
+        references = @CutoutOcc.usdz@
+    )
+    {
+        rel material:binding = </Root/material_occluder> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (0, -0.8995056, 0.0000015497208)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "material_occluder" (
+        active = true
+        prepend references = @material_occluder.usda@
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Occlusion"
+        {
+            float2 ui:nodegraph:node:size = (194.5, 81)
+        }
+    }
+
+    def RealityKitAudioFile "dieSoundLong_mp3"
+    {
+        uniform asset file = @dieSoundLong.mp3@
+    }
+
+    def RealityKitAudioFile "dieSoundShort_mp3"
+    {
+        uniform asset file = @dieSoundShort.mp3@
+    }
+
+    def RealityKitAudioFile "pickUpCard_mp3"
+    {
+        uniform asset file = @pickUpCard.mp3@
+    }
+
+    def Xform "Transform" (
+        active = true
+    )
+    {
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "SpatialAudio"
+        {
+            uniform token info:id = "RealityKit.SpatialAudio"
+        }
+    }
+
+    def "Conveyor_belt_assembly" (
+        active = true
+        prepend references = @Conveyor_belt_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "board_assembly" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.5707963, 0)
+        }
+        references = @board_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, -0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "gantry_assembly" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.5707963, 0)
+        }
+        references = @gantry_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, -0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "table_assembly" (
+        active = true
+        references = @table_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "dice_and_audio" (
+        active = true
+        references = @dice_and_audio.usda@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (-40.899376, 0.6850233, 22.145382)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "cutebot_4_bits_assembly_1" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.6632252, 0)
+        }
+        references = @cutebot_4_bits_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.9455186, 0, -0.32556817, 0)
+        float3 xformOp:scale = (0.65, 0.6499999, 0.65)
+        float3 xformOp:translate = (28.09901, -0.35941, -28.04561)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "CuteBot_04_extrabits"
+        {
+            over "Looks"
+            {
+                over "usdPreviewSurface1SG"
+                {
+                    token outputs:surface.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/usdPreviewSurface1.outputs:surface>
+
+                    over "usdPreviewSurface1"
+                    {
+                        color3f inputs:diffuseColor.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/Mat_CuteBot_04_aiss_mat_Base_color_1.outputs:rgb>
+                        float inputs:metallic.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/Mat_CuteBot_04_aiss_mat_Metallic_1.outputs:r>
+                        normal3f inputs:normal.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/Mat_CuteBot_04_aiss_mat_Normal_OpenGL_1.outputs:rgb>
+                        float inputs:occlusion.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/Mat_CuteBot_04_aiss_mat_Mixed_AO_1.outputs:r>
+                        float inputs:roughness.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/Mat_CuteBot_04_aiss_mat_Roughness_1.outputs:r>
+                    }
+
+                    over "Mat_CuteBot_04_aiss_mat_Mixed_AO_1"
+                    {
+                        float2 inputs:st.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/place2dTexture1.outputs:result>
+                    }
+
+                    over "place2dTexture1"
+                    {
+                        string inputs:varname.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG.inputs:Mat_CuteBot_04_aiss_mat_Mixed_AO_1:varname>
+                    }
+
+                    over "Mat_CuteBot_04_aiss_mat_Normal_OpenGL_1"
+                    {
+                        float2 inputs:st.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/place2dTexture2.outputs:result>
+                    }
+
+                    over "place2dTexture2"
+                    {
+                        string inputs:varname.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG.inputs:Mat_CuteBot_04_aiss_mat_Normal_OpenGL_1:varname>
+                    }
+
+                    over "Mat_CuteBot_04_aiss_mat_Roughness_1"
+                    {
+                        float2 inputs:st.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/place2dTexture5.outputs:result>
+                    }
+
+                    over "place2dTexture5"
+                    {
+                        string inputs:varname.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG.inputs:Mat_CuteBot_04_aiss_mat_Roughness_1:varname>
+                    }
+
+                    over "Mat_CuteBot_04_aiss_mat_Base_color_1"
+                    {
+                        float2 inputs:st.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/place2dTexture7.outputs:result>
+                    }
+
+                    over "place2dTexture7"
+                    {
+                        string inputs:varname.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG.inputs:Mat_CuteBot_04_aiss_mat_Base_color_1:varname>
+                    }
+
+                    over "Mat_CuteBot_04_aiss_mat_Metallic_1"
+                    {
+                        float2 inputs:st.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG/place2dTexture6.outputs:result>
+                    }
+
+                    over "place2dTexture6"
+                    {
+                        string inputs:varname.connect = </Root/cutebot_4_bits_assembly_1/CuteBot_04_extrabits/Looks/usdPreviewSurface1SG.inputs:Mat_CuteBot_04_aiss_mat_Metallic_1:varname>
+                    }
+                }
+            }
+        }
+
+        over "fresnel_ghost_mat"
+        {
+            color3f inputs:color (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-346.20312, -116.74609)
+                        float2 sizeInSubgraph = (133, 53)
+                        int stackingOrderInSubgraph = 175
+                    }
+                }
+            )
+            float inputs:opacity (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-389.8496, 163.96875)
+                        float2 sizeInSubgraph = (114, 53)
+                    }
+                }
+            )
+            float inputs:power (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-582.3965, 130.64062)
+                        float2 sizeInSubgraph = (106.5, 53)
+                        int stackingOrderInSubgraph = 171
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat/UnlitSurface.outputs:out>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat.inputs:color>
+                float inputs:opacity.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat/Multiply.outputs:out>
+                float2 ui:nodegraph:node:size = (194.5, 181)
+            }
+
+            over "DotProduct"
+            {
+                float3 inputs:in1.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat/Normal.outputs:out>
+                float3 inputs:in2.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat/ViewDirection.outputs:out>
+                float2 ui:nodegraph:node:size = (153.5, 53)
+            }
+
+            over "Clamp"
+            {
+                float inputs:in.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat/DotProduct.outputs:out>
+                float2 ui:nodegraph:node:size = (91, 145)
+            }
+
+            over "Oneminus"
+            {
+                float inputs:in.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat/Clamp.outputs:out>
+                float2 ui:nodegraph:node:size = (158, 109)
+            }
+
+            over "Power"
+            {
+                float inputs:in1.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat/Oneminus.outputs:out>
+                float inputs:in2.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat.inputs:power>
+                float2 ui:nodegraph:node:size = (123.5, 40)
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat/Power.outputs:out>
+                float inputs:in2.connect = </Root/cutebot_4_bits_assembly_1/fresnel_ghost_mat.inputs:opacity>
+                float2 ui:nodegraph:node:size = (60, 36)
+            }
+
+            over "ViewDirection"
+            {
+                float2 ui:nodegraph:node:size = (210, 53)
+            }
+
+            over "Normal"
+            {
+                float2 ui:nodegraph:node:size = (128.5, 40)
+            }
+        }
+    }
+
+    def "cloud_assembly_2" (
+        active = true
+        prepend references = @cloud_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (5, 5, 5)
+        float3 xformOp:translate = (0, -17.16045, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_2/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_2/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_2/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_2/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_2/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_2/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def "cloud_assembly_3" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.5707963, 0)
+        }
+        prepend references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.7043675, 0, -0.70983547, 0)
+        float3 xformOp:scale = (5.237973, 5.237973, 5.237973)
+        float3 xformOp:translate = (-1.3854942, -24.19206, -2.6899765)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_3/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_3/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_3/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_3/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_3/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_3/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def "cloud_assembly_4" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -2.0352957, 0)
+        }
+        prepend references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.5253687, 0, -0.8508747, 0)
+        float3 xformOp:scale = (5, 5, 5)
+        float3 xformOp:translate = (-1.0430813e-7, -29.591461, 0.000008404255)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_4/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_4/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_4/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_4/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_4/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_4/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def "cloud_assembly_5" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -4.811158, 0)
+        }
+        prepend references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.74115074, 0, 0.6713386, 0)
+        float3 xformOp:scale = (5.237973, 5.237973, 5.237973)
+        float3 xformOp:translate = (-1.3854942, -34.8889, -2.6899765)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_5/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_5/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_5/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_5/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_5/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_5/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_5/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_5/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_5/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_5/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_5/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_5/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_5/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_5/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_5/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_5/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def "cloud_assembly_6" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -6.9986415, 0)
+        }
+        references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.9366946, 0, -0.35014725, 0)
+        float3 xformOp:scale = (5.237973, 5.237973, 5.237973)
+        float3 xformOp:translate = (-1.3854942, -37.827858, -2.6899765)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_6/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_6/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_6/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_6/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_6/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_6/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_6/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_6/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_6/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_6/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_6/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_6/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_6/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_6/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_6/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_6/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def Xform "PointLight" (
+        references = None
+    )
+    {
+        float3 xformOp:translate = (0, -24.644892, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "PointLight"
+        {
+            float attenuationRadius = 30
+            float3 color = (0, 1, 0.6562383)
+            token info:id = "RealityKit.PointLight"
+            float intensity = 2694
+        }
+    }
+
+    def "player_pawn_red_assembly" (
+        active = true
+        references = @player_pawn_red_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (-22.735336, 5.7286167, 5.304899)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "card_arm_01_assembly" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.5707963, 0)
+        }
+        references = @card_arm_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.7083798, 0, -0.70583147, 0)
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (-38.813046, 0, -7.008902)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "card_flower_01_assembly" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.5707963, 0)
+        }
+        references = @card_flower_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.7088492, 0, -0.70536005, 0)
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (-38.73593, 0, 1.4824314)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "card_leg_01_assembly" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.5707963, 0)
+        }
+        references = @card_leg_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.7078877, 0, -0.70632493, 0)
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (-38.95161, 0, 10.375933)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "card_arm_01_assembly_1" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1416306, 3.1447525, 0.005687952)
+        }
+        references = @card_arm_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0028437409, 0.0015800317, -0.000014503623, 0.9999947)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (7.942896, 0.09887673, 37.741814)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_flower_01_assembly_1" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1416306, 3.143422, 0.005687237)
+        }
+        references = @card_flower_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0028437302, 0.0009147803, -0.000016395314, 0.9999955)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (-0.54862213, 0.050581962, 37.722137)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_leg_01_assembly_1" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1416306, 3.146146, 0.005687952)
+        }
+        references = @card_leg_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0028437497, 0.0022768371, -0.000012521618, 0.9999933)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (-9.44032, 0, 37.997963)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_1/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_arm_01_assembly_2" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1472628, 4.712389, 0)
+        }
+        references = @card_arm_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0020042423, 0.7069362, -0.0020174456, 0.7072716)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (39.330326, 0.09887673, -7.112957)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_flower_01_assembly_2" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1472628, 4.7123885, 0)
+        }
+        references = @card_flower_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0020028988, 0.70646554, -0.0020187777, 0.7077417)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (39.27979, 0.050581962, 1.378437)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_leg_01_assembly_2" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1472628, 4.7123885, 0)
+        }
+        references = @card_leg_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0020056474, 0.7074289, -0.0020160477, 0.7067788)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (39.5233, 0, 10.27108)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_2/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_arm_01_assembly_3" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.0686827, 4.7902875, -0.07315114)
+        }
+        references = @card_arm_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0019238846, 0.73403126, -0.0020942157, 0.6791097)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (0.6543026, 0.16826439, -35.90607)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_flower_01_assembly_3" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1472628, 4.7123885, 0)
+        }
+        references = @card_flower_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0020028988, 0.70646554, -0.0020187777, 0.7077417)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (0.73712826, 0.4098029, -35.87146)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_leg_01_assembly_3" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1472628, 4.7123885, 0)
+        }
+        references = @card_leg_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0020056474, 0.7074289, -0.0020160477, 0.7067788)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (0.6093807, 0, -35.950138)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_3/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_arm_01_assembly_4" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.055752, 4.7786155, -0.08604844)
+        }
+        references = @card_arm_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0019361118, 0.73004305, -0.0020829171, 0.6833952)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (0.65430236, 0.9516438, -35.90607)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_arm_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_flower_01_assembly_4" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1472628, 4.7123885, 0)
+        }
+        references = @card_flower_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0020028988, 0.70646554, -0.0020187777, 0.7077417)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (0.73712826, 1.1931823, -35.87146)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_flower_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "card_leg_01_assembly_4" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1472628, 4.7123885, 0)
+        }
+        references = @card_leg_01_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (-0.0020056474, 0.7074289, -0.0020160477, 0.7067788)
+        float3 xformOp:scale = (100, 100, 99.999985)
+        float3 xformOp:translate = (0.6093807, 0.78337944, -35.950138)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "card_01"
+        {
+            over "Looks"
+            {
+                over "card_flower_usdPreviewSurface4SG"
+                {
+                    over "place2dTexture11"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Normal_2:varname>
+                    }
+
+                    over "place2dTexture14"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_BaseColor_2:varname>
+                    }
+
+                    over "place2dTexture13"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Roughness_2:varname>
+                    }
+
+                    over "place2dTexture12"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_Metallic_2:varname>
+                    }
+
+                    over "place2dTexture9"
+                    {
+                        string inputs:varname.connect = </Root/card_leg_01_assembly_4/card_01/Looks/card_flower_usdPreviewSurface4SG.inputs:card_low_standardSurface1_AO_2:varname>
+                    }
+                }
+            }
+        }
+    }
+
+    def "Die" (
+        active = true
+        references = @Die.usdz@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (-41.664867, 1.1752653, 21.091951)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "player_pawn_purple_assembly" (
+        active = true
+        references = @player_pawn_purple_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (13.576, 5.419495, 14.1928)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "player_pawn_blue_assembly" (
+        active = true
+        references = @player_pawn_blue_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (26.16868, 5.583434, 0.23000535)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "cutebot_03_assembly" (
+        active = true
+        references = @cutebot_03_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (-29.231699, 1.6517143, -30.169245)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "cutebot_01_assembly" (
+        active = true
+        references = @cutebot_01_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (-29.078852, 2.0152032, 29.576553)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "cutebot_02_assembly" (
+        active = true
+        references = @cutebot_02_assembly.usda@
+    )
+    {
+        float3 xformOp:scale = (100, 100, 100)
+        float3 xformOp:translate = (30.875374, 0, 29.64788)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

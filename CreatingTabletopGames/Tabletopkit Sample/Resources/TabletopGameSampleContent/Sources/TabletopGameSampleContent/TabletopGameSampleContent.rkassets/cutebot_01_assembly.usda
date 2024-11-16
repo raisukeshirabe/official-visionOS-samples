@@ -1,0 +1,90 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (443)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    def "cutebot_01_skinned_mesh" (
+        active = true
+        references = @cutebot_01_skinned_mesh.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.005, 0.005, 0.005)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cutebot_skinned_mesh" (
+            references = None
+        )
+        {
+            over "cutebot_bind" (
+                references = None
+            )
+            {
+                over "root" (
+                    references = None
+                )
+                {
+                }
+
+                def RealityKitComponent "GroundingShadow"
+                {
+                    bool enableIBLShadow = 1
+                    bool enableMeshShadow = 1
+                    uniform token info:id = "RealityKit.GroundingShadow"
+                }
+            }
+
+            over "geom" (
+                references = None
+            )
+            {
+            }
+        }
+    }
+
+    def RealityKitComponent "AnimationLibrary"
+    {
+        uniform token info:id = "RealityKit.AnimationLibrary"
+
+        def RealityKitAnimationFile "anim_idleA_cutebot_01_usdz"
+        {
+            uniform asset file = @anim_idleA_cutebot_01.usdz@
+            uniform string name = "anim_idleA_cutebot_01"
+        }
+
+        def RealityKitAnimationFile "anim_jumpJoy_cutebot_01_usdz"
+        {
+            uniform asset file = @anim_jumpJoy_cutebot_01.usdz@
+            uniform string name = "anim_jumpJoy_cutebot_01"
+        }
+
+        def RealityKitAnimationFile "anim_sad_cutebot_01_usdz"
+        {
+            uniform asset file = @anim_sad_cutebot_01.usdz@
+            uniform string name = "anim_sad_cutebot_01"
+        }
+    }
+
+    def RealityKitComponent "Billboard"
+    {
+        float blendFactor = 0
+        uniform token info:id = "RealityKit.Billboard"
+        float3 rotationAxis = (0, 1, 0)
+    }
+
+    def RealityKitComponent "GroundingShadow"
+    {
+        bool enableIBLShadow = 1
+        bool enableMeshShadow = 1
+        uniform token info:id = "RealityKit.GroundingShadow"
+    }
+}
+

@@ -1,0 +1,222 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    reorder nameChildren = ["Gantry", "chipped_paint_gantry_mat", "gantry_3_mat", "gantry_flatbase_mat"]
+    def "chipped_paint_gantry_mat" (
+        active = true
+        references = @chipped_paint_gantry_mat.usda@
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "PreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Texcoord"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "TiledImage_3"
+        {
+            float2 ui:nodegraph:node:size = (250, 355)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+        }
+
+        over "Texcoord_2"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "TiledImage"
+        {
+            float2 ui:nodegraph:node:size = (250, 355)
+        }
+    }
+
+    def "gantry_3_mat" (
+        active = true
+        prepend references = @gantry_3_mat.usda@
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "PreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Texcoord"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "TiledImage"
+        {
+            float2 ui:nodegraph:node:size = (250, 355)
+        }
+
+        over "TiledImage_1"
+        {
+            float2 ui:nodegraph:node:size = (250, 355)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Texcoord_2"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+        }
+    }
+
+    def "gantry_flatbase_mat" (
+        active = true
+        references = @gantry_flatbase_mat.usda@
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "PreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Texcoord"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "TiledImage"
+        {
+            float2 ui:nodegraph:node:size = (250, 355)
+        }
+
+        over "TiledImage_1"
+        {
+            float2 ui:nodegraph:node:size = (250, 355)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Texcoord_2"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (250, 319)
+        }
+    }
+
+    def "Gantry" (
+        active = true
+        references = @Gantry.usdc@
+    )
+    {
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+
+        over "Looks"
+        {
+            over "board_flatbase_mat" (
+                references = None
+            )
+            {
+            }
+        }
+
+        over "GantrySG" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/gantry_flatbase_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "GantrySG1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/gantry_3_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "GantrySG3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/chipped_paint_gantry_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+    }
+}
+

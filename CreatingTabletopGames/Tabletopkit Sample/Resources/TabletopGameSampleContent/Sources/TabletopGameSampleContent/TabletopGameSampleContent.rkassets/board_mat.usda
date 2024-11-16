@@ -1,0 +1,118 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Material"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Material "Material"
+{
+    reorder nameChildren = ["PreviewSurface", "Texcoord", "Image_1", "TiledImage", "card_arm_01"]
+    prepend token outputs:mtlx:surface.connect = </Material/PreviewSurface.outputs:out>
+    token outputs:realitykit:vertex
+    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (299.25, 99.5)
+    float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+    def Shader "PreviewSurface"
+    {
+        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+        float inputs:clearcoat
+        float inputs:clearcoatRoughness
+        color3f inputs:diffuseColor.connect = </Material/TiledImage.outputs:out>
+        color3f inputs:emissiveColor
+        float inputs:ior
+        float inputs:metallic.connect = </Material/Image_2.outputs:out>
+        float3 inputs:normal
+        float inputs:opacity
+        float inputs:roughness.connect = </Material/Image_1.outputs:out>
+        token outputs:out
+        float2 ui:nodegraph:node:pos = (72.52344, 62.683594)
+        float2 ui:nodegraph:node:size = (159.5, 307)
+        int ui:nodegraph:node:stackingOrder = 40
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+    }
+
+    def Shader "Texcoord"
+    {
+        uniform token info:id = "ND_texcoord_vector2"
+        int inputs:index = 0
+        float2 outputs:out
+        float2 ui:nodegraph:node:pos = (-718.41986, -34.59208)
+        float2 ui:nodegraph:node:size = (180.5, 53)
+        int ui:nodegraph:node:stackingOrder = 94
+    }
+
+    def Shader "Image_1"
+    {
+        uniform token info:id = "ND_image_float"
+        float inputs:default
+        asset inputs:file = @textures/Card_arm_01.png@
+        string inputs:filtertype
+        float2 inputs:texcoord.connect = </Material/Texcoord.outputs:out>
+        string inputs:uaddressmode
+        string inputs:vaddressmode
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-355.0547, 240.91016)
+        float2 ui:nodegraph:node:size = (250, 319)
+        int ui:nodegraph:node:stackingOrder = 103
+    }
+
+    def Shader "TiledImage"
+    {
+        uniform token info:id = "ND_tiledimage_color3"
+        color3f inputs:default
+        asset inputs:file = @textures/Card_arm_01.png@
+        float2 inputs:realworldimagesize
+        float2 inputs:realworldtilesize
+        float2 inputs:texcoord.connect = </Material/Texcoord.outputs:out>
+        float2 inputs:uvoffset
+        float2 inputs:uvtiling = (20, 20)
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (-352.44922, -99.953125)
+        float2 ui:nodegraph:node:size = (250, 355)
+        int ui:nodegraph:node:stackingOrder = 104
+    }
+
+    def Shader "Image_2"
+    {
+        uniform token info:id = "ND_image_float"
+        float inputs:default
+        asset inputs:file = @textures/Card_arm_01.png@
+        string inputs:filtertype
+        float2 inputs:texcoord.connect = </Material/Texcoord_1.outputs:out>
+        string inputs:uaddressmode
+        string inputs:vaddressmode
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-676.66223, 447.96732)
+        float2 ui:nodegraph:node:size = (250, 319)
+        int ui:nodegraph:node:stackingOrder = 98
+    }
+
+    def Shader "Texcoord_1"
+    {
+        uniform token info:id = "ND_texcoord_vector2"
+        int inputs:index = 0
+        float2 outputs:out
+        float2 ui:nodegraph:node:pos = (-1015.7603, 257.16602)
+        float2 ui:nodegraph:node:size = (180.5, 53)
+        int ui:nodegraph:node:stackingOrder = 99
+    }
+}
+
+def "card_arm_01" (
+    active = true
+    prepend apiSchemas = ["MaterialBindingAPI"]
+    references = @card_arm_01.usdz@
+)
+{
+    rel material:binding = </Material> (
+        bindMaterialAs = "strongerThanDescendants"
+    )
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (-27.539566, -40.68946, -62.49377)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+}
+

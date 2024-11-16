@@ -1,0 +1,101 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Material"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Material "Material" (
+    references = None
+)
+{
+    prepend token outputs:mtlx:surface.connect = </Material/PreviewSurface.outputs:out>
+    token outputs:realitykit:vertex
+    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (299.25, 99.5)
+    float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+    def Shader "PreviewSurface"
+    {
+        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+        float inputs:clearcoat
+        float inputs:clearcoatRoughness
+        color3f inputs:diffuseColor.connect = </Material/TiledImage.outputs:out>
+        color3f inputs:emissiveColor
+        float inputs:ior
+        float inputs:metallic.connect = None
+        float3 inputs:normal
+        float inputs:occlusion
+        float inputs:opacity.connect = </Material/Separate4.outputs:outa>
+        float inputs:opacityThreshold
+        float inputs:roughness.connect = </Material/Separate4.outputs:outr>
+        token outputs:out
+        float2 ui:nodegraph:node:pos = (74.25, 99.5)
+        float2 ui:nodegraph:node:size = (159.5, 307)
+        int ui:nodegraph:node:stackingOrder = 28
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+    }
+
+    def Shader "TiledImage" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_tiledimage_color3"
+        color3f inputs:default
+        asset inputs:file = @textures/conveyor/conveyor_decals_bc.png@
+        string inputs:filtertype
+        float2 inputs:realworldimagesize
+        float2 inputs:realworldtilesize
+        float2 inputs:texcoord.connect = </Material/Texcoord.outputs:out>
+        float2 inputs:uvoffset
+        float2 inputs:uvtiling.connect = None
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (-675.89764, -88.97574)
+        float2 ui:nodegraph:node:size = (250, 355)
+        int ui:nodegraph:node:stackingOrder = 109
+    }
+
+    def Shader "Texcoord" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_texcoord_vector2"
+        float2 outputs:out
+        float2 ui:nodegraph:node:pos = (-1287.9581, 203.31789)
+        float2 ui:nodegraph:node:size = (180.5, 53)
+        int ui:nodegraph:node:stackingOrder = 112
+    }
+
+    def Shader "Separate4"
+    {
+        uniform token info:id = "ND_separate4_color4"
+        color4f inputs:in.connect = </Material/Image.outputs:out>
+        float outputs:outa
+        float outputs:outb
+        float outputs:outg
+        float outputs:outr
+        float2 ui:nodegraph:node:pos = (-306.74902, 260.62317)
+        float2 ui:nodegraph:node:size = (115.5, 163)
+        int ui:nodegraph:node:stackingOrder = 104
+    }
+
+    def Shader "Image" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_image_color4"
+        color4f inputs:default
+        asset inputs:file = @textures/conveyor/Conveyor_Decals_rmao.png@
+        string inputs:filtertype
+        float2 inputs:texcoord.connect = </Material/Texcoord.outputs:out>
+        string inputs:uaddressmode
+        string inputs:vaddressmode
+        color4f outputs:out
+        float2 ui:nodegraph:node:pos = (-856.08496, 315.9005)
+        float2 ui:nodegraph:node:size = (250, 319)
+        int ui:nodegraph:node:stackingOrder = 106
+    }
+}
+

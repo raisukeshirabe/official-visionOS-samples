@@ -1,0 +1,117 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    reorder nameChildren = ["Conveyor_Belt", "Board", "board_1_mat", "board_2_mat", "board_3_mat", "board_window_mat", "board_metalbase_mat", "chipped_paint_board_mat"]
+    def "Board" (
+        active = true
+        references = @Board.usdc@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "BoardSG" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_3_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "BoardSG1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_2_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "BoardSG2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/chipped_paint_board_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "BoardSG3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_window_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "BoardSG4" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_metalbase_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+    }
+
+    def "board_1_mat" (
+        active = true
+        prepend references = @board_1_mat.usda@
+    )
+    {
+    }
+
+    def "board_2_mat" (
+        active = true
+        prepend references = @board_2_mat.usda@
+    )
+    {
+    }
+
+    def "board_3_mat" (
+        active = true
+        prepend references = @board_3_mat.usda@
+    )
+    {
+    }
+
+    def "board_window_mat" (
+        active = true
+        prepend references = @board_window_mat.usda@
+    )
+    {
+    }
+
+    def "chipped_paint_board_mat" (
+        active = true
+        prepend references = @chipped_paint_board_mat.usda@
+    )
+    {
+    }
+
+    def "board_metalbase_mat" (
+        active = true
+        references = @board_metalbase_mat.usda@
+    )
+    {
+    }
+}
+

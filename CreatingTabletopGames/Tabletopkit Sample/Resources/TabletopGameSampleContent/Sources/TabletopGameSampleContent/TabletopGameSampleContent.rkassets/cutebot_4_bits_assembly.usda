@@ -1,0 +1,100 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "CuteBot_04_extrabits" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        prepend references = @CuteBot_04_extrabits.usdz@
+    )
+    {
+        rel material:binding = </Root/fresnel_ghost_mat> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "fresnel_ghost_mat" (
+        active = true
+        prepend references = @fresnel_ghost_mat.usda@
+    )
+    {
+        color3f inputs:color (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-346.20312, -116.74609)
+                    float2 sizeInSubgraph = (133, 53)
+                    int stackingOrderInSubgraph = 175
+                }
+            }
+        )
+        float inputs:opacity (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-389.8496, 163.96875)
+                    float2 sizeInSubgraph = (114, 53)
+                }
+            }
+        )
+        float inputs:power (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-582.3965, 130.64062)
+                    float2 sizeInSubgraph = (106.5, 53)
+                    int stackingOrderInSubgraph = 171
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "ViewDirection"
+        {
+            float2 ui:nodegraph:node:size = (210, 53)
+        }
+
+        over "Normal"
+        {
+            float2 ui:nodegraph:node:size = (128.5, 40)
+        }
+
+        over "DotProduct"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "Oneminus"
+        {
+            float2 ui:nodegraph:node:size = (158, 109)
+        }
+
+        over "Power"
+        {
+            float2 ui:nodegraph:node:size = (123.5, 40)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "UnlitSurface"
+        {
+            float2 ui:nodegraph:node:size = (194.5, 181)
+        }
+    }
+}
+

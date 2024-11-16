@@ -1,0 +1,182 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (413)"
+    }
+    defaultPrim = "Material"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Material "Material" (
+    references = None
+)
+{
+    reorder nameChildren = ["UsdPreviewSurface", "PreviewSurface", "Image", "Image_1", "Image_2", "Image_3", "Texcoord", "table_rectangle"]
+    token cullMode = "unspecified" (
+        allowedTokens = ["unspecified", "none", "front", "back"]
+    )
+    token outputs:mtlx:surface.connect = </Material/PreviewSurface.outputs:out>
+    token outputs:realitykit:vertex
+    token outputs:surface.connect = </Material/UsdPreviewSurface.outputs:surface>
+    string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:mtlx:surface"]
+    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (36.387173, 130.61755)
+    float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+    int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 77
+
+    def Shader "UsdPreviewSurface" (
+        active = false
+    )
+    {
+        uniform token info:id = "UsdPreviewSurface"
+        token outputs:surface
+    }
+
+    def Shader "PreviewSurface" (
+        active = true
+        references = None
+    )
+    {
+        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+        float inputs:clearcoat
+        float inputs:clearcoatRoughness
+        color3f inputs:diffuseColor.connect = </Material/Image.outputs:out>
+        float inputs:ior
+        float inputs:metallic
+        float3 inputs:normal.connect = </Material/NormalMapDecode.outputs:out>
+        float inputs:occlusion.connect = </Material/Image_3.outputs:out>
+        float inputs:opacity.connect = None
+        float inputs:opacityThreshold
+        float inputs:roughness.connect = </Material/Image_1.outputs:out>
+        token outputs:out
+        float2 ui:nodegraph:node:pos = (-255, 105)
+        float2 ui:nodegraph:node:size = (159.5, 307)
+        int ui:nodegraph:node:stackingOrder = 78
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+    }
+
+    def Shader "Image" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_image_color3"
+        asset inputs:file = @textures/table/table_square_bc.png@
+        float2 inputs:texcoord.connect = </Material/Texcoord_1.outputs:out>
+        string inputs:uaddressmode
+        string inputs:vaddressmode
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (-710.46716, -186.62259)
+        float2 ui:nodegraph:node:size = (250, 319)
+        int ui:nodegraph:node:stackingOrder = 66
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default"]
+    }
+
+    def Shader "Image_1" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_image_float"
+        float inputs:default
+        asset inputs:file = @textures/table/table_square_r.png@
+        string inputs:filtertype
+        float2 inputs:texcoord.connect = </Material/Texcoord_1.outputs:out>
+        string inputs:uaddressmode
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-1058.7847, -98.20177)
+        float2 ui:nodegraph:node:size = (250, 319)
+        int ui:nodegraph:node:stackingOrder = 67
+    }
+
+    def Shader "Image_3" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_image_float"
+        float inputs:default
+        asset inputs:file = @textures/table/table_square_ao.png@
+        float2 inputs:texcoord.connect = </Material/Texcoord.outputs:out>
+        string inputs:uaddressmode
+        string inputs:vaddressmode
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (-796.33307, 385.41226)
+        float2 ui:nodegraph:node:size = (250, 319)
+        int ui:nodegraph:node:stackingOrder = 99
+    }
+
+    def Shader "Texcoord" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_texcoord_vector2"
+        int inputs:index = 1
+        float2 outputs:out
+        float2 ui:nodegraph:node:pos = (-1191.4818, 405.49457)
+        float2 ui:nodegraph:node:size = (180.5, 53)
+        int ui:nodegraph:node:stackingOrder = 104
+    }
+
+    def Shader "Image_2" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_image_vector3"
+        float3 inputs:default
+        asset inputs:file = @textures/table/table_square_n.png@
+        string inputs:filtertype
+        float2 inputs:texcoord.connect = </Material/Texcoord_1.outputs:out>
+        string inputs:uaddressmode
+        string inputs:vaddressmode
+        float3 outputs:out
+        float2 ui:nodegraph:node:pos = (-1398.7748, 91.893715)
+        float2 ui:nodegraph:node:size = (250, 319)
+        int ui:nodegraph:node:stackingOrder = 88
+    }
+
+    def Shader "NormalMapDecode" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_normal_map_decode"
+        float3 inputs:in.connect = </Material/Image_2.outputs:out>
+        float3 outputs:out
+        float2 ui:nodegraph:node:pos = (-1054.5505, 157.88173)
+        int ui:nodegraph:node:stackingOrder = 91
+    }
+
+    def Shader "Texcoord_1" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_texcoord_vector2"
+        float2 outputs:out
+        float2 ui:nodegraph:node:pos = (-1696.0771, 60.47985)
+        int ui:nodegraph:node:stackingOrder = 103
+    }
+}
+
+def "table_rectangle" (
+    active = true
+    prepend apiSchemas = ["MaterialBindingAPI"]
+    references = @table_rectangle.usdz@
+)
+{
+    rel material:binding = </Material> (
+        bindMaterialAs = "strongerThanDescendants"
+    )
+    float3 xformOp:scale = (1, 1, 1)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    over "Looks" (
+        references = None
+    )
+    {
+        over "pasted__table_square_matSG" (
+            references = None
+        )
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+        }
+    }
+}
+

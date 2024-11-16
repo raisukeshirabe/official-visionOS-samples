@@ -1,0 +1,145 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (443)"
+    }
+    defaultPrim = "Material"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Material "Material" (
+    references = None
+)
+{
+    token outputs:mtlx:surface.connect = </Material/PreviewSurface.outputs:out>
+    token outputs:realitykit:vertex
+    token outputs:surface.connect = </Material/UsdPreviewSurface.outputs:surface>
+    float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 110.5)
+
+    def Shader "UsdPreviewSurface" (
+        active = false
+    )
+    {
+        uniform token info:id = "UsdPreviewSurface"
+        token outputs:surface
+    }
+
+    def Shader "PreviewSurface"
+    {
+        uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+        float inputs:clearcoat
+        float inputs:clearcoatRoughness
+        color3f inputs:diffuseColor.connect = </Material/RealityKitTexture2D.outputs:out>
+        color3f inputs:emissiveColor
+        float inputs:ior
+        float inputs:metallic.connect = </Material/Separate3.outputs:outg>
+        float3 inputs:normal.connect = </Material/NormalMapDecode_1.outputs:out>
+        float inputs:occlusion.connect = </Material/Separate3.outputs:outb>
+        float inputs:opacity
+        float inputs:opacityThreshold
+        float inputs:roughness.connect = </Material/Separate3.outputs:outr>
+        token outputs:out
+        float2 ui:nodegraph:node:pos = (-255, 105)
+        string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+    }
+
+    def Shader "RealityKitTexture2D" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_RealityKitTexture2D_color3"
+        float inputs:bias
+        color3f inputs:default
+        float inputs:dynamic_min_lod_clamp
+        asset inputs:file = @textures/cards/card_arm_Base_color.png@
+        int inputs:max_anisotropy = 3
+        float inputs:max_lod_clamp
+        string inputs:min_filter
+        float inputs:min_lod_clamp
+        string inputs:mip_filter
+        bool inputs:no_flip_v = 1
+        int2 inputs:offset
+        float2 inputs:texcoord.connect = None
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (-617.5816, -218.72926)
+        int ui:nodegraph:node:stackingOrder = 982
+    }
+
+    def Shader "RealityKitTexture2D_3" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_RealityKitTexture2D_color3"
+        float inputs:bias
+        string inputs:border_color
+        color3f inputs:default.connect = None
+        float inputs:dynamic_min_lod_clamp
+        asset inputs:file = @textures/cards/card_arm_rma.png@
+        string inputs:mag_filter
+        int inputs:max_anisotropy = 3
+        float inputs:min_lod_clamp
+        bool inputs:no_flip_v = 1
+        int2 inputs:offset
+        float2 inputs:texcoord.connect = None
+        string inputs:u_wrap_mode
+        string inputs:v_wrap_mode
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (-1694.8527, 389.5714)
+        int ui:nodegraph:node:stackingOrder = 994
+    }
+
+    def Shader "Separate3" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_separate3_color3"
+        color3f inputs:in.connect = </Material/RealityKitTexture2D_3.outputs:out>
+        float outputs:outb
+        float outputs:outg
+        float outputs:outr
+        float2 ui:nodegraph:node:pos = (-1201.1542, 348.18484)
+        int ui:nodegraph:node:stackingOrder = 993
+    }
+
+    def Shader "Swizzle" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_swizzle_vector4_vector3"
+        string inputs:channels = "xyz"
+        float4 inputs:in.connect = </Material/RealityKitTexture2D_1.outputs:out>
+        float3 outputs:out
+        float2 ui:nodegraph:node:pos = (-1147.2759, 88.15365)
+        int ui:nodegraph:node:stackingOrder = 986
+    }
+
+    def Shader "NormalMapDecode_1" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_normal_map_decode"
+        float3 inputs:in.connect = </Material/Swizzle.outputs:out>
+        float3 outputs:out
+        float2 ui:nodegraph:node:pos = (-921.6862, 69.84614)
+        int ui:nodegraph:node:stackingOrder = 984
+    }
+
+    def Shader "RealityKitTexture2D_1" (
+        references = None
+    )
+    {
+        uniform token info:id = "ND_RealityKitTexture2D_vector4"
+        float inputs:bias
+        float inputs:dynamic_min_lod_clamp
+        asset inputs:file = @textures/cards/card_arm__Normal.png@
+        int inputs:max_anisotropy = 3
+        bool inputs:no_flip_v = 1
+        int2 inputs:offset
+        delete float2 inputs:texcoord.connect = </Material/Combine2.outputs:out>
+        float4 outputs:out
+        float2 ui:nodegraph:node:pos = (-1508.2014, -154.31871)
+        int ui:nodegraph:node:stackingOrder = 988
+    }
+}
+

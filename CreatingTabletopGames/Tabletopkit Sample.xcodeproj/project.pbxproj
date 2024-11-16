@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		465C8AAE2BF581000039460A /* GameObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465C8AAD2BF581000039460A /* GameObserver.swift */; };
+		46BD421D2BCB1AA600F8CC03 /* GroupActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BD421C2BCB1AA600F8CC03 /* GroupActivityManager.swift */; };
+		8733BE3D2BF291B700802BE2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8733BE3C2BF290CA00802BE2 /* Utils.swift */; };
+		8749FB162BF424EA000193AD /* GameEquipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8749FB152BF424EA000193AD /* GameEquipment.swift */; };
+		875E46812BC4D2D2006F825B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87903A7F2BC4C376003009AC /* Assets.xcassets */; };
+		8768628D2BC4B6E100B4A56D /* TabletopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8768628C2BC4B6E100B4A56D /* TabletopKit.framework */; platformFilters = (xros, ); };
+		8768628F2BC4B78200B4A56D /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8768628E2BC4B78200B4A56D /* RealityKit.framework */; };
+		877B30D22BD3191400BD5107 /* GameSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877B30D12BD3191400BD5107 /* GameSetup.swift */; };
+		877B30D62BD319C800BD5107 /* GameRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877B30D52BD319C800BD5107 /* GameRenderer.swift */; };
+		877B30D82BD319F300BD5107 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877B30D72BD319F300BD5107 /* Game.swift */; };
+		877B30DC2BD31A5B00BD5107 /* GameInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877B30DB2BD31A5B00BD5107 /* GameInteraction.swift */; };
+		87903A812BC4C376003009AC /* Tabletopkit_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87903A7A2BC4C376003009AC /* Tabletopkit_SampleApp.swift */; };
+		87D13D112BFC016200AE614A /* TabletopGameSampleContent in Resources */ = {isa = PBXBuildFile; fileRef = 87D13D102BFC016200AE614A /* TabletopGameSampleContent */; };
+		87D13D132BFC031700AE614A /* TabletopGameSampleContent in Frameworks */ = {isa = PBXBuildFile; productRef = 87D13D122BFC031700AE614A /* TabletopGameSampleContent */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A53195BE3858298577DDD79 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		40D3161C41CFD8B1DCF1D253 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		465C8AAD2BF581000039460A /* GameObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameObserver.swift; path = "Tabletopkit Sample/GameObserver.swift"; sourceTree = "<group>"; };
+		46BD421C2BCB1AA600F8CC03 /* GroupActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupActivityManager.swift; path = "Tabletopkit Sample/GroupActivityManager.swift"; sourceTree = "<group>"; };
+		8733BE3C2BF290CA00802BE2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = "Tabletopkit Sample/Utils.swift"; sourceTree = "<group>"; };
+		8749FB152BF424EA000193AD /* GameEquipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameEquipment.swift; path = "Tabletopkit Sample/GameEquipment.swift"; sourceTree = "<group>"; };
+		8768628C2BC4B6E100B4A56D /* TabletopKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TabletopKit.framework; path = Platforms/XROS.platform/Developer/SDKs/XROS2.0.sdk/System/Library/Frameworks/TabletopKit.framework; sourceTree = DEVELOPER_DIR; };
+		8768628E2BC4B78200B4A56D /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
+		877B30D12BD3191400BD5107 /* GameSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameSetup.swift; path = "Tabletopkit Sample/GameSetup.swift"; sourceTree = "<group>"; };
+		877B30D52BD319C800BD5107 /* GameRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameRenderer.swift; path = "Tabletopkit Sample/GameRenderer.swift"; sourceTree = "<group>"; };
+		877B30D72BD319F300BD5107 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "Tabletopkit Sample/Game.swift"; sourceTree = "<group>"; };
+		877B30DB2BD31A5B00BD5107 /* GameInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameInteraction.swift; path = "Tabletopkit Sample/GameInteraction.swift"; sourceTree = "<group>"; };
+		87903A792BC4C376003009AC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Tabletopkit Sample/Info.plist"; sourceTree = "<group>"; };
+		87903A7A2BC4C376003009AC /* Tabletopkit_SampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tabletopkit_SampleApp.swift; path = "Tabletopkit Sample/Tabletopkit_SampleApp.swift"; sourceTree = "<group>"; };
+		87903A7F2BC4C376003009AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Tabletopkit Sample/Assets.xcassets"; sourceTree = "<group>"; };
+		87903A852BC4C717003009AC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		87D13D102BFC016200AE614A /* TabletopGameSampleContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TabletopGameSampleContent; sourceTree = "<group>"; };
+		87D38AF42BFE484600FEA20C /* Tabletopkit Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Tabletopkit Sample.entitlements"; path = "Tabletopkit Sample/Tabletopkit Sample.entitlements"; sourceTree = "<group>"; };
+		98C998E818430FA5BFAE3F67 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		D12037B72BF59CF200566BB1 /* Tabletopkit Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tabletopkit Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		876862762BC4B5CE00B4A56D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8768628F2BC4B78200B4A56D /* RealityKit.framework in Frameworks */,
+				87D13D132BFC031700AE614A /* TabletopGameSampleContent in Frameworks */,
+				8768628D2BC4B6E100B4A56D /* TabletopKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66E607AD1E14BA432D3BBF96 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				98C998E818430FA5BFAE3F67 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		8755DCEA2BC5962C005D8C82 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87D13D102BFC016200AE614A /* TabletopGameSampleContent */,
+			);
+			name = Resources;
+			path = "Tabletopkit Sample/Resources";
+			sourceTree = "<group>";
+		};
+		876862702BC4B5CE00B4A56D = {
+			isa = PBXGroup;
+			children = (
+				40D3161C41CFD8B1DCF1D253 /* README.md */,
+				87D38AF42BFE484600FEA20C /* Tabletopkit Sample.entitlements */,
+				8755DCEA2BC5962C005D8C82 /* Resources */,
+				87903A7F2BC4C376003009AC /* Assets.xcassets */,
+				87903A792BC4C376003009AC /* Info.plist */,
+				87903A7A2BC4C376003009AC /* Tabletopkit_SampleApp.swift */,
+				877B30D12BD3191400BD5107 /* GameSetup.swift */,
+				8749FB152BF424EA000193AD /* GameEquipment.swift */,
+				877B30D72BD319F300BD5107 /* Game.swift */,
+				877B30DB2BD31A5B00BD5107 /* GameInteraction.swift */,
+				465C8AAD2BF581000039460A /* GameObserver.swift */,
+				877B30D52BD319C800BD5107 /* GameRenderer.swift */,
+				46BD421C2BCB1AA600F8CC03 /* GroupActivityManager.swift */,
+				8733BE3C2BF290CA00802BE2 /* Utils.swift */,
+				8768627A2BC4B5CE00B4A56D /* Products */,
+				8768628B2BC4B6E100B4A56D /* Frameworks */,
+				66E607AD1E14BA432D3BBF96 /* Configuration */,
+				ECF2BF40FD8F0E045ACBEE38 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		8768627A2BC4B5CE00B4A56D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D12037B72BF59CF200566BB1 /* Tabletopkit Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8768628B2BC4B6E100B4A56D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87903A852BC4C717003009AC /* SwiftUI.framework */,
+				8768628E2BC4B78200B4A56D /* RealityKit.framework */,
+				8768628C2BC4B6E100B4A56D /* TabletopKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECF2BF40FD8F0E045ACBEE38 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				3A53195BE3858298577DDD79 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		876862782BC4B5CE00B4A56D /* Tabletopkit Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 876862882BC4B5D000B4A56D /* Build configuration list for PBXNativeTarget "Tabletopkit Sample" */;
+			buildPhases = (
+				876862752BC4B5CE00B4A56D /* Sources */,
+				876862762BC4B5CE00B4A56D /* Frameworks */,
+				876862772BC4B5CE00B4A56D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tabletopkit Sample";
+			packageProductDependencies = (
+				87D13D122BFC031700AE614A /* TabletopGameSampleContent */,
+			);
+			productName = "Tabletopkit Sample";
+			productReference = D12037B72BF59CF200566BB1 /* Tabletopkit Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		876862712BC4B5CE00B4A56D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					876862782BC4B5CE00B4A56D = {
+						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
+					};
+				};
+			};
+			buildConfigurationList = 876862742BC4B5CE00B4A56D /* Build configuration list for PBXProject "Tabletopkit Sample" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 876862702BC4B5CE00B4A56D;
+			productRefGroup = 8768627A2BC4B5CE00B4A56D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				876862782BC4B5CE00B4A56D /* Tabletopkit Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		876862772BC4B5CE00B4A56D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87D13D112BFC016200AE614A /* TabletopGameSampleContent in Resources */,
+				875E46812BC4D2D2006F825B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		876862752BC4B5CE00B4A56D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877B30D82BD319F300BD5107 /* Game.swift in Sources */,
+				877B30D62BD319C800BD5107 /* GameRenderer.swift in Sources */,
+				8749FB162BF424EA000193AD /* GameEquipment.swift in Sources */,
+				877B30DC2BD31A5B00BD5107 /* GameInteraction.swift in Sources */,
+				465C8AAE2BF581000039460A /* GameObserver.swift in Sources */,
+				8733BE3D2BF291B700802BE2 /* Utils.swift in Sources */,
+				877B30D22BD3191400BD5107 /* GameSetup.swift in Sources */,
+				46BD421D2BCB1AA600F8CC03 /* GroupActivityManager.swift in Sources */,
+				87903A812BC4C376003009AC /* Tabletopkit_SampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		876862862BC4B5D000B4A56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C998E818430FA5BFAE3F67 /* SampleCode.xcconfig */;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				SDKROOT = xros;
+				SWIFT_VERSION = 6.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		876862872BC4B5D000B4A56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C998E818430FA5BFAE3F67 /* SampleCode.xcconfig */;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				SDKROOT = xros;
+				SWIFT_VERSION = 6.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		876862892BC4B5D000B4A56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C998E818430FA5BFAE3F67 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_ENTITLEMENTS = "Tabletopkit Sample/Tabletopkit Sample.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = TabletopkitSample;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.tabletopkitsample${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		8768628A2BC4B5D000B4A56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C998E818430FA5BFAE3F67 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_ENTITLEMENTS = "Tabletopkit Sample/Tabletopkit Sample.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = TabletopkitSample;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.tabletopkitsample${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		876862742BC4B5CE00B4A56D /* Build configuration list for PBXProject "Tabletopkit Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				876862862BC4B5D000B4A56D /* Debug */,
+				876862872BC4B5D000B4A56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		876862882BC4B5D000B4A56D /* Build configuration list for PBXNativeTarget "Tabletopkit Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				876862892BC4B5D000B4A56D /* Debug */,
+				8768628A2BC4B5D000B4A56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		87D13D122BFC031700AE614A /* TabletopGameSampleContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TabletopGameSampleContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 876862712BC4B5CE00B4A56D /* Project object */;
+}

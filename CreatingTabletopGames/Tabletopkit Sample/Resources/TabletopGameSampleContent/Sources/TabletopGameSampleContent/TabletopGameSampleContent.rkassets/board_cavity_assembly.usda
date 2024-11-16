@@ -1,0 +1,569 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (447)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Board_Cavity", "Conveyor_Belt_Cavity", "board_1_mat", "board_2_mat", "board_3_mat", "board_flatbase_mat", "board_window_mat", "chipped_paint_board_mat", "conveyor_1_mat", "conveyor_2_mat", "conveyor_3_mat"]
+    def "Board_Cavity" (
+        active = true
+        references = @Board_Cavity.usdc@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Board_CavitySG" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_2_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_3_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/chipped_paint_board_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_window_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG4" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG5" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_flatbase_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG6" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_3_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG7" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_2_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG8" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/chipped_paint_board_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG9" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_window_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG10" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_3_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Board_CavitySG11" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/board_flatbase_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+    }
+
+    def "Conveyor_Belt_Cavity" (
+        active = true
+        references = @Conveyor_Belt_Cavity.usdc@
+    )
+    {
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Conveyor_Belt_CavitySG2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/conveyor_3_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Looks"
+        {
+            over "Conveyor_Belt_CavitySG2" (
+                references = None
+            )
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+            }
+        }
+    }
+
+    def "board_1_mat" (
+        active = true
+        references = @board_1_mat.usda@
+    )
+    {
+    }
+
+    def "board_2_mat" (
+        active = true
+        prepend references = @board_2_mat.usda@
+    )
+    {
+    }
+
+    def "board_3_mat" (
+        active = true
+        prepend references = @board_3_mat.usda@
+    )
+    {
+    }
+
+    def "board_flatbase_mat" (
+        active = true
+        prepend references = @board_flatbase_mat.usda@
+    )
+    {
+    }
+
+    def "board_window_mat" (
+        active = true
+        prepend references = @board_window_mat.usda@
+    )
+    {
+    }
+
+    def "chipped_paint_board_mat" (
+        active = true
+        prepend references = @chipped_paint_board_mat.usda@
+    )
+    {
+    }
+
+    def "conveyor_3_mat" (
+        active = true
+        references = @conveyor_3_mat.usda@
+    )
+    {
+    }
+
+    def "cloud_assembly" (
+        active = true
+        references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.061056003, 0.061056003, 0.061056003)
+        float3 xformOp:translate = (0, -0.1716045, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def "cloud_assembly_1" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.5707963, 0)
+        }
+        references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.7043675, 0, -0.70983547, 0)
+        float3 xformOp:scale = (0.067200616, 0.067200616, 0.067200616)
+        float3 xformOp:translate = (0.075776845, -0.2419206, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_1/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_1/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_1/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_1/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_1/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_1/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_1/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_1/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_1/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_1/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_1/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_1/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_1/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_1/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_1/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_1/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def "cloud_assembly_2" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -2.0352957, 0)
+        }
+        references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.5253687, 0, -0.85087466, 0)
+        float3 xformOp:scale = (0.057350438, 0.057350434, 0.057350438)
+        float3 xformOp:translate = (-1.0430813e-7, -0.2959146, 0.044360727)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_2/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_2/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_2/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_2/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_2/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_2/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_2/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_2/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def "cloud_assembly_3" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -4.811158, 0)
+        }
+        references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.7411508, 0, 0.67133856, 0)
+        float3 xformOp:scale = (0.06432398, 0.06432397, 0.06432398)
+        float3 xformOp:translate = (-0.06382877, -0.348889, -0.015846461)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_3/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_3/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_3/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_3/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_3/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_3/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_3/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_3/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+
+    def "cloud_assembly_4" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -6.9986415, 0)
+        }
+        references = @cloud_assembly.usda@
+    )
+    {
+        quatf xformOp:orient = (0.9366946, 0, -0.35014725, 0)
+        float3 xformOp:scale = (0.052, 0.052, 0.052)
+        float3 xformOp:translate = (-0.0138549, -0.3782786, -0.0268998)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "cloud_mat"
+        {
+            token outputs:mtlx:surface.connect = </Root/cloud_assembly_4/cloud_mat/UnlitSurface.outputs:out>
+
+            over "Image"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_4/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "Image_1"
+            {
+                float2 inputs:texcoord.connect = </Root/cloud_assembly_4/cloud_mat/Combine2.outputs:out>
+            }
+
+            over "UnlitSurface"
+            {
+                color3f inputs:color.connect = </Root/cloud_assembly_4/cloud_mat/Multiply_1.outputs:out>
+                float inputs:opacity.connect = </Root/cloud_assembly_4/cloud_mat/Multiply.outputs:out>
+            }
+
+            over "Multiply"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat/Image_1.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat.inputs:opacity>
+            }
+
+            over "Multiply_1"
+            {
+                color3f inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat.inputs:tint>
+                color3f inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat/Image.outputs:out>
+            }
+
+            over "Separate2"
+            {
+                float2 inputs:in.connect = </Root/cloud_assembly_4/cloud_mat/Texcoord.outputs:out>
+            }
+
+            over "Add"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat/Separate2.outputs:outx>
+                float inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat/Multiply_2.outputs:out>
+            }
+
+            over "Multiply_2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat/Time.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat.inputs:speed>
+            }
+
+            over "Combine2"
+            {
+                float inputs:in1.connect = </Root/cloud_assembly_4/cloud_mat/Add.outputs:out>
+                float inputs:in2.connect = </Root/cloud_assembly_4/cloud_mat/Separate2.outputs:outy>
+            }
+        }
+    }
+}
+
