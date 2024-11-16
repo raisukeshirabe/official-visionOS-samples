@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF02DDBE2BD96076008047B2 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02DDBD2BD96076008047B2 /* EntryPoint.swift */; };
+		DF02DDC02BD96076008047B2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02DDBF2BD96076008047B2 /* MainView.swift */; };
+		DF02DDC42BD96083008047B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF02DDC32BD96083008047B2 /* Assets.xcassets */; };
+		DF02DDC72BD96083008047B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF02DDC62BD96083008047B2 /* Preview Assets.xcassets */; };
+		DF02DDD22BD962C8008047B2 /* Shop_R.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF02DDCF2BD962C8008047B2 /* Shop_R.jpg */; };
+		DF02DDD32BD962C8008047B2 /* StereoscopicMaterial.usda in Resources */ = {isa = PBXBuildFile; fileRef = DF02DDD02BD962C8008047B2 /* StereoscopicMaterial.usda */; };
+		DF02DDD42BD962C8008047B2 /* Shop_L.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF02DDD12BD962C8008047B2 /* Shop_L.jpg */; };
+		DF2484662BF5456800CCF334 /* StereoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2484652BF5456800CCF334 /* StereoImage.swift */; };
+		F58A64822C505045000A224C /* StereoImageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64812C50503E000A224C /* StereoImageCreator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		53631CD8BF57C35D7F07DAD8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9B8CD4AE8374E525B4117198 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		BF01A37B63F7FF16A07A51A9 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		DF02DDB62BD96076008047B2 /* Stereo-Image.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stereo-Image.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF02DDBD2BD96076008047B2 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		DF02DDBF2BD96076008047B2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DF02DDC32BD96083008047B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF02DDC62BD96083008047B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF02DDC82BD96083008047B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF02DDCF2BD962C8008047B2 /* Shop_R.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shop_R.jpg; sourceTree = "<group>"; };
+		DF02DDD02BD962C8008047B2 /* StereoscopicMaterial.usda */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StereoscopicMaterial.usda; sourceTree = "<group>"; };
+		DF02DDD12BD962C8008047B2 /* Shop_L.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shop_L.jpg; sourceTree = "<group>"; };
+		DF2484652BF5456800CCF334 /* StereoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StereoImage.swift; sourceTree = "<group>"; };
+		F58A64812C50503E000A224C /* StereoImageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StereoImageCreator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF02DDB32BD96076008047B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9224231F4973707E7DE8B46A /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				BF01A37B63F7FF16A07A51A9 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		A02E324B328C1BEBE589CA93 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				9B8CD4AE8374E525B4117198 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		DF02DDAD2BD96076008047B2 = {
+			isa = PBXGroup;
+			children = (
+				53631CD8BF57C35D7F07DAD8 /* README.md */,
+				DF02DDB82BD96076008047B2 /* Stereo-Image */,
+				DF02DDB72BD96076008047B2 /* Products */,
+				A02E324B328C1BEBE589CA93 /* Configuration */,
+				9224231F4973707E7DE8B46A /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		DF02DDB72BD96076008047B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DDB62BD96076008047B2 /* Stereo-Image.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF02DDB82BD96076008047B2 /* Stereo-Image */ = {
+			isa = PBXGroup;
+			children = (
+				F58A647E2C502754000A224C /* Views */,
+				F58A64832C505425000A224C /* Creator */,
+				DF02DDCE2BD962B9008047B2 /* Resources */,
+				F58A647F2C502772000A224C /* App */,
+			);
+			path = "Stereo-Image";
+			sourceTree = "<group>";
+		};
+		DF02DDCE2BD962B9008047B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DDD12BD962C8008047B2 /* Shop_L.jpg */,
+				DF02DDCF2BD962C8008047B2 /* Shop_R.jpg */,
+				DF02DDD02BD962C8008047B2 /* StereoscopicMaterial.usda */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F58A647E2C502754000A224C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DDBF2BD96076008047B2 /* MainView.swift */,
+				DF2484652BF5456800CCF334 /* StereoImage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F58A647F2C502772000A224C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF02DDBD2BD96076008047B2 /* EntryPoint.swift */,
+				DF02DDC82BD96083008047B2 /* Info.plist */,
+				DF02DDC32BD96083008047B2 /* Assets.xcassets */,
+				DF02DDC62BD96083008047B2 /* Preview Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F58A64832C505425000A224C /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64812C50503E000A224C /* StereoImageCreator.swift */,
+			);
+			path = Creator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF02DDB52BD96076008047B2 /* Stereo-Image */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF02DDCB2BD96083008047B2 /* Build configuration list for PBXNativeTarget "Stereo-Image" */;
+			buildPhases = (
+				DF02DDB22BD96076008047B2 /* Sources */,
+				DF02DDB32BD96076008047B2 /* Frameworks */,
+				DF02DDB42BD96076008047B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stereo-Image";
+			productName = "Stereo-Image";
+			productReference = DF02DDB62BD96076008047B2 /* Stereo-Image.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF02DDAE2BD96076008047B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					DF02DDB52BD96076008047B2 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = DF02DDB12BD96076008047B2 /* Build configuration list for PBXProject "Stereo-Image" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF02DDAD2BD96076008047B2;
+			productRefGroup = DF02DDB72BD96076008047B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF02DDB52BD96076008047B2 /* Stereo-Image */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF02DDB42BD96076008047B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF02DDC72BD96083008047B2 /* Preview Assets.xcassets in Resources */,
+				DF02DDD22BD962C8008047B2 /* Shop_R.jpg in Resources */,
+				DF02DDD32BD962C8008047B2 /* StereoscopicMaterial.usda in Resources */,
+				DF02DDD42BD962C8008047B2 /* Shop_L.jpg in Resources */,
+				DF02DDC42BD96083008047B2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF02DDB22BD96076008047B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58A64822C505045000A224C /* StereoImageCreator.swift in Sources */,
+				DF02DDC02BD96076008047B2 /* MainView.swift in Sources */,
+				DF2484662BF5456800CCF334 /* StereoImage.swift in Sources */,
+				DF02DDBE2BD96076008047B2 /* EntryPoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF02DDC92BD96083008047B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8CD4AE8374E525B4117198 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		DF02DDCA2BD96083008047B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8CD4AE8374E525B4117198 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
+		DF02DDCC2BD96083008047B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8CD4AE8374E525B4117198 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Stereo-Image/App";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = DisplayingStereoImage;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.stereo-image${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		DF02DDCD2BD96083008047B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8CD4AE8374E525B4117198 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Stereo-Image/App";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = DisplayingStereoImage;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.stereo-image${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF02DDB12BD96076008047B2 /* Build configuration list for PBXProject "Stereo-Image" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF02DDC92BD96083008047B2 /* Debug */,
+				DF02DDCA2BD96083008047B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF02DDCB2BD96083008047B2 /* Build configuration list for PBXNativeTarget "Stereo-Image" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF02DDCC2BD96083008047B2 /* Debug */,
+				DF02DDCD2BD96083008047B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF02DDAE2BD96076008047B2 /* Project object */;
+}

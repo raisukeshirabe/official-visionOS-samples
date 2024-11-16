@@ -1,0 +1,146 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def Material "Material" (
+        active = true
+    )
+    {
+        asset inputs:LeftTexture = @Placeholder_L.png@ (
+            colorSpace = "Input - Texture - sRGB - sRGB"
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-124.78927, -309.24268)
+                    float2 sizeInSubgraph = (138.5, 53)
+                    int stackingOrderInSubgraph = 102
+                }
+            }
+        )
+        asset inputs:RightTexture = @Placeholder_R.png@ (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-126.478226, -176.54655)
+                    float2 sizeInSubgraph = (147, 53)
+                    int stackingOrderInSubgraph = 103
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Root/Material/RealityKit_Unlit_Surface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1621.8206, -357.4208)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 177
+
+        def Shader "RealityKit_Unlit_Surface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+            bool inputs:applyPostProcessToneMap
+            color3f inputs:color.connect = </Root/Material/Combine3.outputs:out>
+            float inputs:opacity.connect = </Root/Material/Separate4.outputs:outa>
+            float inputs:opacityThreshold
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (1320.4271, -363.0954)
+            float2 ui:nodegraph:node:size = (203.5, 181)
+            int ui:nodegraph:node:stackingOrder = 179
+        }
+
+        def Shader "Image"
+        {
+            uniform token info:id = "ND_image_color4"
+            color4f inputs:default
+            asset inputs:file.connect = </Root/Material.inputs:LeftTexture>
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:vaddressmode
+            color4f outputs:out
+            float2 ui:nodegraph:node:pos = (260.20718, -440.6885)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 163
+        }
+
+        def Shader "Image_1"
+        {
+            uniform token info:id = "ND_image_color4"
+            color4f inputs:default
+            asset inputs:file.connect = </Root/Material.inputs:RightTexture>
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color4f outputs:out
+            float2 ui:nodegraph:node:pos = (270.99045, -119.65694)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 169
+        }
+
+        def Shader "eyeSwitch"
+        {
+            uniform token info:id = "ND_realitykit_geometry_switch_cameraindex_color4"
+            color4f inputs:left.connect = </Root/Material/Image.outputs:out>
+            color4f inputs:mono.connect = </Root/Material/Image_1.outputs:out>
+            color4f inputs:right.connect = </Root/Material/Image_1.outputs:out>
+            color4f outputs:out
+            float2 ui:nodegraph:node:pos = (629.35406, -282.63293)
+            float2 ui:nodegraph:node:size = (208, 145)
+            int ui:nodegraph:node:stackingOrder = 170
+        }
+
+        def Shader "Separate4"
+        {
+            uniform token info:id = "ND_separate4_color4"
+            color4f inputs:in.connect = </Root/Material/eyeSwitch.outputs:out>
+            float outputs:outa
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (932.88873, -364.58786)
+            float2 ui:nodegraph:node:size = (115.5, 163)
+            int ui:nodegraph:node:stackingOrder = 175
+        }
+
+        def Shader "Combine3"
+        {
+            uniform token info:id = "ND_combine3_color3"
+            float inputs:in1.connect = </Root/Material/Separate4.outputs:outr>
+            float inputs:in2.connect = </Root/Material/Separate4.outputs:outg>
+            float inputs:in3.connect = </Root/Material/Separate4.outputs:outb>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1122.496, -402.8084)
+            float2 ui:nodegraph:node:size = (145, 54)
+            int ui:nodegraph:node:stackingOrder = 180
+        }
+    }
+
+    def Capsule "Capsule" (
+        active = true
+    )
+    {
+        rel material:binding = </Root/Material> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.1, 0.1, 0.1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            prepend token outputs:surface.connect = </Root/Capsule/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+    }
+}
+
