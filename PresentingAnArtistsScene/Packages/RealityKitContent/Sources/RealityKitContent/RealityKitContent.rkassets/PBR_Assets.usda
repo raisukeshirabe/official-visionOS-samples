@@ -1,0 +1,200 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (429.0.0.0.2)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Apple", "Bread", "Tankard", "Materials"]
+    def "Apple" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707963, 0, 0)
+        }
+        references = @Apple.usdc@
+    )
+    {
+        rel material:binding = </Root/Materials/Apple_mat> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.7071067, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Bread" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707963, 0, 0)
+        }
+        references = @Bread.usdc@
+    )
+    {
+        rel material:binding = </Root/Materials/Bread_mat> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.7071067, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Tankard" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707963, 0, 0)
+        }
+        references = @Tankard.usdc@
+    )
+    {
+        rel material:binding = </Root/Materials/Tankard_mat> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.7071067, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Scope "Materials" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["Apple_mat", "Tankard_mat", "Bread_mat"]
+        def Material "Apple_mat"
+        {
+            asset inputs:Basecolor = @Textures/Apple_bc.png@ (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-594.9297, -158.63121)
+                    }
+                }
+            )
+            asset inputs:Normal = @Textures/Apple_n.png@ (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-633.03125, 301.70703)
+                    }
+                }
+            )
+            asset inputs:RMA = @Textures/Apple_rma.png@ (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-604.3086, 74.453125)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/Materials/Apple_mat/PreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (297.25, 99.5)
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                color3f inputs:diffuseColor.connect = </Root/Materials/Apple_mat/Image.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic.connect = </Root/Materials/Apple_mat/Separate3.outputs:outy>
+                float3 inputs:normal.connect = </Root/Materials/Apple_mat/NormalMapDecode.outputs:out>
+                float inputs:occlusion.connect = </Root/Materials/Apple_mat/Separate3.outputs:outz>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/Materials/Apple_mat/Separate3.outputs:outx>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (73.25, 99.5)
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file.connect = </Root/Materials/Apple_mat.inputs:Basecolor>
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-351.78705, -111.20114)
+                int ui:nodegraph:node:stackingOrder = 161
+            }
+
+            def Shader "Image_1"
+            {
+                uniform token info:id = "ND_image_vector3"
+                float3 inputs:default
+                asset inputs:file.connect = </Root/Materials/Apple_mat.inputs:RMA>
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-373.01562, 126.05469)
+                int ui:nodegraph:node:stackingOrder = 146
+            }
+
+            def Shader "Separate3"
+            {
+                uniform token info:id = "ND_separate3_vector3"
+                float3 inputs:in.connect = </Root/Materials/Apple_mat/Image_1.outputs:out>
+                float outputs:outx
+                float outputs:outy
+                float outputs:outz
+                float2 ui:nodegraph:node:pos = (-189.63281, 102.875)
+                int ui:nodegraph:node:stackingOrder = 104
+            }
+
+            def Shader "Image_2"
+            {
+                uniform token info:id = "ND_image_vector3"
+                float3 inputs:default
+                asset inputs:file.connect = </Root/Materials/Apple_mat.inputs:Normal>
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-401.73828, 353.3086)
+                int ui:nodegraph:node:stackingOrder = 153
+            }
+
+            def Shader "NormalMapDecode"
+            {
+                uniform token info:id = "ND_normal_map_decode"
+                float3 inputs:in.connect = </Root/Materials/Apple_mat/Image_2.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-167.22643, 368.9467)
+                int ui:nodegraph:node:stackingOrder = 163
+            }
+        }
+
+        def "Tankard_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Apple_mat>
+        )
+        {
+            asset inputs:Basecolor = @Textures/Tankard_bc.png@
+            asset inputs:Normal = @Textures/Tankard_n.png@
+            asset inputs:RMA = @Textures/Tankard_rma.png@
+        }
+
+        def "Bread_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Apple_mat>
+        )
+        {
+            asset inputs:Basecolor = @Textures/Bread_bc.png@
+            asset inputs:Normal = @Textures/Bread_n.png@
+            asset inputs:RMA = @Textures/Bread_rma.png@
+        }
+    }
+}
+

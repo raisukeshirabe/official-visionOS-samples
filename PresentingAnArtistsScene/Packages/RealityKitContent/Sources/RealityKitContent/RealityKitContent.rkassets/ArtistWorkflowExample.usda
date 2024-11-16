@@ -1,0 +1,1006 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (429.0.0.0.2)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    reorder nameChildren = ["Skybox", "PBR_Materials", "PBR_Assets", "IBL", "Scene_01", "Materials"]
+    def Scope "Materials" (
+        active = true
+        references = None
+    )
+    {
+        reorder nameChildren = ["Terrain_L0_mat", "Terrain_L1_mat", "TreeTrunk_mat", "Props_mat", "StoneWall_mat", "Fence_mat", "Rocks_mat", "DistantHills_mat", "Grass_mat", "TreeFoliage_mat", "WagonWheel_mat", "Skydome_mat", "Bush_mat", "BushCard_mat"]
+        def Material "Terrain_L0_mat" (
+            customData = {
+                dictionary RealityKit = {
+                    bool cullBack = 1
+                    bool cullFront = 0
+                }
+            }
+            references = None
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/Terrain_L0_baked.png@ (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-409, 5.109375)
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/Materials/Terrain_L0_mat/UnlitSurface.outputs:out>
+            token outputs:realitykit:vertex.connect = </Root/Materials/Terrain_L0_mat/GeometryModifier.outputs:out>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (297.25, 99.5)
+
+            def Shader "UnlitSurface" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+                bool inputs:applyPostProcessToneMap = 0
+                color3f inputs:color.connect = </Root/Materials/Terrain_L0_mat/Image.outputs:out>
+                bool inputs:hasPremultipliedAlpha
+                float inputs:opacity
+                float inputs:opacityThreshold
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (28.019531, 45.652344)
+                int ui:nodegraph:node:stackingOrder = 31
+            }
+
+            def Shader "Image" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file (
+                    colorSpace = "srgb_displayp3"
+                )
+                asset inputs:file.connect = </Root/Materials/Terrain_L0_mat.inputs:Unlit_Texture>
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-208.72266, 40.05078)
+                int ui:nodegraph:node:stackingOrder = 34
+            }
+        }
+
+        def "Terrain_L1_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Terrain_L0_mat>
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/Terrain_L1_baked.png@
+        }
+
+        def "TreeTrunk_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Terrain_L0_mat>
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/TreeTrunk_baked.png@
+            token outputs:mtlx:surface.connect = </Root/Materials/TreeTrunk_mat/UnlitSurface.outputs:out>
+        }
+
+        def "Props_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Terrain_L0_mat>
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/Props_baked.png@
+        }
+
+        def "StoneWall_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Terrain_L0_mat>
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/StoneWall_baked.png@
+        }
+
+        def "Fence_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Terrain_L0_mat>
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/Fence_baked.png@
+        }
+
+        def "Rocks_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Terrain_L0_mat>
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/Rocks_baked.png@
+        }
+
+        def Material "TreeFoliage_mat" (
+            customData = {
+                dictionary RealityKit = {
+                    bool cullBack = 1
+                    bool cullFront = 0
+                }
+            }
+            references = None
+        )
+        {
+            token cullMode = "none" (
+                allowedTokens = ["unspecified", "none", "front", "back"]
+            )
+            asset inputs:Unlit_Texture = @Textures/TreeFoliage_baked.png@ (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-709.3828, -23.734375)
+                        int stackingOrderInSubgraph = 117
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/Materials/TreeFoliage_mat/UnlitSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (297.25, 99.5)
+
+            def Shader "UnlitSurface" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+                bool inputs:applyPostProcessToneMap = 0
+                color3f inputs:color.connect = </Root/Materials/TreeFoliage_mat/Swizzle.outputs:out>
+                bool inputs:hasPremultipliedAlpha
+                float inputs:opacity.connect = </Root/Materials/TreeFoliage_mat/Swizzle_1.outputs:out>
+                float inputs:opacityThreshold = 0.5
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (28.019531, 45.652344)
+                int ui:nodegraph:node:stackingOrder = 126
+            }
+
+            def Shader "Image" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color4"
+                color4f inputs:default
+                asset inputs:file (
+                    colorSpace = "srgb_displayp3"
+                )
+                asset inputs:file.connect = </Root/Materials/TreeFoliage_mat.inputs:Unlit_Texture>
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color4f outputs:out
+                float2 ui:nodegraph:node:pos = (-509.10547, 11.207031)
+                int ui:nodegraph:node:stackingOrder = 128
+            }
+
+            def Shader "Swizzle"
+            {
+                uniform token info:id = "ND_swizzle_color4_color3"
+                string inputs:channels = "rgb"
+                prepend color4f inputs:in.connect = </Root/Materials/TreeFoliage_mat/Image.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-206.33203, 16.691406)
+                int ui:nodegraph:node:stackingOrder = 99
+            }
+
+            def Shader "Swizzle_1"
+            {
+                uniform token info:id = "ND_swizzle_color4_float"
+                string inputs:channels = "a"
+                color4f inputs:in.connect = </Root/Materials/TreeFoliage_mat/Image.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-215.9414, 95.25)
+                int ui:nodegraph:node:stackingOrder = 125
+            }
+        }
+
+        def Material "WagonWheel_mat" (
+            references = None
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/WagonWheel_baked.png@ (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-513.79315, -695.33673)
+                        int stackingOrderInSubgraph = 296
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/Materials/WagonWheel_mat/UnlitSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (813.1133, 36.85547)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 77
+
+            def Shader "UnlitSurface"
+            {
+                uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+                bool inputs:applyPostProcessToneMap = 0
+                color3f inputs:color.connect = </Root/Materials/WagonWheel_mat/Add.outputs:out>
+                bool inputs:hasPremultipliedAlpha
+                float inputs:opacity
+                float inputs:opacityThreshold
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (543.8828, -16.992188)
+                int ui:nodegraph:node:stackingOrder = 77
+            }
+
+            def Shader "Image" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file (
+                    colorSpace = "srgb_displayp3"
+                )
+                asset inputs:file.connect = </Root/Materials/WagonWheel_mat.inputs:Unlit_Texture>
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-290.85703, -640.9581)
+                int ui:nodegraph:node:stackingOrder = 293
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+            }
+
+            def Shader "RealitykitEnvironmentRadiance" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_realitykit_environment_radiance"
+                color3f inputs:baseColor.connect = </Root/Materials/WagonWheel_mat/Multiply.outputs:out>
+                half inputs:metallic = 1
+                half inputs:metallic.connect = </Root/Materials/WagonWheel_mat/Convert_1.outputs:out>
+                float3 inputs:normal.connect = </Root/Materials/WagonWheel_mat/NormalMap.outputs:out>
+                half inputs:roughness = 0.5
+                half inputs:roughness.connect = </Root/Materials/WagonWheel_mat/Convert.outputs:out>
+                half inputs:specular = 0
+                color3f outputs:diffuseRadiance
+                color3f outputs:specularRadiance
+                float2 ui:nodegraph:node:pos = (51.3919, -163.79994)
+                int ui:nodegraph:node:stackingOrder = 276
+            }
+
+            def Shader "NormalMap" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_normalmap"
+                float3 inputs:in.connect = </Root/Materials/WagonWheel_mat/Image_3.outputs:out>
+                float inputs:scale
+                string inputs:space = "tangent"
+                float3 inputs:tangent
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-453.91495, -84.89149)
+                int ui:nodegraph:node:stackingOrder = 299
+            }
+
+            def Shader "Add" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_add_color3"
+                color3f inputs:in1.connect = </Root/Materials/WagonWheel_mat/Image.outputs:out>
+                color3f inputs:in2.connect = </Root/Materials/WagonWheel_mat/RealitykitEnvironmentRadiance.outputs:specularRadiance>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (304.01144, -223.67258)
+                int ui:nodegraph:node:stackingOrder = 280
+            }
+
+            def Shader "Image_3" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/WagonWheel_n.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-750.98895, -172.16013)
+                int ui:nodegraph:node:stackingOrder = 287
+            }
+
+            def Shader "Image_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_vector3"
+                float3 inputs:default
+                asset inputs:file = @Textures/WagonWheel_rma.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-750.3203, -533.92615)
+                int ui:nodegraph:node:stackingOrder = 290
+            }
+
+            def Shader "Separate3" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_separate3_vector3"
+                float3 inputs:in.connect = </Root/Materials/WagonWheel_mat/Image_1.outputs:out>
+                float outputs:outx
+                float outputs:outy
+                float outputs:outz
+                float2 ui:nodegraph:node:pos = (-443.46478, -257.30182)
+                int ui:nodegraph:node:stackingOrder = 306
+            }
+
+            def Shader "Convert" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_convert_float_half"
+                prepend float inputs:in.connect = </Root/Materials/WagonWheel_mat/Separate3.outputs:outx>
+                half outputs:out
+                float2 ui:nodegraph:node:pos = (-211.33977, -233.64743)
+                int ui:nodegraph:node:stackingOrder = 303
+            }
+
+            def Shader "Convert_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_convert_float_half"
+                prepend float inputs:in.connect = </Root/Materials/WagonWheel_mat/Separate3.outputs:outy>
+                half outputs:out
+                float2 ui:nodegraph:node:pos = (-220.92627, -166.13217)
+                int ui:nodegraph:node:stackingOrder = 301
+            }
+
+            def Shader "Multiply" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_color3"
+                color3f inputs:in1.connect = </Root/Materials/WagonWheel_mat/Image.outputs:out>
+                color3f inputs:in2 = (0.5049426, 0.5049426, 0.5049426) (
+                    colorSpace = "lin_srgb"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-149.3569, -452.49594)
+                int ui:nodegraph:node:stackingOrder = 272
+            }
+        }
+
+        def Material "Skydome_mat" (
+            references = None
+        )
+        {
+            token outputs:mtlx:surface.connect = </Root/Materials/Skydome_mat/UnlitSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (297.25, 99.5)
+
+            def Shader "UnlitSurface"
+            {
+                uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+                bool inputs:applyPostProcessToneMap = 0
+                color3f inputs:color.connect = </Root/Materials/Skydome_mat/Image.outputs:out>
+                bool inputs:hasPremultipliedAlpha
+                float inputs:opacity
+                float inputs:opacityThreshold
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (55.95703, 53.71875)
+                int ui:nodegraph:node:stackingOrder = 11
+            }
+
+            def Shader "Image" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file (
+                    colorSpace = "srgb_displayp3"
+                )
+                asset inputs:file.connect = </Root/Materials/Skydome_mat/Constant.outputs:out>
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-305.32812, -26.964844)
+                int ui:nodegraph:node:stackingOrder = 28
+            }
+
+            def Shader "Constant" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_constant_filename"
+                asset inputs:value = @Textures/Skydome_8k.png@
+                asset outputs:out
+                float2 ui:nodegraph:node:pos = (-513.29297, -55.523438)
+                int ui:nodegraph:node:stackingOrder = 26
+            }
+        }
+
+        def Material "Grass_mat" (
+            references = None
+        )
+        {
+            token outputs:mtlx:surface.connect = </Root/Materials/Grass_mat/UnlitSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (335.25, 100.5)
+
+            def Shader "UnlitSurface" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+                bool inputs:applyPostProcessToneMap = 0
+                color3f inputs:color.connect = </Root/Materials/Grass_mat/Convert_1.outputs:out>
+                bool inputs:hasPremultipliedAlpha
+                float inputs:opacity
+                float inputs:opacityThreshold
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (78.75, 73.5)
+                int ui:nodegraph:node:stackingOrder = 35
+            }
+
+            def Shader "GeomColor" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_geomcolor_color3"
+                int inputs:index = 1
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-840.6719, -8.3203125)
+                int ui:nodegraph:node:stackingOrder = 64
+            }
+
+            def Shader "Convert" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_convert_color3_vector3"
+                color3f inputs:in.connect = </Root/Materials/Grass_mat/GeomColor.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-658.0625, 25.445312)
+                int ui:nodegraph:node:stackingOrder = 65
+            }
+
+            def Shader "Multiply" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_vector3"
+                float3 inputs:in1.connect = </Root/Materials/Grass_mat/Convert.outputs:out>
+                float3 inputs:in2 = (1.05, 0.95, 0.9)
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-532.96484, 90.78906)
+                int ui:nodegraph:node:stackingOrder = 68
+            }
+
+            def Shader "Convert_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_convert_vector3_color3"
+                float3 inputs:in.connect = </Root/Materials/Grass_mat/Multiply.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-360.39062, 79.48828)
+                int ui:nodegraph:node:stackingOrder = 67
+            }
+        }
+
+        def "DistantHills_mat" (
+            active = true
+            instanceable = true
+            references = </Root/Materials/Terrain_L0_mat>
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/DistantHills_baked.png@
+        }
+
+        def Material "Bush_mat" (
+            references = None
+        )
+        {
+            asset inputs:Unlit_Texture = @Textures/ShrubOpaque_bc.png@ (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-927.22266, 67.19141)
+                        int stackingOrderInSubgraph = 182
+                    }
+                }
+            )
+            token outputs:mtlx:surface.connect = </Root/Materials/Bush_mat/UnlitSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (335.25, 100.5)
+
+            def Shader "Image" (
+                references = </Root/Materials/Terrain_L0_mat/Image>
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file.connect = </Root/Materials/Bush_mat.inputs:Unlit_Texture>
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                float2 ui:nodegraph:node:pos = (-682.7383, 101.21484)
+                int ui:nodegraph:node:stackingOrder = 180
+            }
+
+            def Shader "Multiply" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_color3"
+                color3f inputs:in1.connect = </Root/Materials/Bush_mat/GeomColor.outputs:out>
+                color3f inputs:in2.connect = </Root/Materials/Bush_mat/Image.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-518.6875, 23.59375)
+                int ui:nodegraph:node:stackingOrder = 180
+            }
+
+            def Shader "GeomColor" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_geomcolor_color3"
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-734.01953, -72.78516)
+                int ui:nodegraph:node:stackingOrder = 180
+            }
+
+            def Shader "UnlitSurface" (
+                references = </Root/Materials/Terrain_L0_mat/UnlitSurface>
+            )
+            {
+                uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+                color3f inputs:color.connect = </Root/Materials/Bush_mat/Multiply.outputs:out>
+                float2 ui:nodegraph:node:pos = (-243.77344, 76.02344)
+                int ui:nodegraph:node:stackingOrder = 180
+            }
+        }
+
+        def Material "BushCard_mat" (
+            references = None
+        )
+        {
+            token outputs:mtlx:surface.connect = </Root/Materials/BushCard_mat/UnlitSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (335.25, 100.5)
+
+            def Shader "UnlitSurface" (
+                references = </Root/Materials/Terrain_L0_mat/UnlitSurface>
+            )
+            {
+                uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+                color3f inputs:color.connect = </Root/Materials/BushCard_mat/Multiply.outputs:out>
+                float inputs:opacity.connect = </Root/Materials/BushCard_mat/Image_1.outputs:out>
+                float2 ui:nodegraph:node:pos = (83.32031, 129.14844)
+                int ui:nodegraph:node:stackingOrder = 154
+            }
+
+            def Shader "Image_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Textures/BushLeaves_A.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-394.82025, 249.91737)
+                int ui:nodegraph:node:stackingOrder = 168
+            }
+
+            def Shader "Multiply" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_color3"
+                color3f inputs:in1.connect = </Root/Materials/BushCard_mat/GeomColor.outputs:out>
+                color3f inputs:in2.connect = </Root/Materials/BushCard_mat/Color.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-206.60287, -25.183437)
+                int ui:nodegraph:node:stackingOrder = 154
+            }
+
+            def Shader "GeomColor" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_geomcolor_color3"
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-407.8586, -66.55514)
+                int ui:nodegraph:node:stackingOrder = 165
+            }
+
+            def Shader "Color" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (0.061488647, 0.18983842, 0.08801905) (
+                    colorSpace = "lin_srgb"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-403.84375, 32.640625)
+                int ui:nodegraph:node:stackingOrder = 167
+            }
+        }
+    }
+
+    def Xform "IBL" (
+        active = true
+        references = None
+    )
+    {
+        def RealityKitComponent "ImageBasedLight"
+        {
+            float blendIBLsFactor = 0
+            token blendMode = "single"
+            bool enableBlend = 0
+            bool enableRotation = 0
+            asset ibl = @Textures/ArtistWorkflow_IBL_512.exr@
+            uniform token info:id = "RealityKit.ImageBasedLight"
+            float intensityExponent = 0
+            bool isGlobalIBL = 0
+        }
+    }
+
+    def Scope "PBR_Materials" (
+        active = true
+        references = None
+    )
+    {
+        reorder nameChildren = ["Apple", "Bread", "Tankard"]
+    }
+
+    def "PBR_Assets" (
+        active = true
+        references = @PBR_Assets.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "ImageBasedLightReceiver"
+        {
+            rel iblEntity = </Root/IBL>
+            uniform token info:id = "RealityKit.ImageBasedLightReceiver"
+        }
+
+        over "Apple" (
+            references = None
+        )
+        {
+        }
+    }
+
+    def "Skydome" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707964, 0, 0)
+        }
+        references = @Skydome.usdc@
+    )
+    {
+        rel material:binding = </Root/Materials/Skydome_mat> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "UnlitScene" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-1.5707964, 0, 0)
+        }
+        references = @UnlitScene.usdc@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "DistantHills" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/DistantHills_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L0" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L0_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L3_0" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L3_1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L3_2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L3_3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L3_4" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L3_5" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L2_0" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L2_1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L2_2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L2_3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L2_4" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L2_5" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L1_0" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L1_1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L1_2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L1_3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L1_4" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Terrain_L1_5" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Materials/Terrain_L1_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Props" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/Props_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "StoneWall_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/StoneWall_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Rocks_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/Rocks_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "WagonWheel_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/WagonWheel_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+
+            def RealityKitComponent "ImageBasedLightReceiver"
+            {
+                rel iblEntity = </Root/IBL>
+                uniform token info:id = "RealityKit.ImageBasedLightReceiver"
+            }
+        }
+
+        over "TreeFoliage_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/TreeFoliage_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "TreeTrunk_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/TreeTrunk_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Fence_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/Fence_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Grass_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/Grass_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "BushesCard_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/BushCard_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+
+        over "Bushes_msh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = None
+        )
+        {
+            rel material:binding = </Root/Materials/Bush_mat> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+        }
+    }
+}
+
